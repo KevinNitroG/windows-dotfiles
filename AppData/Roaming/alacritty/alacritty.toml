@@ -1,0 +1,37 @@
+# https://alacritty.org/config-alacritty.html
+
+import = [
+    "~/AppData/Roaming/alacritty/catppuccin-alacritty/catppuccin-macchiato.toml"
+]
+
+[shell]
+program = "pwsh"
+args = ["-noLogo", "-WorkingDirectory C:/Users/kevinnitro/"]
+
+[window]
+padding = { x = 2, y = 2 }
+dynamic_padding = true
+decorations = "Full" # Full or None
+startup_mode = "Maximized"
+
+[scrolling]
+multiplier = 1
+
+[font]
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+size = 13
+
+[colors]
+transparent_background_colors = true
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+
+[terminal]
+osc52 = "CopyPaste"
+
+[mouse]
+hide_when_typing = true
+# Mouse bindings (actual bindings need to be defined as per user preference)
+# Example: bindings = [{ mouse = "Left", action = "Paste" }]
+bindings = []

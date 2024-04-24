@@ -1,0 +1,20 @@
+["AppData/Local/nvim-alexis12119"]
+  type = "git-repo"
+	url = "git@github.com:KevinNitroG/Alexis12119-nvim.git"
+
+["AppData/Local/LazyVim"]
+  type = "git-repo"
+  url = "git@github.com/KevinNitroG/LazyVim-Starter.git"
+
+["AppData/Local/NvChad"]
+  type = "git-repo"
+	url = "git@github.com/KevinNitroG/NvChad-Starter.git"
+
+["AppData/Roaming/alacritty/catppuccin-alacritty"]
+  type = "git-repo"
+	url = "git@github.com/catppuccin/alacritty.git"
+
+["AppData/Local/SilentCMD"]
+    type = "archive-file"
+    url = "https://github.com/stbrenner/SilentCMD/releases/latest/download/SilentCMD.zip"
+    path = "SilentCMD.exe"
