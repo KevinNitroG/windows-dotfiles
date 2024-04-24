@@ -1,40 +1,32 @@
 # KEVINNITRO WINDOWS DOTFILES
 
-[![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/KevinNitroG/KevinNitro-Windows-Dotfiles?style=for-the-badge&color=CAEDFF)](../../commits/main)
-![GitHub repo size](https://img.shields.io/github/repo-size/KevinNitroG/KevinNitro-Windows-Dotfiles?style=for-the-badge&color=D8B4F8)
+[![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/KevinNitroG/windows-dotfiles?style=for-the-badge&color=CAEDFF)](../../commits/main)
+![GitHub repo size](https://img.shields.io/github/repo-size/KevinNitroG/windows-dotfiles?style=for-the-badge&color=D8B4F8)
 
-```fastfetch.ps1
+````fastfetch.ps1
 > fastfetch
 
 /////////////////  /////////////////    kevinnitro@Kevostro-Windows
 /////////////////  /////////////////    ---------------------------
 /////////////////  /////////////////    OS: Windows 11 (Home) x86_64
 /////////////////  /////////////////    Host: Vostro 14 5410
-/////////////////  /////////////////    Packages: 56 (choco)
-/////////////////  /////////////////    Shell: PowerShell 7.4.1
-/////////////////  /////////////////    Display (AUO5491): 1920x1080 @ 60Hz (as 1536x864) [Built-in]
+/////////////////  /////////////////    Kernel: 10.0.22631.3447 (23H2)
+/////////////////  /////////////////    Uptime: 12 days, 3 hours, 8 mins
+/////////////////  /////////////////    Packages: 8 (scoop), 98 (choco)
+/////////////////  /////////////////    Shell: PowerShell 7.4.2
+                                        Display (AUO5491): 1920x1080 @ 60Hz (as 1536x864) [Built-in]
 /////////////////  /////////////////    DE: Fluent
-                                        WM: Desktop Window Manager
+/////////////////  /////////////////    WM: Desktop Window Manager
 /////////////////  /////////////////    WM Theme: Custom - Blue (System: Dark, Apps: Dark)
 /////////////////  /////////////////    Icons: This PC, Recycle Bin, Control Panel
 /////////////////  /////////////////    Font: Segoe UI (12pt) [Caption / Menu / Message / Status]
 /////////////////  /////////////////    Cursor: W11 Cursors Dark HDPI default by Jepri Creations (32px)
-/////////////////  /////////////////    Terminal: Windows Terminal 1.18.3181.0
-/////////////////  /////////////////    Terminal Font: JetBrainsMono Nerd Font Mono (14pt)
-/////////////////  /////////////////    CPU: 11th Gen Intel(R) Core(TM) i5-11320H (8) @ 2.50 GHz
-/////////////////  /////////////////    GPU: Intel(R) Iris(R) Xe Graphics (128.00 MiB) [Integrated]
-                                        Memory: 7.94 GiB / 23.75 GiB (33%)
-                                        Swap: 81.21 MiB / 3.88 GiB (2%)
-                                        Disk (C:\): 91.13 GiB / 250.00 GiB (36%) - NTFS
-                                        Disk (D:\): 31.33 GiB / 138.39 GiB (23%) - NTFS
-                                        Disk (E:\): 3.52 GiB / 99.94 GiB (4%) - ReFS
-                                        Disk (Z:\): 151.02 GiB / 5.03 TiB (3%) - FUSE-rclone [External]
+/////////////////  /////////////////    Terminal: Windows Terminal 1.19.10821.0
+/////////////////  /////////////////    Terminal Font: JetBrainsMono Nerd Font (13pt)
+                                        CPU: 11th Gen Intel(R) Core(TM) i5-11320H (8) @ 2.50 GHz
+                                        GPU: Intel(R) Iris(R) Xe Graphics (128.00 MiB) [Integrated]
+                                        Memory: 6.92 GiB / 23.75 GiB (29%)
 ```
-
-> [!WARNING]
->
-> This repo may contains my personal information, please **DO NOT** use it.
-
 ---
 
 ## Table of Contents
@@ -88,15 +80,13 @@ df branch -m main
 df remote add origin git@github.com:KevinNitroG/KevinNitro-Windows-Dotfiles.git
 # df branch --set-upstream-to=origin/main main
 git push --set-upstream origin main
-```
+````
 
 ## 🪴 USE
 
-### 1️⃣ ADD .SSH AND SOME FILES
+### 1️⃣ ADD SSH
 
-sth
-
-Setup SSH _(Admin)_
+- SSH _(Admin)_
 
 ```setup-ssh.ps1
 Set-Service ssh-agent -StartupType Automatic
@@ -106,42 +96,61 @@ ssh-add "$env:USERPROFILE/.ssh/id_rsa"
 
 ### 2️⃣ INSTALL CHOCO, GIT, POWERSHELL _(Admin)_
 
+- Import GPG Keys:
+
+```.ps1
+# Public key
+gpg --import public.gpg
+gpg --import secret.gpg
+```
+
+> In order to encrypt / decrypt chezmoi
+
+- Set execution policy to run script from URL _(Admin)_
+
+```.ps1
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+```
+
+- Install necessary tools / apps
+
 ```setup.ps1
-iex (iwr "add later").Content
+iex (iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/a-installNeccessaryToolsAndApps.ps1").Content
 ```
 
-### 3️⃣ CLONE REPO
+### 3️⃣ CHEZMOI
 
-```cloneRepo.ps1
-# Clone repo
-# git clone --bare "git@github.com:KevinNitroG/KevinNitro-Windows-Dotfiles.git" "$env:USERPROFILE\KevinNitro-Dotfiles"
-New-Item -ItemType Directory -Path "$env:USERPROFILE\KevinNitro-Dotfiles"
-git init --bare "$env:USERPROFILE\KevinNitro-Dotfiles"
-git --git-dir="$env:USERPROFILE/KevinNitro-Dotfiles/" --work-tree="$env:USERPROFILE" branch -m main
-git --git-dir="$env:USERPROFILE/KevinNitro-Dotfiles/" --work-tree="$env:USERPROFILE" add backup.txt
-git --git-dir="$env:USERPROFILE/KevinNitro-Dotfiles/" --work-tree="$env:USERPROFILE" commit -m "Backup at $(Get-Date -Format "yyyy-MM-dd HH:mm:ss")"
-# git --git-dir="$env:USERPROFILE/KevinNitro-Dotfiles/" --work-tree="$env:USERPROFILE" remote set-url --add origin "git@github.com:KevinNitroG/KevinNitro-Windows-Dotfiles.git"
-git --git-dir="$env:USERPROFILE/KevinNitro-Dotfiles/" --work-tree="$env:USERPROFILE" branch --set-upstream-to=origin/main main
-git --git-dir="$env:USERPROFILE/KevinNitro-Dotfiles/" --work-tree="$env:USERPROFILE" pull origin main
+> [!IMPORTANT]
+>
+> Use powershell IDE, don't use Windows Terminal.
+>
+> Run with Administrator
+
+```.ps1
+chezmoi init --apply --verbose git@github.com:KevinNitroG/windows-dotfiles.git
 ```
+
+> Follow instruction of chezmoi to setup chezmoi config
 
 ### 4️⃣ SET ENV PATH _(Admin)_
 
-```restoreWindows-EnvPath.ps1
-& "$env:USERPROFILE\KevinNitro-Dotfiles\KevinNitro-Files\Scripts\Powershell\restoreWindows\restoreWindows-EnvPath.ps1"
+```.ps1
+iex (iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/b-setEnvironmentVariables.ps1").Content
 ```
 
-### 5️⃣ INSTALL POWERSHELL MODULES, CHOCO APPS, OH-MY-POSH _(Admin)_
+### 5️⃣ INSTALL SOFTWARES _(Admin)_
 
-```installChocoPackages.ps1
-& "$env:USERPROFILE\KevinNitro-Dotfiles\KevinNitro-Files\Scripts\Powershell\restoreWindows\restoreWindows-InstallPackages.ps1"
+```.ps1
+iex (iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/c-InstallSoftwares.ps1").Content
 ```
 
 ### 6️⃣ INSTALL FONTS
 
-sth
+- https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
+- https://fonts.google.com/specimen/Be+Vietnam+Pro?query=be+vie
+- https://fonts.google.com/noto/specimen/Noto+Sans?query=noto
 
-### 7 INSTALL SOME CODE STUFF
+### 7️⃣ INSTALL SOME CODE STUFF
 
 ```.ps1
 # prettier
@@ -266,12 +275,36 @@ irm https://massgrave.dev/get | iex
 
 ## 📒 NOTES
 
+> Just something for me that I often forget
+
 ### SSH
 
 Public key
 
 ```id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDap/5GnLxYYNJ2QB1rYRgXyHLQud0L3Y6sfiPL6iAdqZRm+f+006DeZtJ4oP2IN8oS6nF6tfWhCaQ91jv3fZWO+olhyBZulSGbb75WdcqLcctfDwc9er+BZZZMBsF0inEbCgHEooo5kelkuuPIEUmeqn9ozUtQ4A6mLIurjsGfy2nD2bCjYys3UxUa09xEiQxvgHnlvSPCh9XvG1h4eX611GI6EbtJoOvzFPYzaxdNosbombq1HMnNGXk3TMS9fghE1GjnMiBbrortGn6mT0aNi//N9Wgr9AYR0dY2BWk1CZXF78G4MWZoaLOLW5sriMjU881UbfmJx6MmvMAEHDrfJDIQAIoRsjAJbw00SoZjspEg3R8f8ekNjduzikG65noMJGd+jTD7MtBDe+YNCuZp6UQAPwbPQLtlbKOysEWzPupKMHIsPkzUJpdYp1ML1ljV/q+FLRKje4FvWUKTk8KekWxp2tUyn5gWUIrG7DGkE5MKpBp0njFJ17n8H81xQJs= trannguyenthaibinh46@gmail.com
+```
+
+### GPG
+
+- Export keys
+
+```.ps1
+# Public key
+gpg --output kevinnitro-public-gpg-key.pgp --armor --export trannguyenthaibinh46@gmail.com
+
+# Secret key
+gpg --output kevinnitro-secret-gpg-key.pgp --armor --export-secret-key trannguyenthaibinh46@gmail.com
+```
+
+> Remove `ouput` params to export out stdout
+>
+> Ref: https://unix.stackexchange.com/a/482559
+
+- Import _(for both public and secret keys)_
+
+```.ps1
+gpg --import the-key.gpg
 ```
 
 ### GIT
