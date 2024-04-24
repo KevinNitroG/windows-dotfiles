@@ -3,7 +3,7 @@
 [![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/KevinNitroG/windows-dotfiles?style=for-the-badge&color=CAEDFF)](../../commits/main)
 ![GitHub repo size](https://img.shields.io/github/repo-size/KevinNitroG/windows-dotfiles?style=for-the-badge&color=D8B4F8)
 
-````fastfetch.ps1
+```fastfetch.ps1
 > fastfetch
 
 /////////////////  /////////////////    kevinnitro@Kevostro-Windows
@@ -27,6 +27,7 @@
                                         GPU: Intel(R) Iris(R) Xe Graphics (128.00 MiB) [Integrated]
                                         Memory: 6.92 GiB / 23.75 GiB (29%)
 ```
+
 ---
 
 ## Table of Contents
@@ -35,12 +36,13 @@
   - [Table of Contents](#table-of-contents)
   - [⚙️ SETUP](#️-setup)
   - [🪴 USE](#-use)
-    - [1️⃣ ADD .SSH AND SOME FILES](#1️⃣-add-ssh-and-some-files)
-    - [2️⃣ INSTALL CHOCO, GIT, POWERSHELL _(Admin)_](#2️⃣-install-choco-git-powershell-admin)
-    - [3️⃣ CLONE REPO](#3️⃣-clone-repo)
+    - [1️⃣ ADD SSH](#1️⃣-add-ssh)
+    - [2️⃣ INSTALL REQUIREMENTS _(Admin)_](#2️⃣-install-requirements-admin)
+    - [3️⃣ CHEZMOI](#3️⃣-chezmoi)
     - [4️⃣ SET ENV PATH _(Admin)_](#4️⃣-set-env-path-admin)
-    - [5️⃣ INSTALL POWERSHELL MODULES, CHOCO APPS, OH-MY-POSH _(Admin)_](#5️⃣-install-powershell-modules-choco-apps-oh-my-posh-admin)
+    - [5️⃣ INSTALL SOFTWARES _(Admin)_](#5️⃣-install-softwares-admin)
     - [6️⃣ INSTALL FONTS](#6️⃣-install-fonts)
+    - [7️⃣ INSTALL SOME CODE STUFF](#7️⃣-install-some-code-stuff)
   - [🎈 EXTRAS](#-extras)
     - [Crack Winrar _(Admin)_](#crack-winrar-admin)
     - [Patch IDM](#patch-idm)
@@ -49,6 +51,7 @@
     - [Others](#others)
   - [📒 NOTES](#-notes)
     - [SSH](#ssh)
+    - [GPG](#gpg)
     - [GIT](#git)
       - [Git submodules](#git-submodules)
       - [Tracking files](#tracking-files)
@@ -80,7 +83,7 @@ df branch -m main
 df remote add origin git@github.com:KevinNitroG/KevinNitro-Windows-Dotfiles.git
 # df branch --set-upstream-to=origin/main main
 git push --set-upstream origin main
-````
+```
 
 ## 🪴 USE
 
@@ -94,7 +97,7 @@ Start-Service ssh-agent
 ssh-add "$env:USERPROFILE/.ssh/id_rsa"
 ```
 
-### 2️⃣ INSTALL CHOCO, GIT, POWERSHELL _(Admin)_
+### 2️⃣ INSTALL REQUIREMENTS _(Admin)_
 
 - Import GPG Keys:
 
