@@ -3,6 +3,8 @@
 
 # VARIABLES
 # $env:CPLUS_INCLUDE_PATH = "C:/ProgramData/mingw64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32;C:/Program Files/LLVM/lib/clang/18/include;C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/include;C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/atlmfc/include"
+$env:EDITOR = "v"
+$env:VISUAL = "code"
 $env:OHMYPOSH_THEME = "star"
 $env:DEFAULT_NVIM_CONFIG = "nvim-alexis12119"
 $env:NVIM_CONFIGS = @(
@@ -72,6 +74,13 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # Check battery 
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/checkBattery.ps1"
+
+# Chezmoi tab completion
+# Note that it will work only when you type chezmoi
+. "$env:USERPROFILE/Documents/PowerShell/Modules/chezmoi/completion.ps1"
+
+# Chezmoi config
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/chezmoiConfig.ps1"
 
 # Apps manage
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/appsManage.ps1"
