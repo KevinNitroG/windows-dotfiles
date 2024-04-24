@@ -1,31 +1,28 @@
 # EVKey
-**/evkmacro.txt
-**/evkau.exe
+AppData/Local/EvKey/evkmacro.txt
+AppData/Local/EvKey/evkau.exe
 
 # Unikey
-**/ukmacro.txt
+AppData/Local/EvKey/ukmacro.txt
 
 # Rclone
-**/rclone/rclone.conf
-**/rclone/mount/cache/
-**/rclone/mount/log.txt
+AppData/Roaming/rclone/rclone.conf
+AppData/Roaming/rclone/mount/cache/*
+AppData/Roaming/rclone/mount/log.txt
 
 # Traffic Monitor
-**/TrafficMonitor/history_traffic.dat
-**/TrafficMonitor/history_traffic.dat.bak
-**/TrafficMonitor/error.log
+AppData/Local/TrafficMonitor/history_traffic.dat
+AppData/Local/TrafficMonitor/history_traffic.dat.bak
+AppData/Local/TrafficMonitor/error.log
 
 # Wakatime
-**/.wakatime.cfg
+.wakatime.cfg
 
 # ssh
-**/.ssh/
-
-# nvim
-**/nvim/plugin/packer_compiled.lua
+.ssh/*
 
 # lf
-**/lf/history
+AppData/Local/lf/history
 
 # chezmoi
 .config/chezmoi/chezmoistate.boltdb
