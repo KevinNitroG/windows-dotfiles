@@ -27,7 +27,8 @@ $NPM_APPS_TO_UPGRADE = @(
   "prettier"
 )
 $SCOOP_APPS_TO_UPGRADE = @(
-  "komorebi"
+  "komorebi",
+  "sd"
 )
 
 function List-ChocoApps

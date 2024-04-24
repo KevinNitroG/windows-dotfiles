@@ -19,6 +19,7 @@
 	directory = D:/My Apps
 	directory = E:/Git Repo
 	directory = C:/Users/kevinnitro/scoop/apps/scoop/current
+	directory = C:/Users/kevinnitro/scoop/buckets/main
 [alias]
     s = status
     co = checkout

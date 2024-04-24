@@ -59,6 +59,7 @@ choco install `
   bat `
   delta `
   tldr `
+  everythingpowertoys `
   whois `
   adb `
   gh `
@@ -75,5 +76,6 @@ scoop install sudo
 scoop install touch
 scoop bucket add extras
 scoop install keyviz
+scoop install sd
 
 pip install thefuck
