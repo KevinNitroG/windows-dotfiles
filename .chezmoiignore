@@ -25,6 +25,7 @@ AppData/Local/TrafficMonitor/error.log
 AppData/Local/lf/history
 
 # chezmoi
+.config/chezmoi/*
 .config/chezmoi/chezmoistate.boltdb
 .config/chezmoi/chezmoi.toml
 
