@@ -1,0 +1,31 @@
+# EVKey
+**/evkmacro.txt
+**/evkau.exe
+
+# Unikey
+**/ukmacro.txt
+
+# Rclone
+**/rclone/rclone.conf
+**/rclone/mount/cache/
+**/rclone/mount/log.txt
+
+# Traffic Monitor
+**/TrafficMonitor/history_traffic.dat
+**/TrafficMonitor/history_traffic.dat.bak
+**/TrafficMonitor/error.log
+
+# Wakatime
+**/.wakatime.cfg
+
+# ssh
+**/.ssh/
+
+# nvim
+**/nvim/plugin/packer_compiled.lua
+
+# lf
+**/lf/history
+
+# chezmoi
+.config/chezmoi/chezmoistate.boltdb
