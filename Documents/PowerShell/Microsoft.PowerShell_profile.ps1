@@ -59,7 +59,7 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/setAlias.ps1"
 
 # Dotfiles config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/dotfiles.ps1"
+# . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/dotfiles.ps1"
 
 # Update Spicetify
 # . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/spicetifyUpdate.ps1"

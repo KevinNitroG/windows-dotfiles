@@ -14,7 +14,7 @@ url = "git@github.com:KevinNitroG/NvChad-Starter.git"
 type = "git-repo"
 url = "https://github.com/catppuccin/alacritty.git"
 
-["AppData/Local/SilentCMD"]
+["AppData/Local/SilentCMD/SilentCMD.exe"]
 type = "archive-file"
 url = "https://github.com/stbrenner/SilentCMD/releases/latest/download/SilentCMD.zip"
 path = "SilentCMD.exe"
