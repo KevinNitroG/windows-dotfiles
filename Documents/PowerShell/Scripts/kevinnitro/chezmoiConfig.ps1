@@ -11,7 +11,7 @@ function cms
   git commit --message "$(Get-Date -Format 'h:mm tt on d/M/y')"
   git push
   # chezmoi git apply -R
-  Stop-Process "gpg-agent"
+  Stop-Process -Name "gpg-agent"
 }
 
 function Update-ChezmoiCompletion
