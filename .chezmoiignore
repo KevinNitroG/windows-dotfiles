@@ -26,3 +26,5 @@ AppData/Local/lf/history
 
 # chezmoi
 .config/chezmoi/chezmoistate.boltdb
+.config/chezmoi/chezmoi.toml
+
