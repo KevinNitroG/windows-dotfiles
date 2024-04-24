@@ -18,3 +18,15 @@
     type = "archive-file"
     url = "https://github.com/stbrenner/SilentCMD/releases/latest/download/SilentCMD.zip"
     path = "SilentCMD.exe"
+
+[".config/cursor/Windows-11-Cursor-by-rosea92"]
+  type = "git-repo"
+	url = "https://github.com/YT-Advanced/Windows-11-Cursor-by-rosea92.git"
+
+[".config/wakatime/posh-wakatime"]
+  type = "git-repo"
+	url = "https://github.com/Gravifer/posh-wakatime.git"
+
+[".config/windows-terminal/windows-terminal-shaders"]
+  type = "git-repo"
+	url = "https://github.com/Hammster/windows-terminal-shaders.git"
