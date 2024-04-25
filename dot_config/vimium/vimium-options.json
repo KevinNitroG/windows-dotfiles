@@ -18,6 +18,10 @@
     {
       "passKeys": "",
       "pattern": "https?://monkeytype.com/*"
+    },
+    {
+      "passKeys": "",
+      "pattern": "https://khmt.uit.edu.vn/wecode/it003/submissions/create/assignment/*/problem/*"
     }
   ]
 }
