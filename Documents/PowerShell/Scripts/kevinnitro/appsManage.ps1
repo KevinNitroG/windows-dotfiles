@@ -35,7 +35,6 @@ function List-ChocoApps
 {
   $apps = $(choco list --id-only --no-color).Split("\n")
   $apps = $apps[1..($apps.Length - 2)]
-  $apps = $apps | fzf --prompt="List Choco Apps  " --height=~80% --layout=reverse --border --cycle --margin="2,20" --padding=1 --multi
   return $apps
 }
 
@@ -43,46 +42,58 @@ function List-ScoopApps
 {
   $apps = $(scoop list | Select-Object -ExpandProperty "Name").Split("\n")
   $apps = $apps[1..($apps.Length - 1)]
-  $apps = $apps | fzf --prompt="List Scoop Apps  " --height=~80% --layout=reverse --border --cycle --margin="2,20" --padding=1 --multi
+  return $apps
+}
+
+function Select-Apps
+{
+  param (
+    [string[]] $apps
+  )
+  $apps = $apps | fzf --prompt="Select Apps  " --height=~80% --layout=reverse --border --cycle --margin="2,20" --padding=1 --multi
   return $apps
 }
 
 function Upgrade-ChocoApps
 {
-  Write-Host "Please run with Administrator permission"
-  $apps_set = New-Object System.Collections.Generic.HashSet(System.String)
-  foreach($app in List-ChocoApps)
+  #Requires -RunAsAdministrator
+  # Write-Host "Please run with Administrator permission"
+  $apps_set = New-Object System.Collections.Generic.HashSet[[String]]
+  $installed_apps = List-ChocoApps
+  foreach ($app in Select-Apps $installed_apps)
   {
-    $apps_set.Add($app)
+    $apps_set.Add($app) >$null
   }
-  $include = Read-Host "Include predefine apps to update [Y/n]: "
+  $include = Read-Host "Include predefine apps to update [Y/n]"
   if ($include)
   {
     foreach ($app in $CHOCO_APPS_TO_UPGRADE)
     {
-      $apps_set.Add($app)
+      $apps_set.Add($app) >$null
     }
   }
-  $apps_string = ($apps_set -split ",") -join " "
+  $apps_string = ($apps_set -split ",")
   choco upgrade $apps_string -y
 }
 
 function Upgrade-ScoopApps
 {
-  $apps_set = New-Object System.Collections.Generic.HashSet(System.String)
-  foreach($app in List-ScoopApps)
+  $apps_set = New-Object System.Collections.Generic.HashSet[[String]]
+  $installed_apps = List-ScoopApps
+  foreach ($app in Select-Apps $installed_apps)
   {
-    $apps_set.Add($app)
+    $apps_set.Add($app) >$null
   }
   $include = Read-Host "Include predefine apps to update [Y/n]: "
   if ($include)
+  foreach ($app in Select-ScoopApps)
   {
     foreach ($app in $SCOOP_APPS_TO_UPGRADE)
     {
-      $apps_set.Add($app)
+      $apps_set.Add($app) >$null
     }
   }
-  $apps_string = ($apps_set -split ",") -join " "
+  $apps_string = ($apps_set -split ",")
   scoop upgrade $apps_string
 }
 function Upgrade-NpmApps
@@ -100,7 +111,7 @@ function Upgrade-PipApps
 
 function Uninstall-ChocoApps
 {
-  $apps = List-ChocoApps -join " "
+  $apps = Select-ChocoApps -join " "
   choco uninstall $apps -y
 }
 
