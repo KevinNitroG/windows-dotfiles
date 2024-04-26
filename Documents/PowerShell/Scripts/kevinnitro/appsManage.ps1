@@ -56,8 +56,7 @@ function Select-Apps
 
 function Upgrade-ChocoApps
 {
-  #Requires -RunAsAdministrator
-  # Write-Host "Please run with Administrator permission"
+  Write-Host "Please run with Administrator permission"
   $apps_set = New-Object System.Collections.Generic.HashSet[[String]]
   $installed_apps = List-ChocoApps
   foreach ($app in Select-Apps $installed_apps)
