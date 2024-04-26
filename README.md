@@ -11,20 +11,18 @@
 /////////////////  /////////////////    OS: Windows 11 (Home) x86_64
 /////////////////  /////////////////    Host: Vostro 14 5410
 /////////////////  /////////////////    Kernel: 10.0.22631.3447 (23H2)
-/////////////////  /////////////////    Uptime: 12 days, 3 hours, 8 mins
 /////////////////  /////////////////    Packages: 8 (scoop), 98 (choco)
 /////////////////  /////////////////    Shell: PowerShell 7.4.2
-                                        Display (AUO5491): 1920x1080 @ 60Hz (as 1536x864) [Built-in]
-/////////////////  /////////////////    DE: Fluent
+/////////////////  /////////////////    Display (AUO5491): 1920x1080 @ 60Hz (as 1536x864) [Built-in]
+                                        DE: Fluent
 /////////////////  /////////////////    WM: Desktop Window Manager
 /////////////////  /////////////////    WM Theme: Custom - Blue (System: Dark, Apps: Dark)
-/////////////////  /////////////////    Icons: This PC, Recycle Bin, Control Panel
 /////////////////  /////////////////    Font: Segoe UI (12pt) [Caption / Menu / Message / Status]
 /////////////////  /////////////////    Cursor: W11 Cursors Dark HDPI default by Jepri Creations (32px)
 /////////////////  /////////////////    Terminal: Windows Terminal 1.19.10821.0
 /////////////////  /////////////////    Terminal Font: JetBrainsMono Nerd Font (13pt)
-                                        CPU: 11th Gen Intel(R) Core(TM) i5-11320H (8) @ 2.50 GHz
-                                        GPU: Intel(R) Iris(R) Xe Graphics (128.00 MiB) [Integrated]
+/////////////////  /////////////////    CPU: 11th Gen Intel(R) Core(TM) i5-11320H (8) @ 2.50 GHz
+/////////////////  /////////////////    GPU: Intel(R) Iris(R) Xe Graphics (128.00 MiB) [Integrated]
                                         Memory: 6.92 GiB / 23.75 GiB (29%)
 ```
 
@@ -34,7 +32,6 @@
 
 - [KEVINNITRO WINDOWS DOTFILES](#kevinnitro-windows-dotfiles)
   - [Table of Contents](#table-of-contents)
-  - [⚙️ SETUP](#️-setup)
   - [🪴 USE](#-use)
     - [1️⃣ ADD SSH](#1️⃣-add-ssh)
     - [2️⃣ INSTALL REQUIREMENTS _(Admin)_](#2️⃣-install-requirements-admin)
@@ -61,30 +58,6 @@
       - [Windows Variables](#windows-variables)
       - [DATETIME FORMAT](#datetime-format)
 
-## ⚙️ SETUP
-
-```setup.ps1
-git init --bare $env:USERPROFILE/KevinNitro-Dotfiles
-
-# Open powershell profile to add alias
-notepad $PROFILE
-
-# Add alias
-function df {
-	git --git-dir=$env:USERPROFILE/KevinNitro-Dotfiles/ --work-tree=$env:USERPROFILE $args
-}
-# Setup
-df config --local core.autocrlf false
-df config --local status.showUntrackedFiles no
-df config --local user.name "KevinNitroG"
-df config --local user.email "trannguyenthaibinh46@gmail.com"
-
-df branch -m main
-df remote add origin git@github.com:KevinNitroG/KevinNitro-Windows-Dotfiles.git
-# df branch --set-upstream-to=origin/main main
-git push --set-upstream origin main
-```
-
 ## 🪴 USE
 
 ### 1️⃣ ADD SSH
@@ -97,8 +70,6 @@ Start-Service ssh-agent
 ssh-add "$env:USERPROFILE/.ssh/id_rsa"
 ```
 
-### 2️⃣ INSTALL REQUIREMENTS _(Admin)_
-
 - Import GPG Keys:
 
 ```.ps1
@@ -109,6 +80,8 @@ gpg --import secret.gpg
 
 > In order to encrypt / decrypt chezmoi
 
+### 2️⃣ INSTALL REQUIREMENTS _(Admin)_
+
 - Set execution policy to run script from URL _(Admin)_
 
 ```.ps1
@@ -118,7 +91,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 - Install necessary tools / apps
 
 ```setup.ps1
-iex (iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/a-installNeccessaryToolsAndApps.ps1").Content
+iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/a-installNeccessaryToolsAndApps.ps1" | iex
 ```
 
 ### 3️⃣ CHEZMOI
@@ -138,13 +111,13 @@ chezmoi init --apply --verbose git@github.com:KevinNitroG/windows-dotfiles.git
 ### 4️⃣ SET ENV PATH _(Admin)_
 
 ```.ps1
-iex (iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/b-setEnvironmentVariables.ps1").Content
+iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/b-setEnvironmentVariables.ps1" | iex
 ```
 
 ### 5️⃣ INSTALL SOFTWARES _(Admin)_
 
 ```.ps1
-iex (iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/c-InstallSoftwares.ps1").Content
+iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/c-InstallSoftwares.ps1" | iex
 ```
 
 ### 6️⃣ INSTALL FONTS

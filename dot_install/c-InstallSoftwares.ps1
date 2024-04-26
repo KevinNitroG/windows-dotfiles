@@ -29,6 +29,8 @@ choco install `
   rust `
   # APPS
   powertoys `
+  everything `
+  everythingpowertoys `
   warp `
   vlc `
   spotify `
@@ -59,7 +61,6 @@ choco install `
   bat `
   delta `
   tldr `
-  everythingpowertoys `
   whois `
   adb `
   gh `
