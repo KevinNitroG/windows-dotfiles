@@ -13,8 +13,7 @@ $CHOCO_APPS_TO_UPGRADE = @(
   "bat",
   "delta",
   "tldr",
-  "actionlint",
-  "autohotkey"
+  "actionlint"
 )
 $PIP_APPS_TO_UPGRADE = @(
   "thefuck",
@@ -28,6 +27,7 @@ $NPM_APPS_TO_UPGRADE = @(
 )
 $SCOOP_APPS_TO_UPGRADE = @(
   "komorebi",
+  "autohotkey",
   "sd"
 )
 
@@ -115,13 +115,12 @@ function Upgrade-PipApps
 
 function Uninstall-ChocoApps
 {
-  $apps = Select-ChocoApps -join " "
+  $apps = Select-Apps $(List-ChocoApps)
   choco uninstall $apps -y
 }
 
 function Uninstall-ScoopApps
 {
-  $apps = List-ScoopApps -join " "
+  $apps = Select-Apps $(List-ScoopApps)
   scoop uninstall $apps
 }
-
