@@ -69,7 +69,10 @@ function Upgrade-ChocoApps
   {
     foreach ($app in $CHOCO_APPS_TO_UPGRADE)
     {
-      $apps_set.Add($app) >$null
+      if ($installed_apps -contains $app)
+      {
+        $apps_set.Add($app) >$null
+      }
     }
   }
   $apps_string = ($apps_set -split ",")
@@ -86,11 +89,13 @@ function Upgrade-ScoopApps
   }
   $include = Read-Host "Include predefine apps to update [Y/n]: "
   if ($include)
-  foreach ($app in Select-ScoopApps)
   {
     foreach ($app in $SCOOP_APPS_TO_UPGRADE)
     {
-      $apps_set.Add($app) >$null
+      if ($installed_apps -contains $app)
+      {
+        $apps_set.Add($app) >$null
+      }
     }
   }
   $apps_string = ($apps_set -split ",")
