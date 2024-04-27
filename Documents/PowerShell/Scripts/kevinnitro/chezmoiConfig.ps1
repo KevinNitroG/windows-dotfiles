@@ -6,12 +6,17 @@ function cms
   {
     gpg-connect-agent /bye
   }
+  if (!(Get-Process "keyboxd" -ErrorAction SilentlyContinue))
+  {
+    gpg-connect-agent --keyboxd
+  }
   chezmoi re-add
   Set-Location "$env:USERPROFILE/.local/share/chezmoi"
   git commit --message "$(Get-Date -Format 'h:mm tt on d/M/y')"
   git push
   # chezmoi git apply -R
   Stop-Process -Name "gpg-agent"
+  Stop-Process -Name "keyboxd"
 }
 
 function Update-ChezmoiCompletion
