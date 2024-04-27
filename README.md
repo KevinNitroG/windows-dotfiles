@@ -284,22 +284,24 @@ gpg --import the-key.gpg
 
 #### Variables
 
-Source: https://learn.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables
+| **VARIABLE**        | **PATH**                                 |
+| ------------------- | ---------------------------------------- |
+| `APPDATA`           | `C:\Users\kevinnitro\AppData\Roaming`    |
+| `HOMEDRIVE`         | `C:`                                     |
+| `USERPROFILE`       | `C:\Users\kevinnitro`                    |
+| `HOMEPATH`          | `\Users\kevinnitro`                      |
+| `LOCALAPPDATA`      | `C:\Users\kevinnitro\AppData\Local`      |
+| `PROGRAMDATA`       | `C:\ProgramData`                         |
+| `PROGRAMFILES`      | `C:\Program Files`                       |
+| `PROGRAMFILES(X86)` | `C:\Program Files (x86)`                 |
+| `SYSTEMROOT`        | `C:\Windows`                             |
+| `TEMP` & `TMP`      | `C:\Users\kevinnitro\AppData\Local\Temp` |
+| `USERDOMAIN`        | `DESKTOP-7QJ8Q7V`                        |
+| `USERNAME`          | `kevinnitro`                             |
+| `WINDIR`            | `C:\Windows`                             |
 
-- `USERPROFILE`: `C:\Users\kevinnitro`
-- `HOMEPATH`: `\Users\kevinnitro`
-- `APPDATA`: `C:\Users\kevinnitro\AppData\Roaming`
-- `LOCALAPPDATA`: `C:\Users\kevinnitro\AppData\Local`
-- `PROGRAMDATA`: `C:\ProgramData`
-- `PROGRAMFILES`: `C:\Program Files`
-- `PROGRAMFILES(X86)`: `C:\Program Files (x86)`
-- `SYSTEMROOT`: `C:\Windows`
-- `TEMP` & `TMP`: `C:\Users\kevinnitro\AppData\Local\Temp`
-- `WINDIR`: `C:\Windows`
-- `USERDOMAIN`: `DESKTOP-7QJ8Q7V`
-- `USERNAME`: `kevinnitro`
-- `HOMEDRIVE`: `C:`
-
+> [Source](https://learn.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables)
+>
 > More reference: [Complete List of Environment Variables in Windows 10](https://gist.github.com/RebeccaWhit3/5dad8627b8227142e1bea432db3f8824)
 
 #### Others
