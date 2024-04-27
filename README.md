@@ -166,8 +166,20 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 
 ### Patch IDM
 
+- Patch script
+
 ```ps1
 iex(irm is.gd/idm_reset)
+```
+
+- Or block host
+
+```.ps1
+$file = "C:\Windows\System32\drivers\etc\hosts"
+$hostfile =Get-Content $file
+$hostfile += "127.0.0.1     internetdownloadmanager.com"
+$hostfile += "127.0.0.1     registeridm.com"
+Set-Content -Path $file -Value $hostfile -Force
 ```
 
 ### Install & Active Office
