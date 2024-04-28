@@ -33,13 +33,13 @@
 - [KEVINNITRO WINDOWS DOTFILES](#kevinnitro-windows-dotfiles)
   - [Table of Contents](#table-of-contents)
   - [🪴 USE](#-use)
-    - [1️⃣ ADD SSH](#1️⃣-add-ssh)
-    - [2️⃣ INSTALL PREREQUISITE _(Admin)_](#2️⃣-install-prerequisite-admin)
-    - [3️⃣ CHEZMOI](#3️⃣-chezmoi)
-    - [4️⃣ SET ENV PATH _(Admin)_](#4️⃣-set-env-path-admin)
-    - [5️⃣ INSTALL SOFTWARES _(Admin)_](#5️⃣-install-softwares-admin)
-    - [6️⃣ INSTALL FONTS](#6️⃣-install-fonts)
-    - [7️⃣ INSTALL SOME CODE STUFF](#7️⃣-install-some-code-stuff)
+    - [1️⃣ Add SSH](#1️⃣-add-ssh)
+    - [2️⃣ Install prerequisite _(Admin)_](#2️⃣-install-prerequisite-admin)
+    - [3️⃣ Chezmoi](#3️⃣-chezmoi)
+    - [4️⃣ Set env path _(Admin)_](#4️⃣-set-env-path-admin)
+    - [5️⃣ Install softwares _(Admin)_](#5️⃣-install-softwares-admin)
+    - [6️⃣ Install fonts](#6️⃣-install-fonts)
+    - [7️⃣ Install some code stuff](#7️⃣-install-some-code-stuff)
   - [🎈 EXTRAS](#-extras)
     - [Crack Winrar _(Admin)_](#crack-winrar-admin)
     - [Patch IDM](#patch-idm)
@@ -49,14 +49,14 @@
   - [📒 NOTES](#-notes)
     - [SSH](#ssh)
     - [GPG](#gpg)
-    - [WINDOWS](#windows)
+    - [Windows](#windows)
       - [View current path](#view-current-path)
       - [Variables](#variables)
       - [Others](#others-1)
 
 ## 🪴 USE
 
-### 1️⃣ ADD SSH
+### 1️⃣ Add SSH
 
 - SSH _(Admin)_
 
@@ -76,7 +76,7 @@ gpg --import secret.gpg
 
 > In order to encrypt / decrypt chezmoi
 
-### 2️⃣ INSTALL PREREQUISITE _(Admin)_
+### 2️⃣ Install prerequisite _(Admin)_
 
 - Set execution policy to run script from URL _(Admin)_
 
@@ -90,7 +90,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisite.ps1" | iex
 ```
 
-### 3️⃣ CHEZMOI
+### 3️⃣ Chezmoi
 
 > [!IMPORTANT]
 >
@@ -104,13 +104,13 @@ chezmoi init --apply --verbose git@github.com:KevinNitroG/windows-dotfiles.git
 
 > Follow instruction of chezmoi to setup chezmoi config
 
-### 4️⃣ SET ENV PATH _(Admin)_
+### 4️⃣ Set env path _(Admin)_
 
 ```ps1
 iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/environmentVariables.ps1" | iex
 ```
 
-### 5️⃣ INSTALL SOFTWARES _(Admin)_
+### 5️⃣ Install softwares _(Admin)_
 
 - Install programming languages
 
@@ -126,13 +126,13 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
 iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares.ps1" | iex
 ```
 
-### 6️⃣ INSTALL FONTS
+### 6️⃣ Install fonts
 
 - https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
 - https://fonts.google.com/specimen/Be+Vietnam+Pro?query=be+vie
 - https://fonts.google.com/noto/specimen/Noto+Sans?query=noto
 
-### 7️⃣ INSTALL SOME CODE STUFF
+### 7️⃣ Install some code stuff
 
 ```ps1
 # prettier
@@ -195,31 +195,38 @@ irm https://massgrave.dev/get | iex
 ### Need to do
 
 - Change ownership of old folders / files
-- Install [Cursor](/.config/cursor/Windows-11-Cursor-by-rosea92/dark/regular/01. default/Install.inf)
+- Install Cursor
 - Change `Downloads`, `Desktop`,... location
 - Restore Powertoys settings
 - Winaero-tweaker
   - Disable Windows Defender
   - Disable Shortcut Arrow
 - [VisualCppRedist AIO](https://github.com/abbodi1406/vcredist/releases/latest/download/VisualCppRedist_AIO_x86_x64.exe)
+- EVKey / Unikey
 - Wakatime CLI _(Required by Terminal Powershell)_: `pip install wakatime`
 - Wakatime for Office
-  - https://github.com/wakatime/office-wakatime/releases/download/latest/ExcelSetup.zip
-  - https://github.com/wakatime/office-wakatime/releases/download/latest/PowerPointSetup.zip
-  - https://github.com/wakatime/office-wakatime/releases/download/latest/WordSetup.zip
+  - [Word](https://github.com/wakatime/office-wakatime/releases/download/latest/WordSetup.zip)
+  - [PowerPoint](https://github.com/wakatime/office-wakatime/releases/download/latest/PowerPointSetup.zip)
+  - [Excel](https://github.com/wakatime/office-wakatime/releases/download/latest/ExcelSetup.zip)
 - Chrome flags
 - MathType
-- Spotify `notepad %USERPROFILE%\AppData\Roaming\Spotify\prefs`: `storage.size=500`
+- Spotify
+  ```ps1
+  v $env:USERPROFILE\AppData\Roaming\Spotify\prefs
+  ```
+  ```diff
+  +storage.size=500
+  ```
 - Windows Settings
   - Wallpaper: https://github.com/DenverCoder1/minimalistic-wallpaper-collection
   - Touchpad Gestures _(3 & 4 fingers)_
   - DNS from NextDNS _(https://router.nextdns.io/?limit=50&stack=dual)_:
-  - IPv4:
+  - IPv4
     - `103.186.65.82`
     - `https://greencloud-sgn-1.edge.nextdns.io/`
     - `38.60.253.211`
     - `https://lightnode-sgn-1.edge.nextdns.io/`
-  - IPv6:
+  - IPv6
     - `2400:6ea0:0:1236::d6e2`
     - `https://greencloud-sgn-1.edge.nextdns.io/`
     - `2606:4700:4700::1111`
@@ -278,7 +285,7 @@ gpg --output kevinnitro-secret-gpg-key.pgp --armor --export-secret-key trannguye
 gpg --import the-key.gpg
 ```
 
-### WINDOWS
+### Windows
 
 #### View current path
 
