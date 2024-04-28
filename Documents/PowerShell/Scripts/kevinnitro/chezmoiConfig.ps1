@@ -12,7 +12,7 @@ function cms
   }
   chezmoi re-add
   Set-Location "$env:USERPROFILE/.local/share/chezmoi"
-  git commit --message "$(Get-Date -Format 'h:mm tt on d/M/y')"
+  git commit --message "$(curl -s https://whatthecommit.com/index.txt || Get-Date -Format 'h:mm tt on d/M/y')"
   git push
   # chezmoi git apply -R
   Stop-Process -Name "gpg-agent"
