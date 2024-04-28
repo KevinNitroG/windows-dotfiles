@@ -13,10 +13,10 @@
   "default_container_padding": 0,
   "default_workspace_padding": 0,
   "manage_rules": [
-    // {
-    //   "id": "Messenger.exe",
-    //   "kind": "Exe"
-    // }
+    {
+      "id": "Messenger.exe",
+      "kind": "Exe"
+    }
   ],
   "monitors": [
     {
@@ -32,7 +32,12 @@
           ]
         },
         {
+          "layout": "Grid",
           "name": "1",
+          "workspace_rules": [{ "id": "explorer.exe", "kind": "Exe" }]
+        },
+        {
+          "name": "2",
           "layout": "Grid",
           "workspace_rules": [
             { "id": "WindowsTerminal.exe", "kind": "Exe" },
@@ -40,16 +45,28 @@
             { "id": "alacritty.exe", "kind": "Exe" }
           ]
         },
-        {
-          "layout": "Grid",
-          "name": "2",
-          "workspace_rules": [{ "id": "explorer.exe", "kind": "Exe" }]
-        },
         { "name": "3", "layout": "Grid" },
         { "name": "4", "layout": "Grid" },
         { "name": "5", "layout": "Grid" },
-        { "name": "6", "layout": "Grid" },
-        { "name": "7", "layout": "Grid" },
+        {
+          "name": "6",
+          "layout": "Grid",
+          "workspace_rules": [
+            { "id": "Code.exe", "kind": "Exe" },
+            {
+              "id": "devenv.exe",
+              "kind": "Exe",
+              "matching_strategy": "StartsWith"
+            },
+            { "id": "pycharm64.exe", "kind": "Exe" },
+            { "id": "clion64.exe", "kind": "Exe" }
+          ]
+        },
+        {
+          "name": "7",
+          "layout": "Grid",
+          "workspace_rules": [{ "id": "obs64.exe", "kind": "Exe" }]
+        },
         {
           "name": "8",
           "layout": "Grid",
@@ -57,8 +74,10 @@
         },
         {
           "name": "9",
-          "layout": "Grid",
-          "workspace_rules": [{ "id": "Messenger.exe", "kind": "Exe" }]
+          "workspace_rules": [
+            { "id": "Messenger.exe", "kind": "Exe" },
+            { "id": "zalo.exe", "kind": "Exe" }
+          ]
         }
       ]
     }

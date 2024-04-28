@@ -6,14 +6,14 @@
 
 #Include komorebic.lib.ahk
 
-^!o::ReloadConfiguration()
+^<#o::ReloadConfiguration()
 
 ^<#h::Focus("left")
 ^<#j::Focus("down")
 ^<#k::Focus("up")
 ^<#l::Focus("right")
-^<#+[::CycleFocus("previous")
-^<#+]::CycleFocus("next")
+^<#[::CycleFocus("previous")
+^<#]::CycleFocus("next")
 
 ^<#+h::Move("left")
 ^<#+j::Move("down")
