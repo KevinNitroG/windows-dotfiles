@@ -55,6 +55,7 @@
 !7::FocusWorkspace(6)
 !8::FocusWorkspace(7)
 !9::FocusWorkspace(8)
+!0::FocusWorkspace(9)
 
 ![::CycleWorkspace("previous")
 !]::CycleWorkspace("next")
@@ -68,6 +69,7 @@
 !+7::MoveToWorkspace(6)
 !+8::MoveToWorkspace(7)
 !+9::MoveToWorkspace(8)
+!+0::MoveToWorkspace(9)
 
 !+[::CycleMoveToWorkspace("previous")
 !+]::CycleMoveToWorkspace("next")
