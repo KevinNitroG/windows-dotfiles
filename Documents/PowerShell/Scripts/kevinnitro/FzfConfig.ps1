@@ -8,7 +8,8 @@ Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r' -GitKeyBindings -TabExpansion
 
 Set-PSReadLineKeyHandler -Key "Ctrl+f" -ScriptBlock {
-  fzf --preview "bat --color=always {1} --style=numbers --line-range=:500 {}" --preview-label "Bat Preview" --header "FZF Preview" --header-first 
+  $file = fzf --preview "bat --color=always {1} --style=numbers --line-range=:500 {}" --preview-label "Bat Preview" --header "FZF Preview" --header-first 
+  Set-Location $(Split-Path -Path $file -Parent)
 }
 
 Set-PSReadLineKeyHandler -Key "Ctrl+g" -ScriptBlock {
@@ -23,7 +24,7 @@ Set-PSReadLineKeyHandler -Key "Ctrl+g" -ScriptBlock {
   # --bind 'enter:become(echo "{1}")'
   if ($result)
   {
-    $result.Split(':')[0]
+    Set-Location $(Split-Path -Path $result.Split(':')[0] -Parent)
   } else
   {
     "No file was selected"
