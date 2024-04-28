@@ -2,7 +2,11 @@
 
 function lfcd
 {
-  lf | Set-Location
+  lf -print-last-dir $args | Set-Location
 }
 
-Set-PSReadLineKeyHandler -Key "Ctrl+d" -ScriptBlock { lfcd }
+Set-PSReadLineKeyHandler -Key "Ctrl+Shift+d" -ScriptBlock { 
+  [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+  [Microsoft.PowerShell.PSConsoleReadLine]::Insert('lfcd')
+  [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}

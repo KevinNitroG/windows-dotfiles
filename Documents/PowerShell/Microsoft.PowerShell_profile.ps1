@@ -22,7 +22,7 @@ $env:FZF_DEFAULT_OPTS=@"
 --scroll-off=5
 --border
 --preview-window=right,60%,border-left
---bind ctrl-u:preview-up,ctrl-d:preview-down
+--bind ctrl-u:preview-up,ctrl-d:preview-down,ctrl-space:toggle-preview
 "@
 
 $env:BAT_THEME = "Catppuccin Mocha"
@@ -35,7 +35,7 @@ $env:PYTHONIOENCODING = "utf-8"
 import-module -Name PsReadLine
 Import-Module -Name CompletionPredictor
 Import-Module -Name posh-git
-# Import-Module -Name "$env:USERPROFILE\KevinNitro-Files\posh-wakatime\posh-wakatime.psm1"
+Import-Module -Name "$env:USERPROFILE\.config\wakatime\posh-wakatime\posh-wakatime.psm1"
 Import-Module -Name "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 
 # oh-my-posh
@@ -56,6 +56,15 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # Bat config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/batConfig.ps1"
+
+# Rg config
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/rgConfig.ps1"
+
+# Fd config
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/fdConfig.ps1"
+
+# Lf config
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/lfConfig.ps1"
 
 # Alias config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/setAlias.ps1"
@@ -87,9 +96,6 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # Neovim config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/neovimConfig.ps1"
-
-# Lf config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/lfConfig.ps1"
 
 # Cheat sheet from The Primeagen
 # https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-cht.sh

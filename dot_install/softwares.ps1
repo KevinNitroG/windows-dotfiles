@@ -35,7 +35,7 @@ $CHOCO_CODING_TOOLS = @(
   "lazygit",
   "fzf",
   "ripgrep",
-  "lf",
+  # "lf",
   "winfetch",
   "ffmpeg",
   "yt-dlp",
@@ -75,6 +75,7 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 
 scoop install sudo
 scoop install touch
+scoop install lf
 scoop bucket add extras
 scoop install keyviz
 scoop install sd

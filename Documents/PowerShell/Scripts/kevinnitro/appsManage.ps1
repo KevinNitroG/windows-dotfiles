@@ -5,7 +5,7 @@ $CHOCO_APPS_TO_UPGRADE = @(
   "fd",
   "fzf",
   "lazygit",
-  "lf",
+  # "lf",
   "obs-studio.install",
   "powertoys",
   "vlc",
@@ -14,6 +14,12 @@ $CHOCO_APPS_TO_UPGRADE = @(
   "delta",
   "tldr",
   "actionlint"
+)
+$SCOOP_APPS_TO_UPGRADE = @(
+  "komorebi",
+  "autohotkey",
+  "lf",
+  "sd"
 )
 $PIP_APPS_TO_UPGRADE = @(
   "thefuck",
@@ -25,10 +31,12 @@ $NPM_APPS_TO_UPGRADE = @(
   "eslint",
   "prettier"
 )
-$SCOOP_APPS_TO_UPGRADE = @(
-  "komorebi",
-  "autohotkey",
-  "sd"
+$POWERSHELL_MODULES_TO_UPDATE = @(
+  "PSReadLine",
+  "CompletionPredictor",
+  "posh-git",
+  "Terminal-Icons",
+  "posh-wakatime"
 )
 
 function List-ChocoApps
@@ -110,6 +118,12 @@ function Upgrade-PipApps
 {
   $apps_string = $PIP_APPS_TO_UPGRADE -join " "
   pip install --upgrade $apps_string
+}
+
+function Update-PowershellModules
+{
+  # Update-Module -Name $POWERSHELL_MODULES_TO_UPDATE -AcceptLicense -Force
+  Update-Module -AcceptLicense -Force
 }
 
 
