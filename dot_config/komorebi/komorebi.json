@@ -12,18 +12,59 @@
   "cross_monitor_move_behaviour": "Insert",
   "default_container_padding": 0,
   "default_workspace_padding": 0,
+  "manage_rules": [
+    // {
+    //   "id": "Messenger.exe",
+    //   "kind": "Exe"
+    // }
+  ],
   "monitors": [
     {
       "workspaces": [
-        { "name": "I", "layout": "BSP" },
-        { "name": "II", "layout": "VerticalStack" },
-        { "name": "III", "layout": "HorizontalStack" },
-        { "name": "IV", "layout": "UltrawideVerticalStack" },
-        { "name": "V", "layout": "Rows" }
+        {
+          "name": "0",
+          "layout": "Grid",
+          "workspace_rules": [
+            { "id": "chrome.exe", "kind": "Exe" },
+            { "id": "edge.exe", "kind": "Exe" },
+            { "id": "firefox.exe", "kind": "Exe" },
+            { "id": "opera.exe", "kind": "Exe" }
+          ]
+        },
+        {
+          "name": "1",
+          "layout": "Grid",
+          "workspace_rules": [
+            { "id": "WindowsTerminal.exe", "kind": "Exe" },
+            { "id": "wezterm-gui.exe", "kind": "Exe" },
+            { "id": "alacritty.exe", "kind": "Exe" }
+          ]
+        },
+        {
+          "layout": "Grid",
+          "name": "2",
+          "workspace_rules": [{ "id": "explorer.exe", "kind": "Exe" }]
+        },
+        { "name": "3", "layout": "Grid" },
+        { "name": "4", "layout": "Grid" },
+        { "name": "5", "layout": "Grid" },
+        { "name": "6", "layout": "Grid" },
+        { "name": "7", "layout": "Grid" },
+        {
+          "name": "8",
+          "layout": "Grid",
+          "workspace_rules": [{ "id": "vlc.exe", "kind": "Exe" }]
+        },
+        {
+          "name": "9",
+          "layout": "Grid",
+          "workspace_rules": [{ "id": "Messenger.exe", "kind": "Exe" }]
+        }
       ]
     }
   ],
   "mouse_follows_focus": true,
+  "resize_delta": 20,
   "window_hiding_behaviour": "Cloak",
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.22/schema.json"
 }
