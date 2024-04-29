@@ -26,7 +26,7 @@
     cob = checkout -b
     del = branch -D
     br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
-    save = !git add -A && git commit -m '🧹 chore(save): $(curl -s https://whatthecommit.com/index.txt || "save point")'
+    save = !git add -A && git commit -m \"🧹 chore(save): $(curl -s -f https://whatthecommit.com/index.txt || \"save point\")\"
     undo = reset HEAD~1 --mixed
     res = reset --hard
     done = push origin HEAD
