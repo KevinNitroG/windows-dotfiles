@@ -12,7 +12,7 @@ function cms
     gpg-connect-agent --keyboxd
   }
   chezmoi re-add
-  Set-Location "$env:USERPROFILE/.local/share/chezmoi"
+  Set-Location $(chezmoi source-path)
   git f
   # chezmoi git apply -R
   Stop-Process -Name "gpg-agent"
