@@ -1,6 +1,7 @@
 # Stand for chezmoi sync
 function cms
 {
+  $current_dir = Get-Location
   Set-Location
   if (!(Get-Process "gpg-agent" -ErrorAction SilentlyContinue))
   {
@@ -13,10 +14,10 @@ function cms
   chezmoi re-add
   Set-Location "$env:USERPROFILE/.local/share/chezmoi"
   git f
-  git push
   # chezmoi git apply -R
   Stop-Process -Name "gpg-agent"
   Stop-Process -Name "keyboxd"
+  Set-Location $current_dir
 }
 
 function Update-ChezmoiCompletion
