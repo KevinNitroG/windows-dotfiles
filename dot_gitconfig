@@ -5,59 +5,87 @@
 	editor = nvim
 	autocrlf = false
 	longpaths = true
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  # delta detects terminal colors automatically; set one of these to disable auto-detection
+  dark = true
+  # light = true
+  side-by-side = true
+  line-numbers = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+
 [user]
 	name = KevinNitroG
 	email = trannguyenthaibinh46@gmail.com
 	signingkey = C:/Users/kevinnitro/.ssh/id_rsa.pub
+
 [safe]
 	directory = E:/
 	directory = D:/My Apps
 	directory = E:/Git Repo
 	directory = C:/Users/kevinnitro/scoop/apps/scoop/current
 	directory = C:/Users/kevinnitro/scoop/buckets/main
+
 [alias]
-    s = status
-    co = checkout
-    cob = checkout -b
-    del = branch -D
-    br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
-    save = !git add -A && git commit -m \"🧹 chore(save): $(curl -s -f https://whatthecommit.com/index.txt || \"save point\")\"
-    undo = reset HEAD~1 --mixed
-    res = reset --hard
-    done = push origin HEAD
-    f = !git save && git done
-    lg = log --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]' --abbrev-commit -20
-    supup = submodule update --init --recursive
-    wdiff = diff --word-diff
-    rdiff = diff --submodule=diff
-    discard = !git checkout -- . && git submodule foreach git checkout -- .
-    head = !git r -1
-    h = !git head
-    hp = "!. ~/.githelpers && show_git_head"
-    r = !GIT_NO_PAGER=1 git l -30
-    ra = !git r --all
-    l = "!. ~/.githelpers && pretty_git_log"
-    la = !git l --all
-    b = "!. ~/.githelpers && pretty_git_branch"
-    bs = "!. ~/.githelpers && pretty_git_branch_sorted"
-    ski = !git stash --keep-index
-    cp = cherry-pick
-    pf = push --force-with-lease
+  s = status
+  co = checkout
+  cob = checkout -b
+  del = branch -D
+  br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  save = !git add -A && git commit -m \"🧹 chore(save): $(curl -s -f https://whatthecommit.com/index.txt || \"save point\")\"
+  undo = reset HEAD~1 --mixed
+  res = reset --hard
+  done = push origin HEAD
+  f = !git save && git done
+  lg = log --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]' --abbrev-commit -20
+  supup = submodule update --init --recursive
+  wdiff = diff --word-diff
+  rdiff = diff --submodule=diff
+  discard = !git checkout -- . && git submodule foreach git checkout -- .
+  head = !git r -1
+  h = !git head
+  hp = "!. ~/.githelpers && show_git_head"
+  r = !GIT_NO_PAGER=1 git l -30
+  ra = !git r --all
+  l = "!. ~/.githelpers && pretty_git_log"
+  la = !git l --all
+  b = "!. ~/.githelpers && pretty_git_branch"
+  bs = "!. ~/.githelpers && pretty_git_branch_sorted"
+  ski = !git stash --keep-index
+  cp = cherry-pick
+  pf = push --force-with-lease
+
 [gpg]
 	program = C:/Program Files (x86)/Gpg4win/../GnuPG/bin/gpg.exe
 	format = ssh
+
 [commit]
 	gpgsign = true
+
 [help]
 	autoCorrect = prompt
+
 [log]
 	date = iso
+
 [init]
 	defaultBranch = main
+
 [push]
 	autoSetupRemote = true
