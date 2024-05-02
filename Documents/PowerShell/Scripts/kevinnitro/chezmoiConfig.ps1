@@ -42,6 +42,21 @@ function cmc
   chezmoi git push
 }
 
+function cma
+{
+  param (
+    [string[]] $files
+  )
+  $current_dir = Get-Location
+  for ($i = 0; $i -lt $files.Length; $i++)
+  {
+    $files[$i] = "$($current_dir)\$($files[$i])"
+  }
+  Set-Location
+  chezmoi add $files
+  Set-Location $current_dir
+}
+
 function cmp
 {
   chezmoi git push
