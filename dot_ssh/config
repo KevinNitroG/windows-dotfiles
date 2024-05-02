@@ -1,5 +1,9 @@
+Host *
+  ServerAliveInterval 86400
+  ServerAliveCountMax 4
+
 Host github.com
-    User git
-    Port 22
-    PreferredAuthentications publickey
-    IdentityFile C:/Users/kevinnitro/.ssh/id_rsa
+  User git
+  Port 22
+  PreferredAuthentications publickey
+  IdentityFile C:/Users/kevinnitro/.ssh/id_rsa
