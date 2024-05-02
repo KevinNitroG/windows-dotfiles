@@ -1,4 +1,4 @@
-function ripgrepcd
+function rgcd
 {
   # Source: https://news.ycombinator.com/item?id=38471822
   # Ref: https://github.com/junegunn/fzf/blob/master/ADVANCED.md#using-fzf-as-the-secondary-filter
@@ -20,6 +20,6 @@ function ripgrepcd
 
 Set-PSReadLineKeyHandler -Key "Ctrl+g" -ScriptBlock {
   [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
-  [Microsoft.PowerShell.PSConsoleReadLine]::Insert('ripgrepcd')
+  [Microsoft.PowerShell.PSConsoleReadLine]::Insert("rgcd")
   [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }

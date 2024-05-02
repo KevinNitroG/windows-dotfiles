@@ -14,6 +14,6 @@ function fzfcd
 
 Set-PSReadLineKeyHandler -Key "Ctrl+f" -ScriptBlock {
   [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
-  [Microsoft.PowerShell.PSConsoleReadLine]::Insert('fzfcd')
+  [Microsoft.PowerShell.PSConsoleReadLine]::Insert("fzfcd")
   [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }

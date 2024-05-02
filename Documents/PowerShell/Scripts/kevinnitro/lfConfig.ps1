@@ -7,6 +7,6 @@ function lfcd
 
 Set-PSReadLineKeyHandler -Key "Ctrl+Shift+d" -ScriptBlock { 
   [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
-  [Microsoft.PowerShell.PSConsoleReadLine]::Insert('lfcd')
+  [Microsoft.PowerShell.PSConsoleReadLine]::Insert("lfcd")
   [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
