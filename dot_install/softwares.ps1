@@ -35,7 +35,6 @@ $CHOCO_CODING_TOOLS = @(
   "lazygit",
   "fzf",
   "ripgrep",
-  # "lf",
   "winfetch",
   "ffmpeg",
   "yt-dlp",
@@ -49,7 +48,8 @@ $CHOCO_CODING_TOOLS = @(
   "adb",
   "gh",
   "gzip",
-  "vivetool"
+  "vivetool",
+  "xh"
 )
 $CHOCO_OTHER_APPS = @(
   "itunes",

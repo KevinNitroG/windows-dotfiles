@@ -5,7 +5,6 @@ $CHOCO_APPS_TO_UPGRADE = @(
   "fd",
   "fzf",
   "lazygit",
-  # "lf",
   "obs-studio.install",
   "powertoys",
   "vlc",
@@ -13,7 +12,8 @@ $CHOCO_APPS_TO_UPGRADE = @(
   "bat",
   "delta",
   "tldr",
-  "actionlint"
+  "actionlint",
+  "xh"
 )
 $SCOOP_APPS_TO_UPGRADE = @(
   "komorebi",
