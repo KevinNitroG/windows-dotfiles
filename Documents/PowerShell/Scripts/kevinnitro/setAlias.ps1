@@ -6,3 +6,8 @@ if (Get-Command lazygit)
 }
 
 Set-Alias -Name e -Value explorer.exe
+
+if (Get-Command eza)
+{
+  Set-Alias -Name ls -Value eza
+}
