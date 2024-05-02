@@ -19,6 +19,7 @@ $SCOOP_APPS_TO_UPGRADE = @(
   "komorebi",
   "autohotkey",
   "lf",
+  "eza",
   "sd"
 )
 $PIP_APPS_TO_UPGRADE = @(

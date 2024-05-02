@@ -59,6 +59,16 @@ $CHOCO_OTHER_APPS = @(
   "winscp",
   "v2rayn"
 )
+$SCOOP_APPS = @(
+  "komorebi",
+  "autohotkey",
+  "sudo",
+  "touch",
+  "lf",
+  "keyviz",
+  "sd",
+  "eza"
+)
 
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
 Install-Module -Name CompletionPredictor -Repository PSGallery -Force
@@ -73,13 +83,7 @@ choco install $CHOCO_NECCESSARY $CHOCO_CODE_EDITOR $CHOCO_OFTEN_USE_APPS $CHOCO_
 
 winget install JanDeDobbeleer.OhMyPosh -s winget
 
-scoop install sudo
-scoop install touch
-scoop install lf
 scoop bucket add extras
-scoop install keyviz
-scoop install sd
-scoop install komorebi
-scoop install autohotkey
+scoop install $SCOOP_APPS
 
 pip install thefuck
