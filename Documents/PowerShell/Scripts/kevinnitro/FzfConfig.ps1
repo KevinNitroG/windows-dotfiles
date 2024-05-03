@@ -9,7 +9,13 @@ Set-PsFzfOption -PSReadlineChordProvider "Ctrl+e" -PSReadlineChordReverseHistory
 function fzfcd
 {
   $file = fzf --preview "bat --color=always {1} --style=numbers --line-range=:500 {}" --preview-label "Bat Preview" --header "FZF Preview" --header-first 
-  Set-Location $(Split-Path -Path $file -Parent)
+  if ($file)
+  {
+    Set-Location $(Split-Path -Path $file -Parent)
+  } else
+  {
+    Write-Host "No file was selected"
+  }
 }
 
 Set-PSReadLineKeyHandler -Key "Ctrl+f" -ScriptBlock {
