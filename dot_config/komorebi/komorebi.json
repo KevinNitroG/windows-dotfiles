@@ -71,7 +71,10 @@
         {
           "name": "8",
           "layout": "Grid",
-          "workspace_rules": [{ "id": "vlc.exe", "kind": "Exe" }]
+          "workspace_rules": [
+            { "id": "vlc.exe", "kind": "Exe" },
+            { "id": "Spotify.exe", "kind": "Exe" }
+          ]
         },
         {
           "name": "9",
