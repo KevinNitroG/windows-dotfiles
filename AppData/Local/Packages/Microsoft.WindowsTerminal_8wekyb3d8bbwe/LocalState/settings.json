@@ -30,6 +30,38 @@
         {
             "command": 
             {
+                "action": "moveTab",
+                "direction": "forward"
+            },
+            "keys": "alt+shift+period"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "command": 
+            {
+                "action": "movePane",
+                "index": 6
+            },
+            "keys": "alt+shift+7"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 7
+            },
+            "keys": "ctrl+8"
+        },
+        {
+            "command": 
+            {
                 "action": "splitPane",
                 "split": "down"
             },
@@ -125,10 +157,6 @@
         },
         {
             "command": "unbound",
-            "keys": "ctrl+tab"
-        },
-        {
-            "command": "unbound",
             "keys": "ctrl+shift+space"
         },
         {
@@ -138,10 +166,6 @@
         {
             "command": "unbound",
             "keys": "ctrl+comma"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+shift+tab"
         },
         {
             "command": "unbound",
@@ -276,48 +300,12 @@
             "keys": "alt+shift+up"
         },
         {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 7
-            },
-            "keys": "ctrl+8"
+            "command": "unbound",
+            "keys": "ctrl+["
         },
         {
-            "command": 
-            {
-                "action": "movePane",
-                "index": 6
-            },
-            "keys": "alt+shift+7"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+shift+c"
-        },
-        {
-            "command": 
-            {
-                "action": "moveTab",
-                "direction": "forward"
-            },
-            "keys": "alt+shift+period"
-        },
-        {
-            "command": 
-            {
-                "action": "moveTab",
-                "window": "new"
-            },
-            "keys": "alt+n"
-        },
-        {
-            "command": "toggleAlwaysOnTop",
-            "keys": "alt+shift+t"
+            "command": "unbound",
+            "keys": "ctrl+]"
         },
         {
             "command": 
@@ -326,6 +314,18 @@
                 "index": 9
             },
             "keys": "ctrl+9"
+        },
+        {
+            "command": "toggleAlwaysOnTop",
+            "keys": "alt+shift+t"
+        },
+        {
+            "command": 
+            {
+                "action": "moveTab",
+                "window": "new"
+            },
+            "keys": "alt+n"
         },
         {
             "command": "paste",
@@ -350,14 +350,6 @@
         {
             "command": 
             {
-                "action": "resizePane",
-                "direction": "left"
-            },
-            "keys": "alt+left"
-        },
-        {
-            "command": 
-            {
                 "action": "newTab",
                 "index": 4
             },
@@ -366,6 +358,14 @@
         {
             "command": "find",
             "keys": "ctrl+shift+f"
+        },
+        {
+            "command": 
+            {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "keys": "alt+left"
         },
         {
             "command": 
@@ -416,7 +416,7 @@
             {
                 "action": "prevTab"
             },
-            "keys": "ctrl+["
+            "keys": "ctrl+shift+tab"
         },
         {
             "command": 
@@ -436,18 +436,18 @@
         {
             "command": 
             {
-                "action": "switchToTab",
-                "index": 6
-            },
-            "keys": "ctrl+7"
-        },
-        {
-            "command": 
-            {
                 "action": "movePane",
                 "index": 7
             },
             "keys": "alt+shift+8"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 6
+            },
+            "keys": "ctrl+7"
         },
         {
             "command": 
@@ -476,18 +476,18 @@
         {
             "command": 
             {
-                "action": "newTab",
-                "index": 5
-            },
-            "keys": "ctrl+shift+6"
-        },
-        {
-            "command": 
-            {
                 "action": "splitPane",
                 "split": "right"
             },
             "keys": "alt+o"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 5
+            },
+            "keys": "ctrl+shift+6"
         },
         {
             "command": 
@@ -498,16 +498,16 @@
             "keys": "alt+y"
         },
         {
+            "command": "scrollDownPage",
+            "keys": "alt+d"
+        },
+        {
             "command": 
             {
                 "action": "newTab",
                 "index": 6
             },
             "keys": "ctrl+shift+7"
-        },
-        {
-            "command": "scrollDownPage",
-            "keys": "alt+d"
         },
         {
             "command": 
@@ -519,18 +519,18 @@
         {
             "command": 
             {
-                "action": "newTab",
-                "index": 0
-            },
-            "keys": "ctrl+shift+1"
-        },
-        {
-            "command": 
-            {
                 "action": "moveFocus",
                 "direction": "left"
             },
             "keys": "alt+h"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 0
+            },
+            "keys": "ctrl+shift+1"
         },
         {
             "command": 
@@ -549,13 +549,6 @@
             "keys": "alt+k"
         },
         {
-            "command": 
-            {
-                "action": "closeOtherTabs"
-            },
-            "keys": "alt+shift+q"
-        },
-        {
             "command": "openTabRenamer",
             "keys": "ctrl+f2"
         },
@@ -566,6 +559,13 @@
                 "direction": "down"
             },
             "keys": "alt+down"
+        },
+        {
+            "command": 
+            {
+                "action": "closeOtherTabs"
+            },
+            "keys": "alt+shift+q"
         },
         {
             "command": 
@@ -588,17 +588,17 @@
         {
             "command": 
             {
-                "action": "openSettings",
-                "target": "settingsUI"
+                "action": "nextTab"
             },
-            "keys": "alt+comma"
+            "keys": "ctrl+tab"
         },
         {
             "command": 
             {
-                "action": "nextTab"
+                "action": "openSettings",
+                "target": "settingsUI"
             },
-            "keys": "ctrl+]"
+            "keys": "alt+comma"
         },
         {
             "command": 
@@ -612,17 +612,21 @@
             "command": 
             {
                 "action": "swapPane",
-                "direction": "down"
+                "direction": "left"
             },
-            "keys": "alt+shift+j"
+            "keys": "alt+shift+h"
         },
         {
             "command": 
             {
                 "action": "swapPane",
-                "direction": "left"
+                "direction": "down"
             },
-            "keys": "alt+shift+h"
+            "keys": "alt+shift+j"
+        },
+        {
+            "command": "openWindowRenamer",
+            "keys": "alt+shift+f2"
         },
         {
             "command": 
@@ -631,10 +635,6 @@
                 "index": 2
             },
             "keys": "ctrl+shift+3"
-        },
-        {
-            "command": "openWindowRenamer",
-            "keys": "alt+shift+f2"
         },
         {
             "command": 
