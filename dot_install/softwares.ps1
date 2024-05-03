@@ -15,9 +15,9 @@ $CHOCO_CODE_EDITOR = @(
   "sublimetext3"
 )
 $CHOCO_OFTEN_USE_APPS = @(
-  "powertoys ",
-  "everything",
-  "everythingpowertoys",
+  "powertoys",
+  # "everything",
+  # "everythingpowertoys",
   "warp",
   "vlc",
   # "spotify",
