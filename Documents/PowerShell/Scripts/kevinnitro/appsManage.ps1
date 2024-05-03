@@ -65,7 +65,6 @@ function Select-Apps
 
 function Upgrade-ChocoApps
 {
-  Write-Host "Please run with Administrator permission"
   $apps_set = New-Object System.Collections.Generic.HashSet[[String]]
   $installed_apps = List-ChocoApps
   foreach ($app in Select-Apps $installed_apps)
@@ -84,7 +83,19 @@ function Upgrade-ChocoApps
     }
   }
   $apps_string = ($apps_set -split ",")
-  choco upgrade $apps_string -y
+  if (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))
+  {
+    choco upgrade $apps_string -y
+  } else
+  {
+    if (Get-Command sudo -ErrorAction SilentlyContinue)
+    {
+      sudo choco upgrade $apps_string -y
+    } else
+    {
+      Write-Host "Please run with administrator privileges"
+    }
+  }
 }
 
 function Upgrade-ScoopApps
