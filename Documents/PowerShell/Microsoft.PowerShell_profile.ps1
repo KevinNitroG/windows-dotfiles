@@ -52,25 +52,25 @@ Invoke-Expression "$(thefuck --alias)"
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # PSReadLine config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/PSReadLineConfig.ps1"
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/PSReadLine.ps1"
 
 # fzf config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/FzfConfig.ps1"
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/Fzf.ps1"
 
 # Bat config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/batConfig.ps1"
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/bat.ps1"
 
 # Rg config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/rgConfig.ps1"
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/rg.ps1"
 
 # Fd config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/fdConfig.ps1"
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/fd.ps1"
 
 # Lf config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/lfConfig.ps1"
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/lf.ps1"
 
 # Eza config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/ezaConfig.ps1"
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/eza.ps1"
 
 # Alias config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/setAlias.ps1"
@@ -95,13 +95,13 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 . "$env:USERPROFILE/Documents/PowerShell/Modules/chezmoi/completion.ps1"
 
 # Chezmoi config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/chezmoiConfig.ps1"
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/chezmoi.ps1"
 
 # Apps manage
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/appsManage.ps1"
 
 # Neovim config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/neovimConfig.ps1"
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/neovim.ps1"
 
 # Cheat sheet from The Primeagen
 # https://github.com/ThePrimeagen/.dotfiles/blob/master/bin/.local/scripts/tmux-cht.sh
@@ -111,7 +111,7 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/linuxLike.ps1"
 
 # Komorebi config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/komorebiConfig.ps1"
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/komorebi.ps1"
 
 # Utils
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/utils.ps1"
