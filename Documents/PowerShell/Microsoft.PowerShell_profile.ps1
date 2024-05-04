@@ -115,3 +115,5 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # Utils
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/utils.ps1"
+
+fastfetch --config "$env:USERPROFILE/.config/fastfetch/preset.jsonc"
