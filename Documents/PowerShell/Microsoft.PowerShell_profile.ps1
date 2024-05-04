@@ -66,6 +66,9 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # Lf config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/lfConfig.ps1"
 
+# Eza config
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/ezaConfig.ps1"
+
 # Alias config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/setAlias.ps1"
 
