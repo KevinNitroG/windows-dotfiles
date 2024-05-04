@@ -6,4 +6,4 @@ function Invoke-Starship-TransientFunction
 
 Invoke-Expression (&starship init powershell)
 
-Enable-TransientPrompt
+# Enable-TransientPrompt # Disable due to conflict and no use when using with zoxide
