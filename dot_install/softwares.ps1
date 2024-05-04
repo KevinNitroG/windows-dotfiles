@@ -81,7 +81,7 @@ choco install $CHOCO_NECCESSARY $CHOCO_CODE_EDITOR $CHOCO_OFTEN_USE_APPS $CHOCO_
 
 # INSTALL OH-MY-POSH
 
-winget install JanDeDobbeleer.OhMyPosh -s winget
+# winget install JanDeDobbeleer.OhMyPosh -s winget
 
 scoop bucket add extras
 scoop install $SCOOP_APPS
