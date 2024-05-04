@@ -45,6 +45,9 @@ Import-Module -Name "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 # Thefuck
 Invoke-Expression "$(thefuck --alias)"
 
+# Starship config
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/starship.ps1"
+
 # zoxide
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
@@ -68,9 +71,6 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # Eza config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/ezaConfig.ps1"
-
-# Starship config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/starship.ps1"
 
 # Alias config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/setAlias.ps1"
