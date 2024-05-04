@@ -3,34 +3,21 @@
 [![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/KevinNitroG/windows-dotfiles?style=for-the-badge&color=CAEDFF)](../../commits/main)
 ![GitHub repo size](https://img.shields.io/github/repo-size/KevinNitroG/windows-dotfiles?style=for-the-badge&color=D8B4F8)
 
-```python
-> fastfetch
-                                          ╭───────────╮
-  /////////////////  /////////////////    │  user    │ kevinnitro
-  /////////////////  /////////////////    │ 󰇅 hname   │ Kevostro-Windows
-  /////////////////  /////////////////    │ 󰅐 uptime  │ 1 day, 15 hours, 23 mins
-  /////////////////  /////////////////    │ 󰟾 distro  │ Windows 11 (Home) x86_64
-  /////////////////  /////////////////    │  kernel  │ 10.0.22631.3447 (23H2)
-  /////////////////  /////////////////    │ 󰇄 desktop │ Fluent
-  /////////////////  /////////////////    │  term    │ Windows Terminal 1.19.10821.0
-  /////////////////  /////////////////    │  shell   │ PowerShell 7.4.2
-                                          │ 󰍛 cpu     │ 11th Gen Intel(R) Core(TM) i5-11320H (8) @ 4.50 GHz
-  /////////////////  /////////////////    │ 󰉉 disk    │ 145.60 GiB / 250.00 GiB (58%) - NTFS
-  /////////////////  /////////////////    │  memory  │ 8.08 GiB / 23.75 GiB (34%)
-  /////////////////  /////////////////    │ 󰩟 network │ 192.168.28.24/24 (Wi-Fi)
-  /////////////////  /////////////////    ├───────────┤
-  /////////////////  /////////////////    │  colors  │ ● ● ● ● ● ● ● ●
-  /////////////////  /////////////////    ╰───────────╯
-  /////////////////  /////////////////
-  /////////////////  /////////////////
-```
-
 ---
 
 ## Table of Contents
 
 - [KEVINNITRO WINDOWS DOTFILES](#kevinnitro-windows-dotfiles)
   - [Table of Contents](#table-of-contents)
+  - [😎 PREVIEW](#-preview)
+    - [Terminal](#terminal)
+    - [Check Wifi Password](#check-wifi-password)
+    - [App Manage](#app-manage)
+    - [Change directory schemes](#change-directory-schemes)
+      - [fzfcd](#fzfcd)
+      - [rgcd](#rgcd)
+      - [fdcd](#fdcd)
+      - [lfcd](#lfcd)
   - [🪴 USE](#-use)
     - [1️⃣ Add SSH](#1️⃣-add-ssh)
     - [2️⃣ Install prerequisite _(Admin)_](#2️⃣-install-prerequisite-admin)
@@ -52,6 +39,54 @@
       - [View current path](#view-current-path)
       - [Variables](#variables)
       - [Others](#others-1)
+
+## 😎 PREVIEW
+
+### Terminal
+
+![Terminal Preview](assets/images/preview_terminal.png)
+
+### Check Wifi Password
+
+|                            **SELECT**                             |                             **SHOWN**                             |
+| :---------------------------------------------------------------: | :---------------------------------------------------------------: |
+| ![Check Wifi Password 1](assets/images/check_wifi_password-1.png) | ![Check Wifi Password 2](assets/images/check_wifi_password-2.png) |
+
+> [!NOTE]
+> Using FZF if installed. Worked even without FZF but I'm lazy to show.
+
+### App Manage
+
+|  **PM**   |                         **UPGRADE**                          |                          **UNINSTALL**                           |
+| :-------: | :----------------------------------------------------------: | :--------------------------------------------------------------: |
+| **CHOCO** | ![Choco upgrade](assets/images/app_manage-choco-upgrade.png) | ![Choco uninstall](assets/images/app_manage-choco-uninstall.png) |
+| **SCOOP** | ![Scoop upgrade](assets/images/app_manage-scoop-upgrade.png) | ![Scoop uninstall](assets/images/app_manage-scoop-uninstall.png) |
+
+> [!NOTE]
+>
+> Mange via Package Managers
+
+> [!IMPORTANT]
+>
+> Need FZF
+
+### Change directory schemes
+
+#### fzfcd
+
+[![fzfcd](assets/images/cd-fzfcd.png)](https://github.com/junegunn/fzf/)
+
+#### rgcd
+
+[![rgcd](assets/images/cd-rgcd.png)](https://github.com/BurntSushi/ripgrep/)
+
+#### fdcd
+
+[![fdcd](assets/images/cd-fdcd.png)](https://github.com/sharkdp/fd/)
+
+#### lfcd
+
+[![lfcd](assets/images/cd-lfcd.png)](https://github.com/gokcehan/lf/)
 
 ## 🪴 USE
 
