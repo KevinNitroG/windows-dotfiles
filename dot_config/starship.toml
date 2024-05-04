@@ -23,7 +23,7 @@ $python\
 $docker_context\
 $conda\
 [](fg:blue bg:lavender)\
-$time\
+$cmd_duration\
 [ ](fg:lavender)\
 $line_break$character"""
 
@@ -165,10 +165,19 @@ style = "bg:blue"
 format = '[[ $symbol( $environment) ](fg:#83a598 bg:blue)]($style)'
 
 [time]
-disabled = false
+disabled = true
 time_format = "%R"
 style = "bg:color_bg1"
 format = '[[  $time ](fg:surface0 bg:lavender)]($style)'
+
+[cmd_duration]
+disabled = false
+min_time = 2_000
+show_milliseconds = false
+show_notifications = false
+min_time_to_notify = 300_000
+style = "bg:color_bg1"
+format = '[[   $duration ](fg:surface0 bg:lavender)]($style)'
 
 [line_break]
 disabled = false
