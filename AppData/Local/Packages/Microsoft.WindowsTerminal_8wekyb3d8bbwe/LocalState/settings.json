@@ -30,38 +30,6 @@
         {
             "command": 
             {
-                "action": "moveTab",
-                "direction": "forward"
-            },
-            "keys": "alt+shift+period"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+shift+c"
-        },
-        {
-            "command": 
-            {
-                "action": "movePane",
-                "index": 6
-            },
-            "keys": "alt+shift+7"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 7
-            },
-            "keys": "ctrl+8"
-        },
-        {
-            "command": 
-            {
                 "action": "splitPane",
                 "split": "down"
             },
@@ -311,13 +279,33 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 9
+                "index": 7
             },
-            "keys": "ctrl+9"
+            "keys": "ctrl+8"
         },
         {
-            "command": "toggleAlwaysOnTop",
-            "keys": "alt+shift+t"
+            "command": 
+            {
+                "action": "movePane",
+                "index": 6
+            },
+            "keys": "alt+shift+7"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "command": 
+            {
+                "action": "moveTab",
+                "direction": "forward"
+            },
+            "keys": "alt+shift+period"
         },
         {
             "command": 
@@ -326,6 +314,18 @@
                 "window": "new"
             },
             "keys": "alt+n"
+        },
+        {
+            "command": "toggleAlwaysOnTop",
+            "keys": "alt+shift+t"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 9
+            },
+            "keys": "ctrl+9"
         },
         {
             "command": "paste",
@@ -350,6 +350,14 @@
         {
             "command": 
             {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "keys": "alt+left"
+        },
+        {
+            "command": 
+            {
                 "action": "newTab",
                 "index": 4
             },
@@ -358,14 +366,6 @@
         {
             "command": "find",
             "keys": "ctrl+shift+f"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "left"
-            },
-            "keys": "alt+left"
         },
         {
             "command": 
@@ -436,18 +436,18 @@
         {
             "command": 
             {
-                "action": "movePane",
-                "index": 7
-            },
-            "keys": "alt+shift+8"
-        },
-        {
-            "command": 
-            {
                 "action": "switchToTab",
                 "index": 6
             },
             "keys": "ctrl+7"
+        },
+        {
+            "command": 
+            {
+                "action": "movePane",
+                "index": 7
+            },
+            "keys": "alt+shift+8"
         },
         {
             "command": 
@@ -476,18 +476,18 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "right"
-            },
-            "keys": "alt+o"
-        },
-        {
-            "command": 
-            {
                 "action": "newTab",
                 "index": 5
             },
             "keys": "ctrl+shift+6"
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "right"
+            },
+            "keys": "alt+o"
         },
         {
             "command": 
@@ -498,16 +498,16 @@
             "keys": "alt+y"
         },
         {
-            "command": "scrollDownPage",
-            "keys": "alt+d"
-        },
-        {
             "command": 
             {
                 "action": "newTab",
                 "index": 6
             },
             "keys": "ctrl+shift+7"
+        },
+        {
+            "command": "scrollDownPage",
+            "keys": "alt+d"
         },
         {
             "command": 
@@ -519,18 +519,18 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "left"
-            },
-            "keys": "alt+h"
-        },
-        {
-            "command": 
-            {
                 "action": "newTab",
                 "index": 0
             },
             "keys": "ctrl+shift+1"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "alt+h"
         },
         {
             "command": 
@@ -549,6 +549,13 @@
             "keys": "alt+k"
         },
         {
+            "command": 
+            {
+                "action": "closeOtherTabs"
+            },
+            "keys": "alt+shift+q"
+        },
+        {
             "command": "openTabRenamer",
             "keys": "ctrl+f2"
         },
@@ -559,13 +566,6 @@
                 "direction": "down"
             },
             "keys": "alt+down"
-        },
-        {
-            "command": 
-            {
-                "action": "closeOtherTabs"
-            },
-            "keys": "alt+shift+q"
         },
         {
             "command": 
@@ -588,17 +588,17 @@
         {
             "command": 
             {
-                "action": "nextTab"
-            },
-            "keys": "ctrl+tab"
-        },
-        {
-            "command": 
-            {
                 "action": "openSettings",
                 "target": "settingsUI"
             },
             "keys": "alt+comma"
+        },
+        {
+            "command": 
+            {
+                "action": "nextTab"
+            },
+            "keys": "ctrl+tab"
         },
         {
             "command": 
@@ -612,21 +612,17 @@
             "command": 
             {
                 "action": "swapPane",
-                "direction": "left"
-            },
-            "keys": "alt+shift+h"
-        },
-        {
-            "command": 
-            {
-                "action": "swapPane",
                 "direction": "down"
             },
             "keys": "alt+shift+j"
         },
         {
-            "command": "openWindowRenamer",
-            "keys": "alt+shift+f2"
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "left"
+            },
+            "keys": "alt+shift+h"
         },
         {
             "command": 
@@ -635,6 +631,10 @@
                 "index": 2
             },
             "keys": "ctrl+shift+3"
+        },
+        {
+            "command": "openWindowRenamer",
+            "keys": "alt+shift+f2"
         },
         {
             "command": 
@@ -856,7 +856,7 @@
             "adjustIndistinguishableColors": "indexed",
             "antialiasingMode": "grayscale",
             "backgroundImage": "desktopWallpaper",
-            "backgroundImageOpacity": 0.05,
+            "backgroundImageOpacity": 0.02,
             "bellStyle": 
             [
                 "window",
@@ -867,12 +867,12 @@
             "experimental.retroTerminalEffect": false,
             "font": 
             {
-                "face": "JetBrainsMono Nerd Font",
+                "face": "JetBrainsMono NF",
                 "size": 13.0,
                 "weight": "normal"
             },
             "intenseTextStyle": "bold",
-            "opacity": 40,
+            "opacity": 90,
             "padding": "2,2,-10,0",
             "scrollbarState": "visible",
             "useAcrylic": true,
@@ -881,13 +881,11 @@
         "list": 
         [
             {
-                "backgroundImageOpacity": 0.03,
                 "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
                 "guid": "{67cdaf64-a238-4543-9af0-11508d30e28c}",
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/pwsh.png",
                 "name": "PowerShell 7",
-                "opacity": 95,
                 "startingDirectory": "%USERPROFILE%"
             },
             {
