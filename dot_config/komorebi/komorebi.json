@@ -158,7 +158,7 @@
       ]
     }
   ],
-  "mouse_follows_focus": true,
+  "mouse_follows_focus": false,
   "resize_delta": 20,
   "window_hiding_behaviour": "Cloak",
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.22/schema.json"
