@@ -67,7 +67,8 @@ $SCOOP_APPS = @(
   "lf",
   "keyviz",
   "sd",
-  "eza"
+  "eza",
+  "fastfetch"
 )
 
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck

@@ -16,11 +16,14 @@ $CHOCO_APPS_TO_UPGRADE = @(
   "xh"
 )
 $SCOOP_APPS_TO_UPGRADE = @(
+  "sudo",
+  "touch",
   "komorebi",
   "autohotkey",
   "lf",
   "eza",
-  "sd"
+  "sd",
+  "fastfetch"
 )
 $PIP_APPS_TO_UPGRADE = @(
   "thefuck",
