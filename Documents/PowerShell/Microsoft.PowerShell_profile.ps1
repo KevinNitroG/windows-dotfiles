@@ -82,7 +82,7 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/spicetifyUpdate.ps1"
 
 # Update oh-my-posh
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/updateOhMyPosh.ps1"
+# . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/updateOhMyPosh.ps1"
 
 # Check wifi password
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/checkWifiPassword.ps1"
@@ -116,4 +116,5 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # Utils
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/utils.ps1"
 
-fastfetch --config "$env:USERPROFILE/.config/fastfetch/preset.jsonc"
+# Fastfetch
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/fastfetch.ps1"
