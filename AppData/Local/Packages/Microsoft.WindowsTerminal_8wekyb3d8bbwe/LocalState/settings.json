@@ -881,7 +881,7 @@
         "list": 
         [
             {
-                "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+                "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe -NoLogo",
                 "guid": "{67cdaf64-a238-4543-9af0-11508d30e28c}",
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/pwsh.png",
@@ -950,6 +950,14 @@
                 "hidden": true,
                 "name": "Visual Studio Debug Console",
                 "source": "VSDebugConsole"
+            },
+            {
+                "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe -NoLogo -NoProfile ",
+                "guid": "{bfca2454-4bbd-4d59-92b5-c971e60ee823}",
+                "hidden": false,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "PowerShell 7 (No Profile)",
+                "startingDirectory": "%USERPROFILE%"
             }
         ]
     },
