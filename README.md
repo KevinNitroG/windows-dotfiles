@@ -3,27 +3,26 @@
 [![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/KevinNitroG/windows-dotfiles?style=for-the-badge&color=CAEDFF)](../../commits/main)
 ![GitHub repo size](https://img.shields.io/github/repo-size/KevinNitroG/windows-dotfiles?style=for-the-badge&color=D8B4F8)
 
-```fastfetch.ps1
+```python
 > fastfetch
-
-/////////////////  /////////////////    kevinnitro@Kevostro-Windows
-/////////////////  /////////////////    ---------------------------
-/////////////////  /////////////////    OS: Windows 11 (Home) x86_64
-/////////////////  /////////////////    Host: Vostro 14 5410
-/////////////////  /////////////////    Kernel: 10.0.22631.3447 (23H2)
-/////////////////  /////////////////    Packages: 8 (scoop), 98 (choco)
-/////////////////  /////////////////    Shell: PowerShell 7.4.2
-/////////////////  /////////////////    Display (AUO5491): 1920x1080 @ 60Hz (as 1536x864) [Built-in]
-                                        DE: Fluent
-/////////////////  /////////////////    WM: Desktop Window Manager
-/////////////////  /////////////////    WM Theme: Custom - Blue (System: Dark, Apps: Dark)
-/////////////////  /////////////////    Font: Segoe UI (12pt) [Caption / Menu / Message / Status]
-/////////////////  /////////////////    Cursor: W11 Cursors Dark HDPI default by Jepri Creations (32px)
-/////////////////  /////////////////    Terminal: Windows Terminal 1.19.10821.0
-/////////////////  /////////////////    Terminal Font: JetBrainsMono Nerd Font (13pt)
-/////////////////  /////////////////    CPU: 11th Gen Intel(R) Core(TM) i5-11320H (8) @ 2.50 GHz
-/////////////////  /////////////////    GPU: Intel(R) Iris(R) Xe Graphics (128.00 MiB) [Integrated]
-                                        Memory: 6.92 GiB / 23.75 GiB (29%)
+                                          ╭───────────╮
+  /////////////////  /////////////////    │  user    │ kevinnitro
+  /////////////////  /////////////////    │ 󰇅 hname   │ Kevostro-Windows
+  /////////////////  /////////////////    │ 󰅐 uptime  │ 1 day, 15 hours, 23 mins
+  /////////////////  /////////////////    │ 󰟾 distro  │ Windows 11 (Home) x86_64
+  /////////////////  /////////////////    │  kernel  │ 10.0.22631.3447 (23H2)
+  /////////////////  /////////////////    │ 󰇄 desktop │ Fluent
+  /////////////////  /////////////////    │  term    │ Windows Terminal 1.19.10821.0
+  /////////////////  /////////////////    │  shell   │ PowerShell 7.4.2
+                                          │ 󰍛 cpu     │ 11th Gen Intel(R) Core(TM) i5-11320H (8) @ 4.50 GHz
+  /////////////////  /////////////////    │ 󰉉 disk    │ 145.60 GiB / 250.00 GiB (58%) - NTFS
+  /////////////////  /////////////////    │  memory  │ 8.08 GiB / 23.75 GiB (34%)
+  /////////////////  /////////////////    │ 󰩟 network │ 192.168.28.24/24 (Wi-Fi)
+  /////////////////  /////////////////    ├───────────┤
+  /////////////////  /////////////////    │  colors  │ ● ● ● ● ● ● ● ●
+  /////////////////  /////////////////    ╰───────────╯
+  /////////////////  /////////////////
+  /////////////////  /////////////////
 ```
 
 ---
