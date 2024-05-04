@@ -71,8 +71,8 @@ function Upgrade-ChocoApps
   {
     $apps_set.Add($app) >$null
   }
-  $include = Read-Host "Include predefine apps to update [Y/n]"
-  if ($include)
+  $include = $(Read-Host "Include predefine apps to update [Y/n]").ToUpper()
+  if ($include -eq "Y" -or $include -eq "")
   {
     foreach ($app in $CHOCO_APPS_TO_UPGRADE)
     {
@@ -82,18 +82,21 @@ function Upgrade-ChocoApps
       }
     }
   }
-  $apps_string = ($apps_set -split ",")
-  if (New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator))
+  if ($apps_set.Length)
   {
-    choco upgrade $apps_string -y
-  } else
-  {
-    if (Get-Command sudo -ErrorAction SilentlyContinue)
+    $apps_string = ($apps_set -split ",")
+    if (Check-IsAdmin)
     {
-      sudo choco upgrade $apps_string -y
+      choco upgrade $apps_string -y
     } else
     {
-      Write-Host "Please run with administrator privileges"
+      if (Get-Command sudo -ErrorAction SilentlyContinue)
+      {
+        sudo choco upgrade $apps_string -y
+      } else
+      {
+        Write-Host "Please run with administrator privileges"
+      }
     }
   }
 }
@@ -106,8 +109,8 @@ function Upgrade-ScoopApps
   {
     $apps_set.Add($app) >$null
   }
-  $include = Read-Host "Include predefine apps to update [Y/n]: "
-  if ($include)
+  $include = $(Read-Host "Include predefine apps to update [Y/n]").ToUpper()
+  if ($include -eq "Y" -or $include -eq "")
   {
     foreach ($app in $SCOOP_APPS_TO_UPGRADE)
     {
@@ -117,8 +120,14 @@ function Upgrade-ScoopApps
       }
     }
   }
-  $apps_string = ($apps_set -split ",")
-  scoop upgrade $apps_string
+  if ($apps_set.Length)
+  {
+    $apps_string = ($apps_set -split ",")
+    scoop update $apps_string
+  } else
+  {
+    Write-Host "No app was selected to update"
+  }
 }
 function Upgrade-NpmApps
 {

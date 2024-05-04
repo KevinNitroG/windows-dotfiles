@@ -105,9 +105,10 @@ function uptime
 
 function Reload-Profile
 {
-  # . $profile
-  pwsh
+  . $PROFILE
 }
+
+Set-Alias -Name rl -Value Reload-Profile
 
 function find-file($name)
 {
@@ -182,3 +183,9 @@ function which ($command)
     Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
+function Check-IsAdmin
+{
+  $user    = [Security.Principal.WindowsIdentity]::GetCurrent()
+  $isAdmin = (New-Object Security.Principal.WindowsPrincipal $user).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
+  return $isAdmin
+}

@@ -5,7 +5,7 @@
 # $env:CPLUS_INCLUDE_PATH = "C:/ProgramData/mingw64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32;C:/Program Files/LLVM/lib/clang/18/include;C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/include;C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/atlmfc/include"
 $env:EDITOR = "v"
 $env:VISUAL = "code"
-$env:OHMYPOSH_THEME = "star"
+# $env:OHMYPOSH_THEME = "catppuccin" # star
 $env:DEFAULT_NVIM_CONFIG = "nvim-alexis12119"
 $env:NVIM_CONFIGS = @(
   "nvim-alexis12119",
@@ -39,7 +39,7 @@ Import-Module -Name "$env:USERPROFILE\.config\wakatime\posh-wakatime\posh-wakati
 Import-Module -Name "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 
 # oh-my-posh
-oh-my-posh init pwsh --config "$env:LOCALAPPDATA/Programs/oh-my-posh/themes/$env:OHMYPOSH_THEME.omp.json" | Invoke-Expression
+# oh-my-posh init pwsh --config "$env:LOCALAPPDATA/Programs/oh-my-posh/themes/$env:OHMYPOSH_THEME.omp.json" | Invoke-Expression
 # oh-my-posh init pwsh --config "$env:USERPROFILE/.config/ohmyposh/themes/kevinnitro.omp.json" | Invoke-Expression
 
 # Thefuck
@@ -68,6 +68,9 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # Eza config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/ezaConfig.ps1"
+
+# Starship config
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/starship.ps1"
 
 # Alias config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/setAlias.ps1"

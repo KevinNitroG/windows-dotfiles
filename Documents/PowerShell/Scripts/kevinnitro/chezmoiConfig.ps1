@@ -39,7 +39,10 @@ function cmc
   {
     chezmoi git commit
   }
-  chezmoi git push
+  if ($LASTEXITCODE -eq 0)
+  {
+    chezmoi git push
+  }
 }
 
 function cma
