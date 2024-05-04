@@ -14,10 +14,6 @@
     - [Check Wifi Password](#check-wifi-password)
     - [App Manage](#app-manage)
     - [Change directory schemes](#change-directory-schemes)
-      - [fzfcd](#fzfcd)
-      - [rgcd](#rgcd)
-      - [fdcd](#fdcd)
-      - [lfcd](#lfcd)
   - [🪴 USE](#-use)
     - [1️⃣ Add SSH](#1️⃣-add-ssh)
     - [2️⃣ Install prerequisite _(Admin)_](#2️⃣-install-prerequisite-admin)
@@ -72,21 +68,12 @@
 
 ### Change directory schemes
 
-#### fzfcd
-
-[![fzfcd](assets/images/cd-fzfcd.png)](https://github.com/junegunn/fzf/)
-
-#### rgcd
-
-[![rgcd](assets/images/cd-rgcd.png)](https://github.com/BurntSushi/ripgrep/)
-
-#### fdcd
-
-[![fdcd](assets/images/cd-fdcd.png)](https://github.com/sharkdp/fd/)
-
-#### lfcd
-
-[![lfcd](assets/images/cd-lfcd.png)](https://github.com/gokcehan/lf/)
+|                                         |                                                   |
+| :-------------------------------------: | :-----------------------------------------------: |
+|  ![fzfcd](assets/images/cd-fzfcd.png)   |        ![rgcd](assets/images/cd-rgcd.png)         |
+| [fzf](https://github.com/junegunn/fzf/) | [ripgrep](https://github.com/BurntSushi/ripgrep/) |
+|   ![fdcd](assets/images/cd-fdcd.png)    |        ![lfcd](assets/images/cd-lfcd.png)         |
+|  [fd](https://github.com/sharkdp/fd/)   |       [lf](https://github.com/gokcehan/lf/)       |
 
 ## 🪴 USE
 
