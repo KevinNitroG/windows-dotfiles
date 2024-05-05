@@ -164,15 +164,15 @@ function Uninstall-ChocoApps
   if (Check-IsAdmin)
   {
     choco uninstall $apps -y
-  }
-} else
-{
-  if (Get-Command sudo -ErrorAction SilentlyContinue)
-  {
-    sudo choco uninstall $apps -y
   } else
   {
-    Write-Host "Please run with administrator privileges"
+    if (Get-Command sudo -ErrorAction SilentlyContinue)
+    {
+      sudo choco uninstall $apps -y
+    } else
+    {
+      Write-Host "Please run with administrator privileges"
+    }
   }
 }
 

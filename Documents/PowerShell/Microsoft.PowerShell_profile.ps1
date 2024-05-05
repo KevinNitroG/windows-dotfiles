@@ -34,6 +34,7 @@ $env:PYTHONIOENCODING = "utf-8"
 # Import-Module -Name posh-wakatime
 import-module -Name PsReadLine
 Import-Module -Name CompletionPredictor
+Import-Module -Name DockerCompletion
 Import-Module -Name posh-git
 Import-Module -Name "$env:USERPROFILE\.config\wakatime\posh-wakatime\posh-wakatime.psm1"
 Import-Module -Name "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
