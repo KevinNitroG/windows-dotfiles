@@ -199,14 +199,24 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 iex(irm is.gd/idm_reset)
 ```
 
-- Block host
+- Block host **(admin)**
 
 ```ps1
-$file = "C:\Windows\System32\drivers\etc\hosts"
-$hostfile =Get-Content $file
-$hostfile += "127.0.0.1     internetdownloadmanager.com"
-$hostfile += "127.0.0.1     registeridm.com"
-Set-Content -Path $file -Value $hostfile -Force
+v "C:\Windows\System32\drivers\etc\hosts"
+```
+
+```diff
++  127.0.0.1           tonec.com
++  127.0.0.1           www.tonec.com
++  127.0.0.1           registeridm.com
++  127.0.0.1           www.registeridm.com
++  127.0.0.1           secure.registeridm.com
++  127.0.0.1           internetdownloadmanager.com
++  127.0.0.1           www.internetdownloadmanager.com
++  127.0.0.1           secure.internetdownloadmanager.com
++  127.0.0.1           mirror.internetdownloadmanager.com
++  127.0.0.1           mirror2.internetdownloadmanager.com
++  127.0.0.1           mirror3.internetdownloadmanager.com
 ```
 
 ### Install & Active Office
