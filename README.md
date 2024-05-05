@@ -165,23 +165,20 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
 ### 7️⃣ Install some code stuff
 
 ```ps1
-# prettier
-npm install prettier
-
 # ruff
 pip intsall ruff
-
-# eslint
-npm install eslint
 
 # cpplint
 pip install cpplint
 
+# prettier
+npm install prettier
+
+# eslint
+npm install eslint
+
 # markdownlint
 npm install markdownlint
-
-# actionlint
-choco install actionlint
 ```
 
 ## 🎈 EXTRAS
