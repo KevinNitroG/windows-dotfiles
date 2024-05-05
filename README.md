@@ -56,12 +56,12 @@
 
 |  **PM**   |                         **UPGRADE**                          |                          **UNINSTALL**                           |
 | :-------: | :----------------------------------------------------------: | :--------------------------------------------------------------: |
-| **CHOCO** | ![Choco upgrade](assets/images/app_manage-choco-upgrade.png) | ![Choco uninstall](assets/images/app_manage-choco-uninstall.png) |
 | **SCOOP** | ![Scoop upgrade](assets/images/app_manage-scoop-upgrade.png) | ![Scoop uninstall](assets/images/app_manage-scoop-uninstall.png) |
+| **CHOCO** | ![Choco upgrade](assets/images/app_manage-choco-upgrade.png) | ![Choco uninstall](assets/images/app_manage-choco-uninstall.png) |
 
 > [!NOTE]
 >
-> Mange via Package Managers
+> Mange via Package Managers **(Scoop isn't PM btw :v)**
 
 > [!IMPORTANT]
 >
@@ -291,7 +291,7 @@ iex "& { $(iwr -useb 'https://spotx-official.github.io/run.ps1') } -m -new_theme
 
 ## 📒 NOTES
 
-> Just something for me that I often forget
+> Just something that I often forget
 
 ### SSH
 
