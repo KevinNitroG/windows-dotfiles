@@ -199,6 +199,11 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 iex(irm is.gd/idm_reset)
 ```
 
+- Disable check for update
+
+  - `HKEY_CURRENT_USER\Software\DownloadManager`
+  - `CheckUpdtVm`: `10` ->`0`
+
 - Block host **(admin)**
 
 ```ps1
