@@ -37,6 +37,7 @@ Import-Module -Name CompletionPredictor
 Import-Module -Name posh-git
 Import-Module -Name "$env:USERPROFILE\.config\wakatime\posh-wakatime\posh-wakatime.psm1"
 Import-Module -Name "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
 
 # oh-my-posh
 # oh-my-posh init pwsh --config "$env:LOCALAPPDATA/Programs/oh-my-posh/themes/$env:OHMYPOSH_THEME.omp.json" | Invoke-Expression

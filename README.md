@@ -16,10 +16,10 @@
     - [Change directory schemes](#change-directory-schemes)
   - [🪴 USE](#-use)
     - [1️⃣ Add SSH](#1️⃣-add-ssh)
-    - [2️⃣ Install prerequisite _(Admin)_](#2️⃣-install-prerequisite-admin)
+    - [2️⃣ Install prerequisite](#2️⃣-install-prerequisite)
     - [3️⃣ Chezmoi](#3️⃣-chezmoi)
     - [4️⃣ Set env path _(Admin)_](#4️⃣-set-env-path-admin)
-    - [5️⃣ Install softwares _(Admin)_](#5️⃣-install-softwares-admin)
+    - [5️⃣ Install softwares](#5️⃣-install-softwares)
     - [6️⃣ Install fonts](#6️⃣-install-fonts)
     - [7️⃣ Install some code stuff](#7️⃣-install-some-code-stuff)
   - [🎈 EXTRAS](#-extras)
@@ -97,7 +97,7 @@ gpg --import secret.gpg
 
 > In order to encrypt / decrypt chezmoi
 
-### 2️⃣ Install prerequisite _(Admin)_
+### 2️⃣ Install prerequisite
 
 - Set execution policy to run script from URL _(Admin)_
 
@@ -105,10 +105,16 @@ gpg --import secret.gpg
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
 ```
 
-- Install necessary tools / apps
+- Install prequisite scoop _(non-admin)_
 
 ```ps1
-iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisite.ps1" | iex
+iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteScoop.ps1" | iex
+```
+
+- Install prequisite choco _(admin)_
+
+```ps1
+iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteChoco.ps1" | iex
 ```
 
 ### 3️⃣ Chezmoi
@@ -131,7 +137,7 @@ chezmoi init --apply --verbose git@github.com:KevinNitroG/windows-dotfiles.git
 iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/environmentVariables.ps1" | iex
 ```
 
-### 5️⃣ Install softwares _(Admin)_
+### 5️⃣ Install softwares
 
 - Install programming languages
 
@@ -139,19 +145,21 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
 iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/programmingLanguage.ps1" | iex
 ```
 
-> Install python separately [python](https://www.python.org/downloads/windows/)
-
-- Install softwares
+- Install softwares _(non-admin)_
 
 ```ps1
-iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares.ps1" | iex
+iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-nonadmin.ps1" | iex
+```
+
+- Install softwares _(admin)_
+
+```ps1
+iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-nadmin.ps1" | iex
 ```
 
 ### 6️⃣ Install fonts
 
-- https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip
 - https://fonts.google.com/specimen/Be+Vietnam+Pro?query=be+vie
-- https://fonts.google.com/noto/specimen/Noto+Sans?query=noto
 
 ### 7️⃣ Install some code stuff
 

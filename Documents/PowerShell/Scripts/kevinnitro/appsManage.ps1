@@ -1,45 +1,52 @@
 $CHOCO_APPS_TO_UPGRADE = @(
-  "git",
-  "neovim",
-  "chezmoi",
-  "fd",
-  "fzf",
-  "lazygit",
-  "obs-studio.install",
-  "powertoys",
-  "vlc",
-  "zoxide",
-  "bat",
-  "delta",
-  "tldr",
-  "actionlint",
-  "xh"
 )
+
 $SCOOP_APPS_TO_UPGRADE = @(
-  "sudo",
-  "touch",
-  "komorebi",
-  "autohotkey",
-  "lf",
-  "eza",
-  "sd",
-  "fastfetch"
+  "extras/autohotkey",
+  "extras/dockercompletion",
+  "extras/komorebi",
+  "extras/lazygit",
+  "extras/obs-studio",
+  "extras/posh-git"
+  "extras/powertoys",
+  "extras/psfzf",
+  "extras/psreadline",
+  "extras/scoop-completion",
+  "extras/vscode",
+  "main/actionlint",
+  "main/bat",
+  "main/delta",
+  "main/eza",
+  "main/fastfetch",
+  "main/fd",
+  "main/fzf",
+  "main/lf",
+  "main/neovim",
+  "main/rclone",
+  "main/ripgrep",
+  "main/sd",
+  "main/sed",
+  "main/starship",
+  "main/sudo",
+  "main/tldr",
+  "main/touch",
+  "main/zoxide"
 )
+
 $PIP_APPS_TO_UPGRADE = @(
   "thefuck",
   "cpplint",
   "ruff"
 )
+
 $NPM_APPS_TO_UPGRADE = @(
   "markdownlint",
   "eslint",
   "prettier"
 )
+
 $POWERSHELL_MODULES_TO_UPDATE = @(
-  "PSReadLine",
   "CompletionPredictor",
-  "posh-git",
-  "Terminal-Icons",
   "posh-wakatime"
 )
 
@@ -154,7 +161,19 @@ function Update-PowershellModules
 function Uninstall-ChocoApps
 {
   $apps = Select-Apps $(List-ChocoApps)
-  choco uninstall $apps -y
+  if (Check-IsAdmin)
+  {
+    choco uninstall $apps -y
+  }
+} else
+{
+  if (Get-Command sudo -ErrorAction SilentlyContinue)
+  {
+    sudo choco uninstall $apps -y
+  } else
+  {
+    Write-Host "Please run with administrator privileges"
+  }
 }
 
 function Uninstall-ScoopApps
