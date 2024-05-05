@@ -20,6 +20,7 @@ $SCOOP_APPS_TO_UPGRADE = @(
   "main/fastfetch",
   "main/fd",
   "main/fzf",
+  "main/lazydocker",
   "main/lf",
   "main/neovim",
   "main/rclone",
