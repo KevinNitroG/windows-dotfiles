@@ -26,6 +26,7 @@
     - [Crack Winrar _(Admin)_](#crack-winrar-admin)
     - [Patch IDM](#patch-idm)
     - [Install \& Active Office](#install--active-office)
+    - [Spotify](#spotify)
     - [Need to do](#need-to-do)
     - [Others](#others)
   - [📒 NOTES](#-notes)
@@ -201,9 +202,9 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 iex(irm is.gd/idm_reset)
 ```
 
-- Or block host
+- Block host
 
-```.ps1
+```ps1
 $file = "C:\Windows\System32\drivers\etc\hosts"
 $hostfile =Get-Content $file
 $hostfile += "127.0.0.1     internetdownloadmanager.com"
@@ -219,6 +220,17 @@ Set-Content -Path $file -Value $hostfile -Force
 
 ```ps1
 irm https://massgrave.dev/get | iex
+```
+
+### Spotify
+
+- SpotX
+
+```ps1
+# main
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/SpotX-Official/spotx-official.github.io/main/run.ps1') } -new_theme"
+# mirror
+iex "& { $(iwr -useb 'https://spotx-official.github.io/run.ps1') } -m -new_theme"
 ```
 
 ### Need to do
