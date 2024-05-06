@@ -56,16 +56,20 @@
       "type": "cpu"
     },
     {
-      "key": "│           │\u001b[11D\u001b[34m󰉉 disk",
+      "key": "│           │\u001b[11D\u001b[34m󰍛 gpu",
+      "type": "gpu"
+    },
+    {
+      "key": "│           │\u001b[11D\u001b[35m󰉉 disk",
       "type": "disk",
       "folders": "/"
     },
     {
-      "key": "│           │\u001b[11D\u001b[35m memory",
+      "key": "│           │\u001b[11D\u001b[36m memory",
       "type": "memory"
     },
     {
-      "key": "│           │\u001b[11D\u001b[36m󰩟 network",
+      "key": "│           │\u001b[11D\u001b[37m󰩟 network",
       "type": "localip",
       "format": "{1} ({4})"
     },
