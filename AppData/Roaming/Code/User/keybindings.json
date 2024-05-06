@@ -522,18 +522,18 @@
   // Source Neovim keybinding for VSC: https://gist.github.com/nikolovlazar/1174876ab2769c52ac9fc1534c557d70
 
   // Navigation
-  {
-    "key": "ctrl-h",
-    "command": "workbench.action.navigateLeft"
-  },
-  {
-    "key": "ctrl-l",
-    "command": "workbench.action.navigateRight"
-  },
-  {
-    "key": "ctrl-k",
-    "command": "workbench.action.navigateUp"
-  },
+  // {
+  //   "key": "ctrl-h",
+  //   "command": "workbench.action.navigateLeft"
+  // },
+  // {
+  //   "key": "ctrl-l",
+  //   "command": "workbench.action.navigateRight"
+  // },
+  // {
+  //   "key": "ctrl-k",
+  //   "command": "workbench.action.navigateUp"
+  // },
   {
     "key": "ctrl-j",
     "command": "workbench.action.navigateDown"
@@ -548,16 +548,16 @@
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
-  {
-    "key": "tab",
-    "command": "workbench.action.nextEditorInGroup",
-    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "key": "shift-tab",
-    "command": "workbench.action.previousEditorInGroup",
-    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-  },
+  // {
+  //   "key": "tab",
+  //   "command": "workbench.action.nextEditorInGroup",
+  //   "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  // },
+  // {
+  //   "key": "shift-tab",
+  //   "command": "workbench.action.previousEditorInGroup",
+  //   "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+  // },
 
   // Coding
   {

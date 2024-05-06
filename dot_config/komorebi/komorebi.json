@@ -18,6 +18,17 @@
       "kind": "Exe"
     }
   ],
+  // "float_rules": [
+  //   {
+  //     "id": "Microsoft Visual Studio",
+  //     "kind": "Title",
+  //     "matching_strategy": "Equals"
+  //   },
+  //   {
+  //     "id": "VsDebugConsole.exe",
+  //     "kind": "Exe"
+  //   }
+  // ],
   "monitors": [
     {
       "workspaces": [
@@ -96,9 +107,9 @@
               "kind": "Exe"
             },
             {
-              "id": "devenv.exe",
-              "kind": "Exe",
-              "matching_strategy": "StartsWith"
+              "id": "- Microsoft Visual Studio",
+              "kind": "Title",
+              "matching_strategy": "EndsWith"
             },
             {
               "id": "pycharm64.exe",
@@ -144,6 +155,11 @@
             {
               "id": "Messenger.exe",
               "kind": "Exe"
+            },
+            {
+              "id": "Messenger - Google Chrome",
+              "kind": "Title",
+              "matching_strategy": "Equals"
             },
             {
               "id": "Messenger call - Google Chrome",

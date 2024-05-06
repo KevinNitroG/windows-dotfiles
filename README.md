@@ -14,7 +14,8 @@
     - [Check Wifi Password](#check-wifi-password)
     - [App Manage](#app-manage)
     - [Change directory schemes](#change-directory-schemes)
-  - [🪴 USE](#-use)
+    - [Neovim](#neovim)
+  - [🪴 INSTALL](#-install)
     - [1️⃣ Add SSH](#1️⃣-add-ssh)
     - [2️⃣ Install prerequisite](#2️⃣-install-prerequisite)
     - [3️⃣ Chezmoi](#3️⃣-chezmoi)
@@ -50,7 +51,7 @@
 | ![Check Wifi Password 1](assets/images/check_wifi_password-1.png) | ![Check Wifi Password 2](assets/images/check_wifi_password-2.png) |
 
 > [!NOTE]
-> Using FZF if installed. Worked even without FZF but I'm lazy to show.
+> Using FZF if installed. Work even without FZF but I'm lazy to show.
 
 ### App Manage
 
@@ -76,7 +77,17 @@
 |   ![fdcd](assets/images/cd-fdcd.png)    |        ![lfcd](assets/images/cd-lfcd.png)         |
 |  [fd](https://github.com/sharkdp/fd/)   |       [lf](https://github.com/gokcehan/lf/)       |
 
-## 🪴 USE
+### Neovim
+
+![Neovim](assets/images/neovim.png)
+
+> [!NOTE]
+>
+> I use [Alexis12119's nvim config](https://github.com/Alexis12119/nvim-config)
+>
+> My [fork config](https://github.com/KevinNitroG/Alexis12119-nvim)
+
+## 🪴 INSTALL
 
 ### 1️⃣ Add SSH
 
