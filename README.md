@@ -190,7 +190,14 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 
 ### Patch IDM
 
-- Patch script
+- Close source tool from [repack.me by Alexey1980](https://repack.me/software/repacks/internet/15-idm.html)
+  - [Download tool](https://workupload.com/file/gJuZfPnJhQK)
+
+> [!NOTE]
+>
+> Password is inside the archived file
+
+- Patch script _(old method)_
   ```ps1
   iex(irm is.gd/idm_reset)
   ```
