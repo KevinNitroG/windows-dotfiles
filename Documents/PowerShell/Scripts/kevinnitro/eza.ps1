@@ -4,4 +4,14 @@ function _eza
   eza --long --git --icons=always --color=always --sort="type" $args
 }
 
-Set-Alias -Name ls -Value _eza -Force
+function ll
+{
+  _eza -la
+}
+
+function la
+{
+  _eza -a
+}
+
+Set-Alias -Name ls -Value _eza

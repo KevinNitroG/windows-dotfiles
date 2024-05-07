@@ -1,3 +1,5 @@
+# ref: https://github.com/ChrisTitusTech/powershell-profile/blob/main/Microsoft.PowerShell_profile.ps1
+
 function ..
 { Set-Location .\..
 }
@@ -9,6 +11,42 @@ function ....
 function List-AvailableModules
 {
   Get-Module -ListAvailable
+}
+
+function Update-PowerShell
+{
+  if (-not $global:canConnectToGitHub)
+  {
+    Write-Host "Skipping PowerShell update check due to GitHub.com not responding within 1 second." -ForegroundColor Yellow
+    return
+  }
+
+  try
+  {
+    Write-Host "Checking for PowerShell updates..." -ForegroundColor Cyan
+    $updateNeeded = $false
+    $currentVersion = $PSVersionTable.PSVersion.ToString()
+    $gitHubApiUrl = "https://api.github.com/repos/PowerShell/PowerShell/releases/latest"
+    $latestReleaseInfo = Invoke-RestMethod -Uri $gitHubApiUrl
+    $latestVersion = $latestReleaseInfo.tag_name.Trim('v')
+    if ($currentVersion -lt $latestVersion)
+    {
+      $updateNeeded = $true
+    }
+
+    if ($updateNeeded)
+    {
+      Write-Host "Updating PowerShell..." -ForegroundColor Yellow
+      winget upgrade "Microsoft.PowerShell" --accept-source-agreements --accept-package-agreements
+      Write-Host "PowerShell has been updated. Please restart your shell to reflect changes" -ForegroundColor Magenta
+    } else
+    {
+      Write-Host "Your PowerShell is up to date." -ForegroundColor Green
+    }
+  } catch
+  {
+    Write-Error "Failed to update PowerShell. Error: $_"
+  }
 }
 
 Function Test-CommandExists
@@ -71,10 +109,10 @@ function Edit-Profile
   }
 }
 
-function ll
-{
-  Get-ChildItem -Path $pwd -File
-}
+# function ll
+# {
+#   Get-ChildItem -Path $pwd -File
+# }
 
 function Get-PubIP
 {
@@ -125,6 +163,78 @@ function unzip ($file)
   Expand-Archive -Path $fullFile -DestinationPath $pwd
 }
 
+function Share-TextFile
+{
+  if ($args.Length -eq 0)
+  {
+    Write-Error "No file path specified."
+    return
+  }
+    
+  $FilePath = $args[0]
+    
+  if (Test-Path $FilePath)
+  {
+    $Content = Get-Content $FilePath -Raw
+  } else
+  {
+    Write-Error "File path does not exist."
+    return
+  }
+    
+  $uri = "http://bin.christitus.com/documents"
+  try
+  {
+    $response = Invoke-RestMethod -Uri $uri -Method Post -Body $Content -ErrorAction Stop
+    $hasteKey = $response.key
+    $url = "http://bin.christitus.com/$hasteKey"
+    Write-Output $url
+  } catch
+  {
+    Write-Error "Failed to upload the document. Error: $_"
+  }
+}
+
+function head
+{
+  param($Path, $n = 10)
+  Get-Content $Path -Head $n
+}
+
+function tail
+{
+  param($Path, $n = 10)
+  Get-Content $Path -Tail $n
+}
+
+function mkcd
+{
+  param($dir) mkdir $dir -Force; Set-Location $dir 
+}
+
+# Quick Access to System Information
+function sysinfo
+{
+  Get-ComputerInfo 
+}
+
+# Networking Utilities
+function flushdns
+{
+  Clear-DnsClientCache 
+}
+
+# Clipboard Utilities
+function cpy
+{
+  Set-Clipboard $args[0] 
+}
+
+function pst
+{
+  Get-Clipboard 
+}
+
 function ix ($file)
 {
   curl.exe -F "f:1=@$file" ix.io
@@ -142,12 +252,13 @@ function ix ($file)
 
 # function touch($file)
 # {
-#     "" | Out-File $file -Encoding ASCII
+#   "" | Out-File $file -Encoding ASCII
 # }
 
-# function df {
-#     get-volume
-# }
+function df
+{
+  get-volume
+}
 
 function sed($file, $find, $replace)
 {
@@ -185,7 +296,5 @@ function which ($command)
 
 function Check-IsAdmin
 {
-  $user    = [Security.Principal.WindowsIdentity]::GetCurrent()
-  $isAdmin = (New-Object Security.Principal.WindowsPrincipal $user).IsInRole([Security.Principal.WindowsBuiltinRole]::Administrator)
-  return $isAdmin
+  return ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 }

@@ -23,3 +23,4 @@ Set-PSReadLineKeyHandler -Key "Ctrl+f" -ScriptBlock {
   [Microsoft.PowerShell.PSConsoleReadLine]::Insert("fzfcd")
   [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
+
