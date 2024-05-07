@@ -41,24 +41,42 @@ Set-PSReadLineOption -ViModeIndicator Script -ViModeChangeHandler $Function:OnVi
 
 # Set jk to exit vi
 # Ref: https://github.com/PowerShell/PSReadLine/issues/1701#issuecomment-1445137723
-$j_timer = New-Object System.Diagnostics.Stopwatch
-Set-PSReadLineKeyHandler -Key j -ViMode Insert -ScriptBlock {
-  if (!$j_timer.IsRunning -or $j_timer.ElapsedMilliseconds -gt 1000)
-  {
-    [Microsoft.PowerShell.PSConsoleReadLine]::Insert("j")
-    $j_timer.Restart()
-    return
-  }
+# Set-PSReadLineKeyHandler -Key j -ViMode Insert -ScriptBlock {
+#   if (!$j_timer.IsRunning -or $j_timer.ElapsedMilliseconds -gt 1000)
+#   {
+#     [Microsoft.PowerShell.PSConsoleReadLine]::Insert("k")
+#     $j_timer.Restart()
+#     return
+#   }
 
-  [Microsoft.PowerShell.PSConsoleReadLine]::Insert("k")
-  [Microsoft.PowerShell.PSConsoleReadLine]::ViCommandMode()
-  $line = $null
-  $cursor = $null
-  [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
-  [Microsoft.PowerShell.PSConsoleReadLine]::Delete($cursor-1, 2)
-  [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition($cursor-2)
-}
+#   [Microsoft.PowerShell.PSConsoleReadLine]::Insert("k")
+#   [Microsoft.PowerShell.PSConsoleReadLine]::ViCommandMode()
+#   $line = $null
+#   $cursor = $null
+#   [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
+#   [Microsoft.PowerShell.PSConsoleReadLine]::Delete($cursor-1, 2)
+#   [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition($cursor-2)
+# }
 
+# ref: https://github.com/PowerShell/PSReadLine/issues/759#issuecomment-518363364
+# $j_timer = New-Object System.Diagnostics.Stopwatch
+# Set-PSReadLineKeyHandler -Chord 'j' -ScriptBlock {
+#   if ([Microsoft.PowerShell.PSConsoleReadLine]::InViInsertMode())
+#   {
+#     $j_timer.ReStart()
+#     $key = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+#     # $key = [System.Console]::ReadKey()
+#     if (($j_timer.ElapsedMilliseconds -lt 500) -and $key.Character -eq 'k')
+#     {
+#       [Microsoft.PowerShell.PSConsoleReadLine]::ViCommandMode()
+#     } else
+#     {
+#       [Microsoft.Powershell.PSConsoleReadLine]::Insert('j')
+#       [Microsoft.Powershell.PSConsoleReadLine]::Insert($key.Character)
+#     }
+#     $j_timer.Stop()
+#   }
+# }
 
 Set-PSReadLineKeyHandler -Key "Ctrl+p" -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key "Ctrl+n" -Function HistorySearchForward
