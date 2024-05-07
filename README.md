@@ -92,48 +92,39 @@
 ### 1️⃣ Add SSH
 
 - SSH _(Admin)_
-
-```ps1
-Set-Service ssh-agent -StartupType Automatic
-Start-Service ssh-agent
-ssh-add "$env:USERPROFILE/.ssh/id_rsa"
-```
-
+  ```ps1
+  Set-Service ssh-agent -StartupType Automatic
+  Start-Service ssh-agent
+  ssh-add "$env:USERPROFILE/.ssh/id_rsa"
+  ```
 - Import GPG Keys:
-
-```ps1
-# Public key
-gpg --import public.gpg
-gpg --import secret.gpg
-```
+  ```ps1
+  gpg --import public.gpg
+  gpg --import secret.gpg
+  ```
 
 > In order to encrypt / decrypt chezmoi
 
 ### 2️⃣ Install prerequisite
 
 - Set execution policy to run script from URL _(Admin)_
-
-```ps1
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
-```
-
+  ```ps1
+  Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+  ```
 - Install prequisite scoop _(non-admin)_
-
-```ps1
-iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteScoop.ps1" | iex
-```
-
+  ```ps1
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteScoop.ps1" | iex
+  ```
 - Install prequisite choco _(admin)_
-
-```ps1
-iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteChoco.ps1" | iex
-```
+  ```ps1
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteChoco.ps1" | iex
+  ```
 
 ### 3️⃣ Chezmoi
 
 > [!IMPORTANT]
 >
-> Use powershell IDE, don't use Windows Terminal.
+> Use powershell IDE _(not pwsh also)_, don't use Windows Terminal.
 >
 > Run with Administrator
 
@@ -152,22 +143,17 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
 ### 5️⃣ Install softwares
 
 - Install programming languages
-
-```ps1
-iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/programmingLanguage.ps1" | iex
-```
-
+  ```ps1
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/programmingLanguage.ps1" | iex
+  ```
 - Install softwares _(non-admin)_
-
-```ps1
-iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-nonadmin.ps1" | iex
-```
-
+  ```ps1
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-nonadmin.ps1" | iex
+  ```
 - Install softwares _(admin)_
-
-```ps1
-iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-nadmin.ps1" | iex
-```
+  ```ps1
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-nadmin.ps1" | iex
+  ```
 
 ### 6️⃣ Install fonts
 
@@ -205,56 +191,48 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 ### Patch IDM
 
 - Patch script
-
-```ps1
-iex(irm is.gd/idm_reset)
-```
-
+  ```ps1
+  iex(irm is.gd/idm_reset)
+  ```
 - Disable check for update
-
   - `HKEY_CURRENT_USER\Software\DownloadManager`
   - `CheckUpdtVm`: `10` ->`0`
-
 - Block host **(admin)**
-
-```ps1
-v "C:\Windows\System32\drivers\etc\hosts"
-```
-
-```diff
-+  127.0.0.1           tonec.com
-+  127.0.0.1           www.tonec.com
-+  127.0.0.1           registeridm.com
-+  127.0.0.1           www.registeridm.com
-+  127.0.0.1           secure.registeridm.com
-+  127.0.0.1           internetdownloadmanager.com
-+  127.0.0.1           www.internetdownloadmanager.com
-+  127.0.0.1           secure.internetdownloadmanager.com
-+  127.0.0.1           mirror.internetdownloadmanager.com
-+  127.0.0.1           mirror2.internetdownloadmanager.com
-+  127.0.0.1           mirror3.internetdownloadmanager.com
-```
+  ```ps1
+  v "C:\Windows\System32\drivers\etc\hosts"
+  ```
+  ```diff
+  +  127.0.0.1           tonec.com
+  +  127.0.0.1           www.tonec.com
+  +  127.0.0.1           registeridm.com
+  +  127.0.0.1           www.registeridm.com
+  +  127.0.0.1           secure.registeridm.com
+  +  127.0.0.1           internetdownloadmanager.com
+  +  127.0.0.1           www.internetdownloadmanager.com
+  +  127.0.0.1           secure.internetdownloadmanager.com
+  +  127.0.0.1           mirror.internetdownloadmanager.com
+  +  127.0.0.1           mirror2.internetdownloadmanager.com
+  +  127.0.0.1           mirror3.internetdownloadmanager.com
+  ```
 
 ### Install & Active Office
 
 - Install: [OTP Ladian](https://otp.landian.vip/redirect/download.php?type=runtime&arch=x64&site=github)
 
 - Active
-
-```ps1
-irm https://massgrave.dev/get | iex
-```
+  ```ps1
+  irm https://massgrave.dev/get | iex
+  ```
 
 ### Spotify
 
 - SpotX
-
-```ps1
-# main
-iex "& { $(iwr -useb 'https://raw.githubusercontent.com/SpotX-Official/spotx-official.github.io/main/run.ps1') } -new_theme"
-# mirror
-iex "& { $(iwr -useb 'https://spotx-official.github.io/run.ps1') } -m -new_theme"
-```
+  ```ps1
+  # main
+  iex "& { $(iwr -useb 'https://raw.githubusercontent.com/SpotX-Official/spotx-official.github.io/main/run.ps1') } -new_theme"
+  # mirror
+  iex "& { $(iwr -useb 'https://spotx-official.github.io/run.ps1') } -m -new_theme"
+  ```
 
 ### Need to do
 
@@ -297,6 +275,10 @@ iex "& { $(iwr -useb 'https://spotx-official.github.io/run.ps1') } -m -new_theme
     - `https://cloudflare-dns.com/dns-query`
   - Power & Sleep
   - Print Screen button with snipping tool
+- Make Windows to use UTC time in order to dual boot with Linux
+  ```.ps1
+  reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
+  ```
 
 ### Others
 
