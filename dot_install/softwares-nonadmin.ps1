@@ -59,6 +59,7 @@ $SCOOP_CODING_TOOLS = @(
   "main/gh",
   "main/gnupg",
   "main/gpg",
+  "main/grep",
   "main/gzip",
   "main/jq",
   "main/lazydocker",
