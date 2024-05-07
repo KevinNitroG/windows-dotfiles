@@ -30,6 +30,9 @@ $env:BAT_THEME = "Catppuccin Mocha"
 # to fix thefuck
 $env:PYTHONIOENCODING = "utf-8"
 
+# Starship config
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/starship.ps1"
+
 # Import-Module -Name Terminal-Icons
 # Import-Module -Name posh-wakatime
 import-module -Name PsReadLine
@@ -46,9 +49,6 @@ Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.Full
 
 # Thefuck
 Invoke-Expression "$(thefuck --alias)"
-
-# Starship config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/starship.ps1"
 
 # zoxide
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
