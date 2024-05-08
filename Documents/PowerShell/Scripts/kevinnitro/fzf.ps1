@@ -9,9 +9,15 @@ Set-PsFzfOption -PSReadlineChordProvider "Ctrl+e" -PSReadlineChordReverseHistory
 function fzfcd
 {
   $file = fzf --preview "bat --color=always {1} --style=numbers --line-range=:500 {}" --preview-label "Bat Preview" --header "FZF Preview" --header-first 
+  Write-Host $file
+  Write-Host 
   if ($file)
   {
-    Set-Location $(Split-Path -Path $file -Parent)
+    $destination = $(Split-Path -Path $file -Parent)
+    if ($destination)
+    {
+      Set-Location $destination
+    }
   } else
   {
     Write-Host "No file was selected"

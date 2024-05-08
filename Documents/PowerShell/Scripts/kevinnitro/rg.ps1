@@ -11,7 +11,11 @@ function rgcd
   # --bind 'enter:become(echo "{1}")'
   if ($result)
   {
-    Set-Location $(Split-Path -Path $result.Split(':')[0] -Parent)
+    $destination = Split-Path -Path $result.Split(':')[0] -Parent
+    if ($destination)
+    {
+      Set-Location $destination
+    }
   } else
   {
     "No file was selected"
