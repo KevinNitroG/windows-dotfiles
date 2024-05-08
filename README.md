@@ -190,14 +190,22 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 
 ### Patch IDM
 
+#### Repack.me
+
 - Close source tool from [repack.me by Alexey1980](https://repack.me/software/repacks/internet/15-idm.html)
-  - [Download tool](https://workupload.com/file/gJuZfPnJhQK)
+- [Download tool](https://workupload.com/file/gJuZfPnJhQK)
 
 > [!NOTE]
 >
 > Password is inside the archived file
 
-- Patch script _(old method)_
+#### PITVN
+
+- [PITVN](https://docs.google.com/document/d/19MCt6uXlJYJO71L35Tj_PcGvWhL_W-SoYYkcnVA07fU/edit?usp=sharing)
+
+#### Old method
+
+- Patch script
   ```ps1
   iex(irm is.gd/idm_reset)
   ```
@@ -289,8 +297,12 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 
 ### Others
 
-- [Keyviz](https://github.com/mulaRahul/keyviz/releases/latest)
+- [Keyviz](https://github.com/mulaRahul/keyviz/releases/latest) _(Already install from PM)_
 - [Optimizer](https://github.com/hellzerg/optimizer/releases/latest)
+- [Winutil](https://github.com/ChrisTitusTech/winutil)
+  ```ps1
+  irm https://christitus.com/win | iex
+  ```
 - [iSlide](https://islide-powerpoint.com/en/downloads-en)
 - [3UTools](https://www.3u.com/)
 - [qBittorrent _(qt6)_](https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases/latest)
