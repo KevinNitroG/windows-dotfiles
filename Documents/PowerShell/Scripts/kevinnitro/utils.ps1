@@ -163,7 +163,7 @@ function unzip ($file)
   Expand-Archive -Path $fullFile -DestinationPath $pwd
 }
 
-function Share-TextFile
+function hb
 {
   if ($args.Length -eq 0)
   {
