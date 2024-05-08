@@ -1,132 +1,77 @@
 #SingleInstance Force
 #Warn All, Off
 
-; <# Left Win
+; # Left Win
 ; ^ Ctrl
 ; ! Alt
 ; + Shift
 
 #Include komorebic.lib.ahk
 
-<#1::FocusWorkspace(0)
-return
-<#2::FocusWorkspace(1)
-return
-<#3::FocusWorkspace(2)
-return
-<#4::FocusWorkspace(3)
-return
-<#5::FocusWorkspace(4)
-return
-<#6::FocusWorkspace(5)
-return
-<#7::FocusWorkspace(6)
-return
-<#8::FocusWorkspace(7)
-return
-<#9::FocusWorkspace(8)
-return
-<#0::FocusWorkspace(9)
-return
+#1::FocusWorkspace(0)
+#2::FocusWorkspace(1)
+#3::FocusWorkspace(2)
+#4::FocusWorkspace(3)
+#5::FocusWorkspace(4)
+#6::FocusWorkspace(5)
+#7::FocusWorkspace(6)
+#8::FocusWorkspace(7)
+#9::FocusWorkspace(8)
+#0::FocusWorkspace(9)
 
-<#[::CycleWorkspace("previous")
-return
-<#]::CycleWorkspace("next")
-return
+#[::CycleWorkspace("previous")
+#]::CycleWorkspace("next")
 
-<#+1::MoveToWorkspace(0)
-return
-<#+2::MoveToWorkspace(1)
-return
-<#+3::MoveToWorkspace(2)
-return
-<#+4::MoveToWorkspace(3)
-return
-<#+5::MoveToWorkspace(4)
-return
-<#+6::MoveToWorkspace(5)
-return
-<#+7::MoveToWorkspace(6)
-return
-<#+8::MoveToWorkspace(7)
-return
-<#+9::MoveToWorkspace(8)
-return
-<#+0::MoveToWorkspace(9)
-return
+#+1::MoveToWorkspace(0)
+#+2::MoveToWorkspace(1)
+#+3::MoveToWorkspace(2)
+#+4::MoveToWorkspace(3)
+#+5::MoveToWorkspace(4)
+#+6::MoveToWorkspace(5)
+#+7::MoveToWorkspace(6)
+#+8::MoveToWorkspace(7)
+#+9::MoveToWorkspace(8)
+#+0::MoveToWorkspace(9)
 
-<#+[::CycleMoveToWorkspace("previous")
-return
-<#+]::CycleMoveToWorkspace("next")
-return
+#+[::CycleMoveToWorkspace("previous")
+#+]::CycleMoveToWorkspace("next")
 
-^<#h::Focus("left")
-return
-^<#j::Focus("down")
-return
-^<#k::Focus("up")
-return
-^<#l::Focus("right")
-return
-^<#+[::CycleFocus("previous")
-return
-^<#+]::CycleFocus("next")
-return
+^#h::Focus("left")
+^#j::Focus("down")
+^#k::Focus("up")
+^#l::Focus("right")
+^#+[::CycleFocus("previous")
+^#+]::CycleFocus("next")
 
-^<#+h::Move("left")
-return
-^<#+j::Move("down")
-return
-^<#+k::Move("up")
-return
-^<#+l::Move("right")
-return
-^<#p::Promote()
-return
+^#+h::Move("left")
+^#+j::Move("down")
+^#+k::Move("up")
+^#+l::Move("right")
+^#p::Promote()
 
-<#Enter::Run "wt.exe"
-return
+#Enter::Run "wt.exe"
 
-^<#f::ToggleFloat()
-return
-^<#m::Minimize()
-return
-^<#w::Close()
-return
-^<#t::ToggleTiling() ; avoid with opening terminal
-return
-^<#z::ToggleMonocle()
-return
+^#f::ToggleFloat()
+^#m::Minimize()
+^#w::Close()
+^#t::ToggleTiling() ; avoid with opening terminal
+^#z::ToggleMonocle()
 
-^<#r::Retile()
-return
-^<#+p::TogglePause()
-return
+^#r::Retile()
+^#+p::TogglePause()
 
-^<#+Left::Stack("left")
-return
-^<#+Right::Stack("right")
-return
-^<#+Up::Stack("up")
-return
-^<#+Down::Stack("down")
-return
-^<#+;::Unstack()
-return
+^#+Left::Stack("left")
+^#+Right::Stack("right")
+^#+Up::Stack("up")
+^#+Down::Stack("down")
+^#+;::Unstack()
 
-^<#Right::ResizeAxis("horizontal", "increase")
-return
-^<#Left::ResizeAxis("horizontal", "decrease")
-return
-^<#Up::ResizeAxis("vertical", "increase")
-return
-^<#Down::ResizeAxis("vertical", "decrease")
-return
+^#Right::ResizeAxis("horizontal", "increase")
+^#Left::ResizeAxis("horizontal", "decrease")
+^#Up::ResizeAxis("vertical", "increase")
+^#Down::ResizeAxis("vertical", "decrease")
 
-^<#x::FlipLayout("horizontal")
-return
-^<#y::FlipLayout("vertical")
-return
+^#x::FlipLayout("horizontal")
+^#y::FlipLayout("vertical")
 
-<#^o::ReloadConfiguration()
-return
+#^o::ReloadConfiguration()
