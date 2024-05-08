@@ -115,6 +115,9 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # Komorebi config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/komorebi.ps1"
 
+# GPG
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/gpg.ps1"
+
 # Utils
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/utils.ps1"
 

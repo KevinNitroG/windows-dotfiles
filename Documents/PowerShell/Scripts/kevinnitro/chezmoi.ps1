@@ -56,7 +56,7 @@ function cma
     $files[$i] = "$($current_dir)\$($files[$i])"
   }
   Set-Location
-  chezmoi add $files
+  chezmoi add $files $args
   Set-Location $current_dir
 }
 
