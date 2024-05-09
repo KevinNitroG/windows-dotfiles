@@ -253,6 +253,8 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 
 - Change ownership of old folders / files
 - Install Cursor
+  - [Vision Cursor](https://www.deviantart.com/idarques/art/Vision-Cursor-911891424)
+  - [Windows 11 Cursor Rosea92](https://github.com/YT-Advanced/Windows-11-Cursor-by-rosea92)
 - Change `Downloads`, `Desktop`,... location
 - Restore Powertoys settings
 - Winaero-tweaker
