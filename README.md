@@ -55,6 +55,8 @@
 > [!NOTE]
 > Using FZF if installed. Work even without FZF but I'm lazy to show.
 
+---
+
 ### App Manage
 
 |  **PM**   |                         **UPGRADE**                          |                          **UNINSTALL**                           |
@@ -96,8 +98,6 @@
 ---
 
 ## 🪴 INSTALL
-
----
 
 ### 1️⃣ Add SSH
 
@@ -204,8 +204,6 @@ npm install markdownlint
 ---
 
 ## 🎈 EXTRAS
-
----
 
 ### Crack Winrar _(Admin)_
 
@@ -361,8 +359,6 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 ## 📒 NOTES
 
 > Just something that I often forget
-
----
 
 ### SSH
 
