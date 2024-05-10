@@ -17,6 +17,10 @@
   # light = true
   side-by-side = true
   line-numbers = true
+  show-syntax-themes = true
+  hyperlinks = true
+  ; hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+
 
 [merge]
   conflictstyle = diff3

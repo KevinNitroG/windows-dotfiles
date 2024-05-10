@@ -1,0 +1,41 @@
+# reference from https://github.com/scottmckendry/Windots/blob/main/lazygit/config.yml
+
+notARepository: skip
+disableStartupPopups: false
+
+update:
+  method: never
+  days: 14
+
+gui:
+  nerdFontsVersion: "3"
+  border: rounded
+  mouseEvents: true
+  # use catppuccin macchiato yellow - https://github.com/catppuccin/lazygit/blob/main/themes/macchiato/yellow.yml
+  theme:
+    activeBorderColor:
+      - "#eed49f"
+      - bold
+    inactiveBorderColor:
+      - "#a5adcb"
+    optionsTextColor:
+      - "#8aadf4"
+    selectedLineBgColor:
+      - "#363a4f"
+    cherryPickedCommitBgColor:
+      - "#494d64"
+    cherryPickedCommitFgColor:
+      - "#eed49f"
+    unstagedChangesColor:
+      - "#ed8796"
+    defaultFgColor:
+      - "#cad3f5"
+    searchingActiveBorderColor:
+      - "#eed49f"
+  authorColors:
+    "*": "#b7bdf8"
+
+git:
+  parseEmoji: true
+  paging:
+    pager: delta
