@@ -38,6 +38,8 @@
       - [Variables](#variables)
       - [Others](#others-1)
 
+---
+
 ## 😎 PREVIEW
 
 ### Terminal
@@ -68,6 +70,8 @@
 >
 > Need FZF
 
+---
+
 ### Change directory schemes
 
 |                                         |                                                   |
@@ -76,6 +80,8 @@
 | [fzf](https://github.com/junegunn/fzf/) | [ripgrep](https://github.com/BurntSushi/ripgrep/) |
 |   ![fdcd](assets/images/cd-fdcd.png)    |        ![lfcd](assets/images/cd-lfcd.png)         |
 |  [fd](https://github.com/sharkdp/fd/)   |       [lf](https://github.com/gokcehan/lf/)       |
+
+---
 
 ### Neovim
 
@@ -87,7 +93,11 @@
 >
 > My [fork config](https://github.com/KevinNitroG/Alexis12119-nvim)
 
+---
+
 ## 🪴 INSTALL
+
+---
 
 ### 1️⃣ Add SSH
 
@@ -105,6 +115,8 @@
 
 > In order to encrypt / decrypt chezmoi
 
+---
+
 ### 2️⃣ Install prerequisite
 
 - Set execution policy to run script from URL _(Admin)_
@@ -116,9 +128,12 @@
   iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteScoop.ps1" | iex
   ```
 - Install prequisite choco _(admin)_
+
   ```ps1
   iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteChoco.ps1" | iex
   ```
+
+---
 
 ### 3️⃣ Chezmoi
 
@@ -134,11 +149,15 @@ chezmoi init --apply --verbose git@github.com:KevinNitroG/windows-dotfiles.git
 
 > Follow instruction of chezmoi to setup chezmoi config
 
+---
+
 ### 4️⃣ Set env path _(Admin)_
 
 ```ps1
 iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/environmentVariables.ps1" | iex
 ```
+
+---
 
 ### 5️⃣ Install softwares
 
@@ -155,9 +174,13 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
   iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-nadmin.ps1" | iex
   ```
 
+---
+
 ### 6️⃣ Install fonts
 
 - https://fonts.google.com/specimen/Be+Vietnam+Pro?query=be+vie
+
+---
 
 ### 7️⃣ Install some code stuff
 
@@ -178,7 +201,11 @@ npm install eslint
 npm install markdownlint
 ```
 
+---
+
 ## 🎈 EXTRAS
+
+---
 
 ### Crack Winrar _(Admin)_
 
@@ -187,6 +214,8 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 ```
 
 > [Source](https://gist.github.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aab81a1)
+
+---
 
 ### Patch IDM
 
@@ -230,6 +259,8 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
   +  127.0.0.1           mirror3.internetdownloadmanager.com
   ```
 
+---
+
 ### Install & Active Office
 
 - Install: [OTP Ladian](https://otp.landian.vip/redirect/download.php?type=runtime&arch=x64&site=github)
@@ -238,6 +269,8 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
   ```ps1
   irm https://massgrave.dev/get | iex
   ```
+
+---
 
 ### Spotify
 
@@ -248,6 +281,8 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
   # mirror
   iex "& { $(iwr -useb 'https://spotx-official.github.io/run.ps1') } -m -new_theme"
   ```
+
+---
 
 ### Need to do
 
@@ -297,6 +332,8 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
   reg add "HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TimeZoneInformation" /v RealTimeIsUniversal /d 1 /t REG_DWORD /f
   ```
 
+---
+
 ### Others
 
 - [Keyviz](https://github.com/mulaRahul/keyviz/releases/latest) _(Already install from PM)_
@@ -314,13 +351,18 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 - Microsoft Teams
 - [MPC - HC](https://github.com/clsid2/mpc-hc)
 - ViveTool
+
   ```.ps1
   vivetool /disable /id:42354458 # Disable desktop switch animation
   ```
 
+---
+
 ## 📒 NOTES
 
 > Just something that I often forget
+
+---
 
 ### SSH
 
@@ -329,6 +371,8 @@ Public key
 ```id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDap/5GnLxYYNJ2QB1rYRgXyHLQud0L3Y6sfiPL6iAdqZRm+f+006DeZtJ4oP2IN8oS6nF6tfWhCaQ91jv3fZWO+olhyBZulSGbb75WdcqLcctfDwc9er+BZZZMBsF0inEbCgHEooo5kelkuuPIEUmeqn9ozUtQ4A6mLIurjsGfy2nD2bCjYys3UxUa09xEiQxvgHnlvSPCh9XvG1h4eX611GI6EbtJoOvzFPYzaxdNosbombq1HMnNGXk3TMS9fghE1GjnMiBbrortGn6mT0aNi//N9Wgr9AYR0dY2BWk1CZXF78G4MWZoaLOLW5sriMjU881UbfmJx6MmvMAEHDrfJDIQAIoRsjAJbw00SoZjspEg3R8f8ekNjduzikG65noMJGd+jTD7MtBDe+YNCuZp6UQAPwbPQLtlbKOysEWzPupKMHIsPkzUJpdYp1ML1ljV/q+FLRKje4FvWUKTk8KekWxp2tUyn5gWUIrG7DGkE5MKpBp0njFJ17n8H81xQJs= trannguyenthaibinh46@gmail.com
 ```
+
+---
 
 ### GPG
 
@@ -351,6 +395,8 @@ gpg --output kevinnitro-secret-gpg-key.pgp --armor --export-secret-key trannguye
 ```.ps1
 gpg --import the-key.gpg
 ```
+
+---
 
 ### Windows
 
