@@ -158,11 +158,11 @@ format = '[[ $symbol( $version) ](fg:surface0 bg:green)]($style)'
 [docker_context]
 symbol = ""
 style = "bg:blue"
-format = '[[ $symbol( $context) ](fg:#83a598 bg:blue)]($style)'
+format = '[[ $symbol( $context) ](fg:#surface0 bg:blue)]($style)'
 
 [conda]
 style = "bg:blue"
-format = '[[ $symbol( $environment) ](fg:#83a598 bg:blue)]($style)'
+format = '[[ $symbol( $environment) ](fg:#surface0 bg:blue)]($style)'
 
 [time]
 disabled = true
