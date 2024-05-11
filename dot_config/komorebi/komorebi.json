@@ -19,17 +19,21 @@
       "kind": "Exe"
     }
   ],
-  // "float_rules": [
-  //   {
-  //     "id": "Microsoft Visual Studio",
-  //     "kind": "Title",
-  //     "matching_strategy": "Equals"
-  //   },
-  //   {
-  //     "id": "VsDebugConsole.exe",
-  //     "kind": "Exe"
-  //   }
-  // ],
+  "float_rules": [
+    // {
+    //   "id": "Microsoft Visual Studio",
+    //   "kind": "Title",
+    //   "matching_strategy": "Equals"
+    // },
+    // {
+    //   "id": "VsDebugConsole.exe",
+    //   "kind": "Exe"
+    // }
+    {
+      "id": "Messenger call - Google Chrome",
+      "kind": "Title"
+    }
+  ],
   "monitors": [
     {
       "workspaces": [
