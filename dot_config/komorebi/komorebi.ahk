@@ -50,10 +50,14 @@
 ^#p::Promote()
 
 #Enter::Run "wt.exe"
+#t::Run "wt.exe"
+#c::Run "code.exe"
+#b::Run "chrome.exe" 
+#s::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
 
 ^#f::ToggleFloat()
 ^#m::Minimize()
-^#w::Close()
+^#q::Close()
 ^#t::ToggleTiling() ; avoid with opening terminal
 ^#z::ToggleMonocle()
 
