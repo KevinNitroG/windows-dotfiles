@@ -55,11 +55,11 @@
 #b::Run "chrome.exe" 
 #s::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
 
-^#f::ToggleFloat()
+#f::ToggleFloat()
 ^#m::Minimize()
-^#q::Close()
+#q::Close()
 ^#t::ToggleTiling() ; avoid with opening terminal
-^#z::ToggleMonocle()
+#z::ToggleMonocle()
 
 ^#r::Retile()
 ^#+p::TogglePause()
