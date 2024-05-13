@@ -8,6 +8,8 @@
 
 #Include komorebic.lib.ahk
 
+#^o::ReloadConfiguration()
+
 #1::FocusWorkspace(0)
 #2::FocusWorkspace(1)
 #3::FocusWorkspace(2)
@@ -36,46 +38,44 @@
 #+[::CycleMoveToWorkspace("previous")
 #+]::CycleMoveToWorkspace("next")
 
-^#h::Focus("left")
-^#j::Focus("down")
-^#k::Focus("up")
-^#l::Focus("right")
+#Left::Focus("left")
+#Down::Focus("down")
+#Up::Focus("up")
+#Right::Focus("right")
 ^#+[::CycleFocus("previous")
 ^#+]::CycleFocus("next")
 
-^#+h::Move("left")
-^#+j::Move("down")
-^#+k::Move("up")
-^#+l::Move("right")
+^#+Left::Move("left")
+^#+Down::Move("down")
+^#+Up::Move("up")
+^#+Right::Move("right")
 ^#p::Promote()
+
+#+Right::ResizeAxis("horizontal", "increase")
+#+Left::ResizeAxis("horizontal", "decrease")
+#+Up::ResizeAxis("vertical", "increase")
+#+Down::ResizeAxis("vertical", "decrease")
+
+#f::ToggleFloat()
+#m::Minimize()
+#q::Close()
+#+t::ToggleTiling() ; avoid with opening terminal
+#z::ToggleMonocle()
+!Enter::F11 ; Toggle fullscreen
+^#r::Retile()
+^#+p::TogglePause()
+
+^#h::Stack("left")
+^#l::Stack("right")
+^#k::Stack("up")
+^#j::Stack("down")
+^#;::Unstack()
+
+^#x::FlipLayout("horizontal")
+^#y::FlipLayout("vertical")
 
 #Enter::Run "wt.exe"
 #t::Run "wt.exe"
 #c::Run "code.exe"
 #b::Run "chrome.exe" 
 #s::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
-
-#f::ToggleFloat()
-^#m::Minimize()
-#q::Close()
-^#t::ToggleTiling() ; avoid with opening terminal
-#z::ToggleMonocle()
-
-^#r::Retile()
-^#+p::TogglePause()
-
-^#+Left::Stack("left")
-^#+Right::Stack("right")
-^#+Up::Stack("up")
-^#+Down::Stack("down")
-^#+;::Unstack()
-
-^#Right::ResizeAxis("horizontal", "increase")
-^#Left::ResizeAxis("horizontal", "decrease")
-^#Up::ResizeAxis("vertical", "increase")
-^#Down::ResizeAxis("vertical", "decrease")
-
-^#x::FlipLayout("horizontal")
-^#y::FlipLayout("vertical")
-
-#^o::ReloadConfiguration()
