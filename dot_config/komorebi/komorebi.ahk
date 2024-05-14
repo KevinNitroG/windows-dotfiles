@@ -61,7 +61,7 @@
 #q::Close()
 #+t::ToggleTiling() ; avoid with opening terminal
 #z::ToggleMonocle()
-!Enter::F11 ; Toggle fullscreen
+; !Enter::F11 ; Toggle fullscreen
 ^#r::Retile()
 ^#+p::TogglePause()
 
