@@ -87,9 +87,13 @@ $SCOOP_OTHER_APPS = @(
   "main/openssl",
   "nonportable/winfsp-np"
 )
+$PIP_APPS = @(
+  "thefuck",
+  "yewtube"
+)
 
 Install-Module -Name CompletionPredictor -Repository PSGallery -Force
 
 scoop install $SCOOP_FONTS $SCOOP_COMPLETIONS $SCOOP_NECESSARYS $SCOOP_CODE_EDITORS $SCOOP_OFTEN_USE_APPS $SCOOP_CODING_TOOLS $SCOOP_OTHER_APPS
 
-pip install thefuck
+pip install $PIP_APPS
