@@ -3,6 +3,10 @@
 import = [
     "~/AppData/Roaming/alacritty/catppuccin-alacritty/catppuccin-macchiato.toml"
 ]
+live_config_reload = true
+
+[env]
+TERMINAL = "alacritty"
 
 [shell]
 program = "pwsh"
@@ -13,6 +17,7 @@ padding = { x = 2, y = 2 }
 dynamic_padding = true
 decorations = "Full" # Full or None
 startup_mode = "Maximized"
+dynamic_title = true
 
 [scrolling]
 multiplier = 1
@@ -26,6 +31,7 @@ transparent_background_colors = true
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
+vi_mode_style = {shape = "Block", blinking = "Off"}
 
 [terminal]
 osc52 = "CopyPaste"
