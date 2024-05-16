@@ -77,18 +77,18 @@
           "name": "2",
           "layout": "Grid",
           "workspace_rules": [
-            {
-              "id": "WindowsTerminal.exe",
-              "kind": "Exe"
-            },
-            {
-              "id": "wezterm-gui.exe",
-              "kind": "Exe"
-            },
-            {
-              "id": "alacritty.exe",
-              "kind": "Exe"
-            }
+            //   {
+            //     "id": "WindowsTerminal.exe",
+            //     "kind": "Exe"
+            //   },
+            //   {
+            //     "id": "wezterm-gui.exe",
+            //     "kind": "Exe"
+            //   },
+            //   {
+            //     "id": "alacritty.exe",
+            //     "kind": "Exe"
+            //   }
           ]
         },
         {
