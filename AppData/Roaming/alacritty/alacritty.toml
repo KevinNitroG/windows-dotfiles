@@ -19,7 +19,6 @@ decorations = "Full" # Full or None
 opacity = 1.0
 blur = true
 startup_mode = "Maximized"
-dynamic_title = true
 
 [scrolling]
 multiplier = 1
