@@ -74,7 +74,7 @@
 ^#x::FlipLayout("horizontal")
 ^#y::FlipLayout("vertical")
 
-#Enter::Run "wt.exe"
+#Enter::Run "alacritty.exe"
 #t::Run "wt.exe"
 #c::Run "code.exe"
 #b::Run "chrome.exe" 
