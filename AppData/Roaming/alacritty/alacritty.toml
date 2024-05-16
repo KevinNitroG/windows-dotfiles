@@ -16,6 +16,8 @@ args = ["-noLogo", "-WorkingDirectory C:/Users/kevinnitro/"]
 padding = { x = 2, y = 2 }
 dynamic_padding = true
 decorations = "Full" # Full or None
+opacity = 1.0
+blur = true
 startup_mode = "Maximized"
 dynamic_title = true
 
@@ -36,8 +38,7 @@ vi_mode_style = {shape = "Block", blinking = "Off"}
 [terminal]
 osc52 = "CopyPaste"
 
-[mouse]
-hide_when_typing = true
-# Mouse bindings (actual bindings need to be defined as per user preference)
-# Example: bindings = [{ mouse = "Left", action = "Paste" }]
-bindings = []
+[keyboard]
+bindings = [
+  { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+]
