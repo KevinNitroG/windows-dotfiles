@@ -37,7 +37,7 @@
 [user]
 	name = KevinNitroG
 	email = trannguyenthaibinh46@gmail.com
-	signingkey = C:/Users/kevinnitro/.ssh/id_rsa.pub
+	signingkey = C:/Users/kevinnitro/.ssh/id_ed25519
 
 [safe]
 	directory = E:/
