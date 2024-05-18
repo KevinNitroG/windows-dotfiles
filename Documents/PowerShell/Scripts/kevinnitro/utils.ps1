@@ -1,11 +1,28 @@
 # ref: https://github.com/ChrisTitusTech/powershell-profile/blob/main/Microsoft.PowerShell_profile.ps1
 
 function ..
-{ Set-Location .\..
+{
+  Set-Location .\..
 }
 
-function ....
-{ Set-Location .\..\.. 
+function ...
+{ 
+  Set-Location .\..\.. 
+}
+
+function .3
+{ 
+  Set-Location .\..\..\..
+}
+
+function .4
+{ 
+  Set-Location .\..\..\..\..
+}
+
+function .5
+{ 
+  Set-Location .\..\..\..\..\..
 }
 
 function List-AvailableModules

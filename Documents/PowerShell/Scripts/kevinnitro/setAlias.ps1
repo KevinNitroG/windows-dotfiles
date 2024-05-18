@@ -6,3 +6,5 @@ if (Get-Command lazygit)
 }
 
 Set-Alias -Name e -Value explorer.exe
+
+Set-Alias - Name c -Value cls
