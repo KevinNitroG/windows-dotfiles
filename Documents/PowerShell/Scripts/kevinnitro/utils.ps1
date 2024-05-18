@@ -315,3 +315,18 @@ function Check-IsAdmin
 {
   return ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 }
+
+function Reboot-BIOS
+{
+  if (Check-IsAdmin)
+  {
+    shutdown /r /fw /f /t 0
+  } else
+  {
+    if (Test-CommandExists sudo)
+    {
+      sudo shutdown /r /fw /f /t 0
+    } else
+    Write-Host "Please run with administrator privilege"
+  }
+}
