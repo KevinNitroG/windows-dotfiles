@@ -6,4 +6,4 @@ Host github.com
   User git
   Port 22
   PreferredAuthentications publickey
-  IdentityFile C:/Users/kevinnitro/.ssh/id_rsa
+  IdentityFile C:/Users/kevinnitro/.ssh/id_ed25519

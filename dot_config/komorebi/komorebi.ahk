@@ -74,8 +74,8 @@
 ^#x::FlipLayout("horizontal")
 ^#y::FlipLayout("vertical")
 
-#Enter::Run "alacritty.exe"
-#t::Run "wt.exe"
+#Enter::Run "wt.exe"
+#t::Run "alacritty.exe"
 #c::Run "code.exe"
 #b::Run "chrome.exe" 
 #s::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
