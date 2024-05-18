@@ -56,7 +56,7 @@
 #+Up::ResizeAxis("vertical", "increase")
 #+Down::ResizeAxis("vertical", "decrease")
 
-#f::ToggleFloat()
+#w::ToggleFloat()
 #m::Minimize()
 #q::Close()
 #+t::ToggleTiling() ; avoid with opening terminal
