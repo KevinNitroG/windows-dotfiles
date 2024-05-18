@@ -1,7 +1,7 @@
 ; Ref: https://github.com/garybernhardt/dotfiles/blob/main/.gitconfig
 
 [core]
-	; editor = \"C:\\Users\\kevinnitro\\AppData\\Local\\Programs\\Microsoft VS Code\\bin\\code\" --wait
+	; editor = code --wait
 	editor = nvim
 	autocrlf = false
 	longpaths = true
@@ -20,7 +20,6 @@
   show-syntax-themes = true
   hyperlinks = true
   ; hyperlinks-file-link-format = "vscode://file/{path}:{line}"
-
 
 [merge]
   conflictstyle = diff3
@@ -47,18 +46,21 @@
 	directory = C:/Users/kevinnitro/scoop/buckets/main
 
 [alias]
+  aa = add -A
+  au = add -u
+  amend = commit -a --amend --no-edit
   s = status
   co = checkout
   cob = checkout -b
-  del = branch -D
-  br = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+  db = branch -D
+  lsb = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
   save = !git add -A && git commit -m \"🧹 chore(save): $(curl -s -f https://whatthecommit.com/index.txt || \"save point\")\" # magic commit
-  undo = reset HEAD~1 --mixed
-  res = reset --hard
   done = push origin HEAD # lazy to push
   f = !git save && git done # finish
+  undo = reset HEAD~1 --mixed
+  res = reset --hard
   lg = log --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]' --abbrev-commit # online log with prettier
-  logg = git log --graph --decorate --all # graph log
+  lgg = git log --graph --decorate --all # graph log
   subup = submodule update --init --recursive # submodule recursive update
   wdiff = diff --word-diff # word diff
   rdiff = diff --submodule=diff # recursive
@@ -76,9 +78,10 @@
   ski = !git stash --keep-index
   cp = cherry-pick
   pf = push --force-with-lease
+  pr = pull rebase
+  editconfig = config --global --edit
 
 [gpg]
-	program = C:/Program Files (x86)/Gpg4win/../GnuPG/bin/gpg.exe
 	format = ssh
 
 [commit]
