@@ -118,6 +118,9 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # GPG
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/gpg.ps1"
 
+# Githelpers
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/gitHelpers.ps1"
+
 # Utils
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/utils.ps1"
 
