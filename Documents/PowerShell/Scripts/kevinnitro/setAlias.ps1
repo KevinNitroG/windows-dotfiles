@@ -8,3 +8,7 @@ if (Get-Command lazygit)
 Set-Alias -Name e -Value explorer.exe
 
 Set-Alias -Name c -Value cls
+
+Set-Alias -Name shutdownnow -Value Stop-Computer
+Set-Alias -Name rebootnow -Value Restart-Computer
+
