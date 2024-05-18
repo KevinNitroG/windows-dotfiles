@@ -1,7 +1,7 @@
-; Ref: https://github.com/garybernhardt/dotfiles/blob/main/.gitconfig
+# Ref: https://github.com/garybernhardt/dotfiles/blob/main/.gitconfig
 
 [core]
-	; editor = code --wait
+	# editor = code --wait
 	editor = nvim
 	autocrlf = false
 	longpaths = true
@@ -12,14 +12,14 @@
 
 [delta]
   navigate = true    # use n and N to move between diff sections
-  # delta detects terminal colors automatically; set one of these to disable auto-detection
+  # delta detects terminal colors automatically# set one of these to disable auto-detection
   dark = true
   # light = true
   side-by-side = true
   line-numbers = true
   show-syntax-themes = true
   hyperlinks = true
-  ; hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+  # hyperlinks-file-link-format = "vscode://file/{path}:{line}"
 
 [merge]
   conflictstyle = diff3
@@ -59,27 +59,38 @@
   f = !git save && git done # finish
   undo = reset HEAD~1 --mixed
   res = reset --hard
-  lg = log --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]' --abbrev-commit # online log with prettier
+  lg = log --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]' --abbrev-commit # online log with prettierg
   lgg = log --graph --decorate --all # graph log
   subup = submodule update --init --recursive # submodule recursive update
   wdiff = diff --word-diff # word diff
   rdiff = diff --submodule=diff # recursive
   pdiff = diff --word-diff=color --word-diff-regex=. # precise
   discard = !git checkout -- . && git submodule foreach git checkout -- .
-  head = !git r -1
+  head = r -1
   h = head
-  hp = "!. ~/.githelpers && show_git_head"
-  r = !GIT_NO_PAGER=1 git l -30
-  ra = r --all
-  l = "!. ~/.githelpers && pretty_git_log"
-  la = !git l --all
-  b = "!. ~/.githelpers && pretty_git_branch"
-  bs = "!. ~/.githelpers && pretty_git_branch_sorted"
   ski = stash --keep-index
   cp = cherry-pick
   pf = push --force-with-lease
   pr = pull rebase
   editconfig = config --global --edit
+
+  # ref: https://github.com/stevearc/dotfiles/blob/master/.gitconfig
+  po = !bash ~/.githelpers push_current_branch
+  pof = !bash ~/.githelpers push_current_branch --force-with-lease
+  dopr = !bash ~/.githelpers create_pull_request
+  popr = !git po && sleep 1 && git dopr
+  findpr = !bash ~/.githelpers find_pull_request
+  fix = !bash ~/.githelpers commit_fix
+  uu = !bash ~/.githelpers update_master
+  l = !bash ~/.githelpers pretty_git_log_paged
+  la = !git l --all
+  r = !git rcp -20
+  ra = !git la -20
+  rc = !bash ~/.githelpers contextual_git_log
+  rcp = !bash ~/.githelpers contextual_git_log_paged
+
+  prev = checkout @^
+  next = !git checkout $(git rev-list --children --all | grep ^$(git rev-parse HEAD) | cut -f 2 -d ' ')
 
 [gpg]
 	format = ssh

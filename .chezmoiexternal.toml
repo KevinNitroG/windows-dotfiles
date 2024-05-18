@@ -45,6 +45,6 @@ refreshPeriod = "168h"
 
 [".githelpers"]
 type = "file"
-url = "https://raw.githubusercontent.com/garybernhardt/dotfiles/main/.githelpers"
+url = "https://raw.githubusercontent.com/stevearc/dotfiles/master/.githelpers"
 refreshPeriod = "168h"
 
