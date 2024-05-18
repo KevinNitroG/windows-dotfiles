@@ -60,22 +60,22 @@
   undo = reset HEAD~1 --mixed
   res = reset --hard
   lg = log --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]' --abbrev-commit # online log with prettier
-  lgg = git log --graph --decorate --all # graph log
+  lgg = log --graph --decorate --all # graph log
   subup = submodule update --init --recursive # submodule recursive update
   wdiff = diff --word-diff # word diff
   rdiff = diff --submodule=diff # recursive
-  pdiff = git diff --word-diff=color --word-diff-regex=. # precise
+  pdiff = diff --word-diff=color --word-diff-regex=. # precise
   discard = !git checkout -- . && git submodule foreach git checkout -- .
   head = !git r -1
-  h = !git head
+  h = head
   hp = "!. ~/.githelpers && show_git_head"
   r = !GIT_NO_PAGER=1 git l -30
-  ra = !git r --all
+  ra = r --all
   l = "!. ~/.githelpers && pretty_git_log"
   la = !git l --all
   b = "!. ~/.githelpers && pretty_git_branch"
   bs = "!. ~/.githelpers && pretty_git_branch_sorted"
-  ski = !git stash --keep-index
+  ski = stash --keep-index
   cp = cherry-pick
   pf = push --force-with-lease
   pr = pull rebase
