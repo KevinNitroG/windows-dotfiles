@@ -5,38 +5,41 @@
 
 ---
 
-## Table of Contents
+## TABLE OF CONTENTS
 
 - [KEVINNITRO WINDOWS DOTFILES](#kevinnitro-windows-dotfiles)
-  - [Table of Contents](#table-of-contents)
-  - [😎 PREVIEW](#-preview)
+  - [😎 PREVIEW](#😎-preview)
     - [Terminal](#terminal)
     - [Check Wifi Password](#check-wifi-password)
     - [App Manage](#app-manage)
     - [Change directory schemes](#change-directory-schemes)
     - [Neovim](#neovim)
-  - [🪴 INSTALL](#-install)
+  - [🪴 INSTALL](#🪴-install)
     - [1️⃣ Add SSH](#1️⃣-add-ssh)
     - [2️⃣ Install prerequisite](#2️⃣-install-prerequisite)
     - [3️⃣ Chezmoi](#3️⃣-chezmoi)
-    - [4️⃣ Set env path _(Admin)_](#4️⃣-set-env-path-admin)
+    - [4️⃣ Set env path _(Admin)_](<#4️⃣-set-env-path-_(admin)_>)
     - [5️⃣ Install softwares](#5️⃣-install-softwares)
     - [6️⃣ Install fonts](#6️⃣-install-fonts)
     - [7️⃣ Install some code stuff](#7️⃣-install-some-code-stuff)
-  - [🎈 EXTRAS](#-extras)
-    - [Crack Winrar _(Admin)_](#crack-winrar-admin)
+    - [🧪 ONE SCRIPT _(test)_](<#🧪-one-script-_(test)_>)
+  - [🎈 EXTRAS](#🎈-extras)
+    - [Crack Winrar _(Admin)_](<#crack-winrar-_(admin)_>)
     - [Patch IDM](#patch-idm)
-    - [Install \& Active Office](#install--active-office)
+      - [Repack.me](#repack.me)
+      - [PITVN](#pitvn)
+      - [Old method](#old-method)
+    - [Install & Active Office](#install-&-active-office)
     - [Spotify](#spotify)
     - [Need to do](#need-to-do)
     - [Others](#others)
-  - [📒 NOTES](#-notes)
+  - [📒 NOTES](#📒-notes)
     - [SSH](#ssh)
     - [GPG](#gpg)
     - [Windows](#windows)
       - [View current path](#view-current-path)
       - [Variables](#variables)
-      - [Others](#others-1)
+      - [Others](#others)
 
 ---
 
@@ -119,7 +122,7 @@
 
 ### 2️⃣ Install prerequisite
 
-- Set execution policy to run script from URL _(Admin)_
+- Set execution policy to run script from URL _(non-admin)_
   ```ps1
   Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
   ```
@@ -191,16 +194,21 @@ pip intsall ruff
 pip install cpplint
 
 # prettier
-npm install prettier
+npm install prettier -g
 
 # eslint
-npm install eslint
+npm install eslint -g
 
 # markdownlint
-npm install markdownlint
+npm install markdownlint -g
+
+# commitizen
+npm install commitizen -g
 ```
 
-### TESTING SCRIPT
+---
+
+### 🧪 ONE SCRIPT _(test)_
 
 > [!NOTE]
 >
@@ -209,7 +217,7 @@ npm install markdownlint
 >
 > It may not work =))
 
-- Set execution policy to run script from URL _(Admin)_
+- Set execution policy to run script from URL _(non-admin)_
   ```ps1
   Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
   ```

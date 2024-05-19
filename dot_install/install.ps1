@@ -10,6 +10,9 @@ Write-Host "INSTALL PREQUISITE CHOCO..."
 curl "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteChoco.ps1" -o "$($env:temp)\install_prequisite_choco.ps1"
 Start-Process -filepath "powershell" -Argumentlist "$($env:temp)\install_prequisite_choco.ps1" -Verb runas -Wait remove-item -Path "$($env:temp)\install_prequisite_choco.ps1" -Force
 
+Write-Host "APPLY CHEZMOI DOTFILES..."
+chezmoi init --apply --verbose git@github.com:KevinNitroG/windows-dotfiles.git
+
 Write-Host "SETUP ENVIRONMENT VARIABLES..."
 curl "https://raw.githubusercontent.com/kevinnitrog/windows-dotfiles/main/dot_install/environmentVariables.ps1" -o "$($env:temp)\install_environment_variables.ps1"
 Start-Process -filepath "powershell" -Argumentlist "$($env:temp)\install_environment_variables.ps1" -Verb runas -Wait remove-item -Path "$($env:temp)\install_environment_variables.ps1" -Force
@@ -25,5 +28,4 @@ curl "https://raw.githubusercontent.com/kevinnitrog/windows-dotfiles/main/dot_in
 Start-Process -Filepath "powershell" -Argumentlist "$($env:temp)\install_softwares_admin.ps1" -Verb runas -Wait remove-item -Path "$($env:temp)\install_softwares_admin.ps1" -Force
 
 Write-Host "INSTALL CODING STUFF..."
-pip intsall ruff cpplint
-npm install prettier eslint markdownlint
+Invoke-WebRequest "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/codingStuff.ps1" | Invoke-Expression
