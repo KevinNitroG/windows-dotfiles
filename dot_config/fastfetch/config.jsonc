@@ -52,26 +52,25 @@
       "type": "shell"
     },
     {
-      "key": "│           │\u001b[11D\u001b[33m󰍛 cpu",
+      "key": "│           │\u001b[11D\u001b[33m apps",
+      "type": "packages"
+    },
+    {
+      "key": "│           │\u001b[11D\u001b[34m󰍛 cpu",
       "type": "cpu"
     },
     {
-      "key": "│           │\u001b[11D\u001b[34m󰍛 gpu",
+      "key": "│           │\u001b[11D\u001b[35m󰍛 gpu",
       "type": "gpu"
     },
     {
-      "key": "│           │\u001b[11D\u001b[35m󰉉 disk",
+      "key": "│           │\u001b[11D\u001b[36m󰉉 disk",
       "type": "disk",
       "folders": "/"
     },
     {
-      "key": "│           │\u001b[11D\u001b[36m memory",
+      "key": "│           │\u001b[11D\u001b[37m memory",
       "type": "memory"
-    },
-    {
-      "key": "│           │\u001b[11D\u001b[37m󰩟 network",
-      "type": "localip",
-      "format": "{1} ({4})"
     },
     {
       "key": "├───────────┤",
