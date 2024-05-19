@@ -37,7 +37,7 @@ $env:PYTHONIOENCODING = "utf-8"
 # Import-Module -Name posh-wakatime
 import-module -Name PsReadLine
 Import-Module -Name CompletionPredictor
-Import-Module -Name DockerCompletion
+# Import-Module -Name DockerCompletion
 Import-Module -Name posh-git
 Import-Module -Name "$env:USERPROFILE\.config\wakatime\posh-wakatime\posh-wakatime.psm1"
 Import-Module -Name "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
@@ -48,7 +48,7 @@ Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.Full
 # oh-my-posh init pwsh --config "$env:USERPROFILE/.config/ohmyposh/themes/kevinnitro.omp.json" | Invoke-Expression
 
 # Thefuck
-Invoke-Expression "$(thefuck --alias)"
+# Invoke-Expression "$(thefuck --alias)"
 
 # zoxide
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
@@ -94,7 +94,7 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # Chezmoi tab completion
 # Note that it will work only when you type chezmoi
-. "$env:USERPROFILE/Documents/PowerShell/Modules/chezmoi/completion.ps1"
+# . "$env:USERPROFILE/Documents/PowerShell/Modules/chezmoi/completion.ps1"
 
 # Chezmoi config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/chezmoi.ps1"
@@ -119,7 +119,7 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/gpg.ps1"
 
 # Githelpers
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/gitHelpers.ps1"
+# . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/gitHelpers.ps1"
 
 # Utils
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/utils.ps1"
