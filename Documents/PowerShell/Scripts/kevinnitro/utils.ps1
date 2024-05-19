@@ -277,10 +277,10 @@ function df
   get-volume
 }
 
-function sed($file, $find, $replace)
-{
-    (Get-Content $file).replace("$find", $replace) | Set-Content $file
-}
+# function sed($file, $find, $replace)
+# {
+#     (Get-Content $file).replace("$find", $replace) | Set-Content $file
+# }
 
 # function which($name) {
 #     Get-Command $name | Select-Object -ExpandProperty Definition
