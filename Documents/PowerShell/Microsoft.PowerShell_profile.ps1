@@ -124,5 +124,5 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # Utils
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/utils.ps1"
 
-# Fastfetch
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/fastfetch.ps1"
+# Fastfetch to flex ~.~
+fastfetch
