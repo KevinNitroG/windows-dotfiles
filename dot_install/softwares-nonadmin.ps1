@@ -19,6 +19,7 @@ $SCOOP_NECESSARYS = @(
 $SCOOP_CODE_EDITORS = @(
   "extras/vscode",
   "extras/windows-terminal",
+  "extras/alacritty",
   "main/neovim"
   # "extra/sublime-text"
 )
@@ -73,6 +74,7 @@ $SCOOP_CODING_TOOLS = @(
   "main/tldr",
   "main/touch",
   "main/vivetool",
+  "main/wakatime-cli",
   "main/xh",
   "main/yt-dlp",
   "main/zoxide",

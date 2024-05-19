@@ -105,7 +105,7 @@
   ```ps1
   Set-Service ssh-agent -StartupType Automatic
   Start-Service ssh-agent
-  ssh-add "$env:USERPROFILE/.ssh/id_rsa"
+  ssh-add "$env:USERPROFILE/.ssh/id_ed25519"
   ```
 - Import GPG Keys:
   ```ps1
@@ -128,7 +128,6 @@
   iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteScoop.ps1" | iex
   ```
 - Install prequisite choco _(admin)_
-
   ```ps1
   iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteChoco.ps1" | iex
   ```
@@ -171,7 +170,7 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
   ```
 - Install softwares _(admin)_
   ```ps1
-  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-nadmin.ps1" | iex
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-admin.ps1" | iex
   ```
 
 ---
@@ -200,6 +199,24 @@ npm install eslint
 # markdownlint
 npm install markdownlint
 ```
+
+### TESTING SCRIPT
+
+> [!NOTE]
+>
+> This script merges above steps. But haven't been tested yet.
+> Go import SSH and GPG keys first.
+>
+> It may not work =))
+
+- Set execution policy to run script from URL _(Admin)_
+  ```ps1
+  Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
+  ```
+- Run script _(non-admin)_
+  ```ps1
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/install.ps1" | iex
+  ```
 
 ---
 

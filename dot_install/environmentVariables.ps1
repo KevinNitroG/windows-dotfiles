@@ -22,7 +22,6 @@ $newPathsString = $newPaths -join ";"
 # Set the updated Path variable (User)
 [System.Environment]::SetEnvironmentVariable("Path", "$currentPath;$newPathsString", [System.EnvironmentVariableTarget]::User)
 
-
 # ENV
 
 # Cargo
