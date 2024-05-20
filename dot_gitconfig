@@ -46,7 +46,7 @@
 	directory = C:/Users/kevinnitro/scoop/buckets/main
 
 [alias]
-  gcc = !git reflog expire --all --expire=now && git gc --prune=now --aggressive
+  gcc = !git reflog expire --all --expire=now && git gc --prune=now --aggressive # clean local reflog: https://stackoverflow.com/a/2116892/23173098
   aa = add -A
   au = add -u
   amend = commit -a --amend --no-edit
