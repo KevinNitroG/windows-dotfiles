@@ -31,6 +31,7 @@
       - [Old method](#old-method)
     - [Install & Active Office](#install-&-active-office)
     - [Spotify](#spotify)
+    - [Chrome extensions](#chrome-extensions)
     - [Need to do](#need-to-do)
     - [Others](#others)
   - [📒 NOTES](#📒-notes)
@@ -304,6 +305,18 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
   # mirror
   iex "& { $(iwr -useb 'https://spotx-official.github.io/run.ps1') } -m -new_theme"
   ```
+
+---
+
+### Chrome extensions
+
+- [AltNumberTab](https://github.com/pointtonull/AltNumberTab/tree/master)
+- [bypass paywalls chrome](https://github.com/iamadamdev/bypass-paywalls-chrome)
+- [useful-script](https://github.com/HoangTran0410/useful-script)
+
+> [!NOTE]
+>
+> Those are extensions which aren't in webstore and have to be installed manually.
 
 ---
 
