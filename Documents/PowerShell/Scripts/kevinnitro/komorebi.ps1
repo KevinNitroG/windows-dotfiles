@@ -8,7 +8,8 @@ function Start-Komorebi
   }
   if (! (Get-Process "AutoHotKey" -ErrorAction SilentlyContinue))
   {
-    AutoHotkey.exe "C:/Users/kevinnitro/.config/komorebi/komorebi.ahk"
+    # AutoHotkey.exe "C:/Users/kevinnitro/.config/komorebi/komorebi.ahk"
+    AutoHotkey.exe "C:/Users/kevinnitro/.config/autohotkey.ahk"
   }
 }
 
