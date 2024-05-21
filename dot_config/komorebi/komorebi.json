@@ -20,18 +20,15 @@
     }
   ],
   "float_rules": [
-    // {
-    //   "id": "Microsoft Visual Studio",
-    //   "kind": "Title",
-    //   "matching_strategy": "Equals"
-    // },
-    // {
-    //   "id": "VsDebugConsole.exe",
-    //   "kind": "Exe"
-    // }
     {
       "id": "Messenger call - Google Chrome",
-      "kind": "Title"
+      "kind": "Title",
+      "matching_strategy": "Equals"
+    },
+    {
+      "id": "Authy Desktop.exe",
+      "kind": "Exe",
+      "matching_strategy": "Equals"
     }
   ],
   "monitors": [
