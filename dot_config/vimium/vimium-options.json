@@ -1,6 +1,6 @@
 {
   "hideHud": true,
-  "keyMappings": "# Insert your preferred key mappings here.\n\nmapKey <c-;> <c-[>",
+  "keyMappings": "# Insert your preferred key mappings here.\n\nmapKey <c-;> <c-[>\nmap ' Marks.activateGotoMode",
   "linkHintCharacters": "asdfjklghertyuicvn",
   "scrollStepSize": 80,
   "grabBackFocus": true,
