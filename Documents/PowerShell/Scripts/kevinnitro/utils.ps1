@@ -348,17 +348,11 @@ function extract
   {
     $FileName = [System.IO.Path]::GetFileNameWithoutExtension($File)
     $Folder = Join-Path -Path (Split-Path -Path $File -Parent) -ChildPath "$FileName"
-    if (-not (Test-Path -Path $Folder -PathType Container))
-    {
-      New-Item -Path $Folder -ItemType Directory | Out-Null
-      Write-Host "Folder '$Folder' created."
-    }
   }
 
-  if (!(Test-Path -Path "$Folder" -PathType Container))
+  if (-not (Test-Path -Path $Folder -PathType Container))
   {
-    Write-Error "$Folder does not exist!!!"
-    Break
+    New-Item -Path $Folder -ItemType Directory | Out-Null
   }
 
   if (Test-Path -Path "$File" -PathType Leaf)
@@ -381,6 +375,17 @@ function extract
       { Write-Error "No way to Extract $File !!!"; return;
       }
     }
-    Write-Host "Extracted to $($Folder)"
+    Write-Host "Extracted "$FILE" to "$($Folder)""
+  }
+}
+
+function extract_multi
+{
+  $CurrentDate = (Get-Date).ToString("yyyy-MM-dd_HH-mm-ss")
+  $Folder = "extracted_$($CurrentDate)"
+  New-Item -Path $Folder -ItemType Directory | Out-Null
+  foreach($File in $args)
+  {
+    extract -File $File -Folder "$($Folder)\$([System.IO.Path]::GetFileNameWithoutExtension($File))"
   }
 }
