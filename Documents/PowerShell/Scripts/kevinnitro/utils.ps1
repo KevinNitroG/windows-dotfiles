@@ -336,3 +336,50 @@ function Reboot-BIOS
   shutdown /r /fw /f /t 0
 }
 
+# Ref: https://gist.github.com/mikepruett3/7ca6518051383ee14f9cf8ae63ba18a7
+function extract
+{
+  param (
+    [string]$File,
+    [string]$Folder
+  )
+
+  if (-not $Folder)
+  {
+    $FileName = [System.IO.Path]::GetFileNameWithoutExtension($File)
+    $Folder = Join-Path -Path (Split-Path -Path $File -Parent) -ChildPath "$FileName"
+    if (-not (Test-Path -Path $Folder -PathType Container))
+    {
+      New-Item -Path $Folder -ItemType Directory | Out-Null
+      Write-Host "Folder '$Folder' created."
+    }
+  }
+
+  if (!(Test-Path -Path "$Folder" -PathType Container))
+  {
+    Write-Error "$Folder does not exist!!!"
+    Break
+  }
+
+  if (Test-Path -Path "$File" -PathType Leaf)
+  {
+    switch ($File.Split(".") | Select-Object -Last 1)
+    {
+      "rar"
+      { Start-Process -FilePath "UnRar.exe" -ArgumentList "x","-op'$Folder'","-y","$File" -WorkingDirectory "$Env:ProgramFiles\WinRAR\" -Wait | Out-Null 
+      }
+      "zip"
+      { 7z x -o"$Folder" -y "$File" | Out-Null 
+      }
+      "7z"
+      { 7z x -o"$Folder" -y "$File" | Out-Null 
+      }
+      "exe"
+      { 7z x -o"$Folder" -y "$File" | Out-Null 
+      }
+      Default
+      { Write-Error "No way to Extract $File !!!"; Break 
+      }
+    }
+  }
+}

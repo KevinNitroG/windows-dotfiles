@@ -12,6 +12,7 @@ $SCOOP_NECESSARYS = @(
   "extras/winrar",
   "main/7zip",
   "main/openssh",
+  "main/unrar",
   "main/wget",
   "main/winget"
 )
