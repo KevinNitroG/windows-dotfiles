@@ -378,8 +378,9 @@ function extract
       { 7z x -o"$Folder" -y "$File" | Out-Null 
       }
       Default
-      { Write-Error "No way to Extract $File !!!"; Break 
+      { Write-Error "No way to Extract $File !!!"; return;
       }
     }
+    Write-Host "Extracted to $($Folder)"
   }
 }
