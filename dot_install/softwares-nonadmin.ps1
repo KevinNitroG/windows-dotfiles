@@ -57,6 +57,7 @@ $SCOOP_CODING_TOOLS = @(
   "main/fastfetch",
   "main/fd",
   "main/ffmpeg",
+  "main/file",
   "main/fzf",
   "main/gh",
   "main/gnupg",
@@ -65,7 +66,6 @@ $SCOOP_CODING_TOOLS = @(
   "main/gzip",
   "main/jq",
   "main/lazydocker",
-  # "main/lf",
   "main/poppler",
   "main/rclone",
   "main/ripgrep",
@@ -83,6 +83,7 @@ $SCOOP_CODING_TOOLS = @(
   "main/yt-dlp",
   "main/zoxide",
   "sysinternals/whois"
+  # "main/lf",
   # "main/oh-my-posh"
 )
 

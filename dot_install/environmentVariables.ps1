@@ -1,11 +1,4 @@
-# Get the current value of the Path variable (User)
-$currentPath = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User)
-
-# Allow long path
-Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
-
-# Define multiple paths as an array
-$newPaths = @(
+$USER_PATHS = @(
   "D:\My Apps\ENV Tools\OCI CLI\bin",
   "$env:LOCALAPPDATA\Local\SilentCMD",
   "D:\My Apps\ENV Tools\Koyeb CLI",
@@ -16,28 +9,23 @@ $newPaths = @(
   "C:\Program Files\OpenSSL-Win64\bin"
 )
 
-# Join paths with a newline character
-$newPathsString = $newPaths -join ";"
+# Allow long path
+Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
 
-# Set the updated Path variable (User)
-[System.Environment]::SetEnvironmentVariable("Path", "$currentPath;$newPathsString", [System.EnvironmentVariableTarget]::User)
+$SetupEnv = @{
+  Path = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User) + (($USER_PATHS) -join ";");
+  YAZI_CONFIG_HOME = "$($env:USERPROFILE)\.config\yazi";
+  KOMOREBI_CONFIG_HOME = "$($env:USERPROFILE)\.config\komorebi";
+  CARGO_HOME = "E:\packages\cargo";
+  npm_config_cache = "E:\cache\npm";
+  PIP_CACHE_DIR = "E:\cache\pip";
+  VCPKG_BINARY_CACHE = "E:\packages\vcpkg"
+}
 
-# ENV
-
-# Cargo
-setx /M CARGO_HOME "E:\packages\cargo"
-
-# NPM config cache
-setx /M npm_config_cache "E:\cache\npm"
-
-# Python Pip cache
-setx /M PIP_CACHE_DIR "E:\cache\pip"
-
-# VCPKG binary cache
-setx /M VCPKG_BINARY_CACHE "E:\packages\vcpkg"
-
-# Komorebi
-setx /M KOMOREBI_CONFIG_HOME "$env:USERPROFILE\.config\komorebi"
+foreach ($Key in $SetupEnv)
+{
+  [System.Environment]::SetEnvironmentVariable($Key, $SetupEnv[$Key], [System.EnvironmentVariableTarget]::User)
+}
 
 # FZF DEFAULT OPTS
 # setx FZF_DEFAULT_OPTS  "--height=~80% --layout=reverse --border --exit-0 --cycle --margin=2,40 --padding=1"

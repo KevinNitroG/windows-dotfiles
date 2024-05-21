@@ -48,3 +48,13 @@ type = "file"
 url = "https://raw.githubusercontent.com/stevearc/dotfiles/master/.githelpers"
 refreshPeriod = "168h"
 
+[".config/yazi/theme.toml"]
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/yazi/main/themes/mocha.toml"
+refreshPeriod = "168h"
+
+[".config/yazi/Catppuccin-mocha.tmTheme"]
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/yazi/main/themes/mocha.toml"
+refreshPeriod = "168h"
+
