@@ -1,9 +1,12 @@
 $ScriptBlock = {
   Param([string]$line)
+  if ($line -like " *")
+  {return $false
+  }
   $ignore_psreadline = @("user", "pass", "account")
-  foreach ( $ignore in $ignore_psreadline )
+  foreach ($ignore in $ignore_psreadline)
   {
-    if ( $line -match $ignore )
+    if ($line -match $ignore)
     {
       return $false
     }
