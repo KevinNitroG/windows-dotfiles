@@ -1,6 +1,6 @@
 # Function to trigger komorebi
 
-function Run-Komorebi
+function Start-Komorebi 
 {
   if (! (Get-Process "komorebi" -ErrorAction SilentlyContinue))
   {
