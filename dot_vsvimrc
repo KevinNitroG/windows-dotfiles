@@ -1,0 +1,13 @@
+let mapleader = " "
+
+set clipboard=unnamed
+set smartcase
+set hlsearch
+set ignorecase
+
+inoremap jk <Esc>
+
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap Y y$
+nnoremap <Esc> :noh<return>
