@@ -1,4 +1,6 @@
-function yy
+Set-Alias -Name yz -Value yazi
+
+function yzcd
 {
   $tmp = [System.IO.Path]::GetTempFileName()
   yazi $args --cwd-file="$tmp"
@@ -10,4 +12,8 @@ function yy
   Remove-Item -Path $tmp
 }
 
-Set-Alias -Name yz -Value yazi
+Set-PSReadLineKeyHandler -Key "Ctrl+Shift+d" -ScriptBlock { 
+  [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
+  [Microsoft.PowerShell.PSConsoleReadLine]::Insert("yzcd")
+  [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}

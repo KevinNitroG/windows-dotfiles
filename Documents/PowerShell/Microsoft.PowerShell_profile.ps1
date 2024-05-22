@@ -69,7 +69,10 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/fd.ps1"
 
 # Lf config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/lf.ps1"
+# . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/lf.ps1"
+
+# Yazi config
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/yazi.ps1"
 
 # Eza config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/eza.ps1"
