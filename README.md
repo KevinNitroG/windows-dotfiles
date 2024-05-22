@@ -1,46 +1,44 @@
 # KEVINNITRO WINDOWS DOTFILES
 
-[![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/KevinNitroG/windows-dotfiles?style=for-the-badge&color=CAEDFF)](../../commits/main)
-![GitHub repo size](https://img.shields.io/github/repo-size/KevinNitroG/windows-dotfiles?style=for-the-badge&color=D8B4F8)
+[![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/KevinNitroG/windows-dotfiles?style=for-the-badge&color=FAB387)](../../commits/main)
+![GitHub repo size](https://img.shields.io/github/repo-size/KevinNitroG/windows-dotfiles?style=for-the-badge&color=B4BEFE)
 
 ---
 
-## TABLE OF CONTENTS
-
 - [KEVINNITRO WINDOWS DOTFILES](#kevinnitro-windows-dotfiles)
-  - [😎 PREVIEW](#😎-preview)
+  - [😎 PREVIEW](#-preview)
     - [Terminal](#terminal)
     - [Check Wifi Password](#check-wifi-password)
     - [App Manage](#app-manage)
     - [Change directory schemes](#change-directory-schemes)
     - [Neovim](#neovim)
-  - [🪴 INSTALL](#🪴-install)
+  - [🪴 INSTALL](#-install)
     - [1️⃣ Add SSH](#1️⃣-add-ssh)
     - [2️⃣ Install prerequisite](#2️⃣-install-prerequisite)
     - [3️⃣ Chezmoi](#3️⃣-chezmoi)
-    - [4️⃣ Set env path _(Admin)_](<#4️⃣-set-env-path-_(admin)_>)
+    - [4️⃣ Set env path _(Admin)_](#4️⃣-set-env-path-admin)
     - [5️⃣ Install softwares](#5️⃣-install-softwares)
     - [6️⃣ Install fonts](#6️⃣-install-fonts)
     - [7️⃣ Install some code stuff](#7️⃣-install-some-code-stuff)
-    - [🧪 ONE SCRIPT _(test)_](<#🧪-one-script-_(test)_>)
-  - [🎈 EXTRAS](#🎈-extras)
-    - [Crack Winrar _(Admin)_](<#crack-winrar-_(admin)_>)
+    - [🧪 ONE SCRIPT _(test)_](#-one-script-test)
+  - [🎈 EXTRAS](#-extras)
+    - [Crack Winrar _(Admin)_](#crack-winrar-admin)
     - [Patch IDM](#patch-idm)
-      - [Repack.me](#repack.me)
+      - [Repack.me](#repackme)
       - [PITVN](#pitvn)
       - [Old method](#old-method)
-    - [Install & Active Office](#install-&-active-office)
+    - [Install \& Active Office](#install--active-office)
     - [Spotify](#spotify)
     - [Chrome extensions](#chrome-extensions)
     - [Need to do](#need-to-do)
     - [Others](#others)
-  - [📒 NOTES](#📒-notes)
+  - [📒 NOTES](#-notes)
     - [SSH](#ssh)
     - [GPG](#gpg)
     - [Windows](#windows)
-      - [View current path](#view-current-path)
-      - [Variables](#variables)
-      - [Others](#others)
+      - [Set / Get variables](#set--get-variables)
+      - [Default variables](#default-variables)
+      - [Others](#others-1)
 
 ---
 
@@ -327,6 +325,10 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
   - [Vision Cursor](https://www.deviantart.com/idarques/art/Vision-Cursor-911891424)
   - [Windows 11 Cursor Rosea92](https://github.com/YT-Advanced/Windows-11-Cursor-by-rosea92)
 - Change `Downloads`, `Desktop`,... location
+- Symlink `git folder` _(admin)_
+  ```ps1
+  New-Item -Path gits -ItemType SymbolicLink -Value E:\Git-Repo
+  ```
 - Restore Powertoys settings
 - Winaero-tweaker
   - Disable Windows Defender
@@ -400,55 +402,60 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 
 ### SSH
 
-Public key
-
-```id_rsa.pub
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDap/5GnLxYYNJ2QB1rYRgXyHLQud0L3Y6sfiPL6iAdqZRm+f+006DeZtJ4oP2IN8oS6nF6tfWhCaQ91jv3fZWO+olhyBZulSGbb75WdcqLcctfDwc9er+BZZZMBsF0inEbCgHEooo5kelkuuPIEUmeqn9ozUtQ4A6mLIurjsGfy2nD2bCjYys3UxUa09xEiQxvgHnlvSPCh9XvG1h4eX611GI6EbtJoOvzFPYzaxdNosbombq1HMnNGXk3TMS9fghE1GjnMiBbrortGn6mT0aNi//N9Wgr9AYR0dY2BWk1CZXF78G4MWZoaLOLW5sriMjU881UbfmJx6MmvMAEHDrfJDIQAIoRsjAJbw00SoZjspEg3R8f8ekNjduzikG65noMJGd+jTD7MtBDe+YNCuZp6UQAPwbPQLtlbKOysEWzPupKMHIsPkzUJpdYp1ML1ljV/q+FLRKje4FvWUKTk8KekWxp2tUyn5gWUIrG7DGkE5MKpBp0njFJ17n8H81xQJs= trannguyenthaibinh46@gmail.com
-```
+- `IDA_RSA` public key
+  ```pub
+  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDap/5GnLxYYNJ2QB1rYRgXyHLQud0L3Y6sfiPL6iAdqZRm+f+006DeZtJ4oP2IN8oS6nF6tfWhCaQ91jv3fZWO+olhyBZulSGbb75WdcqLcctfDwc9er+BZZZMBsF0inEbCgHEooo5kelkuuPIEUmeqn9ozUtQ4A6mLIurjsGfy2nD2bCjYys3UxUa09xEiQxvgHnlvSPCh9XvG1h4eX611GI6EbtJoOvzFPYzaxdNosbombq1HMnNGXk3TMS9fghE1GjnMiBbrortGn6mT0aNi//N9Wgr9AYR0dY2BWk1CZXF78G4MWZoaLOLW5sriMjU881UbfmJx6MmvMAEHDrfJDIQAIoRsjAJbw00SoZjspEg3R8f8ekNjduzikG65noMJGd+jTD7MtBDe+YNCuZp6UQAPwbPQLtlbKOysEWzPupKMHIsPkzUJpdYp1ML1ljV/q+FLRKje4FvWUKTk8KekWxp2tUyn5gWUIrG7DGkE5MKpBp0njFJ17n8H81xQJs= trannguyenthaibinh46@gmail.com
+  ```
+- `ID_ED25519` public key
+  ```pub
+  ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGmsTFqYpEvaJbMm6PSN2pH4JY0Whrd1F3jkP9OCcrWF trannguyenthaibinh46@gmail.com
+  ```
 
 ---
 
 ### GPG
 
 - Export keys
+  ```ps1
+  # Public key
+  gpg --output kevinnitro-public-gpg-key.pgp --armor --export trannguyenthaibinh46@gmail.com
+  # Secret key
+  gpg --output kevinnitro-secret-gpg-key.pgp --armor --export-secret-key trannguyenthaibinh46@gmail.com
+  ```
+- Import _(for both public and secret keys)_
+  ```ps1
+  gpg --import the-key.gpg
+  ```
 
-```.ps1
-# Public key
-gpg --output kevinnitro-public-gpg-key.pgp --armor --export trannguyenthaibinh46@gmail.com
-
-# Secret key
-gpg --output kevinnitro-secret-gpg-key.pgp --armor --export-secret-key trannguyenthaibinh46@gmail.com
-```
-
+> [!NOTE]
 > Remove `ouput` params to export out stdout
 >
 > Ref: https://unix.stackexchange.com/a/482559
-
-- Import _(for both public and secret keys)_
-
-```.ps1
-gpg --import the-key.gpg
-```
 
 ---
 
 ### Windows
 
-#### View current path
+#### Set / Get variables
 
-- System path
+- View system variables
+  ```ps1
+  [System.Environment]::GetEnvironmentVariable($KEY, [System.EnvironmentVariableTarget]::Machine)
+  ```
+- View user variables
+  ```ps1
+  [System.Environment]::GetEnvironmentVariable($KEY, [System.EnvironmentVariableTarget]::User)
+  ```
+- Set system variables
+  ```ps1
+  [System.Environment]::SetEnvironmentVariable($KEY, $VALUE, [System.EnvironmentVariableTarget]::Machine)
+  ```
+- Set user variables
+  ```ps1
+  [System.Environment]::SetEnvironmentVariable($KEY, $VALUE, [System.EnvironmentVariableTarget]::User)
+  ```
 
-```ps1
-[System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::Machine)
-```
-
-- User path
-
-```ps1
-[System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User)
-```
-
-#### Variables
+#### Default variables
 
 | **VARIABLE**        | **PATH**                                 |
 | ------------------- | ---------------------------------------- |
