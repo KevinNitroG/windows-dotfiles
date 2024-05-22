@@ -12,13 +12,23 @@ DetectHiddenWindows true
 
 #Include "komorebi/komorebic.lib.ahk"
 
+; --- RUN APP VIA KEYBOARD SHORTCUT ---
+
+#Enter::Run "wt.exe"
+#t::Run "alacritty.exe"
+#c::Run "code.exe"
+#b::Run "chrome.exe" 
+#s::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
+
 ; --- ALT TO SWITCH TAB IN BROWSER ---
 
-GroupAdd "Browser", "ahk_exe chrome.exe"
-GroupAdd "Browser", "ahk_exe edge.exe"
-GroupAdd "Browser", "ahk_exe brave.exe"
-GroupAdd "Browser", "ahk_exe firefox.exe"
 GroupAdd "Browser", "ahk_exe arc.exe"
+GroupAdd "Browser", "ahk_exe brave.exe"
+GroupAdd "Browser", "ahk_exe chrome.exe"
+GroupAdd "Browser", "ahk_exe chromium.exe"
+GroupAdd "Browser", "ahk_exe edge.exe"
+GroupAdd "Browser", "ahk_exe firefox.exe"
+GroupAdd "Browser", "ahk_exe thorium.exe"
 
 #HotIf WinActive("ahk_group Browser")
 
@@ -37,6 +47,8 @@ GroupAdd "Browser", "ahk_exe arc.exe"
 ; --- UNIKEY ---
 
 #space::!z
+
+; Cannot use bellow :v, UniKeyNT doesn't read the key
 ; #space::try ControlSend "!z",, "ahk_exe UniKeyNT.exe"
 
 ; --- KOMOREBI ---
@@ -106,9 +118,3 @@ GroupAdd "Browser", "ahk_exe arc.exe"
 
 ^#x::FlipLayout("horizontal")
 ^#y::FlipLayout("vertical")
-
-#Enter::Run "wt.exe"
-#t::Run "alacritty.exe"
-#c::Run "code.exe"
-#b::Run "chrome.exe" 
-#s::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
