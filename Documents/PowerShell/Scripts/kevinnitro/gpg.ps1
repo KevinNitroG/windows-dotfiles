@@ -12,6 +12,6 @@ function Start-GPG
 
 function Stop-GPG
 {
-  Stop-Process -Name "gpg-agent"
-  Stop-Process -Name "keyboxd"
+  Stop-Process -Name "gpg-agent" -ErrorAction SilentlyContinue
+  Stop-Process -Name "keyboxd" -ErrorAction SilentlyContinue
 }
