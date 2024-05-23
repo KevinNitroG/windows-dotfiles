@@ -38,7 +38,7 @@ type = "git-repo"
 url = "https://github.com/Hammster/windows-terminal-shaders.git"
 refreshPeriod = "168h"
 
-[".config/komorebi/applications.yml"]
+[".config/komorebi/applications.yaml"]
 type = "file"
 url = "https://raw.githubusercontent.com/LGUG2Z/komorebi-application-specific-configuration/master/applications.yaml"
 refreshPeriod = "168h"
