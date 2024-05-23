@@ -1,8 +1,8 @@
 {
   "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
-  "active_window_border": true,
-  "active_window_border_style": "System",
-  "active_window_border_colours": {
+  "window_border": true,
+  "border_style": "System",
+  "border_colours": {
     "monocle": "#F9E2AF",
     "single": "#B4BEFE",
     "stack": "#CBA6F7"
