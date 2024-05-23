@@ -32,6 +32,7 @@ size = 13
 
 [colors]
 transparent_background_colors = true
+draw_bold_text_with_bright_colors = false
 
 [cursor]
 style = { shape = "Beam", blinking = "On" }
