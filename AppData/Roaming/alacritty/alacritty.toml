@@ -24,7 +24,10 @@ startup_mode = "Maximized"
 multiplier = 1
 
 [font]
-normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrainsMono Nerd Font", style = "Bold Italic" }
 size = 13
 
 [colors]
