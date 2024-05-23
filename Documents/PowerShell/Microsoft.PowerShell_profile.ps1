@@ -77,6 +77,9 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # Eza config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/eza.ps1"
 
+# Typing config
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/typing.ps1"
+
 # Alias config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/setAlias.ps1"
 
