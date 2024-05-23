@@ -333,7 +333,7 @@ function Check-IsAdmin
 #
 function Reboot-BIOS
 {
-  shutdown /r /fw /f /t 0
+  Start-Process -FilePath "shutdown" -ArgumentList "/r /fw /f /t 0"
 }
 
 # Ref: https://gist.github.com/mikepruett3/7ca6518051383ee14f9cf8ae63ba18a7

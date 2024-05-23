@@ -50,7 +50,7 @@
   aa = add -A
   au = add -u
   amend = commit -a --amend --no-edit
-  s = status
+  s = status --porcelain
   co = checkout
   cob = checkout -b
   db = branch -D
