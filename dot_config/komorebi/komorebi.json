@@ -36,7 +36,7 @@
       "workspaces": [
         {
           "name": "0",
-          "layout": "Grid",
+          "layout": "BSP",
           "workspace_rules": [
             {
               "id": "arc.exe",
@@ -61,7 +61,7 @@
           ]
         },
         {
-          "layout": "Grid",
+          "layout": "BSP",
           "name": "1",
           "workspace_rules": [
             {
@@ -72,7 +72,7 @@
         },
         {
           "name": "2",
-          "layout": "Grid",
+          "layout": "BSP",
           "workspace_rules": [
             //   {
             //     "id": "WindowsTerminal.exe",
@@ -90,19 +90,19 @@
         },
         {
           "name": "3",
-          "layout": "Grid"
+          "layout": "BSP"
         },
         {
           "name": "4",
-          "layout": "Grid"
+          "layout": "BSP"
         },
         {
           "name": "5",
-          "layout": "Grid"
+          "layout": "BSP"
         },
         {
           "name": "6",
-          "layout": "Grid",
+          "layout": "BSP",
           "workspace_rules": [
             {
               "id": "Code.exe",
@@ -125,7 +125,7 @@
         },
         {
           "name": "7",
-          "layout": "Grid",
+          "layout": "BSP",
           "workspace_rules": [
             {
               "id": "obs64.exe",
@@ -139,7 +139,7 @@
         },
         {
           "name": "8",
-          "layout": "Grid",
+          "layout": "BSP",
           "workspace_rules": [
             {
               "id": "vlc.exe",
