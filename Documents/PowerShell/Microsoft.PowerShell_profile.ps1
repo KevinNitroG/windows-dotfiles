@@ -4,7 +4,12 @@
 # VARIABLES
 $env:EDITOR = "v"
 $env:VISUAL = "code"
-# $env:OHMYPOSH_THEME = "catppuccin" # star
+$env:PYTHONIOENCODING = "utf-8" # To fix thefuck
+# If is in non-interactive shell, then return
+if (!([Environment]::UserInteractive -and -not $([Environment]::GetCommandLineArgs() | Where-Object{ $_ -like '-NonI*' })))
+{
+  return
+}
 $env:DEFAULT_NVIM_CONFIG = "nvim-alexis12119"
 $env:NVIM_CONFIGS = @(
   "nvim-alexis12119",
@@ -12,8 +17,6 @@ $env:NVIM_CONFIGS = @(
   "NvChad"
 )
 
-# to fix thefuck
-$env:PYTHONIOENCODING = "utf-8"
 
 # Starship config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/starship.ps1"
@@ -22,11 +25,14 @@ $env:PYTHONIOENCODING = "utf-8"
 # Import-Module -Name posh-wakatime
 import-module -Name PsReadLine
 Import-Module -Name CompletionPredictor
+Import-Module Catppuccin
 # Import-Module -Name DockerCompletion
 Import-Module -Name posh-git
 Import-Module -Name "$env:USERPROFILE\.config\wakatime\posh-wakatime\posh-wakatime.psm1"
 Import-Module -Name "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
+
+$Flavor = $Catppuccin['Mocha']
 
 # oh-my-posh
 # oh-my-posh init pwsh --config "$env:LOCALAPPDATA/Programs/oh-my-posh/themes/$env:OHMYPOSH_THEME.omp.json" | Invoke-Expression
@@ -114,6 +120,16 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # Utils
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/utils.ps1"
+
+# PSStyle Catppuccin
+# Ref: https://github.com/catppuccin/powershell#profile-usage
+$PSStyle.Formatting.Debug = $Flavor.Sky.Foreground()
+$PSStyle.Formatting.Error = $Flavor.Red.Foreground()
+$PSStyle.Formatting.ErrorAccent = $Flavor.Blue.Foreground()
+$PSStyle.Formatting.FormatAccent = $Flavor.Teal.Foreground()
+$PSStyle.Formatting.TableHeader = $Flavor.Rosewater.Foreground()
+$PSStyle.Formatting.Verbose = $Flavor.Yellow.Foreground()
+$PSStyle.Formatting.Warning = $Flavor.Peach.Foreground()
 
 # Fastfetch to flex ~.~
 fastfetch
