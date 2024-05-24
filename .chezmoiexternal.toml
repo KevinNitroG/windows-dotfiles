@@ -55,6 +55,11 @@ refreshPeriod = "168h"
 
 [".config/yazi/Catppuccin-mocha.tmTheme"]
 type = "file"
-url = "https://raw.githubusercontent.com/catppuccin/yazi/main/themes/mocha.toml"
+url = "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme"
+refreshPeriod = "168h"
+
+["AppData/Roaming/Bat/themes/Catppuccin Mocha.tmTheme"]
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme"
 refreshPeriod = "168h"
 

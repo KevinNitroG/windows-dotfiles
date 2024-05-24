@@ -25,8 +25,6 @@ $env:FZF_DEFAULT_OPTS=@"
 --bind ctrl-u:preview-up,ctrl-d:preview-down,ctrl-space:toggle-preview
 "@
 
-$env:BAT_THEME = "Catppuccin Mocha"
-
 # to fix thefuck
 $env:PYTHONIOENCODING = "utf-8"
 

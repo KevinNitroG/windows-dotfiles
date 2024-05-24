@@ -29,3 +29,13 @@ Start-Process -Filepath "powershell" -Argumentlist "$($env:temp)\install_softwar
 
 Write-Host "INSTALL CODING STUFF..."
 Invoke-WebRequest "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/codingStuff.ps1" | Invoke-Expression
+
+if (Get-Command -Name bat -ErrorAction SilentlyContinue)
+{
+  Write-Host "BUILD BAT THEMES..."
+  bat cache --build
+  bat --list-themes
+} else
+{
+  Write-Host "Bat not installed, skip building Bat themes!"
+}
