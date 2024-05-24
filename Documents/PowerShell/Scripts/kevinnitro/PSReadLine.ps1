@@ -1,3 +1,7 @@
+Import-Module Catppuccin
+
+$Flavor = $Catppuccin['Mocha']
+
 $ScriptBlock = {
   Param([string]$line)
   if ($line -like " *")
@@ -14,13 +18,46 @@ $ScriptBlock = {
   return $true
 }
 
+# Ref: https://github.com/catppuccin/powershell#profile-usage
+$Colors = @{
+  # Largely based on the Code Editor style guide
+  # Emphasis, ListPrediction and ListPredictionSelected are inspired by the Catppuccin fzf theme
+	
+  # Powershell colours
+  ContinuationPrompt     = $Flavor.Teal.Foreground()
+  Emphasis               = $Flavor.Red.Foreground()
+  Selection              = $Flavor.Surface0.Background()
+	
+  # PSReadLine prediction colours
+  InlinePrediction       = $Flavor.Overlay0.Foreground()
+  ListPrediction         = $Flavor.Mauve.Foreground()
+  ListPredictionSelected = $Flavor.Surface0.Background()
+
+  # Syntax highlighting
+  Command                = $Flavor.Blue.Foreground()
+  Comment                = $Flavor.Overlay0.Foreground()
+  Default                = $Flavor.Text.Foreground()
+  Error                  = $Flavor.Red.Foreground()
+  Keyword                = $Flavor.Mauve.Foreground()
+  Member                 = $Flavor.Rosewater.Foreground()
+  Number                 = $Flavor.Peach.Foreground()
+  Operator               = $Flavor.Sky.Foreground()
+  Parameter              = $Flavor.Pink.Foreground()
+  String                 = $Flavor.Green.Foreground()
+  Type                   = $Flavor.Yellow.Foreground()
+  Variable               = $Flavor.Lavender.Foreground()
+}
+
 $PSReadLineOptions = @{
+  # EditMode = "Vi"
+  AddToHistoryHandler = $ScriptBlock
+  Color = $Colors
+  ExtraPromptLineCount = $true
+  HistoryNoDuplicates = $true
+  MaximumHistoryCount = 5000
   PredictionSource = "HistoryAndPlugin"
   PredictionViewStyle = "ListView"
-  # EditMode = "Vi"
   ShowToolTips = $true
-  ExtraPromptLineCount = $true
-  AddToHistoryHandler = $ScriptBlock
 }
 
 Set-PSReadLineOption @PSReadLineOptions

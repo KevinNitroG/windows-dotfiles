@@ -2,7 +2,6 @@
 # $ErrorActionPreference = "SilentlyContinue"
 
 # VARIABLES
-# $env:CPLUS_INCLUDE_PATH = "C:/ProgramData/mingw64/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/c++/x86_64-w64-mingw32;C:/Program Files/LLVM/lib/clang/18/include;C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/include;C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.39.33519/atlmfc/include"
 $env:EDITOR = "v"
 $env:VISUAL = "code"
 # $env:OHMYPOSH_THEME = "catppuccin" # star
@@ -12,18 +11,6 @@ $env:NVIM_CONFIGS = @(
   "LazyVim",
   "NvChad"
 )
-
-# https://github.com/catppuccin/fzf - not use background for transparent
-$env:FZF_DEFAULT_OPTS=@"
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc
---color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8
---layout=reverse
---cycle
---scroll-off=5
---border
---preview-window=right,60%,border-left
---bind ctrl-u:preview-up,ctrl-d:preview-down,ctrl-space:toggle-preview
-"@
 
 # to fix thefuck
 $env:PYTHONIOENCODING = "utf-8"

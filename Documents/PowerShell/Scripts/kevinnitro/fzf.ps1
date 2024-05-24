@@ -1,3 +1,21 @@
+Import-Module Catppuccin
+
+# Ref: https://github.com/catppuccin/powershell#profile-usage 
+# https://github.com/catppuccin/fzf - not use background for transparent
+$Flavor = $Catppuccin['Mocha']
+$env:FZF_DEFAULT_OPTS=@"
+--color=hl:$($Flavor.Red),fg:$($Flavor.Text),header:$($Flavor.Red)
+--color=info:$($Flavor.Mauve),pointer:$($Flavor.Rosewater),marker:$($Flavor.Rosewater)
+--color=fg+:$($Flavor.Text),prompt:$($Flavor.Mauve),hl+:$($Flavor.Red)
+--color=border:$($Flavor.Surface2)
+--layout=reverse
+--cycle
+--scroll-off=5
+--border
+--preview-window=right,60%,border-left
+--bind ctrl-u:preview-up,ctrl-d:preview-down,ctrl-space:toggle-preview
+"@
+
 $commandOverride = [ScriptBlock]{ param($Location) Write-Host $Location }
 
 Set-PsFzfOption -AltCCommand $commandOverride
