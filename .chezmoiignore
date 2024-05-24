@@ -34,3 +34,7 @@ AppData/Local/lf/history
 
 # thefuck
 .config/thefuck/__pycache__
+
+# Powershell
+Documents/PowerShell/Scripts/InstalledScriptInfos/*
+Documents/PowerShell/Scripts/Modules/*
