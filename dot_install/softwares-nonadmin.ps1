@@ -61,6 +61,7 @@ $SCOOP_CODING_TOOLS = @(
   "main/fzf",
   "main/gh",
   "main/gnupg",
+  "main/goodbyedpi"
   "main/gpg",
   "main/grep",
   "main/gzip",
@@ -82,7 +83,7 @@ $SCOOP_CODING_TOOLS = @(
   "main/yazi",
   "main/yt-dlp",
   "main/zoxide",
-  "sysinternals/whois"
+  "sysinternals/whois",
   # "main/lf",
   # "main/oh-my-posh"
 )

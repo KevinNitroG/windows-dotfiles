@@ -34,6 +34,16 @@
       "id": "Cloudflare WARP.exe",
       "kind": "Exe",
       "matching_strategy": "Equals"
+    },
+    {
+      "id": "C:\\Program Files\\nodejs\\node.exe",
+      "kind": "Title",
+      "matching_strategy": "Equals"
+    },
+    {
+      "id": "C:\\\\Users\\\\kevinnitro\\\\AppData\\\\Local\\\\.*/mason/packages/debugpy/venv/Scripts/python\\.exe",
+      "kind": "Title",
+      "matching_strategy": "Regex"
     }
   ],
   "monitors": [

@@ -4,6 +4,7 @@ $SCOOP_PROGRAMMING_LANGUAGES = @(
   "main/docker-compose",
   "main/llvm",
   "main/mingw",
+  "main/gdb",
   "main/nodejs",
   "main/python",
   "main/rust"
