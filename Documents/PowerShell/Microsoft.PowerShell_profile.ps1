@@ -99,6 +99,9 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # Apps manage
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/appsManage.ps1"
 
+# Vscode-CPPTools
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/vscode-cpptools.ps1"
+
 # Neovim config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/neovim.ps1"
 
