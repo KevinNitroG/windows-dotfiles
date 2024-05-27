@@ -29,6 +29,11 @@
       "id": "Authy Desktop.exe",
       "kind": "Exe",
       "matching_strategy": "Equals"
+    },
+    {
+      "id": "Cloudflare WARP.exe",
+      "kind": "Exe",
+      "matching_strategy": "Equals"
     }
   ],
   "monitors": [
