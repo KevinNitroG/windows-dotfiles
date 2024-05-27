@@ -41,7 +41,12 @@
       "matching_strategy": "Equals"
     },
     {
-      "id": "C:\\\\Users\\\\kevinnitro\\\\AppData\\\\Local\\\\.*/mason/packages/debugpy/venv/Scripts/python\\.exe",
+      "id": "^C:\\\\Users\\\\kevinnitro\\\\AppData\\\\Local\\\\.*/mason/packages/debugpy/venv/Scripts/python\\.exe$", // Debugpy in Neovim
+      "kind": "Title",
+      "matching_strategy": "Regex"
+    },
+    {
+      "id": "^.*Debug.*\\.exe$", // For debugging using terminal in VS
       "kind": "Title",
       "matching_strategy": "Regex"
     }

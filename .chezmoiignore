@@ -38,3 +38,6 @@ AppData/Local/lf/history
 # Powershell
 Documents/PowerShell/Scripts/InstalledScriptInfos/*
 Documents/PowerShell/Scripts/Modules/*
+
+# Komorebi
+.config/komorebi/applications.yaml
