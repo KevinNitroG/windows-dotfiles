@@ -115,8 +115,14 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # GPG
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/gpg.ps1"
 
+# Cloudflare WARP
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/cloudflareWARP.ps1"
+
 # Githelpers
 # . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/gitHelpers.ps1"
+
+# Clean (Delete recycle bin, temp, cache, disk cleanup)
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/clean.ps1"
 
 # Utils
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/utils.ps1"
