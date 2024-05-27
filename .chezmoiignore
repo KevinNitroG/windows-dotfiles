@@ -2,14 +2,9 @@
 */__pycache__/
 
 # EVKey
-# AppData/Local/EvKey/evkmacro.txt
 AppData/Local/EvKey/evkau.exe
-
-# Unikey
-# AppData/Local/EvKey/ukmacro.txt
-
+#
 # Rclone
-# AppData/Roaming/rclone/rclone.conf
 AppData/Roaming/rclone/mount/cache/*
 AppData/Roaming/rclone/mount/log.txt
 
@@ -17,12 +12,6 @@ AppData/Roaming/rclone/mount/log.txt
 AppData/Local/TrafficMonitor/history_traffic.dat
 AppData/Local/TrafficMonitor/history_traffic.dat.bak
 AppData/Local/TrafficMonitor/error.log
-
-# Wakatime
-# .wakatime.cfg
-
-# ssh
-# .ssh/*
 
 # lf
 AppData/Local/lf/history
@@ -41,3 +30,6 @@ Documents/PowerShell/Scripts/Modules/*
 
 # Komorebi
 .config/komorebi/applications.yaml
+
+# bin
+bin/vscode-cpptools/*
