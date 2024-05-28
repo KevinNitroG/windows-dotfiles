@@ -1,6 +1,6 @@
 $USER_PATHS = @(
-  "$($env:LOCALAPPDATA)\Local\SilentCMD",
-  "C:\Users\kevinnitro\AppData\Local\nvim-data\mason\bin"
+  "%LOCALAPPDATA%\Local\SilentCMD",
+  "%LOCALAPPDATA%\nvim-data\mason\bin"
   # "$($env:USERPROFILE)\bin\vscode-cpptools\extension\debugAdapters\bin".
   # "D:\My Apps\ENV Tools\vcpkg",
   # "C:\Program Files\OpenSSL-Win64\bin",
@@ -25,23 +25,36 @@ Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'Long
 #   return $ExistedPaths
 # }
 
-# Process include paths, avoid already included paths
-# $USER_PATHS = Test-PathExistList($USER_PATHS)
-#
-$ExistedPaths = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User) -split ";"
-$IncludePathSet = New-Object System.Collections.Generic.HashSet[[String]]
-foreach ($app in ($USER_PATHS + $ExistedPaths))
+function add_paths_to_existed_paths
 {
-  $IncludePathSet.Add($app) >$null
+  param (
+    [string[]] $paths
+  )
+  $existedPaths = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User) -split ";"
+  $pathToInclude = $existedPaths
+  $includePathSet = New-Object System.Collections.Generic.HashSet[[String]]
+  foreach ($path in $existedPaths)
+  {
+    $includePathSet.Add($path) >$null
+  }
+  foreach ($path in $paths)
+  {
+    if (!($includePathSet.Contains($path)))
+    {
+      $pathToInclude += $path
+    }
+  }
+  return $pathToInclude
 }
-$IncludePath = ($IncludePathSet -split ",") -join ";"
+
+$IncludePaths = (add_paths_to_existed_paths $USER_PATHS) -join ";"
 
 # Hashtable of Variables keys, values
 $SetupEnv = @{
-  Path = $IncludePath;
-  YAZI_CONFIG_HOME = "$($env:USERPROFILE)\.config\yazi";
-  YAZI_FILE_ONE = "$($env:USERPROFILE)\\scoop\apps\git\current\usr\bin\file.exe";
-  KOMOREBI_CONFIG_HOME = "$($env:USERPROFILE)\.config\komorebi";
+  Path = $IncludePaths;
+  YAZI_CONFIG_HOME = "%USERPROFILE%\.config\yazi";
+  YAZI_FILE_ONE = "%USERPROFILE%\\scoop\apps\git\current\usr\bin\file.exe";
+  KOMOREBI_CONFIG_HOME = "%USERPROFILE%\.config\komorebi";
   CARGO_HOME = "E:\packages\cargo";
   npm_config_cache = "E:\cache\npm";
   PIP_CACHE_DIR = "E:\cache\pip";
