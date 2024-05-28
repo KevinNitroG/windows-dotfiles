@@ -116,5 +116,5 @@ GroupAdd "Browser", "ahk_exe thorium.exe"
 ^#j::Stack("down")
 ^#;::Unstack()
 
-^#x::FlipLayout("horizontal")
-^#y::FlipLayout("vertical")
+#x::FlipLayout("horizontal")
+#y::FlipLayout("vertical")
