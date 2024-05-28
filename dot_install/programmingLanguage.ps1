@@ -4,11 +4,11 @@ $SCOOP_PROGRAMMING_LANGUAGES = @(
   "main/docker-compose",
   "main/gdb",
   "main/llvm",
-  "main/lua",
   "main/mingw",
   "main/nodejs",
   "main/python",
   "main/rust"
+  # "main/lua",
 )
 
 scoop install $SCOOP_PROGRAMMING_LANGUAGES
