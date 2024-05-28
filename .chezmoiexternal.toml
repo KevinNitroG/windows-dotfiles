@@ -1,17 +1,17 @@
-["AppData/Local/nvim-alexis12119"]
+["AppData/Local/nvim"]
 type = "git-repo"
 url = "git@github.com:KevinNitroG/Alexis12119-nvim.git"
 refreshPeriod = "168h"
 
-["AppData/Local/LazyVim"]
-type = "git-repo"
-url = "git@github.com:KevinNitroG/LazyVim-Starter.git"
-refreshPeriod = "168h"
+# ["AppData/Local/LazyVim"]
+# type = "git-repo"
+# url = "git@github.com:KevinNitroG/LazyVim-Starter.git"
+# refreshPeriod = "168h"
 
-["AppData/Local/NvChad"]
-type = "git-repo"
-url = "git@github.com:KevinNitroG/NvChad-Starter.git"
-refreshPeriod = "168h"
+# ["AppData/Local/NvChad"]
+# type = "git-repo"
+# url = "git@github.com:KevinNitroG/NvChad-Starter.git"
+# refreshPeriod = "168h"
 
 ["AppData/Roaming/alacritty/catppuccin-alacritty"]
 type = "git-repo"

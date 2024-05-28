@@ -5,32 +5,33 @@
 $env:EDITOR = "v"
 $env:VISUAL = "code"
 $env:PYTHONIOENCODING = "utf-8" # To fix thefuck
+
 # If is in non-interactive shell, then return
 if (!([Environment]::UserInteractive -and -not $([Environment]::GetCommandLineArgs() | Where-Object{ $_ -like '-NonI*' })))
 {
   return
 }
-$env:DEFAULT_NVIM_CONFIG = "nvim-alexis12119"
+
+$env:DEFAULT_NVIM_CONFIG = "nvim"
 $env:NVIM_CONFIGS = @(
-  "nvim-alexis12119",
+  "nvim",
   "LazyVim",
   "NvChad"
 )
 
-
 # Starship config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/starship.ps1"
 
-# Import-Module -Name Terminal-Icons
-# Import-Module -Name posh-wakatime
-import-module -Name PsReadLine
-Import-Module -Name CompletionPredictor
-Import-Module Catppuccin
-# Import-Module -Name DockerCompletion
-Import-Module -Name posh-git
-Import-Module -Name "$env:USERPROFILE\.config\wakatime\posh-wakatime\posh-wakatime.psm1"
-Import-Module -Name "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+# Import-Module DockerCompletion
+# Import-Module Terminal-Icons
+# Import-Module posh-wakatime
 Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
+Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
+Import-Module "$env:USERPROFILE\.config\wakatime\posh-wakatime\posh-wakatime.psm1"
+Import-Module CompletionPredictor
+Import-Module posh-git
+Import-Module Catppuccin
+import-module PsReadLine
 
 $Flavor = $Catppuccin['Mocha']
 
@@ -100,7 +101,7 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/appsManage.ps1"
 
 # Vscode-CPPTools
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/vscode-cpptools.ps1"
+# . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/vscode-cpptools.ps1"
 
 # Neovim config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/neovim.ps1"
