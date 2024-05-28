@@ -11,3 +11,4 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap Y y$
 nnoremap <Esc> :noh<return>
+vnoremap p "_dP
