@@ -1,5 +1,6 @@
 // Place your key bindings in this file to override the defaultsauto[]
 // Source Neovim keybinding for VSC: https://gist.github.com/nikolovlazar/1174876ab2769c52ac9fc1534c557d70
+// Other Neovim source: https://dev.to/apestein/intuitive-vim-keybinding-for-vscode-2ga0
 [
   // Normal remap
   {
@@ -44,6 +45,20 @@
     "key": "ctrl+shift+u j",
     "command": "workbench.action.togglePanel"
   },
+  {
+    "key": "ctrl+shift+u ctrl+s",
+    "command": "workbench.action.openGlobalKeybindings"
+  },
+  {
+    "key": "ctrl+shift+u ctrl+o",
+    "command": "workbench.action.files.openFile",
+    "when": "true"
+  },
+  {
+    "key": "ctrl+shift+u ctrl+shift+o",
+    "command": "workbench.action.files.openFolder",
+    "when": "openFolderWorkspaceSupport"
+  },
 
   // Override neovim key bidings which override VSCode key bindings
   {
@@ -75,7 +90,8 @@
   },
   {
     "key": "ctrl+shift+w",
-    "command": "workbench.action.terminal.kill"
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
   },
   {
     "key": "space n r",
@@ -177,6 +193,11 @@
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
     "key": "space shift+c",
     "command": "workbench.action.closeOtherEditors",
     "when": "vim.mode == 'Normal' && editorTextFocus"
@@ -222,6 +243,28 @@
     "command": "workbench.action.navigateDown"
   },
 
+  // Neovim: Move cursor in insert mode
+  {
+    "key": "alt+j",
+    "command": "cursorLeft",
+    "when": "vim.mode != 'Insert' && editorTextFocus"
+  },
+  {
+    "key": "alt+l",
+    "command": "cursorRight",
+    "when": "vim.mode != 'Insert' && editorTextFocus"
+  },
+  {
+    "key": "alt+i",
+    "command": "cursorUp",
+    "when": "vim.mode != 'Insert' && editorTextFocus"
+  },
+  {
+    "key": "alt+k",
+    "command": "cursorDown",
+    "when": "textInputFocus"
+  },
+
   // Neovim: Find
   {
     "key": "space f b",
@@ -231,19 +274,57 @@
 
   // Neovim: Coding
   {
-    "key": "alt-j",
+    "key": "alt+j",
     "command": "editor.action.moveLinesDownAction",
     "when": "vim.mode != 'Insert' && editorTextFocus"
   },
   {
-    "key": "alt-k",
+    "key": "alt+k",
     "command": "editor.action.moveLinesUpAction",
     "when": "vim.mode != 'Insert' && editorTextFocus"
   },
   {
-    "key": "shift-k",
+    "key": "shift+k",
     "command": "editor.action.showHover",
     "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+
+  // Neovim: Select list suggestion
+  // Actually neovim override can do it
+  // {
+  //   "key": "ctrl+n",
+  //   "command": "selectNextSuggestion",
+  //   "when": "vim.mode != 'Insert' && suggestWidgetMultipleSuggestions && suggestWidgetVisible && editorTextFocus"
+  // },
+  // {
+  //   "key": "ctrl+i",
+  //   "command": "selectPrevSuggestion",
+  //   "when": "vim.mode != 'Insert' && suggestWidgetMultipleSuggestions && suggestWidgetVisible && editorTextFocus"
+  // },
+  {
+    "key": "ctrl+n",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "list.focusUp",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "hideSuggestWidget",
+    "when": "vim.mode == 'Insert' && suggestWidgetMultipleSuggestions && suggestWidgetVisible && editorTextFocus"
   },
 
   // Neovim: LSP
@@ -295,7 +376,7 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
-    "key": "ctrl-n",
+    "key": "ctrl+n",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
