@@ -1,35 +1,33 @@
 $USER_PATHS = @(
-  "D:\My Apps\ENV Tools\OCI CLI\bin",
   "$($env:LOCALAPPDATA)\Local\SilentCMD",
-  "D:\My Apps\ENV Tools\Koyeb CLI",
-  "D:\My Apps\ENV Tools\Solution Merge",
-  "D:\My Apps\ENV Tools\MinGW x64\bin",
-  "D:\My Apps\ENV Tools\vcpkg",
-  "D:\My Apps\ENV Tools\goodbyedpi"
-  "C:\Program Files\OpenSSL-Win64\bin"
+  "C:\Users\kevinnitro\AppData\Local\nvim-data\mason\bin"
+  # "$($env:USERPROFILE)\bin\vscode-cpptools\extension\debugAdapters\bin".
+  # "D:\My Apps\ENV Tools\vcpkg",
+  # "C:\Program Files\OpenSSL-Win64\bin",
 )
 
 # Allow long path
 Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
 
-function Test-PathExistList
-{
-  param (
-    [string[]] $Paths
-  )
-  $ExistedPaths = @()
-  foreach ($Path in $Paths)
-  {
-    if (Test-Path -Path $Path -ErrorAction SilentlyContinue)
-    {
-      $ExistedPaths += $Paths
-    }
-  }
-  return $ExistedPaths
-}
+# function Test-PathExistList
+# {
+#   param (
+#     [string[]] $Paths
+#   )
+#   $ExistedPaths = @()
+#   foreach ($Path in $Paths)
+#   {
+#     if (Test-Path -Path $Path -ErrorAction SilentlyContinue)
+#     {
+#       $ExistedPaths += $Paths
+#     }
+#   }
+#   return $ExistedPaths
+# }
 
 # Process include paths, avoid already included paths
-$USER_PATHS = Test-PathExistList($USER_PATHS)
+# $USER_PATHS = Test-PathExistList($USER_PATHS)
+#
 $ExistedPaths = [System.Environment]::GetEnvironmentVariable("Path", [System.EnvironmentVariableTarget]::User) -split ";"
 $IncludePathSet = New-Object System.Collections.Generic.HashSet[[String]]
 foreach ($app in ($USER_PATHS + $ExistedPaths))
