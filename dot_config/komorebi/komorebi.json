@@ -17,6 +17,10 @@
     {
       "id": "Messenger.exe",
       "kind": "Exe"
+    },
+    {
+      "id": "MicrosoftWhiteboard.exe",
+      "kind": "Exe"
     }
   ],
   "float_rules": [
