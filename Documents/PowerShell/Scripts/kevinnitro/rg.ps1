@@ -22,7 +22,7 @@ function rgcd
   }
 }
 
-Set-PSReadLineKeyHandler -Key "Ctrl+g" -ScriptBlock {
+Set-PSReadLineKeyHandler -Key "Ctrl+Shift+g" -ScriptBlock {
   [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
   [Microsoft.PowerShell.PSConsoleReadLine]::Insert("rgcd")
   [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
