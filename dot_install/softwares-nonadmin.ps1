@@ -49,7 +49,6 @@ $SCOOP_CODING_TOOLS = @(
   "extras/psfzf",
   "extras/psreadline",
   "extras/terminal-icons",
-  "main/actionlint",
   "main/adb",
   "main/bat",
   "main/delta",
@@ -57,7 +56,6 @@ $SCOOP_CODING_TOOLS = @(
   "main/fastfetch",
   "main/fd",
   "main/ffmpeg",
-  "main/file",
   "main/fzf",
   "main/gh",
   "main/gnupg",
@@ -84,6 +82,8 @@ $SCOOP_CODING_TOOLS = @(
   "main/yt-dlp",
   "main/zoxide",
   "sysinternals/whois"
+  # "main/actionlint",
+  # "main/file", # for yazi, but use in git instead
   # "main/lf",
   # "main/oh-my-posh"
 )

@@ -1,13 +1,13 @@
 $PIP_PACKAGES = @(
-  "ruff",
-  "cpplint"
+  # "ruff",
+  # "cpplint"
 )
 
 $NPM_PACKAGES = @(
-  "prettier",
-  "eslint",
-  "markdownlint",
-  "commitizen"
+  # "prettier",
+  # "eslint",
+  # "markdownlint",
+  # "commitizen"
 )
 
 pip intsall $PIP_PACKAGES
