@@ -3,6 +3,10 @@
 [![GitHub last commit (by committer)](https://img.shields.io/github/last-commit/KevinNitroG/windows-dotfiles?style=for-the-badge&color=FAB387)](../../commits/main)
 ![GitHub repo size](https://img.shields.io/github/repo-size/KevinNitroG/windows-dotfiles?style=for-the-badge&color=B4BEFE)
 
+> [!IMPORTANT]
+>
+> Please just use this as reference. My installation may not work _(because I haven't tested yet)_. Just go and grab the config you like.
+
 ---
 
 - [KEVINNITRO WINDOWS DOTFILES](#kevinnitro-windows-dotfiles)
@@ -19,7 +23,10 @@
     - [4️⃣ Set env path _(Admin)_](#4️⃣-set-env-path-admin)
     - [5️⃣ Install softwares](#5️⃣-install-softwares)
     - [6️⃣ Install fonts](#6️⃣-install-fonts)
-    - [7️⃣ Install some code stuff](#7️⃣-install-some-code-stuff)
+    - [7️⃣ Install some code stuff via `Mason` manually](#7️⃣-install-some-code-stuff-via-mason-manually)
+      - [DAP](#dap)
+      - [Linter](#linter)
+      - [Formatter](#formatter)
     - [🧪 ONE SCRIPT _(test)_](#-one-script-test)
   - [🎈 EXTRAS](#-extras)
     - [Crack Winrar _(Admin)_](#crack-winrar-admin)
@@ -111,7 +118,7 @@
   ```
 - Import GPG Keys:
   ```ps1
-  gpg --import public.gpg
+  gpg --import public.gpg # Not need
   gpg --import secret.gpg
   ```
 
@@ -183,27 +190,27 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
 
 ---
 
-### 7️⃣ Install some code stuff
+### 7️⃣ Install some code stuff via `Mason` manually
 
-```ps1
-# ruff
-pip intsall ruff
+#### DAP
 
-# cpplint
-pip install cpplint
+- js-debug-adapter
+- codelldb / cpptools
+- debugpy
 
-# prettier
-npm install prettier -g
+#### Linter
 
-# eslint
-npm install eslint -g
+- ruff
+- actionlint
+- cpplint
+- markdownlint
 
-# markdownlint
-npm install markdownlint -g
+#### Formatter
 
-# commitizen
-npm install commitizen -g
-```
+- ruff
+- markdownlint
+- prettier
+- stylua
 
 ---
 
