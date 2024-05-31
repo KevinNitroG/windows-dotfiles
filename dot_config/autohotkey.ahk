@@ -12,6 +12,9 @@ DetectHiddenWindows true
 
 #Include "komorebi/komorebic.lib.ahk"
 
+; --- CONFIG ---
+#Backspace::try ControlSend "!{F4}",, "ahk_class Progman"
+
 ; --- RUN APP VIA KEYBOARD SHORTCUT ---
 
 #Enter::Run "wt.exe"
