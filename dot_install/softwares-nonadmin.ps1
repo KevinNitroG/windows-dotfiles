@@ -41,6 +41,7 @@ $SCOOP_OFTEN_USE_APPS = @(
 )
 
 $SCOOP_CODING_TOOLS = @(
+  "extra/jqp",
   "extras/autohotkey",
   "extras/keyviz",
   "extras/komorebi",
@@ -79,6 +80,7 @@ $SCOOP_CODING_TOOLS = @(
   "main/wakatime-cli",
   "main/xh",
   "main/yazi",
+  "main/yq",
   "main/yt-dlp",
   "main/zoxide",
   "sysinternals/whois"
