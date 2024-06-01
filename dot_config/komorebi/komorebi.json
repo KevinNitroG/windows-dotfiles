@@ -24,11 +24,6 @@
     }
   ],
   "float_rules": [
-    // {
-    //   "id": "Messenger call - Google Chrome",
-    //   "kind": "Title",
-    //   "matching_strategy": "Equals"
-    // },
     {
       "id": "Authy Desktop.exe",
       "kind": "Exe",
@@ -38,22 +33,7 @@
       "id": "Cloudflare WARP.exe",
       "kind": "Exe",
       "matching_strategy": "Equals"
-    },
-    {
-      "id": "C:\\Program Files\\nodejs\\node.exe",
-      "kind": "Title",
-      "matching_strategy": "Equals"
-    },
-    {
-      "id": "^C:\\\\Users\\\\kevinnitro\\\\AppData\\\\Local\\\\.*/mason/packages/debugpy/venv/Scripts/python\\.exe$", // Debugpy in Neovim
-      "kind": "Title",
-      "matching_strategy": "Regex"
     }
-    // {
-    //   "id": "^.*Debug.*\\.exe$", // For debugging using terminal in VS
-    //   "kind": "Title",
-    //   "matching_strategy": "Regex"
-    // }
   ],
   "border_overflow_applications": [],
   "monitors": [
@@ -182,11 +162,6 @@
             {
               "id": "Messenger.exe",
               "kind": "Exe"
-            },
-            {
-              "id": "Messenger call - Google Chrome",
-              "kind": "Title",
-              "matching_strategy": "Equals"
             },
             {
               "id": "zalo.exe",
