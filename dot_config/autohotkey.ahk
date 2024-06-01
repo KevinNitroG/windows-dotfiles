@@ -13,7 +13,9 @@ DetectHiddenWindows true
 #Include "komorebi/komorebic.lib.ahk"
 
 ; --- CONFIG ---
+
 #Backspace::try ControlSend "!{F4}",, "ahk_class Progman"
+^#!r::Reload
 
 ; --- RUN APP VIA KEYBOARD SHORTCUT ---
 
@@ -57,6 +59,10 @@ GroupAdd "Browser", "ahk_exe thorium.exe"
 ; --- KOMOREBI ---
 
 #^o::ReloadConfiguration()
+#^+r:: {
+  try RunWait("komorebic.exe stop", , "Hide")
+  RunWait("komorebic.exe start", , "Hide")
+}
 
 #1::FocusWorkspace(0)
 #2::FocusWorkspace(1)
