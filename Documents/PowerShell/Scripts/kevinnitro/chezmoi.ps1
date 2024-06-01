@@ -7,10 +7,6 @@ function cms
   {
     gpg-connect-agent /bye
   }
-  # if (!(Get-Process "keyboxd" -ErrorAction SilentlyContinue))
-  # {
-  #   gpg-connect-agent --keyboxd
-  # }
   chezmoi re-add
   Set-Location $(chezmoi source-path)
   git f
