@@ -24,11 +24,11 @@
     }
   ],
   "float_rules": [
-    {
-      "id": "Messenger call - Google Chrome",
-      "kind": "Title",
-      "matching_strategy": "Equals"
-    },
+    // {
+    //   "id": "Messenger call - Google Chrome",
+    //   "kind": "Title",
+    //   "matching_strategy": "Equals"
+    // },
     {
       "id": "Authy Desktop.exe",
       "kind": "Exe",
@@ -127,26 +127,26 @@
         },
         {
           "name": "6",
-          "layout": "BSP",
-          "workspace_rules": [
-            {
-              "id": "Code.exe",
-              "kind": "Exe"
-            },
-            {
-              "id": "- Microsoft Visual Studio",
-              "kind": "Title",
-              "matching_strategy": "EndsWith"
-            },
-            {
-              "id": "pycharm64.exe",
-              "kind": "Exe"
-            },
-            {
-              "id": "clion64.exe",
-              "kind": "Exe"
-            }
-          ]
+          "layout": "BSP"
+          // "workspace_rules": [
+          //   {
+          //     "id": "Code.exe",
+          //     "kind": "Exe"
+          //   },
+          //   {
+          //     "id": "- Microsoft Visual Studio",
+          //     "kind": "Title",
+          //     "matching_strategy": "EndsWith"
+          //   },
+          //   {
+          //     "id": "pycharm64.exe",
+          //     "kind": "Exe"
+          //   },
+          //   {
+          //     "id": "clion64.exe",
+          //     "kind": "Exe"
+          //   }
+          // ]
         },
         {
           "name": "7",
@@ -184,13 +184,9 @@
               "kind": "Exe"
             },
             {
-              "id": "Messenger - Google Chrome",
+              "id": "Messenger call - Google Chrome",
               "kind": "Title",
               "matching_strategy": "Equals"
-            },
-            {
-              "id": "Messenger call - Google Chrome",
-              "kind": "Title"
             },
             {
               "id": "zalo.exe",
