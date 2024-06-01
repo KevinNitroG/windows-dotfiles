@@ -13,4 +13,6 @@ nnoremap n nzz
 nnoremap N Nzz
 nnoremap Y y$
 nnoremap <Esc> :noh<return>
+nnoremap <leader>y :%y+<return>
+nnoremap <leader>D :%d+<return>
 vnoremap p "_dP
