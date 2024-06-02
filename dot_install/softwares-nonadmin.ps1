@@ -52,6 +52,7 @@ $SCOOP_CODING_TOOLS = @(
   "extras/terminal-icons",
   "main/adb",
   "main/bat",
+  "main/bottom",
   "main/delta",
   "main/eza",
   "main/fastfetch",
