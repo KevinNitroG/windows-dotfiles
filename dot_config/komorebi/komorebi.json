@@ -2,14 +2,15 @@
   "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
   "window_border": true,
   "border_style": "System",
-  "border_colours": {
+  "active_window_border": true,
+  "active_window_border_colours": {
     "monocle": "#F9E2AF",
     "single": "#B4BEFE",
-    "stack": "#CBA6F7",
-    "unfocused": "#45475A"
+    "stack": "#CBA6F7"
   },
+  "border_padding": 0,
   "border_offset": -2,
-  "border_width": 6,
+  "border_width": 5,
   "cross_monitor_move_behaviour": "Insert",
   "default_container_padding": 0,
   "default_workspace_padding": 0,
@@ -25,6 +26,11 @@
   ],
   "float_rules": [
     {
+      "id": "Messenger call - Google Chrome",
+      "kind": "Title",
+      "matching_strategy": "Equals"
+    },
+    {
       "id": "Authy Desktop.exe",
       "kind": "Exe",
       "matching_strategy": "Equals"
@@ -35,7 +41,6 @@
       "matching_strategy": "Equals"
     }
   ],
-  "border_overflow_applications": [],
   "monitors": [
     {
       "workspaces": [
@@ -77,21 +82,7 @@
         },
         {
           "name": "2",
-          "layout": "BSP",
-          "workspace_rules": [
-            //   {
-            //     "id": "WindowsTerminal.exe",
-            //     "kind": "Exe"
-            //   },
-            //   {
-            //     "id": "wezterm-gui.exe",
-            //     "kind": "Exe"
-            //   },
-            //   {
-            //     "id": "alacritty.exe",
-            //     "kind": "Exe"
-            //   }
-          ]
+          "layout": "BSP"
         },
         {
           "name": "3",
@@ -108,25 +99,6 @@
         {
           "name": "6",
           "layout": "BSP"
-          // "workspace_rules": [
-          //   {
-          //     "id": "Code.exe",
-          //     "kind": "Exe"
-          //   },
-          //   {
-          //     "id": "- Microsoft Visual Studio",
-          //     "kind": "Title",
-          //     "matching_strategy": "EndsWith"
-          //   },
-          //   {
-          //     "id": "pycharm64.exe",
-          //     "kind": "Exe"
-          //   },
-          //   {
-          //     "id": "clion64.exe",
-          //     "kind": "Exe"
-          //   }
-          // ]
         },
         {
           "name": "7",
@@ -175,5 +147,5 @@
   "mouse_follows_focus": false,
   "resize_delta": 20,
   "window_hiding_behaviour": "Cloak",
-  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.22/schema.json"
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.25/schema.json"
 }
