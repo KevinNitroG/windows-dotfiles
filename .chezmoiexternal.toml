@@ -18,11 +18,6 @@ type = "git-repo"
 url = "https://github.com/catppuccin/alacritty.git"
 refreshPeriod = "168h"
 
-# ["AppData/Local/SilentCMD/SilentCMD.exe"]
-# type = "archive-file"
-# url = "https://github.com/stbrenner/SilentCMD/releases/latest/download/SilentCMD.zip"
-# path = "SilentCMD.exe"
-
 [".config/cursor/Windows-11-Cursor-by-rosea92"]
 type = "git-repo"
 url = "https://github.com/YT-Advanced/Windows-11-Cursor-by-rosea92.git"
@@ -33,14 +28,19 @@ type = "git-repo"
 url = "https://github.com/Gravifer/posh-wakatime.git"
 refreshPeriod = "168h"
 
-[".config/windows-terminal/windows-terminal-shaders"]
-type = "git-repo"
-url = "https://github.com/Hammster/windows-terminal-shaders.git"
-refreshPeriod = "168h"
+# [".config/windows-terminal/windows-terminal-shaders"]
+# type = "git-repo"
+# url = "https://github.com/Hammster/windows-terminal-shaders.git"
+# refreshPeriod = "168h"
 
 [".config/komorebi/applications.yaml"]
 type = "file"
 url = "https://raw.githubusercontent.com/LGUG2Z/komorebi-application-specific-configuration/master/applications.yaml"
+refreshPeriod = "168h"
+
+[".config/komorebi/komorebic.lib.ahk"]
+type = "file"
+url = "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/komorebic.lib.ahk"
 refreshPeriod = "168h"
 
 [".githelpers"]
