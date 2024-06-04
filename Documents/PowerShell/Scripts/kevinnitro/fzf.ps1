@@ -88,7 +88,7 @@ function _get_path_using_rg
       --header 'CTRL-S: Switch between ripgrep/fzf' `
       --header-first `
       --preview 'bat --color=always {1} --highlight-line {2} --style=plain' `
-      --preview-window 'up,60%,border-bottom,+{2}+3/3,~3'
+      --preview-window 'up,60%,border-bottom,+{2}+3/3'
   return $input_path
 }
 
