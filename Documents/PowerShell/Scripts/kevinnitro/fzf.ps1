@@ -13,7 +13,14 @@ $env:FZF_DEFAULT_OPTS=@"
 --scroll-off=5
 --border
 --preview-window=right,60%,border-left
---bind ctrl-u:preview-up,ctrl-d:preview-down,ctrl-space:toggle-preview
+--bind ctrl-u:preview-half-page-up
+--bind ctrl-d:preview-half-page-down
+--bind ctrl-f:preview-page-down
+--bind ctrl-b:preview-page-up
+--bind ctrl-g:preview-top
+--bind ctrl-h:preview-bottom
+--bind alt-w:toggle-preview-wrap
+--bind ctrl-e:toggle-preview
 "@
 
 $commandOverride = [ScriptBlock]{ param($Location) Write-Host $Location }
@@ -32,7 +39,6 @@ function _open_path
 
   if (-not $inputPath)
   {
-    Write-Output "No choice"
     return
   }
 
@@ -97,7 +103,6 @@ function _get_path_using_fd
 {
   $input_path = fd --type directory --follow --hidden --exclude .git |
     fzf --prompt 'Directories> ' `
-      --header-first `
       --preview 'eza -T --colour=always --icons=always {}'
   return $input_path
 }
