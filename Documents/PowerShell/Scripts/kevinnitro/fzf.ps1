@@ -94,12 +94,9 @@ function _get_path_using_rg
 
 function _get_path_using_fd
 {
-  $input_path = fd --type d --follow --hidden --exclude .git |
-    fzf --preview 'tree /A {}' `
-      --prompt 'Fd> ' `
-      --preview-label "Preview" `
-      --header "FIND DIRECTORY" `
-      --header-first
+  $input_path = fd --type directory --follow --hidden --exclude .git |
+    fzf --prompt 'Directories> ' `
+      --preview 'eza -T --colour=always --icons=always {}'
   return $input_path
 }
 
