@@ -12,7 +12,7 @@ function yzcd
   Remove-Item -Path $tmp
 }
 
-Set-PSReadLineKeyHandler -Key "Ctrl+Shift+d" -ScriptBlock { 
+Set-PSReadLineKeyHandler -Key "Ctrl+d" -ScriptBlock { 
   [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
   [Microsoft.PowerShell.PSConsoleReadLine]::Insert("yzcd")
   [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()

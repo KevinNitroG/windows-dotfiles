@@ -54,15 +54,6 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # Bat config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/bat.ps1"
 
-# Rg config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/rg.ps1"
-
-# Fd config
-. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/fd.ps1"
-
-# Lf config
-# . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/lf.ps1"
-
 # Yazi config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/yazi.ps1"
 
@@ -74,9 +65,6 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # Alias config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/setAlias.ps1"
-
-# Dotfiles config
-# . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/dotfiles.ps1"
 
 # Update Spicetify
 # . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/spicetifyUpdate.ps1"
