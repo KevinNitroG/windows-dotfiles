@@ -66,6 +66,7 @@ function _get_path_using_fzf
 {
   $input_path = fd --type file --follow --hidden --exclude .git |
     fzf --prompt 'Files> ' `
+      --header-first `
       --header 'CTRL-S: Switch between Files/Directories' `
       --bind 'ctrl-s:transform:if not "%FZF_PROMPT%"=="Files> " (echo ^change-prompt^(Files^> ^)^+^reload^(fd --type file^)) else (echo ^change-prompt^(Directory^> ^)^+^reload^(fd --type directory^))' `
       --preview 'if "%FZF_PROMPT%"=="Files> " (bat --color=always {} --style=plain) else (eza -T --colour=always --icons=always {})'
@@ -96,6 +97,7 @@ function _get_path_using_fd
 {
   $input_path = fd --type directory --follow --hidden --exclude .git |
     fzf --prompt 'Directories> ' `
+      --header-first `
       --preview 'eza -T --colour=always --icons=always {}'
   return $input_path
 }
