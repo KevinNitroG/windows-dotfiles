@@ -26,11 +26,6 @@
   ],
   "float_rules": [
     {
-      "id": "Messenger call - Google Chrome",
-      "kind": "Title",
-      "matching_strategy": "Equals"
-    },
-    {
       "id": "Authy Desktop.exe",
       "kind": "Exe",
       "matching_strategy": "Equals"

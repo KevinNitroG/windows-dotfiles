@@ -64,26 +64,37 @@ function _open_path
 
 function _get_path_using_fzf
 {
-  $input_path = fzf --preview "bat --color=always {1} --style=numbers --line-range=:500 {}" --preview-label "Preview" --header "FZF" --header-first --prompt "File> "
+  $input_path = fzf --preview "bat --color=always {1} --style=numbers --line-range=:500 {}" --preview-label "Preview" --header "FIND FILE" --header-first --prompt "File> "
   return $input_path
 }
 
 function _get_path_using_rg
 {
   $INITIAL_QUERY = "${*:-}"
-  $input_path = rg --ignore-case --color=always --line-number --no-heading --smart-case "${*:-}" |
+  $RG_PREFIX = "rg --column --line-number --no-heading --color=always --smart-case"
+  $input_path = "" |
     fzf --ansi --disabled --query "$INITIAL_QUERY" `
+      --bind "start:reload:$RG_PREFIX {q}" `
+      --bind "change:reload:sleep 0.2 & $RG_PREFIX {q} || rem" `
       --color "hl:-1:underline,hl+:-1:underline:reverse" `
       --delimiter ":" `
-      --preview "bat --color=always {1} --style=numbers" `
-      --preview-label "Preview" --header "Ripgrep" --header-first `
+      --prompt 'Ripgrep> ' `
+      --preview-label "Preview" `
+      --header "FIND FILE'S CONTENT" `
+      --header-first `
+      --preview 'bat --color=always {1} --highlight-line {2} --style=plain --diagnostic' `
       --preview-window 'up,60%,border-bottom,+{2}+3/3,~3'
   return $input_path
 }
 
 function _get_path_using_fd
 {
-  $input_path = fd --type d --follow --hidden --exclude .git | fzf --preview 'tree /A {}'
+  $input_path = fd --type d --follow --hidden --exclude .git |
+    fzf --preview 'tree /A {}' `
+      --prompt 'Fd> ' `
+      --preview-label "Preview" `
+      --header "FIND DIRECTORY" `
+      --header-first
   return $input_path
 }
 
