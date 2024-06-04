@@ -64,7 +64,11 @@ function _open_path
 
 function _get_path_using_fzf
 {
-  $input_path = fzf --preview "bat --color=always {1} --style=numbers --line-range=:500 {}" --preview-label "Preview" --header "FIND FILE" --header-first --prompt "File> "
+  $input_path = fd --type file --follow --hidden --exclude .git |
+    fzf --prompt 'Files> ' `
+      --header 'CTRL-S: Switch between Files/Directories' `
+      --bind 'ctrl-s:transform:if not "%FZF_PROMPT%"=="Files> " (echo ^change-prompt^(Files^> ^)^+^reload^(fd --type file^)) else (echo ^change-prompt^(Directory^> ^)^+^reload^(fd --type directory^))' `
+      --preview 'if "%FZF_PROMPT%"=="Files> " (bat --color=always {} --style=plain) else (eza -T --colour=always --icons=always {})'
   return $input_path
 }
 
@@ -76,13 +80,14 @@ function _get_path_using_rg
     fzf --ansi --disabled --query "$INITIAL_QUERY" `
       --bind "start:reload:$RG_PREFIX {q}" `
       --bind "change:reload:sleep 0.2 & $RG_PREFIX {q} || rem" `
+      --bind 'ctrl-s:transform:if not "%FZF_PROMPT%" == "1. ripgrep> " (echo ^rebind^(change^)^+^change-prompt^(1. ripgrep^> ^)^+^disable-search^+^transform-query:echo ^{q^} ^> %TEMP%\rg-fzf-f ^& cat %TEMP%\rg-fzf-r) else (echo ^unbind^(change^)^+^change-prompt^(2. fzf^> ^)^+^enable-search^+^transform-query:echo ^{q^} ^> %TEMP%\rg-fzf-r ^& cat %TEMP%\rg-fzf-f)' `
       --color "hl:-1:underline,hl+:-1:underline:reverse" `
       --delimiter ":" `
-      --prompt 'Ripgrep> ' `
+      --prompt '1. ripgrep> ' `
       --preview-label "Preview" `
-      --header "FIND FILE'S CONTENT" `
+      --header 'CTRL-S: Switch between ripgrep/fzf' `
       --header-first `
-      --preview 'bat --color=always {1} --highlight-line {2} --style=plain --diagnostic' `
+      --preview 'bat --color=always {1} --highlight-line {2} --style=plain' `
       --preview-window 'up,60%,border-bottom,+{2}+3/3,~3'
   return $input_path
 }
