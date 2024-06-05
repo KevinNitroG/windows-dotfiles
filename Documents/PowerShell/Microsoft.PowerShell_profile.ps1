@@ -116,6 +116,9 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 # Clean (Delete recycle bin, temp, cache, disk cleanup)
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/clean.ps1"
 
+# Update Stylus
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/stylus.ps1"
+
 # Utils
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/utils.ps1"
 
