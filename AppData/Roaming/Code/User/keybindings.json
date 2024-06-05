@@ -7,14 +7,12 @@
     "key": "ctrl+shift+w",
     "command": "-workbench.action.closeWindow"
   },
-
   // Normal remap
   {
     "key": "ctrl+shift+backspace",
     "command": "editor.action.deleteLines",
     "when": "textInputFocus && !editorReadonly"
   },
-
   // User command prefix with Ctrl Shift u
   {
     "key": "ctrl+shift+u g",
@@ -65,7 +63,6 @@
     "command": "workbench.action.files.openFolder",
     "when": "openFolderWorkspaceSupport"
   },
-
   // Override neovim key bidings which override VSCode key bindings
   {
     "key": "ctrl+f",
@@ -82,7 +79,6 @@
     "command": "editor.action.selectAll",
     "when": "vim.mode == 'Insert' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && editorTextFocus"
   },
-
   // A bit Neovim: Terminal config
   {
     "key": "ctrl+`",
@@ -114,7 +110,6 @@
     "command": "markdown.showPreviewToSide",
     "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus) && !notebookEditorFocused && editorLangId == 'markdown'"
   },
-
   // Switch buffer (actually tab) using Ctrl number
   {
     "key": "ctrl+1",
@@ -152,7 +147,6 @@
     "key": "ctrl+9",
     "command": "workbench.action.openEditorAtIndex9"
   },
-
   // Control Shift Tab like Chrome
   {
     "key": "ctrl+shift+tab",
@@ -168,7 +162,6 @@
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditor"
   },
-
   // Ctrl Tab like Chrome
   {
     "key": "ctrl+tab",
@@ -184,14 +177,12 @@
     "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
     "when": "inEditorsPicker && inQuickOpen"
   },
-
   // New buffer (actually tab) like Chrome
   {
     "key": "ctrl+t",
     "command": "welcome.showNewFileEntries",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
-
   // Neovim: General keymaps
   // This is configured in .vimrc
   // {
@@ -208,7 +199,6 @@
   //   "command": "vim.showQuickpickCmdLine",
   //   "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && editorTextFocus"
   // }
-
   // Neovim: Switch buffer (actually tab)
   {
     "key": "shift+l",
@@ -220,7 +210,6 @@
     "command": "workbench.action.previousEditorInGroup",
     "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus)"
   },
-
   // Neovim: Window - Close
   {
     "key": "space c",
@@ -242,7 +231,6 @@
     "command": "workbench.action.closeWindow",
     "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus)"
   },
-
   // Neovim: Window - Split window
   {
     "key": "s v",
@@ -254,7 +242,6 @@
     "command": "workbench.action.splitEditorDown",
     "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus)"
   },
-
   // Neovim: Window - Navigation
   // {
   //   "key": "tab",
@@ -282,7 +269,6 @@
     "key": "ctrl+j",
     "command": "workbench.action.navigateDown"
   },
-
   //   // Neovim: Move cursor in insert mode
   //   {
   //     "key": "alt+l",
@@ -304,7 +290,6 @@
   //     "command": "cursorUp",
   //     "when": "vim.mode == 'Insert' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && editorTextFocus"
   //   },
-
   // Neovim: Coding
   {
     "key": "alt+j",
@@ -341,7 +326,6 @@
     "command": "workbench.action.moveEditorLeftInGroup",
     "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus)"
   },
-
   // Neovim: Select list suggestion
   // Actually neovim override can do it
   // {
@@ -379,7 +363,6 @@
     "command": "hideSuggestWidget",
     "when": "vim.mode == 'Insert' && suggestWidgetMultipleSuggestions && suggestWidgetVisible && editorTextFocus"
   },
-
   // Neovim: LSP
   {
     "key": "space l a",
@@ -411,7 +394,6 @@
   //   "command": "editor.action.goToReferences",
   //   "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus)"
   // },
-
   // Neovim: Find
   {
     "key": "space f b",
@@ -438,12 +420,33 @@
     "command": "workbench.view.scm",
     "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus)"
   },
-
   // File Explorer
   {
     "key": "space e",
-    "command": "workbench.action.toggleSidebarVisibility",
-    "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus)"
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.files.action.focusFilesExplorer"
+      ]
+    },
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
+  },
+  {
+    "key": "space e",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    },
+    "when": "sideBarFocus && !inputFocus"
+  },
+  {
+    "key": "space e",
+    "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible",
+    "command": "workbench.action.toggleSidebarVisibility"
   },
   {
     "key": "r",
@@ -502,7 +505,6 @@
     "command": "explorer.openAndPassFocus",
     "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
   },
-
   // Neovim: Options
   {
     "key": "alt+z",
