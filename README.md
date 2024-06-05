@@ -14,7 +14,7 @@
     - [Terminal](#terminal)
     - [Check Wifi Password](#check-wifi-password)
     - [App Manage](#app-manage)
-    - [Change directory schemes](#change-directory-schemes)
+    - [Find files / directories / file content](#find-files--directories--file-content)
     - [Neovim](#neovim)
   - [🪴 INSTALL](#-install)
     - [1️⃣ Add SSH](#1️⃣-add-ssh)
@@ -83,14 +83,26 @@
 
 ---
 
-### Change directory schemes
+### Find files / directories / file content
 
-|                                         |                                                   |
-| :-------------------------------------: | :-----------------------------------------------: |
-|  ![fzfcd](assets/images/cd-fzfcd.png)   |        ![rgcd](assets/images/cd-rgcd.png)         |
-| [fzf](https://github.com/junegunn/fzf/) | [ripgrep](https://github.com/BurntSushi/ripgrep/) |
-|   ![fdcd](assets/images/cd-fdcd.png)    |        ![lfcd](assets/images/cd-lfcd.png)         |
-|  [fd](https://github.com/sharkdp/fd/)   |       [lf](https://github.com/gokcehan/lf/)       |
+|     [fzf](https://github.com/junegunn/fzf/)      |             [fd](https://github.com/sharkdp/fd/)              |
+| :----------------------------------------------: | :-----------------------------------------------------------: |
+| ![fdg - find files](assets/images/find-file.png) | ![fdg - find directories](assets/images/find-directories.png) |
+
+| [ripgrep](https://github.com/BurntSushi/ripgrep) |          [fzf](https://github.com/junegunn/fzf/)           |
+| :----------------------------------------------: | :--------------------------------------------------------: |
+| ![rgg - ripgrep](assets/images/find-ripgrep.png) | ![rgg - ripgrep - fzf](assets/images/find-ripgrep_fzf.png) |
+
+![cd or neovim](assets/images/find-choice.png)
+
+> [!NOTE]
+>
+> These come from [fzf advanced integration](https://github.com/junegunn/fzf/blob/master/ADVANCED.md) but in Powershell
+>
+> The config is in [Documents/PowerShell/Scripts/kevinnitro/fzf.ps1](https://github.com/KevinNitroG/windows-dotfiles/blob/main/Documents/PowerShell/Scripts/kevinnitro/fzf.ps1)
+
+- Bonus: [yazi](https://github.com/sxyazi/yazi) and cd
+  ![yzcd](assets/images/cd-yazi.png)
 
 ---
 
