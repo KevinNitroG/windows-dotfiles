@@ -11,7 +11,7 @@ function cms
   Set-Location $(chezmoi source-path)
   git f
   # chezmoi git apply -R
-  Stop-Process -Name "gpg-agent" -Force -ErrorAction Continue
+  # Stop-Process -Name "gpg-agent" -Force -ErrorAction Continue
   # Stop-Process -Name "keyboxd"
   Set-Location $current_dir
 }

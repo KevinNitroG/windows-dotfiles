@@ -36,7 +36,8 @@
 [user]
 	name = KevinNitroG
 	email = trannguyenthaibinh46@gmail.com
-	signingkey = C:/Users/kevinnitro/.ssh/id_ed25519
+	signingkey = 071E9CD8A2D41057
+	; signingkey = C:/Users/kevinnitro/.ssh/id_ed25519
 
 [safe]
 	directory = E:/
@@ -93,8 +94,8 @@
   prev = checkout @^
   next = !git checkout $(git rev-list --children --all | grep ^$(git rev-parse HEAD) | cut -f 2 -d ' ')
 
-[gpg]
-	format = ssh
+; [gpg]
+; 	format = ssh
 
 [commit]
 	gpgsign = true
