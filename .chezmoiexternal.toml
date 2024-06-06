@@ -67,3 +67,8 @@ refreshPeriod = "168h"
 type = "git-repo"
 url = "https://github.com/catppuccin/powershell.git"
 refreshPeriod = "168h"
+
+[".config/delta/themes/catppuccin"]
+type = "git-repo"
+url = "https://github.com/catppuccin/delta.git"
+refreshPeriod = "168h"
