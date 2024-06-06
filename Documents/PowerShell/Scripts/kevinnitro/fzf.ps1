@@ -34,41 +34,36 @@ Set-PsFzfOption -PSReadlineChordProvider "Ctrl+e" -PSReadlineChordReverseHistory
 function _open_path
 {
   param (
-    [string]$inputPath
+    [string]$input_path
   )
-
-  if (-not $inputPath)
+  if (-not $input_path)
   {
     return
   }
-
   Write-Output "[ ] cd"
   Write-Output "[*] nvim"
-
   $choice = Read-Host "Enter your choice"
-
-  if ($inputPath -match "^.*:\d+:.*$")
+  if ($input_path -match "^.*:\d+:.*$")
   {
-    $inputPath = ($inputPath -split ":")[0]
+    $input_path = ($input_path -split ":")[0]
   }
-
   switch ($choice)
   {
     {$_ -eq "" -or $_ -eq " "}
     {
-      if (Test-Path -Path $inputPath -PathType Leaf)
+      if (Test-Path -Path $input_path -PathType Leaf)
       {
-        $inputPath = Split-Path -Path $inputPath -Parent
+        $input_path = Split-Path -Path $input_path -Parent
       }
-      Set-Location -Path $inputPath
+      Set-Location -Path $input_path
     }
     default
-    { nvim $inputPath 
+    { nvim $input_path
     }
   }
 }
 
-function _get_path_using_fzf
+function _get_path_using_fd
 {
   $input_path = fd --type file --follow --hidden --exclude .git |
     fzf --prompt 'Files> ' `
@@ -99,18 +94,9 @@ function _get_path_using_rg
   return $input_path
 }
 
-function _get_path_using_fd
+function fdg
 {
-  $input_path = fd --type directory --follow --hidden --exclude .git |
-    fzf --prompt 'Directories> ' `
-      --preview 'eza -T --colour=always --icons=always {}'
-  return $input_path
-}
-
-
-function fzfg
-{
-  _open_path $(_get_path_using_fzf)
+  _open_path $(_get_path_using_fd)
 }
 
 function rgg
@@ -118,25 +104,14 @@ function rgg
   _open_path $(_get_path_using_rg)
 }
 
-function fdg
-{
-  _open_path $(_get_path_using_fd)
-}
-
 Set-PSReadLineKeyHandler -Key "Ctrl+f" -ScriptBlock {
   [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
-  [Microsoft.PowerShell.PSConsoleReadLine]::Insert("fzfg")
+  [Microsoft.PowerShell.PSConsoleReadLine]::Insert("fdg")
   [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
 
 Set-PSReadLineKeyHandler -Key "Ctrl+g" -ScriptBlock {
   [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
   [Microsoft.PowerShell.PSConsoleReadLine]::Insert("rgg")
-  [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
-}
-
-Set-PSReadLineKeyHandler -Key "Ctrl+Shift+d" -ScriptBlock {
-  [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
-  [Microsoft.PowerShell.PSConsoleReadLine]::Insert("fdg")
   [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }

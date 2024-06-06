@@ -423,9 +423,9 @@
   // File Explorer
   {
     "key": "space e",
-    "command": "extension.multiCommand.execute",
+    "command": "runCommands",
     "args": {
-      "sequence": [
+      "commands": [
         "workbench.action.toggleSidebarVisibility",
         "workbench.files.action.focusFilesExplorer"
       ]
@@ -434,9 +434,9 @@
   },
   {
     "key": "space e",
-    "command": "extension.multiCommand.execute",
+    "command": "runCommands",
     "args": {
-      "sequence": [
+      "commands": [
         "workbench.action.toggleSidebarVisibility",
         "workbench.action.focusActiveEditorGroup"
       ]
