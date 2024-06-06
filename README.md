@@ -17,7 +17,7 @@
     - [Find files / directories / file content](#find-files--directories--file-content)
     - [Neovim](#neovim)
   - [🪴 INSTALL](#-install)
-    - [1️⃣ Add SSH](#1️⃣-add-ssh)
+    - [1️⃣ Add Keys](#1️⃣-add-keys)
     - [2️⃣ Install prerequisite](#2️⃣-install-prerequisite)
     - [3️⃣ Chezmoi](#3️⃣-chezmoi)
     - [4️⃣ Set env path _(Admin)_](#4️⃣-set-env-path-admin)
@@ -120,7 +120,7 @@
 
 ## 🪴 INSTALL
 
-### 1️⃣ Add SSH
+### 1️⃣ Add Keys
 
 - SSH _(Admin)_
   ```ps1
@@ -444,6 +444,17 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 - Import _(for both public and secret keys)_
   ```ps1
   gpg --import the-key.gpg
+  ```
+- Start GPG agent _(set a task schedule to trigger on log on)_
+  ```ps1
+  gpgconf --launch gpg-agent
+  ```
+- May want to trust a key
+  ```ps1
+  gpg --edit-key {key-id}
+  trust
+  5
+  quit
   ```
 
 > [!NOTE]
