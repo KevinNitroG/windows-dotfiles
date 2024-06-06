@@ -39,3 +39,4 @@ git:
   parseEmoji: true
   paging:
     pager: delta
+    colorArg: always
