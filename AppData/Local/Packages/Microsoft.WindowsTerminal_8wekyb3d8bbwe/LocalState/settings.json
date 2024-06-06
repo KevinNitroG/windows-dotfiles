@@ -30,38 +30,6 @@
         {
             "command": 
             {
-                "action": "moveTab",
-                "direction": "forward"
-            },
-            "keys": "alt+shift+period"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "keys": "ctrl+shift+c"
-        },
-        {
-            "command": 
-            {
-                "action": "movePane",
-                "index": 6
-            },
-            "keys": "alt+shift+7"
-        },
-        {
-            "command": 
-            {
-                "action": "switchToTab",
-                "index": 7
-            },
-            "keys": "ctrl+8"
-        },
-        {
-            "command": 
-            {
                 "action": "splitPane",
                 "split": "down"
             }
@@ -346,13 +314,33 @@
             "command": 
             {
                 "action": "switchToTab",
-                "index": 9
+                "index": 7
             },
-            "keys": "ctrl+9"
+            "keys": "ctrl+8"
         },
         {
-            "command": "toggleAlwaysOnTop",
-            "keys": "alt+shift+t"
+            "command": 
+            {
+                "action": "movePane",
+                "index": 6
+            },
+            "keys": "alt+shift+7"
+        },
+        {
+            "command": 
+            {
+                "action": "copy",
+                "singleLine": false
+            },
+            "keys": "ctrl+shift+c"
+        },
+        {
+            "command": 
+            {
+                "action": "moveTab",
+                "direction": "forward"
+            },
+            "keys": "alt+shift+period"
         },
         {
             "command": 
@@ -361,6 +349,18 @@
                 "window": "new"
             },
             "keys": "alt+n"
+        },
+        {
+            "command": "toggleAlwaysOnTop",
+            "keys": "alt+shift+t"
+        },
+        {
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 9
+            },
+            "keys": "ctrl+9"
         },
         {
             "command": "paste",
@@ -385,6 +385,14 @@
         {
             "command": 
             {
+                "action": "resizePane",
+                "direction": "left"
+            },
+            "keys": "alt+shift+left"
+        },
+        {
+            "command": 
+            {
                 "action": "newTab",
                 "index": 4
             },
@@ -393,14 +401,6 @@
         {
             "command": "find",
             "keys": "ctrl+shift+f"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "left"
-            },
-            "keys": "alt+shift+left"
         },
         {
             "command": 
@@ -470,18 +470,18 @@
         {
             "command": 
             {
-                "action": "movePane",
-                "index": 7
-            },
-            "keys": "alt+shift+8"
-        },
-        {
-            "command": 
-            {
                 "action": "switchToTab",
                 "index": 6
             },
             "keys": "ctrl+7"
+        },
+        {
+            "command": 
+            {
+                "action": "movePane",
+                "index": 7
+            },
+            "keys": "alt+shift+8"
         },
         {
             "command": 
@@ -510,13 +510,6 @@
         {
             "command": 
             {
-                "action": "splitPane",
-                "split": "right"
-            }
-        },
-        {
-            "command": 
-            {
                 "action": "newTab",
                 "index": 5
             },
@@ -526,12 +519,15 @@
             "command": 
             {
                 "action": "splitPane",
-                "split": "left"
+                "split": "right"
             }
         },
         {
-            "command": "scrollDownPage",
-            "keys": "alt+d"
+            "command": 
+            {
+                "action": "splitPane",
+                "split": "left"
+            }
         },
         {
             "command": 
@@ -540,6 +536,10 @@
                 "index": 6
             },
             "keys": "ctrl+shift+7"
+        },
+        {
+            "command": "scrollDownPage",
+            "keys": "alt+d"
         },
         {
             "command": 
@@ -551,18 +551,18 @@
         {
             "command": 
             {
-                "action": "moveFocus",
-                "direction": "left"
-            },
-            "keys": "alt+left"
-        },
-        {
-            "command": 
-            {
                 "action": "newTab",
                 "index": 0
             },
             "keys": "ctrl+shift+1"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "left"
+            },
+            "keys": "alt+left"
         },
         {
             "command": 
@@ -581,6 +581,13 @@
             "keys": "alt+up"
         },
         {
+            "command": 
+            {
+                "action": "closeOtherTabs"
+            },
+            "keys": "alt+shift+o"
+        },
+        {
             "command": "openTabRenamer",
             "keys": "ctrl+f2"
         },
@@ -591,13 +598,6 @@
                 "direction": "down"
             },
             "keys": "alt+shift+down"
-        },
-        {
-            "command": 
-            {
-                "action": "closeOtherTabs"
-            },
-            "keys": "alt+shift+o"
         },
         {
             "command": 
@@ -620,17 +620,17 @@
         {
             "command": 
             {
-                "action": "nextTab"
-            },
-            "keys": "ctrl+tab"
-        },
-        {
-            "command": 
-            {
                 "action": "openSettings",
                 "target": "settingsUI"
             },
             "keys": "alt+comma"
+        },
+        {
+            "command": 
+            {
+                "action": "nextTab"
+            },
+            "keys": "ctrl+tab"
         },
         {
             "command": 
@@ -644,21 +644,17 @@
             "command": 
             {
                 "action": "swapPane",
-                "direction": "left"
-            },
-            "keys": "alt+shift+h"
-        },
-        {
-            "command": 
-            {
-                "action": "swapPane",
                 "direction": "down"
             },
             "keys": "alt+shift+j"
         },
         {
-            "command": "openWindowRenamer",
-            "keys": "alt+shift+f2"
+            "command": 
+            {
+                "action": "swapPane",
+                "direction": "left"
+            },
+            "keys": "alt+shift+h"
         },
         {
             "command": 
@@ -667,6 +663,10 @@
                 "index": 2
             },
             "keys": "ctrl+shift+3"
+        },
+        {
+            "command": "openWindowRenamer",
+            "keys": "alt+shift+f2"
         },
         {
             "command": 
@@ -783,16 +783,16 @@
             "keys": "ctrl+t"
         },
         {
-            "command": "markMode",
-            "keys": "ctrl+shift+space"
-        },
-        {
             "command": 
             {
                 "action": "moveFocus",
                 "direction": "parent"
             },
             "keys": "alt+home"
+        },
+        {
+            "command": "markMode",
+            "keys": "ctrl+shift+space"
         },
         {
             "command": 
@@ -899,7 +899,7 @@
                 "window",
                 "taskbar"
             ],
-            "colorScheme": "Catppuccin Macchiato",
+            "colorScheme": "Catppuccin Mocha",
             "elevate": false,
             "experimental.retroTerminalEffect": false,
             "font": 
@@ -909,7 +909,7 @@
                 "weight": "normal"
             },
             "intenseTextStyle": "bold",
-            "opacity": 90,
+            "opacity": 85,
             "padding": "2,2,-10,0",
             "scrollbarState": "visible",
             "useAcrylic": true,
@@ -1047,6 +1047,52 @@
             "yellow": "#C19C00"
         },
         {
+            "background": "#303446",
+            "black": "#51576D",
+            "blue": "#8CAAEE",
+            "brightBlack": "#626880",
+            "brightBlue": "#8CAAEE",
+            "brightCyan": "#81C8BE",
+            "brightGreen": "#A6D189",
+            "brightPurple": "#F4B8E4",
+            "brightRed": "#E78284",
+            "brightWhite": "#A5ADCE",
+            "brightYellow": "#E5C890",
+            "cursorColor": "#F2D5CF",
+            "cyan": "#81C8BE",
+            "foreground": "#C6D0F5",
+            "green": "#A6D189",
+            "name": "Catppuccin Frappe",
+            "purple": "#F4B8E4",
+            "red": "#E78284",
+            "selectionBackground": "#626880",
+            "white": "#B5BFE2",
+            "yellow": "#E5C890"
+        },
+        {
+            "background": "#EFF1F5",
+            "black": "#5C5F77",
+            "blue": "#1E66F5",
+            "brightBlack": "#ACB0BE",
+            "brightBlue": "#1E66F5",
+            "brightCyan": "#179299",
+            "brightGreen": "#40A02B",
+            "brightPurple": "#EA76CB",
+            "brightRed": "#D20F39",
+            "brightWhite": "#BCC0CC",
+            "brightYellow": "#DF8E1D",
+            "cursorColor": "#DC8A78",
+            "cyan": "#179299",
+            "foreground": "#4C4F69",
+            "green": "#40A02B",
+            "name": "Catppuccin Latte",
+            "purple": "#EA76CB",
+            "red": "#D20F39",
+            "selectionBackground": "#ACB0BE",
+            "white": "#ACB0BE",
+            "yellow": "#DF8E1D"
+        },
+        {
             "background": "#24273A",
             "black": "#494D64",
             "blue": "#8AADF4",
@@ -1070,50 +1116,27 @@
             "yellow": "#EED49F"
         },
         {
-            "background": "#282A36",
-            "black": "#21222C",
-            "blue": "#BD93F9",
-            "brightBlack": "#6272A4",
-            "brightBlue": "#D6ACFF",
-            "brightCyan": "#A4FFFF",
-            "brightGreen": "#69FF94",
-            "brightPurple": "#FF92DF",
-            "brightRed": "#FF6E6E",
-            "brightWhite": "#FFFFFF",
-            "brightYellow": "#FFFFA5",
-            "cursorColor": "#F8F8F2",
-            "cyan": "#8BE9FD",
-            "foreground": "#F8F8F2",
-            "green": "#50FA7B",
-            "name": "Dracula",
-            "purple": "#FF79C6",
-            "red": "#FF5555",
-            "selectionBackground": "#44475A",
-            "white": "#F8F8F2",
-            "yellow": "#F1FA8C"
-        },
-        {
-            "background": "#1F1D27",
-            "black": "#1F1D27",
-            "blue": "#FFC284",
-            "brightBlack": "#353147",
-            "brightBlue": "#FFC284",
-            "brightCyan": "#2488FF",
-            "brightGreen": "#2DCD73",
-            "brightPurple": "#DE8D40",
-            "brightRed": "#D9393E",
-            "brightWhite": "#EAE5FF",
-            "brightYellow": "#D9B76E",
-            "cursorColor": "#FF9839",
-            "cyan": "#2488FF",
-            "foreground": "#B7A1FF",
-            "green": "#2DCD73",
-            "name": "Duotone Dark",
-            "purple": "#DE8D40",
-            "red": "#D9393E",
-            "selectionBackground": "#353147",
-            "white": "#B7A1FF",
-            "yellow": "#D9B76E"
+            "background": "#1E1E2E",
+            "black": "#45475A",
+            "blue": "#89B4FA",
+            "brightBlack": "#585B70",
+            "brightBlue": "#89B4FA",
+            "brightCyan": "#94E2D5",
+            "brightGreen": "#A6E3A1",
+            "brightPurple": "#F5C2E7",
+            "brightRed": "#F38BA8",
+            "brightWhite": "#A6ADC8",
+            "brightYellow": "#F9E2AF",
+            "cursorColor": "#F5E0DC",
+            "cyan": "#94E2D5",
+            "foreground": "#CDD6F4",
+            "green": "#A6E3A1",
+            "name": "Catppuccin Mocha",
+            "purple": "#F5C2E7",
+            "red": "#F38BA8",
+            "selectionBackground": "#585B70",
+            "white": "#BAC2DE",
+            "yellow": "#F9E2AF"
         },
         {
             "background": "#222436",
@@ -1226,7 +1249,7 @@
             "name": "Solarized Light",
             "purple": "#D33682",
             "red": "#DC322F",
-            "selectionBackground": "#FFFFFF",
+            "selectionBackground": "#073642",
             "white": "#EEE8D5",
             "yellow": "#B58900"
         },
@@ -1272,7 +1295,7 @@
             "name": "Tango Light",
             "purple": "#75507B",
             "red": "#CC0000",
-            "selectionBackground": "#FFFFFF",
+            "selectionBackground": "#555753",
             "white": "#D3D7CF",
             "yellow": "#C4A000"
         },
@@ -1323,9 +1346,55 @@
             "yellow": "#808000"
         }
     ],
-    "theme": "Catppuccin Macchiato",
+    "theme": "Catppuccin Mocha",
     "themes": 
     [
+        {
+            "name": "Catppuccin Frappe",
+            "tab": 
+            {
+                "background": "#303446FF",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow": 
+            {
+                "background": "#292C3CFF",
+                "unfocusedBackground": "#232634FF"
+            },
+            "window": 
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        },
+        {
+            "name": "Catppuccin Latte",
+            "tab": 
+            {
+                "background": "#EFF1F5FF",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow": 
+            {
+                "background": "#E6E9EFFF",
+                "unfocusedBackground": "#DCE0E8FF"
+            },
+            "window": 
+            {
+                "applicationTheme": "light",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        },
         {
             "name": "Catppuccin Macchiato",
             "tab": 
@@ -1339,6 +1408,29 @@
             {
                 "background": "#1E2030FF",
                 "unfocusedBackground": "#181926FF"
+            },
+            "window": 
+            {
+                "applicationTheme": "dark",
+                "experimental.rainbowFrame": false,
+                "frame": null,
+                "unfocusedFrame": null,
+                "useMica": false
+            }
+        },
+        {
+            "name": "Catppuccin Mocha",
+            "tab": 
+            {
+                "background": "#1E1E2EFF",
+                "iconStyle": "default",
+                "showCloseButton": "always",
+                "unfocusedBackground": null
+            },
+            "tabRow": 
+            {
+                "background": "#181825FF",
+                "unfocusedBackground": "#11111BFF"
             },
             "window": 
             {
