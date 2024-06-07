@@ -1,17 +1,40 @@
-function _eza
+if (!(Get-Command -Name "eza" -ErrorAction SilentlyContinue))
 {
-  # eza --color=always --long --git --no-filesize --icons=always --no-time --no-user --no-permissions $args
-  eza --long --git --icons=always --color=always --sort="type" $args
+  return
+}
+
+$DEFAULT_EZA_ARGS = @(
+  "--group-directories-first",
+  "--ignore-glob=.DS_Store",
+  "--icons=always",
+  "--colour=always",
+  "--sort=type",
+  "--git"
+)
+
+function _ls
+{
+  eza -1 @DEFAULT_EZA_ARGS @args
+}
+
+function l
+{
+  eza -lh @DEFAULT_EZA_ARGS @args
 }
 
 function ll
 {
-  _eza -la
+  eza -lag @DEFAULT_EZA_ARGS @args
 }
 
-function la
+function ld
 {
-  _eza -a
+  eza -lhD @DEFAULT_EZA_ARGS @args
 }
 
-Set-Alias -Name ls -Value _eza
+function lt
+{
+  eza --tree @DEFAULT_EZA_ARGS @args
+}
+
+Set-Alias -Name ls -Value _ls -Force
