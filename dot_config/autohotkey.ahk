@@ -51,7 +51,7 @@ GroupAdd "Browser", "ahk_exe thorium.exe"
 
 ; --- UNIKEY ---
 
-#space::!z
+; #space::!z
 
 ; Cannot use bellow :v, UniKeyNT doesn't read the key
 ; #space::try ControlSend "!z",, "ahk_exe UniKeyNT.exe"
