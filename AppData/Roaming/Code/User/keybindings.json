@@ -360,7 +360,7 @@
   {
     "key": "ctrl+e",
     "command": "hideSuggestWidget",
-    "when": "vim.mode == 'Insert' && suggestWidgetMultipleSuggestions && suggestWidgetVisible && editorTextFocus"
+    "when": "vim.mode == 'Insert' && suggestWidgetVisible && editorTextFocus"
   },
   // Neovim: LSP
   {
@@ -419,10 +419,7 @@
     "command": "runCommands",
     "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)",
     "args": {
-      "commands": [
-        "workbench.view.scm",
-        "workbench.scm.focus"
-      ]
+      "commands": ["workbench.view.scm", "workbench.scm.focus"]
     }
   },
   // File Explorer
