@@ -50,6 +50,14 @@ function _open_path
   }
   switch ($choice)
   {
+    "r"
+    { 
+      Remove-Item $input_path -Recurse -Confirm
+    }
+    "v"
+    { 
+      nvim $input_path
+    }
     {$_ -eq "" -or $_ -eq " "}
     {
       if (Test-Path -Path $input_path -PathType Leaf)
@@ -57,14 +65,6 @@ function _open_path
         $input_path = Split-Path -Path $input_path -Parent
       }
       Set-Location -Path $input_path
-    }
-    {$_ -eq "r"}
-    { 
-      Remove-Item $input_path -Recurse -Confirm
-    }
-    {$_ -eq "v"}
-    { 
-      nvim $input_path
     }
     default
     {
