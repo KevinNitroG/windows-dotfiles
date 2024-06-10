@@ -41,7 +41,8 @@ function _open_path
     return
   }
   Write-Output "[ ] cd"
-  Write-Output "[*] nvim"
+  Write-Output "[r] rm"
+  Write-Output "[v] nvim"
   $choice = Read-Host "Enter your choice"
   if ($input_path -match "^.*:\d+:.*$")
   {
@@ -57,8 +58,17 @@ function _open_path
       }
       Set-Location -Path $input_path
     }
+    {$_ -eq "r"}
+    { 
+      Remove-Item $input_path -Recurse -Confirm
+    }
+    {$_ -eq "v"}
+    { 
+      nvim $input_path
+    }
     default
-    { nvim $input_path
+    {
+      Write-Host "Selection is invalid!"
     }
   }
 }

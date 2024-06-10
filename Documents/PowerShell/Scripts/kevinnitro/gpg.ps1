@@ -1,6 +1,6 @@
 function Start-GPG
 {
-  gpgconf --launch gpg-agent
+  gpg-connect-agent reloadagent /bye
 }
 
 function Stop-GPG
