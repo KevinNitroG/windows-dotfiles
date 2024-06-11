@@ -19,7 +19,7 @@ function _ls
 
 function l
 {
-  eza -lh @DEFAULT_EZA_ARGS @args
+  eza -l @DEFAULT_EZA_ARGS @args
 }
 
 function ll
@@ -29,7 +29,7 @@ function ll
 
 function ld
 {
-  eza -lhD @DEFAULT_EZA_ARGS @args
+  eza -lD @DEFAULT_EZA_ARGS @args
 }
 
 function lt
