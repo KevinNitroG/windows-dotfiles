@@ -1,29 +1,11 @@
 $USER_PATHS = @(
-  "%LOCALAPPDATA%\Local\SilentCMD",
-  "%LOCALAPPDATA%\nvim-data\mason\bin"
+  "%LOCALAPPDATA%\nvim-data\mason\bin",
+  "%USERPROFILE%\scoop\apps\git\current\usr\bin"
   # "$($env:USERPROFILE)\bin\vscode-cpptools\extension\debugAdapters\bin".
-  # "D:\My Apps\ENV Tools\vcpkg",
-  # "C:\Program Files\OpenSSL-Win64\bin",
 )
 
 # Allow long path
 Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
-
-# function Test-PathExistList
-# {
-#   param (
-#     [string[]] $Paths
-#   )
-#   $ExistedPaths = @()
-#   foreach ($Path in $Paths)
-#   {
-#     if (Test-Path -Path $Path -ErrorAction SilentlyContinue)
-#     {
-#       $ExistedPaths += $Paths
-#     }
-#   }
-#   return $ExistedPaths
-# }
 
 function add_paths_to_existed_paths
 {
@@ -53,7 +35,7 @@ $IncludePaths = (add_paths_to_existed_paths $USER_PATHS) -join ";"
 $SetupEnv = @{
   Path = $IncludePaths;
   YAZI_CONFIG_HOME = "%USERPROFILE%\.config\yazi";
-  YAZI_FILE_ONE = "%USERPROFILE%\\scoop\apps\git\current\usr\bin\file.exe";
+  YAZI_FILE_ONE = "%USERPROFILE%\scoop\apps\git\current\usr\bin\file.exe";
   KOMOREBI_CONFIG_HOME = "%USERPROFILE%\.config\komorebi";
   CARGO_HOME = "E:\packages\cargo";
   npm_config_cache = "E:\cache\npm";
