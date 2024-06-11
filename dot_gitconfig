@@ -1,5 +1,8 @@
 # Ref: https://github.com/garybernhardt/dotfiles/blob/main/.gitconfig
 
+[include]
+  path = .config/delta/themes/catppuccin/catppuccin.gitconfig
+
 [core]
 	# editor = code --wait
 	editor = nvim
@@ -11,8 +14,8 @@
   diffFilter = delta --color-only
 
 [delta]
-  navigate = true    # use n and N to move between diff sections
-  # delta detects terminal colors automatically# set one of these to disable auto-detection
+  features = catppuccin-mocha
+  navigate = true
   dark = true
   # light = true
   side-by-side = true
@@ -20,6 +23,7 @@
   show-syntax-themes = true
   hyperlinks = true
   # hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+
 
 [merge]
   conflictstyle = diff3
@@ -94,8 +98,9 @@
   prev = checkout @^
   next = !git checkout $(git rev-list --children --all | grep ^$(git rev-parse HEAD) | cut -f 2 -d ' ')
 
-; [gpg]
+[gpg]
 ; 	format = ssh
+  program = gpg
 
 [commit]
 	gpgsign = true
