@@ -62,7 +62,6 @@ $SCOOP_CODING_TOOLS = @(
   "main/gh",
   "main/gnupg",
   "main/goodbyedpi"
-  "main/gpg",
   "main/grep",
   "main/gzip",
   "main/jq",
@@ -89,6 +88,7 @@ $SCOOP_CODING_TOOLS = @(
   # "main/file", # for yazi, but use in git instead
   # "main/lf",
   # "main/oh-my-posh"
+  #"main/gpg", # Use default builtin gpg of git
 )
 
 $SCOOP_OTHER_APPS = @(

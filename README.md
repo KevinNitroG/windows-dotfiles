@@ -128,10 +128,16 @@
   Start-Service ssh-agent
   ssh-add "$env:USERPROFILE/.ssh/id_ed25519"
   ```
-- Import GPG Keys:
-  ```ps1
-  gpg --import public.gpg # Not need
+- Import GPG Keys _(use builtin GPG from git)_:
+  ```sh
+  git bash
+  gpg --import public.gpg
   gpg --import secret.gpg
+  gpg --edit-key KevinNitroG
+  trust
+  5
+  y
+  quit
   ```
 
 > In order to encrypt / decrypt chezmoi
