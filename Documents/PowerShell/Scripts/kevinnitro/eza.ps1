@@ -4,12 +4,13 @@ if (!(Get-Command -Name "eza" -ErrorAction SilentlyContinue))
 }
 
 $DEFAULT_EZA_ARGS = @(
-  "--group-directories-first",
-  "--ignore-glob=.DS_Store",
-  "--icons=always",
   "--colour=always",
-  "--sort=type",
-  "--git"
+  "--git",
+  "--group-directories-first",
+  "--icons=always",
+  "--ignore-glob=.DS_Store",
+  "--no-quotes",
+  "--sort=type"
 )
 
 function _ls
