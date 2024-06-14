@@ -1,6 +1,7 @@
 $CHOCO_APPS = @(
   "internet-download-manager",
-  "itunes"
+  "itunes",
+  "warp"
   # "everythingpowertoys",
   # "ultraviewer"
 )

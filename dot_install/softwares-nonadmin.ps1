@@ -32,7 +32,6 @@ $SCOOP_OFTEN_USE_APPS = @(
   "extras/powertoys",
   "extras/vlc",
   "extras/winaero-tweaker",
-  "main/warp",
   "nonportable/parsec-np"
   # "extra/spotify",
   # "extras/everything",
