@@ -41,29 +41,7 @@
       "workspaces": [
         {
           "name": "0",
-          "layout": "BSP",
-          "workspace_rules": [
-            {
-              "id": "arc.exe",
-              "kind": "Exe"
-            },
-            {
-              "id": "chrome.exe",
-              "kind": "Exe"
-            },
-            {
-              "id": "edge.exe",
-              "kind": "Exe"
-            },
-            {
-              "id": "firefox.exe",
-              "kind": "Exe"
-            },
-            {
-              "id": "opera.exe",
-              "kind": "Exe"
-            }
-          ]
+          "layout": "BSP"
         },
         {
           "layout": "BSP",

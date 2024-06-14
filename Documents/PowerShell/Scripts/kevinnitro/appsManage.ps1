@@ -157,6 +157,11 @@ function Update-PowershellModules
 function Uninstall-ChocoApps
 {
   $apps = Select-Apps $(List-ChocoApps)
+  if ($apps.Length == 0)
+  {
+    Write-Host "No app was selected"!
+    return 
+  }
   if (Check-IsAdmin)
   {
     choco uninstall $apps -y
@@ -169,5 +174,10 @@ function Uninstall-ChocoApps
 function Uninstall-ScoopApps
 {
   $apps = Select-Apps $(List-ScoopApps)
+  if ($apps.Length == 0)
+  {
+    Write-Host "No app was selected"!
+    return 
+  }
   scoop uninstall $apps
 }

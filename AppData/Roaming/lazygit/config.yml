@@ -1,7 +1,7 @@
 # reference from https://github.com/scottmckendry/Windots/blob/main/lazygit/config.yml
 
 notARepository: skip
-disableStartupPopups: false
+disableStartupPopups: true
 
 update:
   method: never
@@ -38,5 +38,5 @@ gui:
 git:
   parseEmoji: true
   paging:
-    pager: delta
+    pager: delta --paging=never
     colorArg: always
