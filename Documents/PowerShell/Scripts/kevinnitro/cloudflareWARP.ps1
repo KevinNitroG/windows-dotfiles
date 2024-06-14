@@ -5,9 +5,9 @@ function Start-CloudFlareWarp
   $sv = Get-Service -Name $CLOUDFLAREWARP_SERVICE_NAME -ErrorAction SilentlyContinue
   if ($sv)
   {
-    Set-Service -Name $CLOUDFLAREWARP_SERVICE_NAME -StartupType Automatic
-    Set-Service -Name $CLOUDFLAREWARP_SERVICE_NAME -Status Running -PassThru
-    & "Cloudflare WARP.exe"
+    Start-Process -filepath "powershell" -Argumentlist "Set-Service -Name $($CLOUDFLAREWARP_SERVICE_NAME) -StartupType Manual; Set-Service -Name $($CLOUDFLAREWARP_SERVICE_NAME) -Status Running -PassThru" -Verb runas
+    Start-Sleep 5
+    Start-Process "Cloudflare WARP.exe"
     Write-Host "Started CloudflareWARP"
   } else
   {
@@ -17,12 +17,11 @@ function Start-CloudFlareWarp
 
 function Stop-CloudFlareWarp 
 {
-  $sv = Get-Service -Name CloudflareWARP -ErrorAction SilentlyContinue
+  $sv = Get-Service -Name $CLOUDFLAREWARP_SERVICE_NAME -ErrorAction SilentlyContinue
   if ($sv)
   {
-    Set-Service -Name $CLOUDFLAREWARP_SERVICE_NAME -StartupType Disabled
-    Set-Service -Name $CLOUDFLAREWARP_SERVICE_NAME -Status Stopped -PassThru
     Stop-Process -Name "Cloudflare WARP" -Force -ErrorAction SilentlyContinue
+    Start-Process -filepath "powershell" -Argumentlist "Set-Service -Name $($CLOUDFLAREWARP_SERVICE_NAME) -Status Stopped -PassThru; Set-Service -Name $($CLOUDFLAREWARP_SERVICE_NAME) -StartupType Disabled" -Verb runas
     Write-Host "Stopped CloudflareWARP"
   } else
   {
