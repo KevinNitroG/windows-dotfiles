@@ -22,7 +22,7 @@ $env:NVIM_CONFIGS = @(
 # Starship config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/starship.ps1"
 
-# Import-Module DockerCompletion
+Import-Module DockerCompletion
 # Import-Module Terminal-Icons
 # Import-Module posh-wakatime
 Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
@@ -44,6 +44,9 @@ $Flavor = $Catppuccin['Mocha']
 
 # zoxide
 Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
+
+# gh completion
+Invoke-Expression (& { (gh completion -s powershell | Out-String) })
 
 # PSReadLine config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/PSReadLine.ps1"
@@ -134,3 +137,6 @@ $PSStyle.Formatting.Warning = $Flavor.Peach.Foreground()
 
 # Fastfetch to flex ~.~
 fastfetch
+
+# For stop cursor from blinking
+Write-Host "`e[?12l"
