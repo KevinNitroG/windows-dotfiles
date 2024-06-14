@@ -102,13 +102,7 @@ function Upgrade-ChocoApps
       choco upgrade $apps_string -y
     } else
     {
-      if (Get-Command sudo -ErrorAction SilentlyContinue)
-      {
-        sudo choco upgrade $apps_string -y
-      } else
-      {
-        Write-Host "Please run with administrator privileges"
-      }
+      Start-Process -filepath "powershell" -Argumentlist "choco upgrade $($apps_string) -y" -Verb runas
     }
   }
 }
@@ -168,13 +162,7 @@ function Uninstall-ChocoApps
     choco uninstall $apps -y
   } else
   {
-    if (Get-Command sudo -ErrorAction SilentlyContinue)
-    {
-      sudo choco uninstall $apps -y
-    } else
-    {
-      Write-Host "Please run with administrator privileges"
-    }
+    Start-Process -filepath "powershell" -Argumentlist "choco uninstall $($apps) -y" -Verb runas
   }
 }
 
