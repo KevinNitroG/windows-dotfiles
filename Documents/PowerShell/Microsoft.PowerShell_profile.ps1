@@ -135,8 +135,9 @@ $PSStyle.Formatting.TableHeader = $Flavor.Rosewater.Foreground()
 $PSStyle.Formatting.Verbose = $Flavor.Yellow.Foreground()
 $PSStyle.Formatting.Warning = $Flavor.Peach.Foreground()
 
-# Fastfetch to flex ~.~
-fastfetch
 
 # For stop cursor from blinking
 Write-Host "`e[?12l"
+
+# Fastfetch to flex ~.~
+fastfetch
