@@ -1,17 +1,19 @@
 {
   "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
-  "window_border": true,
-  "border_style": "System",
-  "active_window_border": true,
-  "active_window_border_colours": {
+  "border": true,
+  "border_colours": {
     "monocle": "#F9E2AF",
     "single": "#B4BEFE",
-    "stack": "#CBA6F7"
+    "stack": "#CBA6F7",
+    "unfocused": "#585B70"
   },
+  "border_style": "System",
+  "cross_monitor_move_behaviour": "Insert",
   "border_padding": 0,
   "border_offset": -2,
   "border_width": 5,
-  "cross_monitor_move_behaviour": "Insert",
+  "transparency": false,
+  "transparency_alpha": 200,
   "default_container_padding": 0,
   "default_workspace_padding": 0,
   "manage_rules": [
@@ -119,6 +121,6 @@
   ],
   "mouse_follows_focus": false,
   "resize_delta": 20,
-  "window_hiding_behaviour": "Cloak",
-  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.25/schema.json"
+  "window_hiding_behaviour": "Minimize",
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.27/schema.json"
 }
