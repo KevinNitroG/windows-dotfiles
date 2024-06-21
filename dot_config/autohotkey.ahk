@@ -14,7 +14,10 @@ DetectHiddenWindows true
 
 ; --- CONFIG ---
 
-#Backspace::try ControlSend "!{F4}",, "ahk_class Progman"
+#Backspace::{
+  try ControlSend "!{F4}",, "ahk_class Progman"
+  try ControlFocus "Shut Down Windows"
+}
 ^#!r::Reload
 
 ; --- RUN APP VIA KEYBOARD SHORTCUT ---
