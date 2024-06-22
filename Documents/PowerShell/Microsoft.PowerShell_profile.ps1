@@ -2,7 +2,7 @@
 # $ErrorActionPreference = "SilentlyContinue"
 
 # VARIABLES
-$env:EDITOR = "v"
+$env:EDITOR = "nvim"
 $env:VISUAL = "code"
 $env:PYTHONIOENCODING = "utf-8" # To fix thefuck
 
