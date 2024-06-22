@@ -72,3 +72,9 @@ refreshPeriod = "168h"
 type = "git-repo"
 url = "https://github.com/catppuccin/delta.git"
 refreshPeriod = "168h"
+
+["AppData/Local/glow/Config/themes/catppuccin-mocha.json"]
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/glamour/main/themes/catppuccin-mocha.json"
+refreshPeriod = "168h"
+
