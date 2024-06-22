@@ -4,6 +4,7 @@
 # VARIABLES
 $env:EDITOR = "nvim"
 $env:VISUAL = "code"
+$env:PAGER = "delta"
 $env:PYTHONIOENCODING = "utf-8" # To fix thefuck
 
 # If is in non-interactive shell, then return
