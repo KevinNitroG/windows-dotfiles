@@ -7,7 +7,6 @@
     "stack": "#CBA6F7",
     "unfocused": "#585B70"
   },
-  "border_style": "System",
   "cross_monitor_move_behaviour": "Insert",
   "border_padding": 0,
   "border_offset": -2,
@@ -121,6 +120,6 @@
   ],
   "mouse_follows_focus": false,
   "resize_delta": 20,
-  "window_hiding_behaviour": "Minimize",
+  "window_hiding_behaviour": "Cloak",
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.27/schema.json"
 }
