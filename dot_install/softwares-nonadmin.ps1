@@ -59,6 +59,7 @@ $SCOOP_CODING_TOOLS = @(
   "main/ffmpeg",
   "main/fzf",
   "main/gh",
+  "main/glow",
   "main/gnupg",
   "main/goodbyedpi"
   "main/grep",
