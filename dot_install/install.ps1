@@ -38,3 +38,6 @@ if (Get-Command -Name bat -ErrorAction SilentlyContinue)
 {
   Write-Host "Bat not installed, skip building Bat themes!"
 }
+
+Write-Host "Apply register to associate JAR filetype to be opened with javaw.exe"
+reg import $env:USERPROFILE\.scripts\registry\associate_scoop_jar.reg
