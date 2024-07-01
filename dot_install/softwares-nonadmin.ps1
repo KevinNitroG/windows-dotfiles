@@ -92,15 +92,16 @@ $SCOOP_CODING_TOOLS = @(
 )
 
 $SCOOP_OTHER_APPS = @(
-  "extras/putty",
+  "extras/qbittorrent-enhanced",
   "extras/v2rayn"
   "extras/winscp",
   "main/openssl",
   "nonportable/winfsp-np"
+  #"extras/putty",
 )
 $PIP_APPS = @(
-  "thefuck",
-  "yewtube"
+  "thefuck"
+  #"yewtube"
 )
 
 Install-Module -Name CompletionPredictor -Repository PSGallery -Force
