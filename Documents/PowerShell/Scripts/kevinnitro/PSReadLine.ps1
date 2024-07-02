@@ -58,6 +58,7 @@ $PSReadLineOptions = @{
   PredictionSource = "HistoryAndPlugin"
   PredictionViewStyle = "ListView"
   ShowToolTips = $true
+  BellStyle = "None"
 }
 
 Set-PSReadLineOption @PSReadLineOptions
