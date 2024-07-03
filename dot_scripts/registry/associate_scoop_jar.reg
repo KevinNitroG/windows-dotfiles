@@ -1,4 +1,7 @@
+; vim:ft=registry
 ; https://github.com/ScoopInstaller/Java/issues/112
+;
+
 Windows Registry Editor Version 5.00
 
 [HKEY_CURRENT_USER\Software\Classes\.jar]
@@ -8,7 +11,7 @@ Windows Registry Editor Version 5.00
 @="Java Archive"
 
 [HKEY_CURRENT_USER\Software\Classes\scoop-javaw\DefaultIcon]
-@="C:\\Users\\kevinnitro\\scoop\\apps\\zulu-jdk\\current\\bin\\javaw.exe,1"
+@="C:\\Users\\kevinnitro\\scoop\\apps\\zulu-jdk\\current\\bin\\javaw.exe"
 
 [HKEY_CURRENT_USER\Software\Classes\scoop-javaw\shell]
 

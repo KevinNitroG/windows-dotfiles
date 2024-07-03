@@ -14,19 +14,19 @@
   },
   // User command prefix with Ctrl Shift u
   {
-    "key": "ctrl+shift+u g",
+    "key": "ctrl+q g",
     "command": "extension.showGitmoji"
   },
   {
-    "key": "ctrl+shift+u s",
+    "key": "ctrl+q s",
     "command": "git.sync"
   },
   {
-    "key": "ctrl+shift+u m",
+    "key": "ctrl+q m",
     "command": "editor.action.toggleMinimap"
   },
   {
-    "key": "ctrl+shift+u h",
+    "key": "ctrl+q h",
     "command": "runCommands",
     "args": {
       "commands": [
@@ -36,29 +36,29 @@
     }
   },
   {
-    "key": "ctrl+shift+u e",
+    "key": "ctrl+q e",
     "command": "markdown.extension.editing.toggleCodeSpan",
     "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
   },
   {
-    "key": "ctrl+shift+u m",
+    "key": "ctrl+q m",
     "command": "workbench.action.toggleMaximizedPanel"
   },
   {
-    "key": "ctrl+shift+u j",
+    "key": "ctrl+q j",
     "command": "workbench.action.togglePanel"
   },
   {
-    "key": "ctrl+shift+u ctrl+s",
+    "key": "ctrl+q ctrl+s",
     "command": "workbench.action.openGlobalKeybindings"
   },
   {
-    "key": "ctrl+shift+u ctrl+o",
+    "key": "ctrl+q ctrl+o",
     "command": "workbench.action.files.openFile",
     "when": "true"
   },
   {
-    "key": "ctrl+shift+u ctrl+shift+o",
+    "key": "ctrl+q ctrl+shift+o",
     "command": "workbench.action.files.openFolder",
     "when": "openFolderWorkspaceSupport"
   },

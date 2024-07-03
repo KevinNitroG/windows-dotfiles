@@ -78,3 +78,7 @@ type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/glamour/main/themes/catppuccin-mocha.json"
 refreshPeriod = "168h"
 
+[".config/qbittorrent/themes/catppuccin-mocha.qbtheme"]
+type = "file"
+url = "https://github.com/catppuccin/qbittorrent/raw/main/mocha.qbtheme"
+refreshPeriod = "168h"
