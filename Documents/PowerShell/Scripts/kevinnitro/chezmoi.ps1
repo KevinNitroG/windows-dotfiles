@@ -1,27 +1,9 @@
-# Stand for chezmoi sync
-function cms
-{
-  $current_dir = Get-Location
-  Set-Location
-  if (!(Get-Process "gpg-agent" -ErrorAction SilentlyContinue))
-  {
-    gpg-connect-agent /bye
-  }
-  chezmoi re-add
-  Set-Location $(chezmoi source-path)
-  git f
-  # chezmoi git apply -R
-  # Stop-Process -Name "gpg-agent" -Force -ErrorAction Continue
-  # Stop-Process -Name "keyboxd"
-  Set-Location $current_dir
-}
+Set-Alias -Name cm -Value chezmoi -Option AllScope
 
-function Update-ChezmoiCompletion
+if (Get-Command "chezmoi" -ErrorAction SilentlyContinue)
 {
-  chezmoi completion powershell --output "$env:USERPROFILE/Documents/PowerShell/Modules/chezmoi/completion.ps1"
+  Invoke-Expression (& { (chezmoi completion powershell | Out-String) })
 }
-
-Set-Alias -Name cm -Value chezmoi
 
 function cmc
 {
@@ -59,4 +41,21 @@ function cma
 function cmp
 {
   chezmoi git push
+}
+
+function cms
+{
+  $current_dir = Get-Location
+  Set-Location
+  if (!(Get-Process "gpg-agent" -ErrorAction SilentlyContinue))
+  {
+    gpg-connect-agent /bye
+  }
+  chezmoi re-add
+  Set-Location $(chezmoi source-path)
+  git f
+  # chezmoi git apply -R
+  # Stop-Process -Name "gpg-agent" -Force -ErrorAction Continue
+  # Stop-Process -Name "keyboxd"
+  Set-Location $current_dir
 }

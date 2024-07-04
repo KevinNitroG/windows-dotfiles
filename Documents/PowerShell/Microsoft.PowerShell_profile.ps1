@@ -52,6 +52,9 @@ Invoke-Expression (& { (gh completion -s powershell | Out-String) })
 # PSReadLine config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/PSReadLine.ps1"
 
+# Rclone
+. "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/rclone.ps1"
+
 # fzf config
 . "$env:USERPROFILE/Documents/PowerShell/Scripts/kevinnitro/Fzf.ps1"
 
