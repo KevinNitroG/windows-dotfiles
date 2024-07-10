@@ -1,9 +1,8 @@
 set PingWebsite=google.com
-set LogPath=%APPDATA%\rclone\mount
-set LogFile=%LogPath%\log.txt
+set TempDir=%TEMP\rclone-mount
+set LogFilePath=%TempDir%\log.txt
 set RemoteName=CombineNeccessary
 set DriveLetter=Z
-set CacheDir=%LogPath%\cache
 set Counter=0
 
 :CHECK_CONNECTION
@@ -18,29 +17,44 @@ if %errorlevel% neq 0 (
     )
 )
 
-IF NOT EXIST %LogPath% (
-    mkdir %LogPath%
+IF NOT EXIST %TempDir% (
+    mkdir %TempDir%
 )
 
-IF NOT EXIST %CacheDir% (
-    mkdir %CacheDir%
-)
-
-del /f /q %LogFile%
+del /f /q %LogFilePath%
 
 start SilentCMD rclone mount ^
     %RemoteName%: %DriveLetter%: ^
-    --network-mode ^
-    --volname="Cloud Storages" ^
-    --no-modtime ^
+    --attr-timeout="1s" ^
+    --buffer-size="512M" ^
+    --bwlimit="40M" ^
+    --cache-chunk-path=%TempDir%\chunks ^
+    --cache-db-path=%TempDir%\db ^
     --cache-dir=%CacheDir% ^
-    --vfs-cache-mode=full ^
+    --cache-dir=%TempDir%\vfs ^
+    --cache-info-age="60m" ^
+    --cache-tmp-upload-path=%TempDir%\upload ^
+    --cache-workers="8" ^
+    --cache-writes ^
+    --checkers="16" ^
+    --dir-cache-time="60m" ^
+    --drive-use-trash ^
     --ignore-checksum ^
+    --log-file=%TempDir%\log.txt ^
+    --max-read-ahead="128k" ^
     --metadata ^
-    --buffer-size=512M ^
-    --vfs-cache-max-age=72h ^
-    --transfers=8 ^
-    --log-file=%LogFile%
+    --network-mode ^
+    --no-modtime ^
+    --poll-interval="1m0s" ^
+    --stats="0" ^
+    --transfers="8" ^
+    --vfs-cache-max-age="72h" ^
+    --vfs-cache-max-size="off" ^
+    --vfs-cache-mode=full ^
+    --vfs-cache-poll-interval="1m0s" ^
+    --vfs-read-chunk-size-limit="off" ^
+    --vfs-read-chunk-size="128M" ^
+    --volname="Cloud Storages"
 
 timeout /t 2
 
