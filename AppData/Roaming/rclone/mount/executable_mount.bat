@@ -1,5 +1,5 @@
 set PingWebsite=google.com
-set TempDir=%TEMP\rclone-mount
+set TempDir=%TEMP%\rclone-mount
 set LogFilePath=%TempDir%\log.txt
 set RemoteName=CombineNeccessary
 set DriveLetter=Z
