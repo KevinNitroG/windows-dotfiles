@@ -212,22 +212,24 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
 
 #### DAP
 
-- js-debug-adapter
 - codelldb / cpptools
 - debugpy
+- js-debug-adapter
 
 #### Linter
 
-- ruff
 - actionlint
 - cpplint
 - markdownlint
+- ruff
 
 #### Formatter
 
-- ruff
+- markdown-toc
 - markdownlint
 - prettier
+- ruff
+- shfmt
 - stylua
 
 ---

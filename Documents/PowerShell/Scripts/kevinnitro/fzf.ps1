@@ -31,49 +31,39 @@ Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 
 Set-PsFzfOption -PSReadlineChordProvider "Ctrl+e" -PSReadlineChordReverseHistory "Ctrl+r" -GitKeyBindings -TabExpansion -EnableAliasFuzzyGitStatus -EnableAliasFuzzyEdit -EnableAliasFuzzyFasd -EnableAliasFuzzyKillProcess -EnableAliasFuzzyScoop
 
-function _open_path
+function _fzf_open_path
 {
   param (
+    [Parameter(Mandatory=$true)]
     [string]$input_path
   )
-  if (-not $input_path)
-  {
-    return
-  }
-  Write-Output "[ ] cd"
-  Write-Output "[r] rm"
-  Write-Output "[v] nvim"
-  $choice = Read-Host "Enter your choice"
   if ($input_path -match "^.*:\d+:.*$")
   {
     $input_path = ($input_path -split ":")[0]
   }
-  switch ($choice)
+  if (-not (Test-Path $input_path))
   {
-    "r"
-    { 
-      Remove-Item $input_path -Recurse -Confirm
-    }
-    "v"
-    { 
-      nvim $input_path
-    }
-    {$_ -eq "" -or $_ -eq " "}
-    {
-      if (Test-Path -Path $input_path -PathType Leaf)
-      {
-        $input_path = Split-Path -Path $input_path -Parent
-      }
-      Set-Location -Path $input_path
-    }
-    default
-    {
-      Write-Host "Selection is invalid!"
-    }
+    return
   }
+  $cmds = @{
+    'bat' = { bat $input_path }
+    'cat' = { Get-Content $input_path }
+    'cd' = {
+      if (Test-Path $input_path -PathType Leaf)
+      {
+        $input_path = Split-Path $input_path -Parent
+      }
+      Set-Location $input_path
+    }
+    'nvim' = { nvim $input_path }
+    'remove' = { Remove-Item -Recurse -Force $input_path }
+    'echo' = { Write-Output $input_path }
+  }
+  $cmd = $cmds.Keys | fzf --prompt 'Select command> '
+  & $cmds[$cmd]
 }
 
-function _get_path_using_fd
+function _fzf_get_path_using_fd
 {
   $input_path = fd --type file --follow --hidden --exclude .git |
     fzf --prompt 'Files> ' `
@@ -84,19 +74,19 @@ function _get_path_using_fd
   return $input_path
 }
 
-function _get_path_using_rg
+function _fzf_get_path_using_rg
 {
   $INITIAL_QUERY = "${*:-}"
   $RG_PREFIX = "rg --column --line-number --no-heading --color=always --smart-case"
   $input_path = "" |
     fzf --ansi --disabled --query "$INITIAL_QUERY" `
       --bind "start:reload:$RG_PREFIX {q}" `
-      --bind "change:reload:sleep 0.2 & $RG_PREFIX {q} || rem" `
+      --bind "change:reload:sleep 0.1 & $RG_PREFIX {q} || rem" `
       --bind 'ctrl-s:transform:if not "%FZF_PROMPT%" == "1. ripgrep> " (echo ^rebind^(change^)^+^change-prompt^(1. ripgrep^> ^)^+^disable-search^+^transform-query:echo ^{q^} ^> %TEMP%\rg-fzf-f ^& type %TEMP%\rg-fzf-r) else (echo ^unbind^(change^)^+^change-prompt^(2. fzf^> ^)^+^enable-search^+^transform-query:echo ^{q^} ^> %TEMP%\rg-fzf-r ^& type %TEMP%\rg-fzf-f)' `
-      --color "hl:-1:underline,hl+:-1:underline:reverse" `
-      --delimiter ":" `
+      --color 'hl:-1:underline,hl+:-1:underline:reverse' `
+      --delimiter ':' `
       --prompt '1. ripgrep> ' `
-      --preview-label "Preview" `
+      --preview-label 'Preview' `
       --header 'CTRL-S: Switch between ripgrep/fzf' `
       --header-first `
       --preview 'bat --color=always {1} --highlight-line {2} --style=plain' `
@@ -106,12 +96,12 @@ function _get_path_using_rg
 
 function fdg
 {
-  _open_path $(_get_path_using_fd)
+  _fzf_open_path $(_fzf_get_path_using_fd)
 }
 
 function rgg
 {
-  _open_path $(_get_path_using_rg)
+  _fzf_open_path $(_fzf_get_path_using_rg)
 }
 
 Set-PSReadLineKeyHandler -Key "Ctrl+f" -ScriptBlock {
