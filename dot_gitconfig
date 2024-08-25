@@ -6,7 +6,7 @@
 [core]
 	# editor = code --wait
 	editor = nvim
-	autocrlf = false
+	autocrlf = true
 	longpaths = true
   pager = delta
 
