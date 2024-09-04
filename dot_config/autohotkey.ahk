@@ -25,7 +25,7 @@ DetectHiddenWindows true
 #Enter::Run "wt.exe"
 #t::Run "alacritty.exe"
 #c::Run "code.exe"
-#b::Run "chrome.exe" 
+#b::Run "brave.exe" 
 #s::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
 
 ; --- ALT TO SWITCH TAB IN BROWSER ---
