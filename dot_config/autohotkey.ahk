@@ -20,6 +20,20 @@ DetectHiddenWindows true
 }
 ^#!r::Reload
 
+; --- CAPSLOCK AND CONTROL ---
+*CapsLock::{
+  Send "{LControl down}"
+}
+
+*CapsLock up::
+{
+  Send "{LControl Up}"
+  if (A_PriorKey == "CapsLock"){
+    if (A_TimeSincePriorHotkey < 400)
+      SetCapsLockState !GetKeyState("CapsLock", "T")
+  }
+}
+
 ; --- RUN APP VIA KEYBOARD SHORTCUT ---
 
 #Enter::Run "wt.exe"
