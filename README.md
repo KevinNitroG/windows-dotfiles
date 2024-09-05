@@ -470,6 +470,16 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 >
 > Ref: https://unix.stackexchange.com/a/482559
 
+### Fix Brave profile installed via Scoop
+
+- Open registry
+- Goto: `Computer\HKEY_CURRENT_USER\Software\Classes\BraveHTML.{...}\shell\open\command`
+- Change: `"C:\Users\{user}\scoop\apps\brave\current\brave.exe" --user-data-dir="C:\Users\{user}\scoop\apps\brave\current\User Data" --single-argument %1`
+
+> [!NOTE]
+>
+> Source: https://gist.github.com/hosaka/bd889b596f25292e14c97d558ad6cff8
+
 ---
 
 ### Windows
