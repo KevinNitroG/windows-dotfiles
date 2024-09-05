@@ -12,7 +12,82 @@ inoremap jk <Esc>
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap Y y$
+
+" Set No Highlight
 nnoremap <Esc> :noh<return>
+
+" Yank All
 nnoremap <leader>y :%y+<return>
+
+" IDK
 nnoremap <leader>D :%d+<return>
+
+" Toggle Wrap
+nnoremap <leader>ow :set wrap!<CR>
+
+" Better Down
+" nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+
+" Better Up
+" nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+
+" Go to upper window
+nnoremap <C-j> <C-w>j
+vnoremap <C-j> <C-w>j
+
+" Go to lower window
+nnoremap <C-k> <C-w>k
+vnoremap <C-k> <C-w>k
+
+" Go to left window
+nnoremap <C-h> <C-w>h
+vnoremap <C-h> <C-w>h
+
+" Go to right window
+nnoremap <C-l> <C-w>l
+vnoremap <C-l> <C-w>l
+
+" Move the line up
+nnoremap <A-j> :m .+1<CR>==
+
+" Move the line down
+nnoremap <A-k> :m .-2<CR>==
+
+" Move the line up (Insert Mode)
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+
+" Move the line down (Insert Mode)
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+
+" Move selected lines up (Visual Mode)
+vnoremap <A-j> :m '>+1<CR>gv=gv
+
+" Move selected lines down (Visual Mode)
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Move the selected text up (Visual Mode)
+vnoremap <A-j> :m '>+1<CR>gv=gv
+
+" Move the selected text down (Visual Mode)
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Indent backward (Visual Mode)
+vnoremap < <gv
+
+" Indent forward (Visual Mode)
+vnoremap > >gv
+
+" Better Paste (Visual Mode)
 vnoremap p "_dP
+
+" Sort (Visual Mode)
+vnoremap <leader>us :sort<CR>gv<ESC>
+
+" Sort Unique (Visual Mode)
+vnoremap <leader>uu :sort u<CR>gv<ESC>
+
+" Highlight on Yank
+augroup General
+  autocmd!
+  autocmd TextYankPost * silent! lua vim.highlight.on_yank { timeout = 200 }
+augroup END

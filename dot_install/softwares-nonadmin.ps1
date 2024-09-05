@@ -96,6 +96,7 @@ $SCOOP_OTHER_APPS = @(
   "extras/v2rayn"
   "extras/winscp",
   "main/openssl",
+  "main/uutils-coreutils",
   "nonportable/winfsp-np"
   #"extras/putty",
 )
