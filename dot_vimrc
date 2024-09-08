@@ -8,6 +8,7 @@ set shortmess+=Ac
 set whichwrap+=<,>,[,],h,l
 
 inoremap jk <Esc>
+nnoremap <leader>x :wq<CR>
 
 " Middle Search Result
 nnoremap n nzz
@@ -27,6 +28,14 @@ nnoremap <leader>D :%d+<return>
 
 " Toggle Wrap
 nnoremap <leader>ow :set wrap!<CR>
+
+" Split
+nnoremap ss :split<CR>
+nnoremap sv :vsplit<CR>
+
+" Close current window
+nnoremap <leader>w :close<CR>
+nnoremap sq :close<CR>
 
 " Better Down
 nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')

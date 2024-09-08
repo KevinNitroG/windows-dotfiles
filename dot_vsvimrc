@@ -8,6 +8,7 @@ set shortmess+=Ac
 set whichwrap+=<,>,[,],h,l
 
 inoremap jk <Esc>
+nnoremap <leader>x :wq<CR>
 
 " Middle Search Result
 nnoremap n nzz
@@ -28,21 +29,13 @@ nnoremap <leader>D :%d+<return>
 " Toggle Wrap
 nnoremap <leader>ow :set wrap!<CR>
 
-" Go to upper window
-nnoremap <C-j> <C-w>j
-vnoremap <C-j> <C-w>j
+" Split
+nnoremap ss :split<CR>
+nnoremap sv :vsplit<CR>
 
-" Go to lower window
-nnoremap <C-k> <C-w>k
-vnoremap <C-k> <C-w>k
-
-" Go to left window
-nnoremap <C-h> <C-w>h
-vnoremap <C-h> <C-w>h
-
-" Go to right window
-nnoremap <C-l> <C-w>l
-vnoremap <C-l> <C-w>l
+" Close current window
+nnoremap <leader>w :close<CR>
+nnoremap sq :close<CR>
 
 " Move the line up
 nnoremap <A-j> :m .+1<CR>==
@@ -80,3 +73,7 @@ vnoremap <leader>uu :sort u<CR>gv<ESC>
 " Override default x keybind to delete without putting into default register
 nnoremap X "_dd
 vnoremap x "_d
+
+" Tab switching
+nnoremap H :tabprev<CR>
+nnoremap L :tabnext<CR>
