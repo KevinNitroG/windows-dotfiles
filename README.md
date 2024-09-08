@@ -46,6 +46,7 @@
   - [GPG](#gpg)
   - [Browser](#browser)
     - [Fix Brave profile installed via Scoop](#fix-brave-profile-installed-via-scoop)
+  - [Pwsh via Scoop](#pwsh-via-scoop)
   - [Windows](#windows)
     - [Set / Get variables](#set--get-variables)
     - [Default variables](#default-variables)
@@ -495,6 +496,13 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 > [!NOTE]
 >
 > Source: https://gist.github.com/hosaka/bd889b596f25292e14c97d558ad6cff8
+
+### Pwsh via Scoop
+
+```pwsh
+C:\Users\kevinnitro\scoop\apps\pwsh\current\install-file-context.reg
+C:\Users\kevinnitro\scoop\apps\pwsh\current\install-explorer-context.reg
+```
 
 ---
 
