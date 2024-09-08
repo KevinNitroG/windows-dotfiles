@@ -9,43 +9,49 @@
 
 ---
 
-- [KEVINNITRO WINDOWS DOTFILES](#kevinnitro-windows-dotfiles)
-  - [😎 PREVIEW](#-preview)
-    - [Terminal](#terminal)
-    - [Check Wifi Password](#check-wifi-password)
-    - [App Manage](#app-manage)
-    - [Find files / directories / file content](#find-files--directories--file-content)
-    - [Neovim](#neovim)
-  - [🪴 INSTALL](#-install)
-    - [1️⃣ Add Keys](#1️⃣-add-keys)
-    - [2️⃣ Install prerequisite](#2️⃣-install-prerequisite)
-    - [3️⃣ Chezmoi](#3️⃣-chezmoi)
-    - [4️⃣ Set env path _(Admin)_](#4️⃣-set-env-path-admin)
-    - [5️⃣ Install softwares](#5️⃣-install-softwares)
-    - [6️⃣ Install fonts](#6️⃣-install-fonts)
-    - [7️⃣ Install some code stuff via `Mason` manually](#7️⃣-install-some-code-stuff-via-mason-manually)
-      - [DAP](#dap)
-      - [Linter](#linter)
-      - [Formatter](#formatter)
-    - [🧪 ONE SCRIPT _(test)_](#-one-script-test)
-  - [🎈 EXTRAS](#-extras)
-    - [Crack Winrar _(Admin)_](#crack-winrar-admin)
-    - [Patch IDM](#patch-idm)
-      - [Repack.me](#repackme)
-      - [PITVN](#pitvn)
-      - [Old method](#old-method)
-    - [Install \& Active Office](#install--active-office)
-    - [Spotify](#spotify)
-    - [Chrome extensions](#chrome-extensions)
-    - [Need to do](#need-to-do)
-    - [Others](#others)
-  - [📒 NOTES](#-notes)
-    - [SSH](#ssh)
-    - [GPG](#gpg)
-    - [Windows](#windows)
-      - [Set / Get variables](#set--get-variables)
-      - [Default variables](#default-variables)
-      - [Others](#others-1)
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [😎 PREVIEW](#-preview)
+  - [Terminal](#terminal)
+  - [Check Wifi Password](#check-wifi-password)
+  - [App Manage](#app-manage)
+  - [Find files / directories / file content](#find-files--directories--file-content)
+  - [Neovim](#neovim)
+- [🪴 INSTALL](#-install)
+  - [1️⃣ Add Keys](#-add-keys)
+  - [2️⃣ Install prerequisite](#-install-prerequisite)
+  - [3️⃣ Chezmoi](#-chezmoi)
+  - [4️⃣ Set env path _(Admin)_](#-set-env-path-_admin_)
+  - [5️⃣ Install softwares](#-install-softwares)
+  - [6️⃣ Install fonts](#-install-fonts)
+  - [7️⃣ Install some code stuff via `Mason` manually](#-install-some-code-stuff-via-mason-manually)
+    - [DAP](#dap)
+    - [Linter](#linter)
+    - [Formatter](#formatter)
+  - [🧪 ONE SCRIPT _(test)_](#-one-script-_test_)
+- [🎈 EXTRAS](#-extras)
+  - [Crack Winrar _(Admin)_](#crack-winrar-_admin_)
+  - [Patch IDM](#patch-idm)
+    - [Repack.me](#repackme)
+    - [PITVN](#pitvn)
+    - [Old method](#old-method)
+  - [Install & Active Office](#install--active-office)
+  - [Spotify](#spotify)
+  - [Chrome extensions](#chrome-extensions)
+  - [Need to do](#need-to-do)
+  - [Others](#others)
+- [📒 NOTES](#-notes)
+  - [SSH](#ssh)
+  - [GPG](#gpg)
+  - [Browser](#browser)
+    - [Fix Brave profile installed via Scoop](#fix-brave-profile-installed-via-scoop)
+  - [Windows](#windows)
+    - [Set / Get variables](#set--get-variables)
+    - [Default variables](#default-variables)
+    - [Others](#others-1)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ---
 
@@ -470,7 +476,13 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 >
 > Ref: https://unix.stackexchange.com/a/482559
 
-### Fix Brave profile installed via Scoop
+### Browser
+
+> [!NOTE]
+>
+> go to https://github.com/KevinNitroG/linux-dotfiles#browser
+
+#### Fix Brave profile installed via Scoop
 
 - Open registry
 - Goto:
