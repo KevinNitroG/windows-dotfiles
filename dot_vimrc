@@ -9,8 +9,11 @@ set whichwrap+=<,>,[,],h,l
 
 inoremap jk <Esc>
 
+" Middle Search Result
 nnoremap n nzz
 nnoremap N Nzz
+
+" Yank to Last
 nnoremap Y y$
 
 " Set No Highlight
@@ -26,10 +29,10 @@ nnoremap <leader>D :%d+<return>
 nnoremap <leader>ow :set wrap!<CR>
 
 " Better Down
-" nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
+nnoremap <expr> j (v:count == 0 ? 'gj' : 'j')
 
 " Better Up
-" nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
+nnoremap <expr> k (v:count == 0 ? 'gk' : 'k')
 
 " Go to upper window
 nnoremap <C-j> <C-w>j
@@ -53,22 +56,10 @@ nnoremap <A-j> :m .+1<CR>==
 " Move the line down
 nnoremap <A-k> :m .-2<CR>==
 
-" Move the line up (Insert Mode)
-inoremap <A-j> <Esc>:m .+1<CR>==gi
-
-" Move the line down (Insert Mode)
-inoremap <A-k> <Esc>:m .-2<CR>==gi
-
 " Move selected lines up (Visual Mode)
 vnoremap <A-j> :m '>+1<CR>gv=gv
 
 " Move selected lines down (Visual Mode)
-vnoremap <A-k> :m '<-2<CR>gv=gv
-
-" Move the selected text up (Visual Mode)
-vnoremap <A-j> :m '>+1<CR>gv=gv
-
-" Move the selected text down (Visual Mode)
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " Indent backward (Visual Mode)
@@ -85,6 +76,10 @@ vnoremap <leader>us :sort<CR>gv<ESC>
 
 " Sort Unique (Visual Mode)
 vnoremap <leader>uu :sort u<CR>gv<ESC>
+
+" Override default x keybind to delete without putting into default register
+nnoremap X "_dd
+vnoremap x "_d
 
 " Highlight on Yank
 augroup General
