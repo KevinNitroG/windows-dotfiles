@@ -40,7 +40,7 @@ DetectHiddenWindows true
 #t::Run "alacritty.exe"
 #c::Run "code.exe"
 #b::Run "brave.exe" 
-#s::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
+#m::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
 
 ; --- ALT TO SWITCH TAB IN BROWSER ---
 
@@ -128,7 +128,7 @@ GroupAdd "Browser", "ahk_exe thorium.exe"
 #+Down::ResizeAxis("vertical", "decrease")
 
 #w::ToggleFloat()
-#m::Minimize()
+; ^#m::Minimize() ; Usually I switch to other workspace to get desktop
 #q::Close()
 ^#t::ToggleTiling() ; avoid with opening terminal
 #z::ToggleMonocle()
