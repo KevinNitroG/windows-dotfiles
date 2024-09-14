@@ -23,6 +23,10 @@
     {
       "id": "MicrosoftWhiteboard.exe",
       "kind": "Exe"
+    },
+    {
+      "id": "Photoshop.exe",
+      "kind": "Exe"
     }
   ],
   "float_rules": [
