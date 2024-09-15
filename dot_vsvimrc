@@ -1,10 +1,11 @@
 let mapleader = " "
 
 set clipboard=unnamed
-set smartcase
 set hlsearch
 set ignorecase
+set relativenumber
 set shortmess+=Ac
+set smartcase
 set whichwrap+=<,>,[,],h,l
 
 inoremap jk <Esc>
@@ -35,6 +36,7 @@ nnoremap sv :vsplit<CR>
 
 " Close current window
 nnoremap <leader>w :close<CR>
+nnoremap <leader>c :close<CR>
 nnoremap sq :close<CR>
 
 " Move the line up

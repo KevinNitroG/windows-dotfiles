@@ -1,10 +1,11 @@
 let mapleader = " "
 
 set clipboard=unnamed
-set smartcase
 set hlsearch
 set ignorecase
+set relativenumber
 set shortmess+=Ac
+set smartcase
 set whichwrap+=<,>,[,],h,l
 
 inoremap jk <Esc>
