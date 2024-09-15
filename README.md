@@ -423,10 +423,10 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 - Microsoft Teams
 - [MPC - HC](https://github.com/clsid2/mpc-hc)
 - ViveTool
-
   ```.ps1
   vivetool /disable /id:42354458 # Disable desktop switch animation
   ```
+- [Lua 5.1](https://github.com/rjpcomputing/luaforwindows/releases/download/v5.1.5-52/LuaForWindows_v5.1.5-52.exe) for Windows (for LazyNvim)
 
 ---
 
