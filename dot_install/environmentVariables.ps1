@@ -1,5 +1,6 @@
 $USER_PATHS = @(
   "%LOCALAPPDATA%\nvim-data\mason\bin",
+  "%USERPROFILE%\bin",
   "%USERPROFILE%\scoop\apps\git\current\usr\bin"
   # "$($env:USERPROFILE)\bin\vscode-cpptools\extension\debugAdapters\bin".
 )
