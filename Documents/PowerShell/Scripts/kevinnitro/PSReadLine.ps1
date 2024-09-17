@@ -49,7 +49,7 @@ $Colors = @{
 }
 
 $PSReadLineOptions = @{
-  EditMode = "Windows"
+  EditMode = "emacs"
   AddToHistoryHandler = $ScriptBlock
   Color = $Colors
   ExtraPromptLineCount = $true
@@ -122,8 +122,8 @@ Set-PSReadLineOption @PSReadLineOptions
 Set-PSReadLineKeyHandler -Key "Ctrl+p" -Function HistorySearchBackward
 Set-PSReadLineKeyHandler -Key "Ctrl+n" -Function HistorySearchForward
 Set-PSReadLineKeyHandler -Key "Ctrl+w" -Function BackwardDeleteWord
-Set-PSReadLineKeyHandler -Key "Ctrl+f" -Function ForwardWord
-Set-PSReadLineKeyHandler -Key "Ctrl+b" -Function BackwardWord
+Set-PSReadLineKeyHandler -Key "Ctrl+RightArrow" -Function ForwardWord
+Set-PSReadLineKeyHandler -Key "Ctrl+LeftArrow" -Function BackwardWord
 
 # https://ianmorozoff.com/2023/01/10/predictive-intellisense-on-by-default-in-powershell-7-3/#keybinding
 $parameters = @{
