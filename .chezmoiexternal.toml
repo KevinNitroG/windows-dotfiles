@@ -1,84 +1,88 @@
+##########################################
+
+# CONFIG
+
 ["AppData/Local/nvim"]
 type = "git-repo"
 url = "git@github.com:KevinNitroG/Alexis12119-nvim.git"
-refreshPeriod = "168h"
 
 # ["AppData/Local/LazyVim"]
 # type = "git-repo"
 # url = "git@github.com:KevinNitroG/LazyVim-Starter.git"
-# refreshPeriod = "168h"
 
 # ["AppData/Local/NvChad"]
 # type = "git-repo"
 # url = "git@github.com:KevinNitroG/NvChad-Starter.git"
-# refreshPeriod = "168h"
 
 ["AppData/Roaming/alacritty/catppuccin-alacritty"]
 type = "git-repo"
 url = "https://github.com/catppuccin/alacritty.git"
-refreshPeriod = "168h"
 
 [".config/cursor/Windows-11-Cursor-by-rosea92"]
 type = "git-repo"
 url = "https://github.com/YT-Advanced/Windows-11-Cursor-by-rosea92.git"
-refreshPeriod = "168h"
 
 [".config/wakatime/posh-wakatime"]
 type = "git-repo"
 url = "https://github.com/Gravifer/posh-wakatime.git"
-refreshPeriod = "168h"
 
 # [".config/windows-terminal/windows-terminal-shaders"]
 # type = "git-repo"
 # url = "https://github.com/Hammster/windows-terminal-shaders.git"
-# refreshPeriod = "168h"
-
+# 
 [".config/komorebi/applications.yaml"]
 type = "file"
 url = "https://raw.githubusercontent.com/LGUG2Z/komorebi-application-specific-configuration/master/applications.yaml"
-refreshPeriod = "168h"
 
 [".config/komorebi/komorebic.lib.ahk"]
 type = "file"
 url = "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/komorebic.lib.ahk"
-refreshPeriod = "168h"
-
-[".githelpers"]
-type = "file"
-url = "https://raw.githubusercontent.com/stevearc/dotfiles/master/.githelpers"
-refreshPeriod = "168h"
 
 [".config/yazi/theme.toml"]
 type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/yazi/main/themes/mocha.toml"
-refreshPeriod = "168h"
 
 [".config/yazi/Catppuccin-mocha.tmTheme"]
 type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme"
-refreshPeriod = "168h"
 
 ["AppData/Roaming/bat/themes/Catppuccin Mocha.tmTheme"]
 type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme"
-refreshPeriod = "168h"
+
 
 ["Document/PowerShell/Modules/Catppuccin"]
 type = "git-repo"
 url = "https://github.com/catppuccin/powershell.git"
-refreshPeriod = "168h"
 
 [".config/delta/themes/catppuccin"]
 type = "git-repo"
 url = "https://github.com/catppuccin/delta.git"
-refreshPeriod = "168h"
 
 ["AppData/Local/glow/Config/themes/catppuccin-mocha.json"]
 type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/glamour/main/themes/catppuccin-mocha.json"
-refreshPeriod = "168h"
 
 [".config/qbittorrent/themes/catppuccin-mocha.qbtheme"]
 type = "file"
 url = "https://github.com/catppuccin/qbittorrent/raw/main/mocha.qbtheme"
-refreshPeriod = "168h"
+
+[".config/atac/key_bindings.toml"]
+type = "file"
+url = "https://raw.githubusercontent.com/Julien-cpsn/ATAC/main/example_resources/key_bindings/vim_key_bindings.toml"
+
+##########################################
+
+# GITS
+
+["obsidian/main"]
+type = "git-repo"
+url = "https://github.com/KevinNitroG/obsidian-vault-main"
+
+##########################################
+
+# UTILS
+
+[".githelpers"]
+type = "file"
+url = "https://raw.githubusercontent.com/stevearc/dotfiles/master/.githelpers"
