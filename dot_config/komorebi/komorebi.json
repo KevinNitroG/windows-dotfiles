@@ -23,10 +23,6 @@
     {
       "id": "MicrosoftWhiteboard.exe",
       "kind": "Exe"
-    },
-    {
-      "id": "Photoshop.exe",
-      "kind": "Exe"
     }
   ],
   "float_rules": [
@@ -39,7 +35,15 @@
       "id": "Cloudflare WARP.exe",
       "kind": "Exe",
       "matching_strategy": "Equals"
+    },
+    {
+      "id": "Photoshop.exe",
+      "kind": "Exe"
     }
+    // {
+    //   "id": "obs64.exe",
+    //   "kind": "Exe"
+    // }
   ],
   "monitors": [
     {
@@ -80,7 +84,6 @@
         },
         {
           "name": "7",
-          "layout": "BSP",
           "workspace_rules": [
             {
               "id": "obs64.exe",
@@ -108,7 +111,6 @@
         },
         {
           "name": "9",
-          "layout": "Grid",
           "workspace_rules": [
             {
               "id": "Messenger.exe",
