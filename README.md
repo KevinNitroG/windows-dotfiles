@@ -29,6 +29,7 @@
     - [DAP](#dap)
     - [Linter](#linter)
     - [Formatter](#formatter)
+  - [8️⃣ Install Nvim](#-install-nvim)
   - [🧪 ONE SCRIPT _(test)_](#-one-script-_test_)
 - [🎈 EXTRAS](#-extras)
   - [Crack Winrar _(Admin)_](#crack-winrar-_admin_)
@@ -238,6 +239,11 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
 - ruff
 - shfmt
 - stylua
+
+### 8️⃣ Install Nvim
+
+- `:TSInstall powershell`
+- `:MasonInstall powershell-editor-services`
 
 ---
 
