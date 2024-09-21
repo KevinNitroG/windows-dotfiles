@@ -15,5 +15,7 @@ scoop bucket add nonportable
 scoop bucket add sysinternals
 scoop bucket add java
 scoop bucket add nerd-fonts
+scoop bucket add versions
+# scoop bucket add neorocks-scoop https://github.com/nvim-neorocks/rocks-scoop.git
 
 scoop install @SCOOP_APPS

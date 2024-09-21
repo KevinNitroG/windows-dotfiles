@@ -15,6 +15,7 @@ $SCOOP_NECESSARYS = @(
   "main/unrar",
   "main/wget",
   "main/winget"
+  #"neorocks-scoop/luarocks" # For nvim lazy, rest.nvim
 )
 
 $SCOOP_CODE_EDITORS = @(
