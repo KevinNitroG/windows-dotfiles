@@ -141,7 +141,7 @@ $PSStyle.Formatting.Warning = $Flavor.Peach.Foreground()
 
 
 # For stop cursor from blinking
-Write-Host "`e[?12l"
+#Write-Host "`e[?12l"
 
 # Fastfetch to flex ~.~
 fastfetch
