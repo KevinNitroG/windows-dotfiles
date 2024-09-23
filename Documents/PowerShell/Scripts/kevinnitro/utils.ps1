@@ -1,37 +1,30 @@
 # ref: https://github.com/ChrisTitusTech/powershell-profile/blob/main/Microsoft.PowerShell_profile.ps1
 
-function ..
-{
+function .. {
   Set-Location .\..
 }
 
-function ...
-{ 
+function ... { 
   Set-Location .\..\.. 
 }
 
-function .3
-{ 
+function .3 { 
   Set-Location .\..\..\..
 }
 
-function .4
-{ 
+function .4 { 
   Set-Location .\..\..\..\..
 }
 
-function .5
-{ 
+function .5 { 
   Set-Location .\..\..\..\..\..
 }
 
-function List-AvailableModules
-{
+function List-AvailableModules {
   Get-Module -ListAvailable
 }
 
-function Update-PowerShell
-{
+function Update-PowerShell {
   if (-not $global:canConnectToGitHub)
   {
     Write-Host "Skipping PowerShell update check due to GitHub.com not responding within 1 second." -ForegroundColor Yellow
@@ -66,9 +59,8 @@ function Update-PowerShell
   }
 }
 
-Function Test-CommandExists
-{
-  Param ($command)
+Function Test-CommandExists {
+Param ($command)
   $oldPreference = $ErrorActionPreference
   $ErrorActionPreference = 'SilentlyContinue'
   try
@@ -114,7 +106,7 @@ if (Test-CommandExists nvim)
 Set-Alias -Name v -Value $EDITOR
 
 function Edit-Profile
-{
+  {
   if ($host.Name -match "ise")
   {
     # $psISE.CurrentPowerShellTab.Files.Add($profile.CurrentUserAllHosts)
@@ -131,26 +123,23 @@ function Edit-Profile
 #   Get-ChildItem -Path $pwd -File
 # }
 
-function Get-PubIP
-{
-    (Invoke-WebRequest http://ifconfig.me/ip ).Content
+function Get-PubIP {
+  (Invoke-WebRequest http://ifconfig.me/ip ).Content
 }
 
-function _Get-Uptime
-{
+function _Get-Uptime {
   $bootuptime = (Get-CimInstance -ClassName Win32_OperatingSystem).LastBootUpTime
   $CurrentDate = Get-Date
   $uptime = $CurrentDate - $bootuptime
   Write-Output "Uptime: $($uptime.Days) Days, $($uptime.Hours) Hours, $($uptime.Minutes) Minutes"
 }
 
-function uptime
-{
+function uptime {
   #Windows Powershell only
   If ($PSVersionTable.PSVersion.Major -eq 5 )
   {
     Get-WmiObject win32_operatingsystem |
-      Select-Object @{EXPRESSION={ $_.ConverttoDateTime($_.lastbootuptime)}} | Format-Table -HideTableHeaders
+    Select-Object @{EXPRESSION={ $_.ConverttoDateTime($_.lastbootuptime)}} | Format-Table -HideTableHeaders
   } Else
   {
     _Get-Uptime
@@ -158,38 +147,35 @@ function uptime
   }
 }
 
-function Reload-Profile
-{
+function Reload-Profile {
   . $PROFILE
 }
 
 Set-Alias -Name rl -Value Reload-Profile
 
-function find-file($name)
-{
+function find-file($name) {
   Get-ChildItem -recurse -filter "*${name}*" -ErrorAction SilentlyContinue | ForEach-Object {
     $place_path = $_.directory
     Write-Output "${place_path}\${_}"
   }
 }
 
-function unzip ($file)
-{
+function unzip ($file) {
   Write-Output("Extracting", $file, "to", $pwd)
   $fullFile = Get-ChildItem -Path $pwd -Filter .\cove.zip | ForEach-Object { $_.FullName }
   Expand-Archive -Path $fullFile -DestinationPath $pwd
 }
 
 function hb
-{
+  {
   if ($args.Length -eq 0)
   {
     Write-Error "No file path specified."
     return
   }
-    
+
   $FilePath = $args[0]
-    
+
   if (Test-Path $FilePath)
   {
     $Content = Get-Content $FilePath -Raw
@@ -198,7 +184,7 @@ function hb
     Write-Error "File path does not exist."
     return
   }
-    
+
   $uri = "http://bin.christitus.com/documents"
   try
   {
@@ -213,47 +199,47 @@ function hb
 }
 
 function head
-{
-  param($Path, $n = 10)
+  {
+param($Path, $n = 10)
   Get-Content $Path -Head $n
 }
 
 function tail
-{
-  param($Path, $n = 10)
+  {
+param($Path, $n = 10)
   Get-Content $Path -Tail $n
 }
 
 function mkcd
-{
-  param($dir) mkdir $dir -Force; Set-Location $dir 
+  {
+param($dir) mkdir $dir -Force; Set-Location $dir 
 }
 
 # Quick Access to System Information
 function sysinfo
-{
+  {
   Get-ComputerInfo 
 }
 
 # Networking Utilities
 function flushdns
-{
+  {
   Clear-DnsClientCache 
 }
 
 # Clipboard Utilities
 function cpy
-{
+  {
   Set-Clipboard $args[0] 
 }
 
 function pst
-{
+  {
   Get-Clipboard 
 }
 
 function ix ($file)
-{
+  {
   curl.exe -F "f:1=@$file" ix.io
 }
 
@@ -273,7 +259,7 @@ function ix ($file)
 # }
 
 function df
-{
+  {
   get-volume
 }
 
@@ -287,17 +273,17 @@ function df
 # }
 
 function export($name, $value)
-{
+  {
   set-item -force -path "env:$name" -value $value;
 }
 
 function pkill($name)
-{
+  {
   Get-Process $name -ErrorAction SilentlyContinue | Stop-Process
 }
 
 function pgrep($name)
-{
+  {
   Get-Process $name
 }
 
@@ -306,13 +292,13 @@ function pgrep($name)
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
 function which ($command)
-{
+  {
   Get-Command -Name $command -ErrorAction SilentlyContinue |
-    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+  Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
 
 function Check-IsAdmin
-{
+  {
   return ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 }
 
@@ -332,14 +318,14 @@ function Check-IsAdmin
 # }
 #
 function Reboot-BIOS
-{
+  {
   Start-Process -FilePath "shutdown" -ArgumentList "/r /fw /f /t 0" -Verb runas
 }
 
 # Ref: https://gist.github.com/mikepruett3/7ca6518051383ee14f9cf8ae63ba18a7
 function extract
-{
-  param (
+  {
+param (
     [string]$File,
     [string]$Folder
   )
@@ -380,7 +366,7 @@ function extract
 }
 
 function extract_multi
-{
+  {
   $CurrentDate = (Get-Date).ToString("yyyy-MM-dd_HH-mm-ss")
   $Folder = "extracted_$($CurrentDate)"
   New-Item -Path $Folder -ItemType Directory | Out-Null
@@ -388,4 +374,16 @@ function extract_multi
   {
     extract -File $File -Folder "$($Folder)\$([System.IO.Path]::GetFileNameWithoutExtension($File))"
   }
+}
+
+function Get-Fonts {
+param (
+    $regex
+  )
+  $AllFonts = (New-Object System.Drawing.Text.InstalledFontCollection).Families.Name
+  if ($null -ne $regex) {
+    $FilteredFonts = $($AllFonts | Select-String -Pattern ".*${regex}.*")
+    return $FilteredFonts
+  }
+  return $AllFonts
 }
