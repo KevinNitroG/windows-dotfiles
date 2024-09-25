@@ -128,7 +128,7 @@ GroupAdd "Browser", "ahk_exe thorium.exe"
 #+Down::ResizeAxis("vertical", "decrease")
 
 #w::ToggleFloat()
-; ^#m::Minimize() ; Usually I switch to other workspace to get desktop
+^#m::Minimize()
 #q::Close()
 ^#t::ToggleTiling() ; avoid with opening terminal
 #z::ToggleMonocle()
