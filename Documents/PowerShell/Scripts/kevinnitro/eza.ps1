@@ -38,4 +38,9 @@ function lt
   eza --tree @DEFAULT_EZA_ARGS @args
 }
 
+function llt
+{
+  eza --tree -lag @DEFAULT_EZA_ARGS @args
+}
+
 Set-Alias -Name ls -Value _ls -Force
