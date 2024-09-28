@@ -1,6 +1,7 @@
 $SCOOP_PROGRAMMING_LANGUAGES = @(
   "java/oraclejre8",
   "main/gdb",
+  "main/go",
   "main/llvm",
   "main/mingw",
   "main/nodejs",
