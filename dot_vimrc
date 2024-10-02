@@ -3,6 +3,7 @@ let mapleader = " "
 set clipboard=unnamed
 set hlsearch
 set ignorecase
+set number
 set relativenumber
 set shortmess+=Ac
 set smartcase
