@@ -15,6 +15,7 @@ $SCOOP_NECESSARYS = @(
   "main/unrar",
   "main/wget",
   "main/winget"
+  #"extras/windows-terminal",
   #"neorocks-scoop/luarocks" # For nvim lazy, rest.nvim
 )
 
@@ -109,5 +110,8 @@ $PIP_APPS = @(
 Install-Module -Name CompletionPredictor -Repository PSGallery -Force
 
 scoop install $SCOOP_FONTS $SCOOP_COMPLETIONS $SCOOP_NECESSARYS $SCOOP_CODE_EDITORS $SCOOP_OFTEN_USE_APPS $SCOOP_CODING_TOOLS $SCOOP_OTHER_APPS
+
+# Post install script for scoop
+#reg import "$env:USERPROFILE\scoop\apps\windows-terminal\current\install-context.reg"
 
 pip install $PIP_APPS
