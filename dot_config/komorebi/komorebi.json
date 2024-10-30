@@ -39,6 +39,14 @@
     {
       "id": "Photoshop.exe",
       "kind": "Exe"
+    },
+    {
+      "id": "Illustrator.exe",
+      "kind": "Exe"
+    },
+    {
+      "id": "vmware.exe",
+      "kind": "Exe"
     }
     // {
     //   "id": "obs64.exe",
@@ -80,7 +88,16 @@
         },
         {
           "name": "6",
-          "layout": "BSP"
+          "workspace_rules": [
+            {
+              "id": "devenv.exe",
+              "kind": "Exe"
+            },
+            {
+              "id": "Code.exe",
+              "kind": "Exe"
+            }
+          ]
         },
         {
           "name": "7",
@@ -128,5 +145,5 @@
   "mouse_follows_focus": false,
   "resize_delta": 20,
   "window_hiding_behaviour": "Cloak",
-  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.27/schema.json"
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.29/schema.json"
 }
