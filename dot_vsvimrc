@@ -5,9 +5,7 @@ set hlsearch
 set ignorecase
 set number
 set relativenumber
-set shortmess+=Ac
 set smartcase
-set whichwrap+=<,>,[,],h,l
 
 inoremap jk <Esc>
 nnoremap <leader>x :wq<CR>
