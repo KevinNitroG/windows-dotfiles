@@ -4,7 +4,7 @@
 
 ["AppData/Local/nvim"]
 type = "git-repo"
-url = "git@github.com:KevinNitroG/Alexis12119-nvim.git"
+url = "git@github.com:KevinNitroG/nvim.git"
 
 # ["AppData/Local/LazyVim"]
 # type = "git-repo"
