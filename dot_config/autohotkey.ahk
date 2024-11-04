@@ -14,21 +14,30 @@ DetectHiddenWindows true
 
 ; --- CONFIG ---
 
-#Backspace::{
+#Backspace:: {
   try ControlSend "!{F4}",, "ahk_class Progman"
-  try ControlFocus "Shut Down Windows"
+  try ControlFocus "ComboBox1", "Shut Down Windows"
 }
+
+#o::
+{
+    Sleep 1000  ; Give user a chance to release keys (in case their release would wake up the monitor again).
+    ; Turn Monitor Off:
+    ;  Turns off the monitor via hotkey. In the SendMessage line, replace the number 2 with -1 to turn on the monitor, or replace it with 1 to activate the monitor's low-power mode.
+    SendMessage 0x0112, 0xF170, 2,, "Program Manager"  ; 0x0112 is WM_SYSCOMMAND, 0xF170 is SC_MONITORPOWER.
+}
+
 ^#!r::Reload
 
 ; --- CAPSLOCK AND CONTROL ---
-*CapsLock::{
+*CapsLock:: {
   Send "{LControl down}"
 }
 
-*CapsLock up::
-{
+*CapsLock up:: {
   Send "{LControl Up}"
-  if (A_PriorKey == "CapsLock"){
+  if (A_PriorKey == "CapsLock")
+  {
     if (A_TimeSincePriorHotkey < 400)
       SetCapsLockState !GetKeyState("CapsLock", "T")
   }
