@@ -7,6 +7,7 @@ $env:EDITOR = "nvim"
 $env:VISUAL = "code"
 $env:PAGER = "delta"
 $env:PYTHONIOENCODING = "utf-8" # To fix thefuck
+# $env:XDG_CONFIG_HOME = "$($env:USERPROFILE)\.config"
 
 # If is in non-interactive shell, then return
 if (!([Environment]::UserInteractive -and -not $([Environment]::GetCommandLineArgs() | Where-Object{ $_ -like '-NonI*' })))
@@ -302,6 +303,10 @@ Set-Alias -Name c -Value cls
 Set-Alias -Name csl -Value cls
 Set-Alias -Name shutdownnow -Value Stop-Computer
 Set-Alias -Name rebootnow -Value Restart-Computer
+if (Test-Path -Path "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -PathType Leaf)
+{
+  Set-Alias -Name msbuild -Value "$(&"${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -prerelease -products * -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe)"
+}
 
 if (Get-Command lazygit)
 {
