@@ -1,18 +1,18 @@
 {
   "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
   "border": true,
-  "border_colours": {
-    "monocle": "#F9E2AF",
-    "single": "#B4BEFE",
-    "stack": "#CBA6F7",
-    "unfocused": "#585B70"
-  },
+  // "border_colours": {
+  //   "monocle": "#F9E2AF",
+  //   "single": "#B4BEFE",
+  //   "stack": "#CBA6F7",
+  //   "unfocused": "#585B70"
+  // },
   "cross_monitor_move_behaviour": "Insert",
   "border_padding": 0,
   "border_offset": -2,
   "border_width": 5,
-  "transparency": false,
-  "transparency_alpha": 200,
+  "transparency": true,
+  "transparency_alpha": 240,
   "default_container_padding": 0,
   "default_workspace_padding": 0,
   "manage_rules": [
@@ -25,7 +25,7 @@
       "kind": "Exe"
     }
   ],
-  "float_rules": [
+  "floating_applications": [
     {
       "id": "Authy Desktop.exe",
       "kind": "Exe",
@@ -47,6 +47,10 @@
     {
       "id": "vmware.exe",
       "kind": "Exe"
+    },
+    {
+      "id": "WPF UI Gallery",
+      "kind": "Title"
     }
     // {
     //   "id": "obs64.exe",
@@ -142,8 +146,12 @@
       ]
     }
   ],
+  "theme": {
+    "name": "Macchiato",
+    "palette": "Catppuccin"
+  },
   "mouse_follows_focus": false,
-  "resize_delta": 20,
+  "resize_delta": 10,
   "window_hiding_behaviour": "Cloak",
-  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.29/schema.json"
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.30/schema.json"
 }
