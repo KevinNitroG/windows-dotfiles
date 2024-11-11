@@ -49,8 +49,8 @@
       "kind": "Exe"
     },
     {
-      "id": "WPF UI Gallery",
-      "kind": "Title"
+      "id": "Wpf.Ui.Gallery.exe",
+      "kind": "Exe"
     }
     // {
     //   "id": "obs64.exe",
@@ -147,8 +147,10 @@
     }
   ],
   "theme": {
-    "name": "Macchiato",
-    "palette": "Catppuccin"
+    "name": "Mocha",
+    "palette": "Catppuccin",
+    "monocle_border": "Yellow",
+    "unfocused_border": "Surface2"
   },
   "mouse_follows_focus": false,
   "resize_delta": 10,
