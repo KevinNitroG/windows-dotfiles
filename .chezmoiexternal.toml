@@ -30,9 +30,9 @@ url = "https://github.com/Gravifer/posh-wakatime.git"
 # type = "git-repo"
 # url = "https://github.com/Hammster/windows-terminal-shaders.git"
 # 
-[".config/komorebi/applications.yaml"]
+[".config/komorebi/applications.json"]
 type = "file"
-url = "https://raw.githubusercontent.com/LGUG2Z/komorebi-application-specific-configuration/master/applications.yaml"
+url = "https://raw.githubusercontent.com/LGUG2Z/komorebi-application-specific-configuration/refs/heads/master/applications.json"
 
 [".config/komorebi/komorebic.lib.ahk"]
 type = "file"
