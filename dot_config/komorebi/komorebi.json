@@ -1,5 +1,5 @@
 {
-  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.yaml",
+  "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.json",
   "border": true,
   // "border_colours": {
   //   "monocle": "#F9E2AF",
@@ -127,6 +127,10 @@
             {
               "id": "Spotify.exe",
               "kind": "Exe"
+            },
+            {
+              "id": "YouTube Music.exe",
+              "kind": "Exe"
             }
           ]
         },
@@ -155,5 +159,5 @@
   "mouse_follows_focus": false,
   "resize_delta": 10,
   "window_hiding_behaviour": "Cloak",
-  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.30/schema.json"
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.json"
 }
