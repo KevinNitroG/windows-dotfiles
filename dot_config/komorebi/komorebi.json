@@ -161,7 +161,9 @@
   "theme": {
     "name": "Mocha",
     "palette": "Catppuccin",
-    "monocle_border": "Yellow",
+    "single_border": "Lavender",
+    "monocle_border": "Blue",
+    "floating_border": "Yellow",
     "unfocused_border": "Surface2"
   },
   "mouse_follows_focus": false,
