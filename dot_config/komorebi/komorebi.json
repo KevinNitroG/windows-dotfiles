@@ -45,6 +45,14 @@
       "kind": "Exe"
     },
     {
+      "id": "lightroom.exe",
+      "kind": "Exe"
+    },
+    {
+      "id": "Adobe Premiere Pro.exe",
+      "kind": "Exe"
+    },
+    {
       "id": "vmware.exe",
       "kind": "Exe"
     },
