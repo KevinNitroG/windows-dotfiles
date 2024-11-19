@@ -118,7 +118,7 @@
 	autoSetupRemote = true
 
 [pull]
-  rebase = true
+  rebase = false
 
 [rebase]
   autoStash = true
