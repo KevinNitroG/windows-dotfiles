@@ -30,16 +30,15 @@ DetectHiddenWindows true
 ^#!r::Reload
 
 ; --- CAPSLOCK AND CONTROL ---
-*CapsLock:: {
-  Send "{LControl down}"
+CapsLock:: {
+  Send "{Blind}{LControl down}"
 }
 
-*CapsLock up:: {
-  Send "{LControl Up}"
-  if (A_PriorKey == "CapsLock")
+CapsLock up:: {
+  Send "{Blind}{LControl Up}"
+  if (A_PriorKey == "CapsLock" and A_TimeSincePriorHotkey < 400)
   {
-    if (A_TimeSincePriorHotkey < 400)
-      SetCapsLockState !GetKeyState("CapsLock", "T")
+    SetCapsLockState !GetKeyState("CapsLock", "T")
   }
 }
 
