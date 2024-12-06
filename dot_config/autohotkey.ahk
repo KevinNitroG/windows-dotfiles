@@ -11,7 +11,7 @@ DetectHiddenWindows true
 ; + Shift
 
 #Include "komorebi/komorebic.lib.ahk"
-#Include "autohotkey/hotstring.ahk"
+; #Include "autohotkey/hotstring.ahk"
 
 ; --- CONFIG ---
 
