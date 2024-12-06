@@ -28,7 +28,7 @@ DetectHiddenWindows true
     SendMessage 0x0112, 0xF170, 2,, "Program Manager"  ; 0x0112 is WM_SYSCOMMAND, 0xF170 is SC_MONITORPOWER.
 }
 
-^#!r::Reload
+^#!+r::Reload
 
 ; --- CAPSLOCK AND CONTROL ---
 CapsLock:: {
@@ -84,7 +84,8 @@ GroupAdd "Browser", "ahk_exe thorium.exe"
 
 ; --- KOMOREBI ---
 
-#^o::ReloadConfiguration()
+; #^o::ReloadConfiguration()
+#^!r::RestoreWindows()
 #^+r:: {
   try RunWait("komorebic.exe stop", , "Hide")
   RunWait("komorebic.exe start", , "Hide")
