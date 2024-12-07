@@ -9,6 +9,7 @@ $env:PAGER = "delta"
 $env:PYTHONIOENCODING = "utf-8" # To fix thefuck
 $env:MAKEFLAGS = "-f C:\\Users\\kevinnitro\\.config\\mkfile\\global.mk"
 # $env:XDG_CONFIG_HOME = "$($env:USERPROFILE)\.config"
+$env:NODE_OPTIONS="--disable-warning=ExperimentalWarning"
 
 # If is in non-interactive shell, then return
 if (!([Environment]::UserInteractive -and -not $([Environment]::GetCommandLineArgs() | Where-Object { $_ -like '-NonI*' })))
