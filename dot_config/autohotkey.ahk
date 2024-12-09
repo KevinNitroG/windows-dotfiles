@@ -12,6 +12,7 @@ DetectHiddenWindows true
 
 #Include "komorebi/komorebic.lib.ahk"
 ; #Include "autohotkey/hotstring.ahk"
+#Include "autohotkey/hidecursor.ahk"
 
 ; --- CONFIG ---
 
