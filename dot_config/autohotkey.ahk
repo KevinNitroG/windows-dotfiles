@@ -14,6 +14,10 @@ DetectHiddenWindows true
 ; #Include "autohotkey/hotstring.ahk"
 #Include "autohotkey/hidecursor.ahk"
 
+; --- HIDE CURSOR ---
+
+#c::ToggleCursor()
+
 ; --- CONFIG ---
 
 #Backspace:: {
@@ -48,7 +52,7 @@ CapsLock up:: {
 
 #Enter::Run "wt.exe"
 #t::Run "alacritty.exe"
-#c::Run "code.exe"
+; #c::Run "code.exe" ; Replace with hide cusor
 #b::Run "brave.exe" 
 #m::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
 
