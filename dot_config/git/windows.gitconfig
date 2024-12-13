@@ -1,0 +1,7 @@
+; vim:ft=gitconfig
+
+[credential "helperselector"]
+  selected = manager
+
+[safe]
+  directory = E:/gits

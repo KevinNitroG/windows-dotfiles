@@ -1,57 +1,26 @@
-# Ref: https://github.com/garybernhardt/dotfiles/blob/main/.gitconfig
+; vim:ft=gitconfig
+; Ref: https://github.com/garybernhardt/dotfiles/blob/main/.gitconfig
 
 [include]
-  path = .config/delta/themes/catppuccin/catppuccin.gitconfig
-
-[core]
-	# editor = code --wait
-	editor = nvim
-	autocrlf = true
-	longpaths = true
-  pager = delta
-
-[interactive]
-  diffFilter = delta --color-only
-
-[delta]
-  features = catppuccin-mocha
-  navigate = true
-  dark = true
-  # light = true
-  side-by-side = true
-  line-numbers = true
-  show-syntax-themes = true
-  hyperlinks = true
-  # hyperlinks-file-link-format = "vscode://file/{path}:{line}"
-
-
-[merge]
-  conflictstyle = diff3
-
-[diff]
-  colorMoved = default
-
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+  path = ~/.config/delta/themes/catppuccin/catppuccin.gitconfig
+  path = ~/.config/git/windows.gitconfig
 
 [user]
-	name = KevinNitroG
-	email = trannguyenthaibinh46@gmail.com
-	signingkey = 071E9CD8A2D41057
-	; signingkey = C:/Users/kevinnitro/.ssh/id_ed25519
+  name = KevinNitroG
+  email = trannguyenthaibinh46@gmail.com
+  signingkey = 071E9CD8A2D41057
+  ; signingkey = C:/Users/kevinnitro/.ssh/id_ed25519
+
+[core]
+  editor = nvim
+  longpaths = true
+  pager = delta
 
 [safe]
-	directory = E:/
-	directory = D:/My Apps
-	directory = E:/Git Repo
-	directory = C:/Users/kevinnitro/scoop/apps/scoop/current
-	directory = C:/Users/kevinnitro/scoop/buckets/main
+  directory = ~/gits
 
 [alias]
-  gcc = !git reflog expire --all --expire=now && git gc --prune=now --aggressive # clean local reflog: https://stackoverflow.com/a/2116892/23173098
+  gcc = !git reflog expire --all --expire=now && git gc --prune=now --aggressive ; clean local reflog: https://stackoverflow.com/a/2116892/23173098
   aa = add -A
   au = add -u
   amend = commit -a --amend --no-edit
@@ -60,17 +29,17 @@
   cob = checkout -b
   db = branch -D
   lsb = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
-  save = !git add -A && git commit -m \"🧹 chore(save): $(curl -s -f https://whatthecommit.com/index.txt || \"save point\")\" # magic commit
-  done = push origin HEAD # lazy to push
-  f = !git save && git done # finish
+  save = !git add -A && git commit -m \"chore(save): $(curl -s -f https://whatthecommit.com/index.txt || \"save point\")\" ; magic commit
+  done = push origin HEAD ; lazy to push
+  f = !git save && git done ; finish
   undo = reset HEAD~1 --mixed
   res = reset --hard
-  lg = log --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]' --abbrev-commit # online log with prettierg
-  lgg = log --graph --decorate --all # graph log
-  subup = submodule update --init --recursive # submodule recursive update
-  wdiff = diff --word-diff # word diff
-  rdiff = diff --submodule=diff # recursive
-  pdiff = diff --word-diff=color --word-diff-regex=. # precise
+  lg = log --pretty=format:'%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]' --abbrev-commit ; online log with prettierg
+  lgg = log --graph --decorate --all ; graph log
+  subup = submodule update --init --recursive ; submodule recursive update
+  wdiff = diff --word-diff ; word diff
+  rdiff = diff --submodule=diff ; recursive
+  pdiff = diff --word-diff=color --word-diff-regex=. ; precise
   discard = !git checkout -- . && git submodule foreach git checkout -- .
   head = r -1
   h = head
@@ -80,7 +49,7 @@
   pr = pull rebase
   editconfig = config --global --edit
 
-  # ref: https://github.com/stevearc/dotfiles/blob/master/.gitconfig
+  ; ref: https://github.com/stevearc/dotfiles/blob/master/.gitconfig
   po = !bash ~/.githelpers push_current_branch
   pof = !bash ~/.githelpers push_current_branch --force-with-lease
   dopr = !bash ~/.githelpers create_pull_request
@@ -99,23 +68,23 @@
   next = !git checkout $(git rev-list --children --all | grep ^$(git rev-parse HEAD) | cut -f 2 -d ' ')
 
 [gpg]
-; 	format = ssh
+ 	; format = ssh
   program = gpg
 
 [commit]
-	gpgsign = true
+  gpgsign = true
 
 [help]
-	autoCorrect = prompt
+  autoCorrect = prompt
 
 [log]
-	date = iso
+  date = iso
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 
 [push]
-	autoSetupRemote = true
+  autoSetupRemote = true
 
 [pull]
   rebase = true
@@ -125,5 +94,29 @@
 
 [rerere]
   enabled = true
-[credential "helperselector"]
-	selected = manager
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  features = catppuccin-mocha
+  navigate = true
+  dark = true
+  ; light = true
+  side-by-side = true
+  line-numbers = true
+  show-syntax-themes = true
+  hyperlinks = true
+  ; hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
