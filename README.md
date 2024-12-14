@@ -23,7 +23,7 @@
   - [2️⃣ Install prerequisite](#-install-prerequisite)
   - [3️⃣ Chezmoi](#-chezmoi)
   - [4️⃣ Set env path _(Admin)_](#-set-env-path-_admin_)
-  - [5️⃣ Install softwares](#-install-softwares)
+  - [5️⃣ Install software](#-install-software)
   - [6️⃣ Install fonts](#-install-fonts)
   - [7️⃣ Install some code stuff via `Mason` manually](#-install-some-code-stuff-via-mason-manually)
     - [DAP](#dap)
@@ -51,6 +51,7 @@
   - [Windows](#windows)
     - [Set / Get variables](#set--get-variables)
     - [Default variables](#default-variables)
+    - [Optimise VHD(X)](#optimise-vhdx)
     - [Others](#others-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -83,7 +84,7 @@
 
 > [!NOTE]
 >
-> Mange via Package Managers **(Scoop isn't PM btw :v)**
+> Manage via Package Managers **(Scoop isn't PM btw :v)**
 
 > [!IMPORTANT]
 >
@@ -158,11 +159,11 @@
   ```ps1
   Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
   ```
-- Install prequisite scoop _(non-admin)_
+- Install perquisite scoop _(non-admin)_
   ```ps1
   iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteScoop.ps1" | iex
   ```
-- Install prequisite choco _(admin)_
+- Install perquisite choco _(admin)_
   ```ps1
   iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteChoco.ps1" | iex
   ```
@@ -193,17 +194,17 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
 
 ---
 
-### 5️⃣ Install softwares
+### 5️⃣ Install software
 
 - Install programming languages
   ```ps1
   iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/programmingLanguage.ps1" | iex
   ```
-- Install softwares _(non-admin)_
+- Install software _(non-admin)_
   ```ps1
   iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-nonadmin.ps1" | iex
   ```
-- Install softwares _(admin)_
+- Install software _(admin)_
   ```ps1
   iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-admin.ps1" | iex
   ```
@@ -479,7 +480,7 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
   ```
 
 > [!NOTE]
-> Remove `ouput` params to export out stdout
+> Remove `output` params to export out stdout
 >
 > Ref: https://unix.stackexchange.com/a/482559
 
@@ -554,6 +555,21 @@ C:\Users\kevinnitro\scoop\apps\pwsh\current\install-explorer-context.reg
 > [Source](https://learn.microsoft.com/en-us/windows/deployment/usmt/usmt-recognized-environment-variables)
 >
 > More reference: [Complete List of Environment Variables in Windows 10](https://gist.github.com/RebeccaWhit3/5dad8627b8227142e1bea432db3f8824)
+
+#### Optimise VHD(X)
+
+```sh
+diskpart
+select vdisk file="D:\file.vhdx"
+attach vdisk readonly
+compact vdisk
+detach vdisk
+exit
+```
+
+> [!NOTE] > https://github.com/microsoft/WSL/issues/4699#issuecomment-565700099
+>
+> Ensure disk is detached
 
 #### Others
 
