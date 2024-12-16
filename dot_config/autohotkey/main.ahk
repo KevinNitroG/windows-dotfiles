@@ -10,9 +10,9 @@ DetectHiddenWindows true
 ; ! Alt
 ; + Shift
 
-#Include "komorebi/komorebic.lib.ahk"
+#Include "komorebic.lib.ahk"
 ; #Include "autohotkey/hotstring.ahk"
-#Include "autohotkey/hidecursor.ahk"
+#Include "hidecursor.ahk"
 
 ; --- HIDE CURSOR ---
 
@@ -54,7 +54,7 @@ CapsLock up:: {
 #t::Run "alacritty.exe"
 ; #c::Run "code.exe" ; Replace with hide cusor
 #b::Run "brave.exe" 
-#m::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
+; #m::Run "C:\Users\kevinnitro\AppData\Roaming\Spotify\Spotify.exe" 
 
 ; --- ALT TO SWITCH TAB IN BROWSER ---
 
@@ -89,6 +89,33 @@ GroupAdd "Browser", "ahk_exe thorium.exe"
 
 ; --- KOMOREBI ---
 
+; TODO: Working on this later
+/*
+previous_workspace := 0
+
+QueryCurrentWorkspace() {
+  command := "komorebic.exe query focused-workspace-index"
+  shell := ComObject("WScript.Shell")
+  ; Execute a single command via cmd.exe
+  exec := shell.Exec(A_ComSpec " /C " command)
+  ; Read and return the command's output
+  return exec.StdOut.ReadAll()
+}
+
+ToggleSecretWorkspace(){
+  global previous_workspace
+  current := QueryCurrentWorkspace()
+  msgbox current previous_workspace
+  if (current == "10") {
+    FocusWorkspace(previous_workspace)
+  }
+  else {
+    FocusWorkspace(10) 
+    previous_workspace := current
+  }
+}
+*/
+
 ; #^o::ReloadConfiguration()
 #^!r::RestoreWindows()
 #^+r:: {
@@ -96,30 +123,32 @@ GroupAdd "Browser", "ahk_exe thorium.exe"
   RunWait("komorebic.exe start", , "Hide")
 }
 
-#1::FocusWorkspace(0)
-#2::FocusWorkspace(1)
-#3::FocusWorkspace(2)
-#4::FocusWorkspace(3)
-#5::FocusWorkspace(4)
-#6::FocusWorkspace(5)
-#7::FocusWorkspace(6)
-#8::FocusWorkspace(7)
-#9::FocusWorkspace(8)
-#0::FocusWorkspace(9)
+#1::FocusNamedWorkspace("0")
+#2::FocusNamedWorkspace("1")
+#3::FocusNamedWorkspace("2")
+#4::FocusNamedWorkspace("3")
+#5::FocusNamedWorkspace("4")
+#6::FocusNamedWorkspace("5")
+#7::FocusNamedWorkspace("6")
+#8::FocusNamedWorkspace("7")
+#9::FocusNamedWorkspace("8")
+#0::FocusNamedWorkspace("9")
+#s::FocusNamedWorkspace("secret")
 
 #[::CycleWorkspace("previous")
 #]::CycleWorkspace("next")
 
-#+1::MoveToWorkspace(0)
-#+2::MoveToWorkspace(1)
-#+3::MoveToWorkspace(2)
-#+4::MoveToWorkspace(3)
-#+5::MoveToWorkspace(4)
-#+6::MoveToWorkspace(5)
-#+7::MoveToWorkspace(6)
-#+8::MoveToWorkspace(7)
-#+9::MoveToWorkspace(8)
-#+0::MoveToWorkspace(9)
+#+1::MoveToNamedWorkspace("0")
+#+2::MoveToNamedWorkspace("1")
+#+3::MoveToNamedWorkspace("2")
+#+4::MoveToNamedWorkspace("3")
+#+5::MoveToNamedWorkspace("4")
+#+6::MoveToNamedWorkspace("5")
+#+7::MoveToNamedWorkspace("6")
+#+8::MoveToNamedWorkspace("7")
+#+9::MoveToNamedWorkspace("8")
+#+0::MoveToNamedWorkspace("9")
+#!s::MoveToNamedWorkspace("secret")
 
 #+[::CycleMoveToWorkspace("previous")
 #+]::CycleMoveToWorkspace("next")
@@ -146,7 +175,7 @@ GroupAdd "Browser", "ahk_exe thorium.exe"
 ^#m::Minimize()
 #q::Close()
 ^#t::ToggleTiling() ; avoid with opening terminal
-#z::ToggleMonocle()
+#m::ToggleMonocle()
 ; !Enter::F11 ; Toggle fullscreen
 ^#r::Retile()
 ^#+p::TogglePause()
