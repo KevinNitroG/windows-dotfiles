@@ -154,6 +154,10 @@
               "kind": "Exe"
             }
           ]
+        },
+        {
+          "name": "secret",
+          "layout": "BSP"
         }
       ]
     }
@@ -165,6 +169,12 @@
     "monocle_border": "Blue",
     "floating_border": "Yellow",
     "unfocused_border": "Surface2"
+  },
+  "animation": {
+    "fps": 30,
+    "enabled": false,
+    "duration": 100,
+    "style": "EaseInOutQuad"
   },
   "mouse_follows_focus": false,
   "resize_delta": 10,
