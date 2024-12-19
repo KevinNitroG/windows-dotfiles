@@ -69,22 +69,18 @@
     {
       "workspaces": [
         {
-          "name": "0",
+          "name": "1",
           "layout": "BSP"
         },
         {
           "layout": "BSP",
-          "name": "1",
+          "name": "2",
           "workspace_rules": [
             {
               "id": "explorer.exe",
               "kind": "Exe"
             }
           ]
-        },
-        {
-          "name": "2",
-          "layout": "BSP"
         },
         {
           "name": "3",
@@ -100,6 +96,10 @@
         },
         {
           "name": "6",
+          "layout": "BSP"
+        },
+        {
+          "name": "7",
           "workspace_rules": [
             {
               "id": "devenv.exe",
@@ -112,7 +112,7 @@
           ]
         },
         {
-          "name": "7",
+          "name": "8",
           "workspace_rules": [
             {
               "id": "obs64.exe",
@@ -125,7 +125,7 @@
           ]
         },
         {
-          "name": "8",
+          "name": "9",
           "layout": "BSP",
           "workspace_rules": [
             {
@@ -143,7 +143,7 @@
           ]
         },
         {
-          "name": "9",
+          "name": "0",
           "workspace_rules": [
             {
               "id": "Messenger.exe",
