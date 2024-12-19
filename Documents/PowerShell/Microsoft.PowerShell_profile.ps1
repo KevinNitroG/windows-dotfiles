@@ -970,7 +970,7 @@ function Start-Komorebi
   if (! (Get-Process "AutoHotKey" -ErrorAction SilentlyContinue))
   {
     # AutoHotkey.exe "C:/Users/kevinnitro/.config/komorebi/komorebi.ahk"
-    AutoHotkey.exe "$env:USERPROFILE\.config\autohotkey.ahk"
+    AutoHotkey.exe "$env:USERPROFILE\.config\autohotkey\main.ahk"
   }
 }
 
