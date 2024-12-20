@@ -731,6 +731,12 @@ function List-ScoopApps
   return $apps
 }
 
+function List-UpdatableScoopApps
+{
+  $apps = $(scoop status | Select-Object -ExpandProperty "Name").Split("\n")
+  return $apps
+}
+
 function Select-Apps
 {
   param (
@@ -740,7 +746,7 @@ function Select-Apps
   return $apps
 }
 
-function Upgrade-ChocoApps
+function Update-ChocoApps
 {
   $apps_set = New-Object System.Collections.Generic.HashSet[[String]]
   $installed_apps = List-ChocoApps
@@ -772,10 +778,11 @@ function Upgrade-ChocoApps
   }
 }
 
-function Upgrade-ScoopApps
+function Update-ScoopApps
 {
+  scoop update
   $apps_set = New-Object System.Collections.Generic.HashSet[[String]]
-  $installed_apps = List-ScoopApps
+  $installed_apps = List-UpdatableScoopApps
   foreach ($app in Select-Apps $installed_apps)
   {
     $apps_set.Add($app) >$null
@@ -800,13 +807,13 @@ function Upgrade-ScoopApps
     Write-Host "No app was selected to update"
   }
 }
-function Upgrade-NpmApps
+function Update-NpmApps
 {
   $apps_string = $NPM_APPS_TO_UPGRADE -join " "
   npm upgrade $apps_string
 }
 
-function Upgrade-PipApps
+function Update-PipApps
 {
   $apps_string = $PIP_APPS_TO_UPGRADE -join " "
   pip install --upgrade $apps_string

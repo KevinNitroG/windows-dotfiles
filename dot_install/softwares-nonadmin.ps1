@@ -116,5 +116,6 @@ scoop install $SCOOP_FONTS $SCOOP_COMPLETIONS $SCOOP_NECESSARYS $SCOOP_CODE_EDIT
 #reg import "$env:USERPROFILE\scoop\apps\windows-terminal\current\install-context.reg"
 reg import "$env:USERPROFILE\scoop\apps\pwsh\current\install-explorer-context.reg"
 reg import "$env:USERPROFILE\scoop\apps\pwsh\current\install-file-context.reg"
+reg import "$env:USERPROFILE\scoop\apps\7zip\current\install-context.reg"
 
 pip install $PIP_APPS

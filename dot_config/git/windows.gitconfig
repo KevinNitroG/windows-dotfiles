@@ -5,3 +5,4 @@
 
 [safe]
   directory = E:/gits
+  directory = ~/scoop/*
