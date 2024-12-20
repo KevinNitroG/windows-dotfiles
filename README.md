@@ -478,6 +478,11 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
   5
   quit
   ```
+- Start gpg-agent and keyboxd for signing commit (with task scheduler!)
+  ```ps1
+  gpgconf --launch gpg-agent
+  gpgconf --launch keyboxd
+  ```
 
 > [!NOTE]
 > Remove `output` params to export out stdout
