@@ -9,7 +9,7 @@
       "bottom": 50
     }
   },
-  "font_family": "JetBrains Mono",
+  "font_family": "Google Sans",
   "left_widgets": [
     {
       "Komorebi": {
@@ -40,7 +40,8 @@
         "show_total_data_transmitted": false,
         "show_network_activity": true,
         "data_refresh_interval": 5,
-        "show_default_interface": true
+        "show_default_interface": false,
+        "network_activity_fill_characters": 8
       }
     },
     {
