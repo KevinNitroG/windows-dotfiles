@@ -23,7 +23,7 @@
         },
         "focused_window": {
           "enable": true,
-          "show_icon": true
+          "display": "IconAndText"
         }
       }
     }

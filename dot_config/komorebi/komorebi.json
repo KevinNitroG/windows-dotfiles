@@ -1,16 +1,10 @@
 {
   "app_specific_configuration_path": "$Env:USERPROFILE/.config/komorebi/applications.json",
   "border": true,
-  // "border_colours": {
-  //   "monocle": "#F9E2AF",
-  //   "single": "#B4BEFE",
-  //   "stack": "#CBA6F7",
-  //   "unfocused": "#585B70"
-  // },
   "cross_monitor_move_behaviour": "Insert",
   "border_padding": 0,
   "border_offset": -2,
-  "border_width": 5,
+  "border_width": 8,
   "transparency": true,
   "transparency_alpha": 240,
   "default_container_padding": 0,
