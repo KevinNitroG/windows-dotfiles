@@ -25,11 +25,6 @@
   - [4️⃣ Set env path _(Admin)_](#-set-env-path-_admin_)
   - [5️⃣ Install software](#-install-software)
   - [6️⃣ Install fonts](#-install-fonts)
-  - [7️⃣ Install some code stuff via `Mason` manually](#-install-some-code-stuff-via-mason-manually)
-    - [DAP](#dap)
-    - [Linter](#linter)
-    - [Formatter](#formatter)
-  - [8️⃣ Install Nvim](#-install-nvim)
   - [🧪 ONE SCRIPT _(test)_](#-one-script-_test_)
 - [🎈 EXTRAS](#-extras)
   - [Crack Winrar _(Admin)_](#crack-winrar-_admin_)
@@ -214,37 +209,6 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
 ### 6️⃣ Install fonts
 
 - https://fonts.google.com/specimen/Be+Vietnam+Pro?query=be+vie
-
----
-
-### 7️⃣ Install some code stuff via `Mason` manually
-
-#### DAP
-
-- codelldb / cpptools
-- debugpy
-- js-debug-adapter
-
-#### Linter
-
-- actionlint
-- cpplint
-- markdownlint
-- ruff
-
-#### Formatter
-
-- markdown-toc
-- markdownlint
-- prettier
-- ruff
-- shfmt
-- stylua
-
-### 8️⃣ Install Nvim
-
-- `:TSInstall powershell`
-- `:MasonInstall powershell-editor-services`
 
 ---
 
