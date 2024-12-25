@@ -991,6 +991,58 @@ function Update-KomorebiApplications
 
 ##########################################
 
+# Function to set service to Manual and start it
+function Set-ServiceToManualAndStart {
+    param (
+        [string]$serviceName
+    )
+    try {
+        Set-Service -Name $serviceName -StartupType Manual
+        Start-Service -Name $serviceName
+    } catch {
+        Write-Host "Error managing service '$serviceName': $_" -ForegroundColor Red
+    }
+}
+
+# Function to stop service and disable it
+function Stop-ServiceAndDisable {
+    param (
+        [string]$serviceName
+    )
+    try {
+        Stop-Service -Name $serviceName -Force 
+        Set-Service -Name $serviceName -StartupType Disabled
+    } catch {
+        Write-Host "Error managing service '$serviceName': $_" -ForegroundColor Red
+    }
+}
+
+
+$DELL_SERVICES = @(
+    'DellClientManagementService',
+    'DDVDataCollector'
+    'DDVRulesProcessor'
+    'DDVCollectorSvcApi'
+    'SupportAssistAgent'
+    'DellTechHub'
+)
+
+
+function Start-DellServices {
+  foreach ($service in $DELL_SERVICES) {
+    Set-ServiceToManualAndStart -serviceName $service
+  }
+}
+
+function Stop-DellServices {
+  foreach ($service in $DELL_SERVICES) {
+    Stop-ServiceAndDisable -serviceName $service
+  }
+}
+
+
+##########################################
+
 # GPG
 
 function Start-GPG
