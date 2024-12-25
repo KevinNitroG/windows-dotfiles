@@ -51,6 +51,7 @@ CapsLock up:: {
 ; --- RUN APP VIA KEYBOARD SHORTCUT ---
 
 #Enter::Run "wt.exe"
+#+Enter::Run '*RunAs "wt.exe"'
 #t::Run "alacritty.exe"
 ; #c::Run "code.exe" ; Replace with hide cusor
 #b::Run "brave.exe" 
