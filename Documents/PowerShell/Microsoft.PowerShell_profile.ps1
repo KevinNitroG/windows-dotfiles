@@ -968,17 +968,13 @@ function Restart-EVKey
 
 # Komorebi config
 
-function Start-Komorebi
+function Restart-Komorebi
 {
-  if (! (Get-Process "komorebi" -ErrorAction SilentlyContinue))
-  {
-    komorebic.exe start
-  }
-  if (! (Get-Process "AutoHotKey" -ErrorAction SilentlyContinue))
-  {
-    # AutoHotkey.exe "C:/Users/kevinnitro/.config/komorebi/komorebi.ahk"
-    AutoHotkey.exe "$env:USERPROFILE\.config\autohotkey\main.ahk"
-  }
+  Stop-Process -Name komorebi -ErrorAction SilentlyContinue
+  Stop-Process -Name komorebi-bar -ErrorAction SilentlyContinue
+  Stop-Process -Name AutoHotkeyUX -ErrorAction SilentlyContinue
+  komorebic-no-console.exe start --bar
+  AutoHotkey.exe "$env:USERPROFILE\.config\autohotkey\main.ahk"
 }
 
 # Update applications.yml
