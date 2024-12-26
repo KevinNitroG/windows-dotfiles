@@ -63,3 +63,13 @@ customCommands:
         title: 'Cleanup'
         body: 'Are you sure you want to unnecessary files, reflog, optimize the repo?'
     loadingText: 'Cleaning up'
+
+  - key: 'u'
+    context: 'files'
+    command: 'git rm --cached {{.SelectedFile.Name | quote}}'
+    description: 'Untrack a file'
+    prompts:
+      - type: 'confirm'
+        title: 'Untrack'
+        body: 'Are you sure you want to untrack {{.SelectedFile.Name | quote}}?'
+    loadingText: 'Untracking file'
