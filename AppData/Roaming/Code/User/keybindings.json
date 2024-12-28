@@ -90,6 +90,16 @@
     "when": "terminalFocus"
   },
   {
+    "key": "ctrl+shift+`",
+    "command": "-workbench.action.terminal.new",
+    "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "ctrl+shift+`",
+    "command": "workbench.action.closePanel",
+    "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus)"
+  },
+  {
     "key": "space t f",
     "command": "workbench.action.createTerminalEditor",
     "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus) && (terminalProcessSupported || terminalWebExtensionContributedProfile)"
@@ -239,6 +249,16 @@
   {
     "key": "s s",
     "command": "workbench.action.splitEditorDown",
+    "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "s q",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus)"
+  },
+  {
+    "key": "space w",
+    "command": "workbench.action.closeActiveEditor",
     "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus)"
   },
   // Neovim: Window - Navigation
@@ -533,4 +553,3 @@
     "when": "vim.mode == 'Normal' && vim.mode != 'OperatorPendingMode' && vim.mode != 'SearchInProgressMode' && vim.mode != 'CommandlineInProgress' && (editorTextFocus || !inputFocus) && !isAuxiliaryWindowFocusedContext"
   }
 ]
-
