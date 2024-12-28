@@ -480,13 +480,9 @@ Set-PsFzfOption -PSReadlineChordProvider "Ctrl+e" -PSReadlineChordReverseHistory
 function _fzf_open_path
 {
   param (
-    [Parameter(Mandatory = $true)]
+    [Parameter(Mandatory = $false)]
     [string]$input_path
   )
-  if ($input_path -match "^.*:\d+:.*$")
-  {
-    $input_path = ($input_path -split ":")[0]
-  }
   if (-not (Test-Path $input_path))
   {
     return
@@ -537,6 +533,7 @@ function _fzf_get_path_using_rg
       --header-first `
       --preview 'bat --color=always {1} --highlight-line {2} --style=plain' `
       --preview-window 'up,60%,border-bottom,+{2}+3/3'
+  $input_path = ($input_path -split ":")[0]
   return $input_path
 }
 
