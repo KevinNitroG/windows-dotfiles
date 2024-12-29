@@ -56,7 +56,7 @@ customCommands:
 
   - key: 'G'
     context: 'global'
-    command: 'git reflog expire --all --expire=now && git gc --prune=now --aggressive'
+    command: 'git gcc' # set alias for git gcc = "git reflog expire --all --expire=now && git gc --prune=now --aggressive"
     description: 'clean up unnecessary files, reflog, optimize'
     prompts:
       - type: 'confirm'
