@@ -3,7 +3,7 @@
 
 [include]
   path = ~/.config/delta/themes/catppuccin/catppuccin.gitconfig
-  path = ~/.config/git/windows.gitconfig
+  path = ~/.config/git/os.gitconfig
 
 [user]
   name = KevinNitroG
