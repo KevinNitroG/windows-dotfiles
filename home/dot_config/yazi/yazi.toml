@@ -1,5 +1,6 @@
 [manager]
 show_hidden = true
+show_symlink = true
 
 [opener]
 edit = [

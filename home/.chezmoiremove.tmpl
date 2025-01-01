@@ -1,19 +1,58 @@
+# Just keep OBS profiles for comparing
+
 {{ if eq .chezmoi.os "windows" }}
 .config/Code
 .config/lazygit
 .config/rclone
 .config/bat
+.config/vlc
+.config/sddm
+.config/systemd
+.config/tlp
+.config/tlpui
+.config/fcitx5
+.config/crontab
+.config/gammastep
+.config/hypr
+.config/kanata
+.config/kitty
+
+.config/brave-flags.conf
+.config/chrome-flags.conf
+.config/chromium-flags.conf
+.config/code-flags.conf
+.config/dolphinrc
+.config/electron-flags.conf
+.config/kdeglobals
+.config/libinput-gestures.conf
+.config/mimeapps.list
+.config/private_ktrashrc
+.config/private_trashrc
+.config/spotify-flags.conf
+
+.font
+.npm-global
+mount
+
+gtk_rc-2.0.mine
+.tmux.conf
+.zprofile
+.zshenv
+.zshrc
+.zshenv_private
+.zsh_history
 {{ else }}
 AppData
 Documents
 docker
 inshellisense
-config/autohotkey
-config/komorebi
-config/microsoft-office
-config/scoop
-config/windows-tasks-scheduler
-config/xinmeng
-config/whkdrc
+.config/autohotkey
+.config/komorebi
+.config/microsoft-office
+.config/scoop
+.config/windows-tasks-scheduler
+.config/xinmeng
+.config/whkdrc
+.vsvimrc
 {{ end }}
 

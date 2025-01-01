@@ -1,0 +1,30 @@
+# [[manager.prepend_keymap]]
+# on   = [ "p" ]
+# run  = "plugin --sync smart-paste"
+# desc = "Paste into the hovered directory or CWD"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "G" ]
+run  = "cd $HOME/gits/"
+desc = "go to gits directory"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "n" ]
+run  = "cd $HOME/.config/nvim/"
+desc = "go to to nvim config directory"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "C" ]
+run  = "cd $HOME/gits/code/"
+desc = "go to to code directory"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "v" ]
+run  = "cd $HOME/Videos/"
+desc = "go to to videos directory"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "p" ]
+run  = "cd $HOME/Pictures/"
+desc = "go to to pictures directory"
+
