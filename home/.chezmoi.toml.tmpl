@@ -1,11 +1,6 @@
-{{- $email := promptStringOnce . "email" "Email address" -}}
-
 encryption = "gpg"
 mode = "file" # file, symlink
 progress = true
-
-[data]
-    email = {{ $email | quote }}
 
 [git]
 autoAdd = true # Add changes to the source state after any change
@@ -20,3 +15,14 @@ command = "cmd" # Change to pwsh later
 
 [completion]
 custom = true
+
+[edit]
+command = "nvim"
+
+[diff]
+command = "delta"
+pager = "delta"
+
+[merge]
+command = "nvim"
+args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]

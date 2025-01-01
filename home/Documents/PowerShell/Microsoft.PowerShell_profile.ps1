@@ -649,11 +649,6 @@ if ((Get-Command -Name "eza" -ErrorAction SilentlyContinue))
 
 Set-Alias -Name cm -Value chezmoi -Option AllScope
 
-if (Get-Command "chezmoi" -ErrorAction SilentlyContinue)
-{
-  Invoke-Expression (& { (chezmoi completion powershell | Out-String) })
-}
-
 function cmc
 {
   param (
@@ -689,24 +684,18 @@ function cma
 
 function cmp
 {
-  chezmoi git push
+  chezmoi git -- push
 }
 
 function cms
 {
-  $current_dir = Get-Location
-  Set-Location
-  if (!(Get-Process "gpg-agent" -ErrorAction SilentlyContinue))
-  {
-    gpg-connect-agent /bye
-  }
   chezmoi re-add
-  Set-Location $(chezmoi source-path)
-  git f
-  # chezmoi git apply -R
-  # Stop-Process -Name "gpg-agent" -Force -ErrorAction Continue
-  # Stop-Process -Name "keyboxd"
-  Set-Location $current_dir
+  chezmoi git -- f
+}
+
+
+function cme {
+    chezmoi edit --watch $args
 }
 
 
