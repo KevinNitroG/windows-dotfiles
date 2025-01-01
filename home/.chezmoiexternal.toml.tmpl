@@ -6,15 +6,11 @@
 type = "git-repo"
 url = "git@github.com:KevinNitroG/nvim.git"
 
-# ["AppData/Local/LazyVim"]
-# type = "git-repo"
-# url = "git@github.com:KevinNitroG/LazyVim-Starter.git"
-
-# ["AppData/Local/NvChad"]
-# type = "git-repo"
-# url = "git@github.com:KevinNitroG/NvChad-Starter.git"
-
-["AppData/Roaming/alacritty/catppuccin-alacritty"]
+{{ if ne .chezmoi.os "windows" }}
+["AppData/Roaming/alacritty/themes/catppuccin"]
+{{ else }}
+[".config/alacritty/themes/catppuccin"]
+{{ end }}
 type = "git-repo"
 url = "https://github.com/catppuccin/alacritty.git"
 
@@ -26,10 +22,6 @@ url = "https://github.com/YT-Advanced/Windows-11-Cursor-by-rosea92.git"
 type = "git-repo"
 url = "https://github.com/Gravifer/posh-wakatime.git"
 
-# [".config/windows-terminal/windows-terminal-shaders"]
-# type = "git-repo"
-# url = "https://github.com/Hammster/windows-terminal-shaders.git"
-# 
 [".config/komorebi/applications.json"]
 type = "file"
 url = "https://raw.githubusercontent.com/LGUG2Z/komorebi-application-specific-configuration/refs/heads/master/applications.json"

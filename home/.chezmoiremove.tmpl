@@ -1,4 +1,9 @@
-{{ if ne .chezmoi.os "windows" }}
+{{ if eq .chezmoi.os "windows" }}
+.config/Code
+.config/lazygit
+.config/rclone
+.config/bat
+{{ else }}
 AppData
 Documents
 docker
