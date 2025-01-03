@@ -3,13 +3,11 @@
 # run  = "plugin --sync smart-paste"
 # desc = "Paste into the hovered directory or CWD"
 
-[[plugin.prepend_previewers]]
-name = "*.md"
-run = "glow"
-
-[[plugin.prepend_previewers]]
-name = "*/"
-run = "eza-preview" 
+# max-preview
+[[manager.prepend_keymap]]
+on   = "T"
+run  = "plugin max-preview"
+desc = "Maximize or restore preview"
 
 # relative-motions
 [[manager.prepend_keymap]]
