@@ -1530,11 +1530,11 @@ function pgrep($name)
 
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
-function which ($command)
-{
-  Get-Command -Name $command -ErrorAction SilentlyContinue |
-    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
-}
+#function which ($command)
+#{
+#  Get-Command -Name $command -ErrorAction SilentlyContinue |
+#    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+#}
 
 function Check-IsAdmin
 {

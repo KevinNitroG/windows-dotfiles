@@ -45,6 +45,12 @@ git:
 
 customCommands:
   - key: 'F'
+    context: 'files'
+    command: 'git f' # require alias f = git add -A && git commit -m \"chore(save): $(curl -s -f https://whatthecommit.com/index.txt || \"save point\")\" && push origin HEAD
+    description: 'Fetch prune branches'
+    loadingText: 'Pruning branches'
+
+  - key: 'F'
     context: 'localBranches, remoteBranches, remotes'
     command: 'git fetch --prune'
     description: 'Fetch prune branches'
@@ -58,13 +64,15 @@ customCommands:
 
   - key: 'G'
     context: 'global'
-    command: 'git gcc' # set alias for git gcc = "git reflog expire --all --expire=now && git gc --prune=now --aggressive"
+    # command: 'git gcc' # set alias for git gcc = "git reflog expire --all --expire=now && git gc --prune=now --aggressive"
+    command: 'git reflog expire --all --expire=now && git gc --prune=now --aggressive'
     description: 'clean up unnecessary files, reflog, optimize'
     prompts:
       - type: 'confirm'
         title: 'Cleanup'
         body: 'Are you sure you want to unnecessary files, reflog, optimize the repo?'
     loadingText: 'Cleaning up'
+    stream: true
 
   - key: 'u'
     context: 'files'
@@ -75,3 +83,13 @@ customCommands:
         title: 'Untrack'
         body: 'Are you sure you want to untrack {{ "{{" }}.SelectedFile.Name | quote{{ "}}" }}?'
     loadingText: 'Untracking file'
+
+  - key: '<c-r>'
+    context:  'files'
+    command: 'git read-tree --empty && git rm --cached -r . && git add .'
+    description: 'normalise follow git attributes'
+    prompts:
+      - type: 'confirm'
+        title: 'Normalise'
+        body: 'Are you sure you want to normalise follow git attributes?'
+    loadingText: 'Normalising files'

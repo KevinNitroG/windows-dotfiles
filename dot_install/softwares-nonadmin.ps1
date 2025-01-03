@@ -62,9 +62,7 @@ $SCOOP_CODING_TOOLS = @(
   "main/fzf",
   "main/gh",
   "main/glow",
-  "main/gnupg",
   "main/goodbyedpi"
-  "main/grep",
   "main/gzip",
   "main/jq",
   "main/lazydocker",
@@ -72,11 +70,9 @@ $SCOOP_CODING_TOOLS = @(
   "main/rclone",
   "main/ripgrep",
   "main/sd",
-  "main/sed",
   "main/starship",
   "main/sudo",
   "main/tldr",
-  "main/touch",
   "main/unar",
   "main/vivetool",
   "main/wakatime-cli",
@@ -90,18 +86,22 @@ $SCOOP_CODING_TOOLS = @(
   # "main/file", # for yazi, but use in git instead
   # "main/lf",
   # "main/oh-my-posh"
+  #"main/gnupg",
   #"main/gpg", # Use default builtin gpg of git
+  #"main/grep",
+  #"main/sed",
+  #"main/touch",
 )
 
 $SCOOP_OTHER_APPS = @(
-  "extras/qbittorrent-enhanced",
-  "extras/v2rayn"
   "extras/winscp",
   "main/openssl",
-  "main/uutils-coreutils",
   "nonportable/k-lite-codec-pack-standard-np",
-  "nonportable/winfsp-np"
+  "nonportable/winfsp-np" # For rclone
   #"extras/putty",
+  #"extras/qbittorrent-enhanced",
+  #"extras/v2rayn"
+  #"main/uutils-coreutils",
 )
 $PIP_APPS = @(
   "thefuck"
