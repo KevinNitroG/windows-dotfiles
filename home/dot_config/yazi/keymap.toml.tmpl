@@ -3,6 +3,12 @@
 # run  = "plugin --sync smart-paste"
 # desc = "Paste into the hovered directory or CWD"
 
+# compress
+[[manager.prepend_keymap]]
+on   = [ "c", "a" ]
+run  = "plugin compress"
+desc = "Archive selected files"
+
 # max-preview
 [[manager.prepend_keymap]]
 on   = "T"
