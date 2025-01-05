@@ -71,3 +71,8 @@ desc = "go to to videos directory"
 on   = [ "g", "p" ]
 run  = "cd $HOME/Pictures/"
 desc = "go to to pictures directory"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "d" ]
+run  = "cd {{ .chezmoi.sourceDir }}"
+desc = "go to to dotfiles management"
