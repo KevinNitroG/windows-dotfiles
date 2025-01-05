@@ -1,7 +1,5 @@
-# Just keep OBS profiles for comparing
-
 {{ if eq .chezmoi.os "windows" }}
-.config/Code
+.config/Code/**
 .config/lazygit
 .config/rclone
 .config/bat
@@ -41,6 +39,10 @@ gtk_rc-2.0.mine
 .zshrc
 .zshenv_private
 .zsh_history
+
+AppData/Local/TrafficMonitor/history_traffic.dat
+AppData/Local/TrafficMonitor/history_traffic.dat.bak
+AppData/Local/TrafficMonitor/error.log
 {{ else }}
 AppData
 Documents
@@ -55,4 +57,3 @@ inshellisense
 .config/whkdrc
 .vsvimrc
 {{ end }}
-
