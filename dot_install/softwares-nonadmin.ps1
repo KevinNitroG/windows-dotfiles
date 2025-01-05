@@ -13,8 +13,8 @@ $SCOOP_NECESSARYS = @(
   "main/7zip",
   "main/openssh",
   "main/unrar",
-  "main/wget",
-  "main/winget"
+  "main/wget"
+  # "main/winget"
   #"extras/windows-terminal",
   #"neorocks-scoop/luarocks" # For nvim lazy, rest.nvim
 )
@@ -29,7 +29,6 @@ $SCOOP_CODE_EDITORS = @(
 
 $SCOOP_OFTEN_USE_APPS = @(
   "extras/anydesk",
-  "extras/authy",
   "extras/obs-studio",
   "extras/powertoys",
   "extras/vlc",
@@ -103,10 +102,13 @@ $SCOOP_OTHER_APPS = @(
   #"extras/v2rayn"
   #"main/uutils-coreutils",
 )
-$PIP_APPS = @(
-  "thefuck"
-  #"yewtube"
+$MICROSOFT_STORE_APPS = @(
+ "XP8C9QZMS2PC1T" # Brave
 )
+# $PIP_APPS = @(
+#   "thefuck"
+#   "yewtube"
+# )
 
 Install-Module -Name CompletionPredictor -Repository PSGallery -Force
 
@@ -118,4 +120,6 @@ reg import "$env:USERPROFILE\scoop\apps\pwsh\current\install-explorer-context.re
 reg import "$env:USERPROFILE\scoop\apps\pwsh\current\install-file-context.reg"
 reg import "$env:USERPROFILE\scoop\apps\7zip\current\install-context.reg"
 
-pip install $PIP_APPS
+# pip install $PIP_APPS
+
+winget install $MICROSOFT_STORE_APPS --accept-source-agreements --accept-package-agreements
