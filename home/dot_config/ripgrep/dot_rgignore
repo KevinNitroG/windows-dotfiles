@@ -1,3 +1,4 @@
+# vim:ft=conf
 # Weird LaTeX files
 *.aux
 *.bbl
