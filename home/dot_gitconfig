@@ -6,7 +6,7 @@
   path = ~/.config/git/os.gitconfig
 
 [user]
-  name = KevinNitroG
+  name = Kevin Nitro
   email = trannguyenthaibinh46@gmail.com
   signingkey = 071E9CD8A2D41057
   ; signingkey = C:/Users/kevinnitro/.ssh/id_ed25519
