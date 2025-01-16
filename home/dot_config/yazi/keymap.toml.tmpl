@@ -41,6 +41,17 @@ on   = "<A-3>"
 run  = "plugin toggle-view --args=preview"
 desc = "Toggle preview" 
 
+### what-size
+[[manager.prepend_keymap]]
+on   = [".", "s"]
+run  = "plugin what-size" # or "plugin what-size --args='--clipboard'"
+desc = "Calc size of selection or cwd"
+
+[[manager.prepend_keymap]]
+on   = [".", "S"]
+run  = "plugin what-size --args='--clipboard'"
+desc = "Calc size of selection or cwd & copy to clipboard"
+
 # Config for yazi
 
 [[manager.prepend_keymap]]

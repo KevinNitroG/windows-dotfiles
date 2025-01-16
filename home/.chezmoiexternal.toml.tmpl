@@ -18,6 +18,33 @@ url = "git@github.com:KevinNitroG/nvim.git"
 type = "git-repo"
 url = "https://github.com/catppuccin/alacritty.git"
 
+{{ if eq .chezmoi.os "windows" }}
+["AppData/Roaming/bat/themes/Catppuccin Mocha.tmTheme"]
+{{ else }}
+[".config/bat/themes/Catppuccin Mocha.tmTheme"]
+{{ end }}
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme"
+
+[".config/delta/themes/catppuccin"]
+type = "git-repo"
+url = "https://github.com/catppuccin/delta.git"
+
+{{ if eq .chezmoi.os "windows" }}
+["AppData/Local/glow/Config/themes/catppuccin-mocha.json"]
+{{ else }}
+[".config/glow/themes/catppuccin-mocha.json"]
+{{ end }}
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/glamour/main/themes/catppuccin-mocha.json"
+
+[".config/atac/key_bindings.toml"]
+type = "file"
+url = "https://raw.githubusercontent.com/Julien-cpsn/ATAC/main/example_resources/key_bindings/vim_key_bindings.toml"
+
+##########################################
+
+# YAZI
 
 [".config/yazi/theme.toml"]
 type = "file"
@@ -47,36 +74,15 @@ url = "https://github.com/dedukun/relative-motions.yazi"
 type = "git-repo"
 url = "https://github.com/KKV9/compress.yazi"
 
+[".config/yazi/plugins/what-size.yazi"]
+type = "git-repo"
+url = "https://github.com/pirafrank/what-size.yazi"
+
 [".config/yazi/plugins"]
 type = "archive"
 url = "https://github.com/yazi-rs/plugins/archive/refs/heads/main.zip"
 stripComponents = 1
 include = ["*/git.yazi/**", "*/max-preview.yazi/**"]
-
-{{ if eq .chezmoi.os "windows" }}
-["AppData/Roaming/bat/themes/Catppuccin Mocha.tmTheme"]
-{{ else }}
-[".config/bat/themes/Catppuccin Mocha.tmTheme"]
-{{ end }}
-type = "file"
-url = "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme"
-
-[".config/delta/themes/catppuccin"]
-type = "git-repo"
-url = "https://github.com/catppuccin/delta.git"
-
-{{ if eq .chezmoi.os "windows" }}
-["AppData/Local/glow/Config/themes/catppuccin-mocha.json"]
-{{ else }}
-[".config/glow/themes/catppuccin-mocha.json"]
-{{ end }}
-type = "file"
-url = "https://raw.githubusercontent.com/catppuccin/glamour/main/themes/catppuccin-mocha.json"
-
-[".config/atac/key_bindings.toml"]
-type = "file"
-url = "https://raw.githubusercontent.com/Julien-cpsn/ATAC/main/example_resources/key_bindings/vim_key_bindings.toml"
-
 
 ##########################################
 
