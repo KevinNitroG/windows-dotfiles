@@ -1,0 +1,28 @@
+encryption = "gpg"
+mode = "file" # file, symlink
+progress = true
+
+[git]
+autoAdd = true # Add changes to the source state after any change
+autoCommit = false
+autoPush = false
+
+[gpg]
+recipient = "KevinNitroG"
+
+[cd]
+command = "cmd" # Change to pwsh later
+
+[completion]
+custom = true
+
+[edit]
+command = "nvim"
+
+[diff]
+command = "delta"
+pager = "delta"
+
+[merge]
+command = "nvim"
+args = ["-d", "{{ "{{" }} .Destination {{ "}}" }}", "{{ "{{" }} .Source {{ "}}" }}", "{{ "{{" }} .Target {{ "}}" }}"]
