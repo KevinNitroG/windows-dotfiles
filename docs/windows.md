@@ -54,9 +54,9 @@
 
 ### Check Wifi Password
 
-|                                  **SELECT**                                  |                             **SHOWN**                             |
-| :--------------------------------------------------------------------------: | :---------------------------------------------------------------: |
-| ![Check Wifi Password 1](../assets/images/windows/check_wifi_password-1.png) | ![Check Wifi Password 2](assets/images/check_wifi_password-2.png) |
+|                                  **SELECT**                                  |                                  **SHOWN**                                   |
+| :--------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
+| ![Check Wifi Password 1](../assets/images/windows/check_wifi_password-1.png) | ![Check Wifi Password 2](../assets/images/windows/check_wifi_password-2.png) |
 
 > [!NOTE]
 > Using FZF if installed. Work even without FZF but I'm lazy to show.
@@ -65,10 +65,10 @@
 
 ### App Manage
 
-|  **PM**   |                               **UPGRADE**                               |                          **UNINSTALL**                           |
-| :-------: | :---------------------------------------------------------------------: | :--------------------------------------------------------------: |
-| **SCOOP** | ![Scoop upgrade](../assets/images/windows/app_manage-scoop-upgrade.png) | ![Scoop uninstall](assets/images/app_manage-scoop-uninstall.png) |
-| **CHOCO** | ![Choco upgrade](../assets/images/windows/app_manage-choco-upgrade.png) | ![Choco uninstall](assets/images/app_manage-choco-uninstall.png) |
+|  **PM**   |                               **UPGRADE**                               |                                **UNINSTALL**                                |
+| :-------: | :---------------------------------------------------------------------: | :-------------------------------------------------------------------------: |
+| **SCOOP** | ![Scoop upgrade](../assets/images/windows/app_manage-scoop-upgrade.png) | ![Scoop uninstall](../assets/images/windows/app_manage-scoop-uninstall.png) |
+| **CHOCO** | ![Choco upgrade](../assets/images/windows/app_manage-choco-upgrade.png) | ![Choco uninstall](../assets/images/windows/app_manage-choco-uninstall.png) |
 
 > [!NOTE]
 >
@@ -82,13 +82,13 @@
 
 ### Find files / directories / file content
 
-|           [fzf](https://github.com/junegunn/fzf/)           |             [fd](https://github.com/sharkdp/fd/)              |
-| :---------------------------------------------------------: | :-----------------------------------------------------------: |
-| ![fdg - find files](../assets/images/windows/find-file.png) | ![fdg - find directories](assets/images/find-directories.png) |
+|           [fzf](https://github.com/junegunn/fzf/)           |                   [fd](https://github.com/sharkdp/fd/)                   |
+| :---------------------------------------------------------: | :----------------------------------------------------------------------: |
+| ![fdg - find files](../assets/images/windows/find-file.png) | ![fdg - find directories](../assets/images/windows/find-directories.png) |
 
-|      [ripgrep](https://github.com/BurntSushi/ripgrep)       |          [fzf](https://github.com/junegunn/fzf/)           |
-| :---------------------------------------------------------: | :--------------------------------------------------------: |
-| ![rgg - ripgrep](../assets/images/windows/find-ripgrep.png) | ![rgg - ripgrep - fzf](assets/images/find-ripgrep_fzf.png) |
+|      [ripgrep](https://github.com/BurntSushi/ripgrep)       |                [fzf](https://github.com/junegunn/fzf/)                |
+| :---------------------------------------------------------: | :-------------------------------------------------------------------: |
+| ![rgg - ripgrep](../assets/images/windows/find-ripgrep.png) | ![rgg - ripgrep - fzf](../assets/images/windows/find-ripgrep_fzf.png) |
 
 ![cd or neovim](../assets/images/windows/find-choice.png)
 

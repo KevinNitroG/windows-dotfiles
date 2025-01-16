@@ -53,9 +53,9 @@
 
 ### Get wifi password
 
-| `get_wifi_password`                                                | `get_current_wifi_password`                                               |
-| ------------------------------------------------------------------ | ------------------------------------------------------------------------- |
-| ![get_wifi_password](../assets/images/linux/get-wifi-password.png) | ![get_current_wifi_password](assets/images/get-current-wifi-password.png) |
+| `get_wifi_password`                                                | `get_current_wifi_password`                                                        |
+| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
+| ![get_wifi_password](../assets/images/linux/get-wifi-password.png) | ![get_current_wifi_password](../assets/images/linux/get-current-wifi-password.png) |
 
 ---
 
