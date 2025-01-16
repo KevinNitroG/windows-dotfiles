@@ -8,6 +8,7 @@
 
 source "$HOME/.zshenv_private"
 export DISABLE_AUTO_UPDATE=true
+export CHROME_EXECUTABLE=$(which brave)
 
 
 ##########################################

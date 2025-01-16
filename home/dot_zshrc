@@ -468,7 +468,6 @@ get_wifi_password() {
 # RUN SOME STUFF
 fastfetch
 eval "$(starship init zsh)"
-eval "$(pyenv init -)"
 
 # pnpm
 export PNPM_HOME="/home/kevinnitro/.local/share/pnpm"

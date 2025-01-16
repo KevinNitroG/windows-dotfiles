@@ -1,4 +1,5 @@
 {{ if eq .chezmoi.os "windows" }}
+
 .config/Code/**
 .config/lazygit
 .config/rclone
@@ -45,7 +46,9 @@ AppData/Local/TrafficMonitor/history_traffic.dat.bak
 AppData/Local/TrafficMonitor/error.log
 AppData/Local/EVKey/_setting.ini
 AppData/Local/UniKey/_uk_process_state.txt
+
 {{ else }}
+
 AppData
 Documents
 docker
@@ -58,4 +61,12 @@ inshellisense
 .config/xinmeng
 .config/whkdrc
 .vsvimrc
+
+# Hyprland
+.config/hypr/*
+!.config/hypr/userprefs.conf
+
+# SDDM
+.config/sddm/themes/*
+
 {{ end }}

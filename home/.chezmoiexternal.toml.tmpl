@@ -2,11 +2,15 @@
 
 # CONFIG
 
+{{ if eq .chezmoi.os "windows" }}
 ["AppData/Local/nvim"]
+{{ else }}
+[".config/nvim"]
+{{ end }}
 type = "git-repo"
 url = "git@github.com:KevinNitroG/nvim.git"
 
-{{ if ne .chezmoi.os "windows" }}
+{{ if eq .chezmoi.os "windows" }}
 ["AppData/Roaming/alacritty/themes/catppuccin"]
 {{ else }}
 [".config/alacritty/themes/catppuccin"]
@@ -14,21 +18,6 @@ url = "git@github.com:KevinNitroG/nvim.git"
 type = "git-repo"
 url = "https://github.com/catppuccin/alacritty.git"
 
-[".config/cursor/Windows-11-Cursor-by-rosea92"]
-type = "git-repo"
-url = "https://github.com/YT-Advanced/Windows-11-Cursor-by-rosea92.git"
-
-[".config/wakatime/posh-wakatime"]
-type = "git-repo"
-url = "https://github.com/Gravifer/posh-wakatime.git"
-
-[".config/komorebi/applications.json"]
-type = "file"
-url = "https://raw.githubusercontent.com/LGUG2Z/komorebi-application-specific-configuration/refs/heads/master/applications.json"
-
-[".config/autohotkey/komorebic.lib.ahk"]
-type = "file"
-url = "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/komorebic.lib.ahk"
 
 [".config/yazi/theme.toml"]
 type = "file"
@@ -64,19 +53,23 @@ url = "https://github.com/yazi-rs/plugins/archive/refs/heads/main.zip"
 stripComponents = 1
 include = ["*/git.yazi/**", "*/max-preview.yazi/**"]
 
+{{ if eq .chezmoi.os "windows" }}
 ["AppData/Roaming/bat/themes/Catppuccin Mocha.tmTheme"]
+{{ else }}
+[".config/bat/themes/Catppuccin Mocha.tmTheme"]
+{{ end }}
 type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/bat/main/themes/Catppuccin%20Mocha.tmTheme"
-
-["Document/PowerShell/Modules/Catppuccin"]
-type = "git-repo"
-url = "https://github.com/catppuccin/powershell.git"
 
 [".config/delta/themes/catppuccin"]
 type = "git-repo"
 url = "https://github.com/catppuccin/delta.git"
 
+{{ if eq .chezmoi.os "windows" }}
 ["AppData/Local/glow/Config/themes/catppuccin-mocha.json"]
+{{ else }}
+[".config/glow/themes/catppuccin-mocha.json"]
+{{ end }}
 type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/glamour/main/themes/catppuccin-mocha.json"
 
@@ -84,9 +77,42 @@ url = "https://raw.githubusercontent.com/catppuccin/glamour/main/themes/catppucc
 type = "file"
 url = "https://raw.githubusercontent.com/Julien-cpsn/ATAC/main/example_resources/key_bindings/vim_key_bindings.toml"
 
-[".config/autohotkey/hidecursor.ahk"]
-type = "file"
-url = "https://raw.githubusercontent.com/steveseguin/hide-cursor/refs/heads/main/hidecursor.ahk"
+
+##########################################
+
+# OH-MY-ZSH
+
+{{ if ne .chezmoi.os "windows" }}
+
+[".oh-my-zsh"]
+type = "git-repo"
+url = "https://github.com/ohmyzsh/ohmyzsh.git"
+
+[".oh-my-zsh/custom/plugins/fzf-tab"]
+type = "git-repo"
+url = "https://github.com/Aloxaf/fzf-tab.git"
+
+[".oh-my-zsh/custom/plugins/wakatime"]
+type = "git-repo"
+url = "https://github.com/sobolevn/wakatime-zsh-plugin.git"
+
+[".oh-my-zsh/custom/plugins/zsh-256color"]
+type = "git-repo"
+url = "https://github.com/chrissicool/zsh-256color.git"
+
+[".oh-my-zsh/custom/plugins/zsh-autosuggestions"]
+type = "git-repo"
+url = "https://github.com/zsh-users/zsh-autosuggestions.git"
+
+[".oh-my-zsh/custom/plugins/zsh-syntax-highlighting"]
+type = "git-repo"
+url = "https://github.com/zsh-users/zsh-syntax-highlighting.git"
+
+[".oh-my-zsh/custom/plugins/zsh-autocomplete"]
+type = "git-repo"
+url = "https://github.com/marlonrichert/zsh-autocomplete.git"
+
+{{ end }}
 
 ##########################################
 
@@ -95,6 +121,55 @@ url = "https://raw.githubusercontent.com/steveseguin/hide-cursor/refs/heads/main
 ["obsidian/main"]
 type = "git-repo"
 url = "https://github.com/KevinNitroG/obsidian-vault-main"
+
+##########################################
+
+# WINDOWS ONLY
+
+{{ if eq .chezmoi.os "windows" }}
+
+[".config/cursor/Windows-11-Cursor-by-rosea92"]
+type = "git-repo"
+url = "https://github.com/YT-Advanced/Windows-11-Cursor-by-rosea92.git"
+
+[".config/wakatime/posh-wakatime"]
+type = "git-repo"
+url = "https://github.com/Gravifer/posh-wakatime.git"
+
+[".config/komorebi/applications.json"]
+type = "file"
+url = "https://raw.githubusercontent.com/LGUG2Z/komorebi-application-specific-configuration/refs/heads/master/applications.json"
+
+[".config/autohotkey/komorebic.lib.ahk"]
+type = "file"
+url = "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/komorebic.lib.ahk"
+
+[".config/autohotkey/hidecursor.ahk"]
+type = "file"
+url = "https://raw.githubusercontent.com/steveseguin/hide-cursor/refs/heads/main/hidecursor.ahk"
+
+["Document/PowerShell/Modules/Catppuccin"]
+type = "git-repo"
+url = "https://github.com/catppuccin/powershell.git"
+
+{{ end }}
+
+##########################################
+
+# NOT! WINDOWS ONLY
+
+{{ if ne .chezmoi.os "windows" }}
+
+[".config/zathura/catppuccin-mocha"]
+type = "file"
+url = "https://raw.githubusercontent.com/catppuccin/zathura/main/src/catppuccin-mocha"
+
+[".config/sddm/themes/"]
+type = "archive"
+url = "https://github.com/catppuccin/sddm/releases/latest/download/catppuccin-mocha.zip"
+include = ["**/*"]
+
+{{ end }}
 
 ##########################################
 
