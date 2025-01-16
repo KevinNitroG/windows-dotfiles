@@ -1,11 +1,12 @@
 # https://alacritty.org/config-alacritty.html
 
+[general]
 import = [
-{{ if ne .chezmoi.os "windows" }}
+{{- if eq .chezmoi.os "windows" -}}
   "~/AppData/Roaming/alacritty/themes/catppuccin/catppuccin-macchiato.toml",
-{{ else }}
+{{- else -}}
   "~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml",
-{{ end }}
+{{- end -}}
 ]
 live_config_reload = true
 
@@ -14,13 +15,16 @@ live_config_reload = true
 TERM = "alacritty"
 TERMINAL = "alacritty"
 
-[shell]
-{{ if ne .chezmoi.os "windows" }}
-program = "pwsh"
-args = ["-noLogo", "-WorkingDirectory C:/Users/kevinnitro/"]
-{{ else }}
-program = "zsh"
-{{ end }}
+[terminal]
+osc52 = "CopyPaste"
+shell = {
+  {{- if eq .chezmoi.os "windows" -}}
+  program = "pwsh",
+  args = ["-noLogo", "-WorkingDirectory C:/Users/kevinnitro/"]
+  {{- else -}}
+  program = "zsh"
+  {{- end -}}
+}
 
 [window]
 padding = { x = 2, y = 2 }
@@ -51,9 +55,6 @@ vi_mode_style = { shape = "Block", blinking = "Off" }
 [mouse]
 bindings = [{ mouse = "Right", mods = "Control", action = "Paste" }]
 hide_when_typing = true
-
-[terminal]
-osc52 = "CopyPaste"
 
 [keyboard]
 bindings = [
