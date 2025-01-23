@@ -87,6 +87,7 @@ declare -A _EVALX_COMMANDS=(
   [source_npm_completion]='source <(npm completion)'
   [source_python_venv]='source .venv/bin/activate'
   [source_warp_cli_completion]='source <(warp-cli generate-completions zsh)'
+  [source_just_completion]='source <(just --completions zsh)'
   [start_docker_desktop_service]='systemctl --user start docker-desktop'
   [start_docker_service]='sudo systemctl start docker.service docker.socket'
   [start_mysql_service]='sudo systemctl start mysqld.service'
@@ -94,6 +95,7 @@ declare -A _EVALX_COMMANDS=(
   [stop_docker_desktop_service]='systemctl --user stop docker-desktop'
   [stop_docker_service]='sudo systemctl stop docker.service docker.socket'
   [stop_mysql_service]='sudo systemctl stop mysqld.service'
+  [source_railway_completion]='source <(railway completion zsh)'
 )
 
 evalx() {
