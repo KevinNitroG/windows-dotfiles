@@ -339,14 +339,13 @@ Set-Alias -Name rebootnow -Value Restart-Computer
 #   Set-Alias -Name msbuild -Value "$(&"${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -prerelease -products * -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe)"
 # }
 
-if (Get-Command lazygit)
-{
-  Set-Alias -Name lg -Value lazygit
-}
+Set-Alias -Name lg -Value lazygit
 
-if ((Get-Command git) -and (Get-Command scoop))
+
+if (Get-Command scoop)
 {
-  Set-Alias -Name gitbash -Value "$(scoop prefix git)\bin\bash.exe"
+  Set-Alias -Name gitbash -Value "$env:USERPROFILE\scoop\app\git\current\bin\bash.exe"
+  Set-Alias -Name curl -Value "$env:USERPROFILE\scoop\app\curl\current\bin\curl.exe"
 }
 
 
@@ -1694,5 +1693,3 @@ Invoke-Expression (& { (zoxide init powershell --cmd cd | Out-String) })
 
 # Fastfetch
 fastfetch
-
-
