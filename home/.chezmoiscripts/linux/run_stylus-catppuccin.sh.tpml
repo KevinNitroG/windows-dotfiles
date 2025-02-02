@@ -4,4 +4,4 @@ accent_color='{{catppuccin_accent_color}}'
 light_flavor='{{catppuccin_light_flavour}}'
 dark_flavor='{{catppuccin_dark_flavour}}'
 
-curl -L https://github.com/catppuccin/userstyles/releases/download/all-userstyles-export/import.json | jq ".[1:].[].usercssData.vars.accentColor.value |= \"$accent_color\" | .[1:].[].usercssData.vars.lightFlavor.value |= \"$light_flavor\" | .[1:].[].usercssData.vars.darkFlavor.value |= \"$dark_flavor\"" >~/.config/browser-data/stylus/catppuccin.json
+~/.scripts/shell/stylus-catppuccin.sh $accent_color $light_flavor $dark_flavor
