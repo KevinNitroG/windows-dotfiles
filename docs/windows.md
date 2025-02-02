@@ -149,11 +149,11 @@
   ```
 - Install perquisite scoop _(non-admin)_
   ```ps1
-  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteScoop.ps1" | iex
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/prerequisiteScoop.ps1" | iex
   ```
 - Install perquisite choco _(admin)_
   ```ps1
-  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/prerequisiteChoco.ps1" | iex
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/prerequisiteChoco.ps1" | iex
   ```
 
 ---
@@ -177,7 +177,7 @@ chezmoi init --apply --verbose git@github.com:KevinNitroG/windows-dotfiles.git
 ### 4️⃣ Set env path _(Admin)_
 
 ```ps1
-iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/environmentVariables.ps1" | iex
+iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/environmentVariables.ps1" | iex
 ```
 
 ---
@@ -186,15 +186,15 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
 
 - Install programming languages
   ```ps1
-  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/programmingLanguage.ps1" | iex
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/programmingLanguage.ps1" | iex
   ```
 - Install software _(non-admin)_
   ```ps1
-  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-nonadmin.ps1" | iex
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/softwares-nonadmin.ps1" | iex
   ```
 - Install software _(admin)_
   ```ps1
-  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/softwares-admin.ps1" | iex
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/softwares-admin.ps1" | iex
   ```
 
 ---
@@ -220,7 +220,7 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_ins
   ```
 - Run script _(non-admin)_
   ```ps1
-  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/dot_install/install.ps1" | iex
+  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/install.ps1" | iex
   ```
 
 ---

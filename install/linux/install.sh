@@ -44,7 +44,7 @@ esac
 case "$DISTRO" in
 'Arch')
   # shellcheck disable=SC1090
-  source <(curl -fsSL 'https://raw.githubusercontent.com/KevinNitroG/dotfiles/main/dot_install/linux/install-arch.sh')
+  source <(curl -fsSL 'https://raw.githubusercontent.com/KevinNitroG/dotfiles/main/install/linux/install-arch.sh')
   ;;
 *)
   echo 'Unsupport distro!'
