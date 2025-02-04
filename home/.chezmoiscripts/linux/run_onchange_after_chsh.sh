@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [[ "$0" =~ .*zsh$ ]]; then
+if [[ "$SHELL" =~ .*zsh$ ]]; then
   exit 0
 fi
 

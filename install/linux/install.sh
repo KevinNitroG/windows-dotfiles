@@ -99,11 +99,6 @@ if has tlp; then
   sudo systemctl mask systemd-rfkill.service systemd-rfkill.socket
 fi
 
-if has npm; then
-  echo "CONFIG NPM..."
-  mkdir -p ~/.npm-global/
-fi
-
 if has crontab; then
   echo "INSTALL CRONTAB..."
   crontab ~/.config/crontab/kevinnitro

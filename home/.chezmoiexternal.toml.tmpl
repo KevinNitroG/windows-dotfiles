@@ -166,6 +166,10 @@ url = "https://github.com/catppuccin/powershell.git"
 
 {{ if ne .chezmoi.os "windows" }}
 
+[".tmux/plugins/tpm"]
+type = "git-repo"
+url = "https://github.com/tmux-plugins/tpm"
+
 [".config/zathura/catppuccin-mocha"]
 type = "file"
 url = "https://raw.githubusercontent.com/catppuccin/zathura/main/src/catppuccin-mocha"

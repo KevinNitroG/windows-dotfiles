@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-accent_color='{{catppuccin_accent_color}}'
-light_flavor='{{catppuccin_light_flavour}}'
-dark_flavor='{{catppuccin_dark_flavour}}'
-
-~/.scripts/shell/stylus-catppuccin.sh $accent_color $light_flavor $dark_flavor

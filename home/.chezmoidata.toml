@@ -1,0 +1,6 @@
+theme = "dark"
+terminalFontSize = 13
+
+catppuccinAccentColor = "lavender"
+catppuccinLightFlavour = "latte"
+catppuccinDarkFlavour = "mocha"
