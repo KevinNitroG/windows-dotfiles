@@ -14,18 +14,18 @@ My Windows and Arch linux (hyprdots) managed by chezmoi
 
 ### Terminal
 
-| **Linux**                                            | **Windows**                                              |
-| ---------------------------------------------------- | -------------------------------------------------------- |
-| ![Linux terminal](.assets/images/linux/terminal.png) | ![Windows terminal](.assets/images/windows/terminal.png) |
+| **Linux**                                             | **Windows**                                               |
+| ----------------------------------------------------- | --------------------------------------------------------- |
+| ![Linux terminal](./assets/images/linux/terminal.png) | ![Windows terminal](./assets/images/windows/terminal.png) |
 
 ### Neovim
 
 > [!NOTE]
 > Neovim config <https://github.com/KevinNitroG/nvim>
 
-| **Linux**                                        | **Windows**                                          |
-| ------------------------------------------------ | ---------------------------------------------------- |
-| ![Linux Neovim](.assets/images/linux/neovim.png) | ![Windows Neovim](.assets/images/windows/neovim.png) |
+| **Linux**                                         | **Windows**                                           |
+| ------------------------------------------------- | ----------------------------------------------------- |
+| ![Linux Neovim](./assets/images/linux/neovim.png) | ![Windows Neovim](./assets/images/windows/neovim.png) |
 
 ### Find files / directories / file content
 
