@@ -15,3 +15,7 @@ My Windows and Arch linux (hyprdots) managed by chezmoi
 
 - [Windows](./docs/windows.md)
 - [Linux](./docs/linux.md)
+
+## References
+
+- <https://github.com/megabyte-labs/install.doctor>

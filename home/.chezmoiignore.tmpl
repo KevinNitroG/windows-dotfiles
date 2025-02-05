@@ -1,3 +1,7 @@
+.config/browser-data/stylus/catppuccin.json
+
+##########################################
+
 {{ if eq .chezmoi.os "windows" }}
 
 .config/Code/**
@@ -65,13 +69,17 @@ inshellisense
 .scripts/batch/
 .scripts/registry/
 
-# Hyprland
-.config/hypr/*
-!.config/hypr/userprefs.conf
-
-# SDDM
-.config/sddm/themes/*
-
 {{ end }}
 
-.config/browser-data/stylus/catppuccin.json
+##########################################
+
+{{ if not (lookPath "sddm") }}
+.config/sddm/themes/*
+{{ end }}
+
+##########################################
+
+{{ if not (lookPath "hyprland") }}
+.config/hypr/*
+!.config/hypr/userprefs.conf
+{{ end }}

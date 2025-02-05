@@ -1,12 +1,22 @@
 # https://alacritty.org/config-alacritty.html
 
+{{- $catppuccinThemePath := "" }}
+{{- if eq .chezmoi.os "windows" }}
+  {{- $catppuccinThemePath = "~/AppData/Roaming/alacritty/themes/catppuccin" }}
+{{- else }}
+  {{- $catppuccinThemePath = "~/.config/alacritty/themes/catppuccin" }}
+{{- end }}
+
+{{- $catppuccinTheme := "" }}
+{{- if eq .settings.theme "dark" }}
+  {{- $catppuccinTheme = .catppuccin.darkFlavour }}
+{{- else }}
+  {{- $catppuccinTheme = .catppuccin.lightFlavour }}
+{{- end }}
+
 [general]
 import = [
-{{- if eq .chezmoi.os "windows" -}}
-  "~/AppData/Roaming/alacritty/themes/catppuccin/catppuccin-macchiato.toml",
-{{- else -}}
-  "~/.config/alacritty/themes/catppuccin/catppuccin-mocha.toml",
-{{- end -}}
+"{{ $catppuccinThemePath }}/catppuccin-{{ $catppuccinTheme }}.toml"
 ]
 live_config_reload = true
 

@@ -12,11 +12,7 @@
 - [🪴 INSTALL](#-install)
   - [1️⃣ Add Keys](#-add-keys)
   - [2️⃣ Install](#-install)
-  - [3️⃣ Install some code stuff via `Mason` manually](#-install-some-code-stuff-via-mason-manually)
-    - [DAP](#dap)
-    - [Linter](#linter)
-    - [Formatter](#formatter)
-  - [4️⃣ TODO](#-todo)
+  - [3️⃣ ITODO](#-itodo)
     - [Browser](#browser)
       - [Brave](#brave)
 - [UTILS](#utils)
@@ -92,33 +88,7 @@
 bash <(curl -fsSL https://raw.githubusercontent.com/KevinNitroG/linux-dotfiles/main/install/install.sh)
 ```
 
-### 3️⃣ Install some code stuff via `Mason` manually
-
-#### DAP
-
-- js-debug-adapter
-- codelldb / cpptools
-- debugpy
-
-#### Linter
-
-- actionlint
-- cpplint
-- markdownlint
-- ruff
-- sqlfluff _(it's a formatter also)_
-
-#### Formatter
-
-- beautysh
-- doctoc
-- markdownlint
-- prettier
-- ruff
-- shfmt
-- stylua
-
-### 4️⃣ TODO
+### 3️⃣ ITODO
 
 #### Browser
 
