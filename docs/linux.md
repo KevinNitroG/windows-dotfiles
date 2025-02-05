@@ -5,14 +5,9 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [😎 PREVIEW](#-preview)
-  - [Terminal](#terminal)
-  - [Neovim](#neovim)
-  - [Get wifi password](#get-wifi-password)
 - [🪴 INSTALL](#-install)
   - [1️⃣ Add Keys](#-add-keys)
-  - [2️⃣ Install](#-install)
-  - [3️⃣ ITODO](#-itodo)
+  - [2️⃣TODO](#todo)
     - [Browser](#browser)
       - [Brave](#brave)
 - [UTILS](#utils)
@@ -22,36 +17,8 @@
   - [XDG](#xdg)
   - [Fingerprint](#fingerprint)
   - [Tmux](#tmux)
-  - [Wallpaper](#wallpaper)
-  - [Other dotfiles](#other-dotfiles)
-    - [Preconfig](#preconfig)
-    - [Others](#others)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
----
-
-## 😎 PREVIEW
-
-### Terminal
-
-![terminal](../assets/images/linux/terminal.png)
-
-### Neovim
-
-![neovim](../assets/images/linux/neovim.png)
-
-> [!NOTE]
->
-> I use [Alexis12119's nvim config](https://github.com/Alexis12119/nvim-config)
->
-> My [fork config](https://github.com/KevinNitroG/Alexis12119-nvim)
-
-### Get wifi password
-
-| `get_wifi_password`                                                | `get_current_wifi_password`                                                        |
-| ------------------------------------------------------------------ | ---------------------------------------------------------------------------------- |
-| ![get_wifi_password](../assets/images/linux/get-wifi-password.png) | ![get_current_wifi_password](../assets/images/linux/get-current-wifi-password.png) |
 
 ---
 
@@ -82,13 +49,7 @@
 >
 > In order to encrypt / decrypt chezmoi
 
-### 2️⃣ Install
-
-```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/KevinNitroG/linux-dotfiles/main/install/install.sh)
-```
-
-### 3️⃣ ITODO
+### 2️⃣TODO
 
 #### Browser
 
@@ -171,46 +132,3 @@ setfont ter-132n
   ```tmux
   attach-session -t . -c /path/to/new/directory
   ```
-
-### Wallpaper
-
-- https://github.com/D3Ext/aesthetic-wallpapers
-- https://github.com/DenverCoder1/minimalistic-wallpaper-collection
-- https://github.com/Gingeh/wallpapers
-
-### Other dotfiles
-
-#### Preconfig
-
-- https://github.com/JaKooLit/Hyprland-Dots
-- https://github.com/end-4/dots-hyprland
-- https://github.com/gh0stzk/dotfiles (BSPWM)
-- https://github.com/koeqaife/hyprland-material-you
-- https://github.com/prasanthrangan/hyprdots
-- https://gitlab.com/stephan-raabe/dotfiles
-
-#### Others
-
-- https://github.com/2KAbhishek/dots2k
-- https://github.com/2nthony/dotfiles (Lazygit?)
-- https://github.com/Alexis12119/dotfiles
-- https://github.com/Cybersnake223/Hypr
-- https://github.com/Integralist/dotfiles
-- https://github.com/JoosepAlviste/dotfiles
-- https://github.com/asilvadesigns/config
-- https://github.com/bahamas10/dotfiles (YSAP)
-- https://github.com/chaneyzorn/dotfiles
-- https://github.com/craftzdog/dotfiles-public
-- https://github.com/dlvhdr/dotfiles
-- https://github.com/dreamsofautonomy/zensh
-- https://github.com/linkarzu/dotfiles-latest
-- https://github.com/mischavandenburg/dotfiles
-- https://github.com/nguyenvukhang/docker-dev
-- https://github.com/nguyenvukhang/dots (git config!)
-- https://github.com/omerxx/dotfiles (have good tmux plugins)
-- https://github.com/p3nguin-kun/dotfiles
-- https://github.com/petobens/dotfiles (X config, tmux for linux & mac)
-- https://github.com/rusty-electron/dotfiles
-- https://github.com/siduck/dotfiles
-- https://github.com/stevearc/dotfiles
-- https://github.com/wincent/wincent (Old dotfiles 😱)

@@ -5,20 +5,13 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [😎 PREVIEW](#-preview)
-  - [Terminal](#terminal)
-  - [Check Wifi Password](#check-wifi-password)
+- [😎 SHOWCASE](#-showcase)
   - [App Manage](#app-manage)
-  - [Find files / directories / file content](#find-files--directories--file-content)
-  - [Neovim](#neovim)
 - [🪴 INSTALL](#-install)
   - [1️⃣ Add Keys](#-add-keys)
   - [2️⃣ Install prerequisite](#-install-prerequisite)
   - [3️⃣ Chezmoi](#-chezmoi)
-  - [4️⃣ Set env path _(Admin)_](#-set-env-path-_admin_)
-  - [5️⃣ Install software](#-install-software)
   - [6️⃣ Install fonts](#-install-fonts)
-  - [🧪 ONE SCRIPT _(test)_](#-one-script-_test_)
 - [🎈 EXTRAS](#-extras)
   - [Crack Winrar _(Admin)_](#crack-winrar-_admin_)
   - [Patch IDM](#patch-idm)
@@ -29,7 +22,7 @@
   - [Spotify](#spotify)
   - [Chrome extensions](#chrome-extensions)
   - [Need to do](#need-to-do)
-  - [Others](#others)
+  - [Additional](#additional)
 - [📒 NOTES](#-notes)
   - [SSH](#ssh)
   - [GPG](#gpg)
@@ -40,28 +33,13 @@
     - [Set / Get variables](#set--get-variables)
     - [Default variables](#default-variables)
     - [Optimise VHD(X)](#optimise-vhdx)
-    - [Others](#others-1)
+    - [Others](#others)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ---
 
-## 😎 PREVIEW
-
-### Terminal
-
-![Terminal Preview](../assets/images/windows/preview_terminal.png)
-
-### Check Wifi Password
-
-|                                  **SELECT**                                  |                                  **SHOWN**                                   |
-| :--------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-| ![Check Wifi Password 1](../assets/images/windows/check_wifi_password-1.png) | ![Check Wifi Password 2](../assets/images/windows/check_wifi_password-2.png) |
-
-> [!NOTE]
-> Using FZF if installed. Work even without FZF but I'm lazy to show.
-
----
+## 😎 SHOWCASE
 
 ### App Manage
 
@@ -77,41 +55,6 @@
 > [!IMPORTANT]
 >
 > Need FZF
-
----
-
-### Find files / directories / file content
-
-|           [fzf](https://github.com/junegunn/fzf/)           |                   [fd](https://github.com/sharkdp/fd/)                   |
-| :---------------------------------------------------------: | :----------------------------------------------------------------------: |
-| ![fdg - find files](../assets/images/windows/find-file.png) | ![fdg - find directories](../assets/images/windows/find-directories.png) |
-
-|      [ripgrep](https://github.com/BurntSushi/ripgrep)       |                [fzf](https://github.com/junegunn/fzf/)                |
-| :---------------------------------------------------------: | :-------------------------------------------------------------------: |
-| ![rgg - ripgrep](../assets/images/windows/find-ripgrep.png) | ![rgg - ripgrep - fzf](../assets/images/windows/find-ripgrep_fzf.png) |
-
-![cd or neovim](../assets/images/windows/find-choice.png)
-
-> [!NOTE]
->
-> These come from [fzf advanced integration](https://github.com/junegunn/fzf/blob/master/ADVANCED.md) but in Powershell
->
-> The config is in [Documents/PowerShell/Scripts/kevinnitro/fzf.ps1](https://github.com/KevinNitroG/windows-dotfiles/blob/main/Documents/PowerShell/Scripts/kevinnitro/fzf.ps1)
-
-- Bonus: [yazi](https://github.com/sxyazi/yazi) and cd
-  ![yzcd](../assets/images/windows/cd-yazi.png)
-
----
-
-### Neovim
-
-![Neovim](../assets/images/windows/neovim.png)
-
-> [!NOTE]
->
-> I use [Alexis12119's nvim config](https://github.com/Alexis12119/nvim-config)
->
-> My [fork config](https://github.com/KevinNitroG/Alexis12119-nvim)
 
 ---
 
@@ -167,35 +110,10 @@
 > Run with Administrator
 
 ```ps1
-chezmoi init --apply --verbose git@github.com:KevinNitroG/windows-dotfiles.git
+chezmoi init --apply --verbose git@github.com:KevinNitroG/dotfiles.git
 ```
 
 > Follow instruction of chezmoi to setup chezmoi config
-
----
-
-### 4️⃣ Set env path _(Admin)_
-
-```ps1
-iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/environmentVariables.ps1" | iex
-```
-
----
-
-### 5️⃣ Install software
-
-- Install programming languages
-  ```ps1
-  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/programmingLanguage.ps1" | iex
-  ```
-- Install software _(non-admin)_
-  ```ps1
-  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/softwares-nonadmin.ps1" | iex
-  ```
-- Install software _(admin)_
-  ```ps1
-  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/softwares-admin.ps1" | iex
-  ```
 
 ---
 
@@ -203,24 +121,11 @@ iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install
 
 - https://fonts.google.com/specimen/Be+Vietnam+Pro?query=be+vie
 
----
-
-### 🧪 ONE SCRIPT _(test)_
-
-> [!NOTE]
->
-> This script merges above steps. But haven't been tested yet.
-> Go import SSH and GPG keys first.
->
-> It may not work =))
+<!--TODO: Note later I'm tired-->
 
 - Set execution policy to run script from URL _(non-admin)_
   ```ps1
   Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
-  ```
-- Run script _(non-admin)_
-  ```ps1
-  iwr "https://raw.githubusercontent.com/KevinNitroG/windows-dotfiles/main/install/install.ps1" | iex
   ```
 
 ---
@@ -370,7 +275,7 @@ curl https://gist.githubusercontent.com/MuhammadSaim/de84d1ca59952cf1efaa8c061aa
 
 ---
 
-### Others
+### Additional
 
 - [Keyviz](https://github.com/mulaRahul/keyviz/releases/latest) _(Already install from PM)_
 - [Optimizer](https://github.com/hellzerg/optimizer/releases/latest)
